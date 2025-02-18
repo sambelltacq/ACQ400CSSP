@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-02-18 14:53:38 by dt100-->
+<display version="2.0.0">
+  <name>acq400_launcher</name>
+  <macros>
+    <SITE>1</SITE>
+  </macros>
+  <width>780</width>
+  <height>620</height>
+  <scripts>
+    <script file="scripts/init_main.py">
+      <pv_name>loc://UUT</pv_name>
+    </script>
+  </scripts>
+  <widget type="group" version="3.0.0">
+    <name>UUT Container</name>
+    <width>152</width>
+    <height>591</height>
+    <style>2</style>
+    <line_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>UUT Input</name>
+      <pv_name>loc://UUT&lt;VString&gt;($(UUT))</pv_name>
+      <y>9</y>
+      <width>150</width>
+      <height>50</height>
+      <font>
+        <font family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Header_ForeGround" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>launcher_uut_buttons</name>
+      <file>opi/components/launcher_uut_buttons.bob</file>
+      <y>73</y>
+      <width>150</width>
+      <height>350</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>logo</name>
+      <file>images/dtacq.png</file>
+      <y>452</y>
+      <height>137</height>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>group 1212</name>
+    <macros>
+      <pvname>NSITES</pvname>
+    </macros>
+    <x>310</x>
+    <y>467</y>
+    <width>222</width>
+    <height>22</height>
+    <style>2</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>$(pvname)</text>
+      <width>90</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry</name>
+      <pv_name>loc://$(pvname)</pv_name>
+      <x>90</x>
+      <width>130</width>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>group 1212_1</name>
+    <macros>
+      <pvname>UUT</pvname>
+    </macros>
+    <x>310</x>
+    <y>440</y>
+    <width>222</width>
+    <height>22</height>
+    <style>2</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>$(pvname)</text>
+      <width>90</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_1</name>
+      <pv_name>loc://$(pvname)</pv_name>
+      <x>90</x>
+      <width>130</width>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>group 1212_2</name>
+    <macros>
+      <pvname>MODEL</pvname>
+    </macros>
+    <x>310</x>
+    <y>494</y>
+    <width>222</width>
+    <height>22</height>
+    <style>2</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>$(pvname)</text>
+      <width>90</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>loc://$(pvname)</pv_name>
+      <x>90</x>
+      <width>130</width>
+    </widget>
+  </widget>
+</display>
