@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-17 17:22:37 by dt100-->
+<!--Saved on 2025-02-18 16:24:18 by dt100-->
 <display version="2.0.0">
   <name>launcher_site0</name>
   <width>150</width>
@@ -7,10 +7,10 @@
   <widget type="action_button" version="3.0.0">
     <name>Counters Button</name>
     <actions>
-      <action type="open_display">
-        <file>../counters.bob</file>
-        <target>tab</target>
-        <description>Open Display</description>
+      <action type="execute">
+        <script file="../../scripts/handle_action_button.py">
+        </script>
+        <description>open counters.bob</description>
       </action>
     </actions>
     <text>Counters</text>
