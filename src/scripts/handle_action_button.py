@@ -31,7 +31,8 @@ cmd, target, macros = get_target(widget)
 
 if cmd == 'open':
     #open a new opi display
-    macros.update(get_macros(widget)) #merge widget macros
+    macros.update(get_macros(widget)) #merge display macros
+    macros.update(get_macros(display)) #merge widget macros
     opi = "opi/{}".format(target)
     logger.info("{} {} {}".format(cmd, opi, macros))
     ScriptUtil.openDisplay(display, opi, "TAB", macros)
