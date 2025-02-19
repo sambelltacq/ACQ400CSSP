@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-18 14:41:03 by dt100-->
+<!--Saved on 2025-02-19 15:10:35 by dt100-->
 <display version="2.0.0">
   <name>Counters</name>
-  <width>851</width>
+  <width>871</width>
   <height>588</height>
   <widget type="group" version="3.0.0">
     <name>Counters Header</name>
+    <x>10</x>
     <width>450</width>
     <height>50</height>
     <style>3</style>
@@ -47,6 +48,7 @@
     <macros>
       <FUNC>CLK</FUNC>
     </macros>
+    <x>10</x>
     <y>50</y>
     <width>851</width>
     <height>127</height>
@@ -117,6 +119,7 @@
     <macros>
       <FUNC>TRG</FUNC>
     </macros>
+    <x>10</x>
     <y>187</y>
     <width>851</width>
     <height>127</height>
@@ -187,6 +190,7 @@
     <macros>
       <FUNC>EVT</FUNC>
     </macros>
+    <x>10</x>
     <y>324</y>
     <width>851</width>
     <height>127</height>
@@ -257,6 +261,7 @@
     <macros>
       <FUNC>SYN</FUNC>
     </macros>
+    <x>10</x>
     <y>461</y>
     <width>851</width>
     <height>127</height>
