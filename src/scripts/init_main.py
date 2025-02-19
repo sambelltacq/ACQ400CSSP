@@ -11,22 +11,9 @@ logger = Logger.getLogger('init_main')
 widget = locals()['widget']
 pvs = locals()['pvs']
 display = widget.getTopDisplayModel()
+timeout = 1
 
 # Functions
-def get_macros(widget):
-	macros = widget.getPropertyValue("macros")
-	extracted = {}
-	for key in macros.getNames():
-		extracted[key] = macros.getValue(key)
-	return extracted
-
-def set_macros(widget, new_macros):
-    macros = Macros()
-    for key in new_macros:
-        macros.add(key, str(new_macros[key]))
-    widget.setPropertyValue("macros", macros)
-    return macros
-
 def get_pv_value(pvname):
     timeout = 1000
     try: PV = PVUtil.createPV(pvname, timeout)
@@ -34,31 +21,19 @@ def get_pv_value(pvname):
         return False
     return PVUtil.getVType(PV).getValue()
 
-def create_string_pv(name, value):
-    timeout = 2
-    dtype="VString"
-    pvname = 'loc://{}<{}>("")'.format(name, dtype)
-    pv = PVUtil.createPV(pvname, timeout)
-    pv.write(value)
-    logger.info("Create {} {}".format(pvname, value))
-    return pv
-
-def create_long_pv(name, value):
-    timeout = 2
-    dtype="VLong"
-    pvname = 'loc://{}<{}>(0)'.format(name, dtype)
-    pv = PVUtil.createPV(pvname, timeout)
-    pv.write(value)
-    logger.info("Create {} {}".format(pvname, value))
-    return pv
-
 def get_model(uutname):
-    for model in models:
-        if uutname.startswith(model):
-            return model
+    uut_model = get_pv_value("{}:0:MODEL".format(uutname))
+    if uut_model:
+        for model in model_def:
+            if uut_model.startswith(model):
+                return model
     return None
 
-models = {
+def set_local(pvname, value):
+    display.getEffectiveMacros().add(pvname, str(value))
+    PVUtil.writePV('loc://{}'.format(pvname), str(value), timeout)
+
+model_def = {
     'acq1001': {
         'sites': 1,
     },
@@ -76,23 +51,17 @@ models = {
     },
 }
 
-#pv0 + 1 >= $(NUM)
-
 # Main
 logger.info("Start")
 uutname = PVUtil.getString(pvs[0]).lower()
 model = get_model(uutname)
 
 if model:
-    macros = get_macros(display)
-    macros['UUT'] = uutname
-    
-    macros['MODEL'] = model
-    create_string_pv('MODEL', model)
+    time.sleep(0.1)
+    set_local('MODEL', model)
 
-    nsites = models[model]['sites']
-    macros['NSITES'] = nsites
-    create_long_pv('NSITES', nsites)
+    nsites = model_def[model]['sites']
+    set_local('NSITES', nsites)
 
     sites = {}
     sitelist = get_pv_value("{}:SITELIST".format(uutname))
@@ -102,11 +71,17 @@ if model:
         sites = {int(k): v for k, v in (site.split('=') for site in sites.split(','))}
 
     for site in range(1, nsites + 1):
-        sitemacro = "SITE_{}".format(site)
-        sitemodel = sites[site] if site in sites else None
-        macros[sitemacro] = sitemodel
-    
-    print(macros)
-    set_macros(widget, macros)
+        en_pv = "SITE_{}_EN".format(site)
+        model_pv = "SITE_{}_MODEL".format(site)
+
+        if site in sites:
+            en_val = 1
+            model_val = sites[site]
+        else:
+            en_val = 0
+            model_val = "Null"
+
+        set_local(en_pv, en_val)
+        set_local(model_pv, model_val)
 
 logger.info("Complete {:0.2f}s".format(time.time() - t0))

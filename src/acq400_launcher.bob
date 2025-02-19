@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-18 16:27:24 by dt100-->
+<!--Saved on 2025-02-19 15:04:48 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -12,6 +12,127 @@
       <pv_name>loc://UUT</pv_name>
     </script>
   </scripts>
+  <widget type="group" version="3.0.0">
+    <name>local def group</name>
+    <x>300</x>
+    <y>140</y>
+    <width>282</width>
+    <height>389</height>
+    <style>1</style>
+    <line_color>
+      <color name="INVALID" red="255" green="0" blue="255">
+      </color>
+    </line_color>
+    <transparent>true</transparent>
+    <widget type="template" version="2.0.0">
+      <name>local_pv_def</name>
+      <file>opi/components/local_pv_def.bob</file>
+      <instances>
+        <instance>
+          <macros>
+            <pvname>NSITES</pvname>
+            <pvtype>VString</pvtype>
+            <pvvalue>6</pvvalue>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>MODEL</pvname>
+            <pvtype>VString</pvtype>
+            <pvvalue>unknown</pvvalue>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_1_EN</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_2_EN</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_3_EN</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_4_EN</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_5_EN</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_6_EN</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_1_MODEL</pvname>
+            <pvvalue>Unknown</pvvalue>
+            <pvtype>VString</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_2_MODEL</pvname>
+            <pvvalue>Unknown</pvvalue>
+            <pvtype>VString</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_3_MODEL</pvname>
+            <pvvalue>Unknown</pvvalue>
+            <pvtype>VString</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_4_MODEL</pvname>
+            <pvvalue>Unknown</pvvalue>
+            <pvtype>VString</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_5_MODEL</pvname>
+            <pvvalue>Unknown</pvvalue>
+            <pvtype>VString</pvtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <pvname>SITE_6_MODEL</pvname>
+            <pvvalue>Unknown</pvvalue>
+            <pvtype>VString</pvtype>
+          </macros>
+        </instance>
+      </instances>
+      <y>10</y>
+      <width>280</width>
+      <height>306</height>
+      <gap>2</gap>
+    </widget>
+  </widget>
   <widget type="group" version="3.0.0">
     <name>UUT Container</name>
     <width>152</width>
@@ -51,79 +172,6 @@
       <file>images/dtacq.png</file>
       <y>452</y>
       <height>137</height>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>Local PVs Debug</name>
-    <x>299</x>
-    <y>151</y>
-    <width>282</width>
-    <height>216</height>
-    <style>1</style>
-    <line_color>
-      <color name="INVALID" red="255" green="0" blue="255">
-      </color>
-    </line_color>
-    <transparent>true</transparent>
-    <widget type="template" version="2.0.0">
-      <name>Debug</name>
-      <file>opi/components/debug_item.bob</file>
-      <instances>
-        <instance>
-          <macros>
-            <pvname>UUT</pvname>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>NSITES</pvname>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>MODEL</pvname>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>SITE_1_EN</pvname>
-            <pvvalue>1</pvvalue>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>SITE_2_EN</pvname>
-            <pvvalue>1</pvvalue>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>SITE_3_EN</pvname>
-            <pvvalue>1</pvvalue>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>SITE_4_EN</pvname>
-            <pvvalue>1</pvvalue>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>SITE_5_EN</pvname>
-            <pvvalue>1</pvvalue>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <pvname>SITE_6_EN</pvname>
-            <pvvalue>1</pvvalue>
-          </macros>
-        </instance>
-      </instances>
-      <width>280</width>
-      <height>196</height>
-      <gap>2</gap>
     </widget>
   </widget>
 </display>
