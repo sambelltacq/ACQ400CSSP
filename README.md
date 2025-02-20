@@ -2,12 +2,12 @@
 
 Phoebus OPIs for ACQ400 series digitizers
 
-Converted from https://github.com/D-TACQ/ACQ400CSS
+Based on https://github.com/D-TACQ/ACQ400CSS
 
 
 
 
-Install:
+Install: TODO
 
 - Linux
 - Windows
