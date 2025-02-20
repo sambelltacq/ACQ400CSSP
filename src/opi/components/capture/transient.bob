@@ -169,6 +169,14 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
+      <rules>
+        <rule name="disable" prop_id="enabled" out_exp="true">
+          <exp bool_exp="pv0==1">
+            <expression>False</expression>
+          </exp>
+          <pv_name>${UUT}:MODE:CONTINUOUS</pv_name>
+        </rule>
+      </rules>
       <border_alarm_sensitive>false</border_alarm_sensitive>
       <mode>1</mode>
     </widget>
