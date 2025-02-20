@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 14:24:23 by dt100-->
+<!--Saved on 2025-02-20 14:55:42 by dt100-->
 <display version="2.0.0">
   <name>Capture</name>
   <width>730</width>
   <height>750</height>
+  <widget type="led" version="2.0.0">
+    <name>Ready</name>
+    <pv_name>${UUT}:IOC_READY</pv_name>
+    <x>10</x>
+    <y>40</y>
+    <width>42</width>
+    <height>42</height>
+  </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_4</name>
+    <name>Capture Label</name>
     <text>$(UUT) Capture</text>
     <x>10</x>
     <width>320</width>
@@ -19,7 +27,7 @@
   <widget type="embedded" version="2.0.0">
     <name>Capture State Bar</name>
     <file>components/capture/capture_state.bob</file>
-    <x>10</x>
+    <x>90</x>
     <y>40</y>
     <width>627</width>
     <height>42</height>
@@ -35,7 +43,7 @@
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Embedded Display</name>
+    <name>Stream</name>
     <file>components/capture/stream.bob</file>
     <x>10</x>
     <y>280</y>
@@ -44,7 +52,7 @@
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_1</name>
+    <name>Signals</name>
     <file>components/capture/capture_signals.bob</file>
     <x>10</x>
     <y>530</y>
@@ -53,7 +61,7 @@
     <resize>2</resize>
   </widget>
   <widget type="template" version="2.0.0">
-    <name>Template/Instance_1</name>
+    <name>SyncRole</name>
     <file>components/capture/sync_role.bob</file>
     <x>740</x>
     <y>100</y>
@@ -61,7 +69,7 @@
     <height>280</height>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_2</name>
+    <name>Stats</name>
     <file>components/capture/stats.bob</file>
     <x>740</x>
     <y>400</y>

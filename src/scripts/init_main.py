@@ -29,9 +29,10 @@ def get_model(uutname):
                 return model
     return None
 
-def set_local(pvname, value):
+def set_local(pvname, value, pv=True):
     display.getEffectiveMacros().add(pvname, str(value))
-    PVUtil.writePV('loc://{}'.format(pvname), str(value), timeout)
+    if pv:
+        PVUtil.writePV('loc://{}'.format(pvname), str(value), timeout)
 
 model_def = {
     'acq1001': {
@@ -58,6 +59,7 @@ model = get_model(uutname)
 
 if model:
     time.sleep(0.1)
+    set_local('UUT', uutname, pv=False)
     set_local('MODEL', model)
 
     nsites = model_def[model]['sites']

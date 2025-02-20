@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-19 15:04:48 by dt100-->
+<!--Saved on 2025-02-20 15:18:45 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -13,9 +13,9 @@
     </script>
   </scripts>
   <widget type="group" version="3.0.0">
-    <name>local def group</name>
-    <x>300</x>
-    <y>140</y>
+    <name>DEBUG pvs</name>
+    <x>170</x>
+    <y>200</y>
     <width>282</width>
     <height>389</height>
     <style>1</style>
@@ -143,12 +143,25 @@
       </color>
     </line_color>
     <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>launcher_uut_buttons</name>
+      <file>opi/components/launcher_uut_buttons.bob</file>
+      <y>209</y>
+      <width>150</width>
+      <height>350</height>
+      <resize>2</resize>
+    </widget>
+    <widget type="picture" version="2.0.0">
+      <name>logo</name>
+      <file>images/dtacq.png</file>
+      <height>119</height>
+    </widget>
     <widget type="textentry" version="3.0.0">
       <name>UUT Input</name>
       <pv_name>loc://UUT&lt;VString&gt;($(UUT=acq1001_999))</pv_name>
-      <y>9</y>
-      <width>150</width>
-      <height>50</height>
+      <y>119</y>
+      <width>149</width>
+      <height>30</height>
       <font>
         <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
@@ -158,20 +171,6 @@
         </color>
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>launcher_uut_buttons</name>
-      <file>opi/components/launcher_uut_buttons.bob</file>
-      <y>79</y>
-      <width>150</width>
-      <height>350</height>
-      <resize>2</resize>
-    </widget>
-    <widget type="picture" version="2.0.0">
-      <name>logo</name>
-      <file>images/dtacq.png</file>
-      <y>452</y>
-      <height>137</height>
     </widget>
   </widget>
 </display>
