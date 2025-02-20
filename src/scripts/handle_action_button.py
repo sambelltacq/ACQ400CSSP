@@ -8,9 +8,6 @@ logger = Logger.getLogger('handle_action_button')
 widget = locals()['widget']
 display = widget.getTopDisplayModel()
 
-print(widget)
-print(dir(widget))
-
 #Functions
 def get_macros(widget):
     macros = widget.getEffectiveMacros()
@@ -28,11 +25,11 @@ def get_target(widget, propname="tooltip"):
     return prop[0], prop[1], prop[2]
 
 cmd, target, macros = get_target(widget)
+macros.update(get_macros(widget)) #merge display macros
+macros.update(get_macros(display)) #merge widget macros
 
 if cmd == 'open':
     #open a new opi display
-    macros.update(get_macros(widget)) #merge display macros
-    macros.update(get_macros(display)) #merge widget macros
     opi = "opi/{}".format(target)
     logger.info("{} {} {}".format(cmd, opi, macros))
     ScriptUtil.openDisplay(display, opi, "TAB", macros)

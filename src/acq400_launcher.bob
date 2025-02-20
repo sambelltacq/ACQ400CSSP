@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 15:18:45 by dt100-->
+<!--Saved on 2025-02-20 16:48:11 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
-  <macros>
-    <SITE>1</SITE>
-  </macros>
   <width>780</width>
   <height>620</height>
   <scripts>
-    <script file="scripts/init_main.py">
-      <pv_name>loc://UUT</pv_name>
+    <script file="scripts/handle_site.py">
+      <pv_name>loc://SITE</pv_name>
     </script>
   </scripts>
   <widget type="group" version="3.0.0">
@@ -28,6 +25,13 @@
       <name>local_pv_def</name>
       <file>opi/components/local_pv_def.bob</file>
       <instances>
+        <instance>
+          <macros>
+            <pvname>SITE</pvname>
+            <pvvalue>1</pvvalue>
+            <pvtype>VLong</pvtype>
+          </macros>
+        </instance>
         <instance>
           <macros>
             <pvname>NSITES</pvname>
@@ -129,7 +133,7 @@
       </instances>
       <y>10</y>
       <width>280</width>
-      <height>306</height>
+      <height>328</height>
       <gap>2</gap>
     </widget>
   </widget>
@@ -171,6 +175,51 @@
         </color>
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Site Group</name>
+    <x>170</x>
+    <y>20</y>
+    <width>130</width>
+    <height>80</height>
+    <style>2</style>
+    <widget type="spinner" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>loc://SITE&lt;VLong&gt;(1)</pv_name>
+      <x>47</x>
+      <y>9</y>
+      <width>62</width>
+      <height>60</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <precision>0</precision>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <tooltip></tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <minimum>1.0</minimum>
+      <maximum>6.0</maximum>
+      <limits_from_pv>false</limits_from_pv>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Site </text>
+      <y>9</y>
+      <width>48</width>
+      <height>60</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
 </display>
