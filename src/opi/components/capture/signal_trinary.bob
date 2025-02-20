@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 12:57:42 by dt100-->
+<!--Saved on 2025-02-20 14:00:13 by dt100-->
 <display version="2.0.0">
   <name>signal trinary</name>
-  <width>360</width>
+  <width>330</width>
   <height>30</height>
   <widget type="group" version="3.0.0">
     <name>Sig Group</name>
     <macros>
       <sig>$(sig=TRG)</sig>
     </macros>
-    <width>360</width>
+    <width>330</width>
     <height>30</height>
     <style>3</style>
     <transparent>true</transparent>
@@ -26,14 +26,14 @@
       <name>Sig En</name>
       <pv_name>${UUT}:${SITE}:${sig}</pv_name>
       <x>100</x>
-      <width>80</width>
+      <width>70</width>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src</name>
       <pv_name>${UUT}:${SITE}:${sig}:DX</pv_name>
-      <x>190</x>
-      <width>80</width>
+      <x>180</x>
+      <width>70</width>
       <rules>
         <rule name="DISABLE" prop_id="enabled" out_exp="false">
           <exp bool_exp="pv0==0">
@@ -50,8 +50,8 @@
     <widget type="combo" version="2.0.0">
       <name>Sig Sens</name>
       <pv_name>${UUT}:${SITE}:${sig}:SENSE</pv_name>
-      <x>280</x>
-      <width>80</width>
+      <x>260</x>
+      <width>70</width>
       <rules>
         <rule name="DISABLE" prop_id="enabled" out_exp="false">
           <exp bool_exp="pv0==0">

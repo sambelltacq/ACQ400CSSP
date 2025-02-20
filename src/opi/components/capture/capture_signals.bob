@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 13:16:37 by dt100-->
+<!--Saved on 2025-02-20 14:01:47 by dt100-->
 <display version="2.0.0">
   <name>capture_signals</name>
   <width>710</width>
@@ -15,6 +15,7 @@
     </background_color>
     <widget type="group" version="3.0.0">
       <name>Agg</name>
+      <x>20</x>
       <y>10</y>
       <width>260</width>
       <height>30</height>
@@ -74,7 +75,7 @@
     </widget>
     <widget type="group" version="3.0.0">
       <name>Sample Size</name>
-      <x>280</x>
+      <x>370</x>
       <y>10</y>
       <width>130</width>
       <height>30</height>
@@ -128,7 +129,7 @@
         </action>
       </actions>
       <text>SET SOFT TRG</text>
-      <x>380</x>
+      <x>360</x>
       <y>50</y>
       <width>130</width>
       <tooltip>$(actions)</tooltip>
@@ -143,14 +144,14 @@
         </action>
       </actions>
       <text>PULSE SOFT TRG</text>
-      <x>520</x>
+      <x>500</x>
       <y>50</y>
       <width>130</width>
       <tooltip>$(actions)</tooltip>
     </widget>
     <widget type="group" version="3.0.0">
       <name>Find Group</name>
-      <x>380</x>
+      <x>360</x>
       <y>90</y>
       <width>330</width>
       <height>30</height>
@@ -237,50 +238,6 @@
         <on_label>ES</on_label>
       </widget>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>Translen Label</name>
-      <text>TRANSLEN</text>
-      <x>380</x>
-      <y>170</y>
-      <height>30</height>
-      <transparent>false</transparent>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textentry" version="3.0.0">
-      <name>Translen Input</name>
-      <pv_name>${UUT}:${SITE}:RTM_TRANSLEN</pv_name>
-      <x>487</x>
-      <y>170</y>
-      <width>75</width>
-      <height>30</height>
-      <background_color>
-        <color name="Header_ForeGround" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>0</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>${UUT}:${SITE}:RTM_TRANSLENp:r</pv_name>
-      <x>567</x>
-      <y>170</y>
-      <width>75</width>
-      <height>30</height>
-      <background_color>
-        <color red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>0</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
     <widget type="template" version="2.0.0">
       <name>Signals</name>
       <file>signal_trinary.bob</file>
@@ -306,10 +263,60 @@
           </macros>
         </instance>
       </instances>
+      <x>20</x>
       <y>50</y>
-      <width>360</width>
+      <width>330</width>
       <height>150</height>
       <transparent>true</transparent>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Translen Group</name>
+      <x>360</x>
+      <y>170</y>
+      <width>262</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Translen Label</name>
+        <text>TRANSLEN</text>
+        <height>30</height>
+        <transparent>false</transparent>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textentry" version="3.0.0">
+        <name>Translen Input</name>
+        <pv_name>${UUT}:${SITE}:RTM_TRANSLEN</pv_name>
+        <x>107</x>
+        <width>75</width>
+        <height>30</height>
+        <background_color>
+          <color name="Header_ForeGround" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <precision>0</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Translen Value</name>
+        <pv_name>${UUT}:${SITE}:RTM_TRANSLENp:r</pv_name>
+        <x>187</x>
+        <width>75</width>
+        <height>30</height>
+        <background_color>
+          <color red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <format>1</format>
+        <precision>0</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
   </widget>
 </display>
