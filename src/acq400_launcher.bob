@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 16:48:11 by dt100-->
+<!--Saved on 2025-02-21 12:05:43 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <width>780</width>
@@ -7,6 +7,9 @@
   <scripts>
     <script file="scripts/handle_site.py">
       <pv_name>loc://SITE</pv_name>
+    </script>
+    <script file="scripts/init_main.py">
+      <pv_name>loc://UUT</pv_name>
     </script>
   </scripts>
   <widget type="group" version="3.0.0">
