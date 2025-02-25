@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-21 17:08:34 by dt100-->
+<!--Saved on 2025-02-25 16:02:38 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
-  <width>780</width>
-  <height>620</height>
+  <width>770</width>
+  <height>999</height>
   <scripts>
-    <script file="scripts/handle_site.py">
+    <script file="scripts/handle_macro.py">
       <pv_name>loc://SITE</pv_name>
     </script>
     <script file="scripts/init_main.py">
@@ -14,8 +14,8 @@
   </scripts>
   <widget type="group" version="3.0.0">
     <name>DEBUG pvs</name>
-    <x>170</x>
-    <y>200</y>
+    <x>270</x>
+    <y>770</y>
     <width>282</width>
     <height>389</height>
     <style>1</style>
@@ -142,6 +142,8 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>UUT Container</name>
+    <x>10</x>
+    <y>10</y>
     <width>152</width>
     <height>591</height>
     <style>2</style>
@@ -150,14 +152,6 @@
       </color>
     </line_color>
     <transparent>true</transparent>
-    <widget type="embedded" version="2.0.0">
-      <name>launcher_uut_buttons</name>
-      <file>opi/components/launcher_uut_buttons.bob</file>
-      <y>209</y>
-      <width>150</width>
-      <height>350</height>
-      <resize>2</resize>
-    </widget>
     <widget type="picture" version="2.0.0">
       <name>logo</name>
       <file>images/dtacq.png</file>
@@ -183,7 +177,7 @@
   <widget type="group" version="3.0.0">
     <name>Site Group</name>
     <x>170</x>
-    <y>20</y>
+    <y>10</y>
     <width>130</width>
     <height>80</height>
     <style>2</style>
@@ -235,9 +229,163 @@
       </action>
     </actions>
     <text>Slowmon strip plot</text>
-    <x>450</x>
-    <y>120</y>
+    <x>30</x>
+    <y>650</y>
     <width>150</width>
     <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Capture Button_1</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open capture.bob</description>
+      </action>
+    </actions>
+    <text>Capture</text>
+    <x>200</x>
+    <y>300</y>
+    <width>150</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Counters Button</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open counters.bob</description>
+      </action>
+    </actions>
+    <text>Counters</text>
+    <x>200</x>
+    <y>270</y>
+    <width>150</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_19</name>
+    <text>Clocktree</text>
+    <x>550</x>
+    <y>370</y>
+    <width>150</width>
+    <tooltip>$(actions)</tooltip>
+    <enabled>false</enabled>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_21</name>
+    <text>System</text>
+    <x>370</x>
+    <y>340</y>
+    <width>150</width>
+    <tooltip>$(actions)</tooltip>
+    <enabled>false</enabled>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_24</name>
+    <text>Firmware</text>
+    <x>550</x>
+    <y>460</y>
+    <width>150</width>
+    <tooltip>$(actions)</tooltip>
+    <enabled>false</enabled>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_25</name>
+    <text>Sync</text>
+    <x>550</x>
+    <y>490</y>
+    <width>70</width>
+    <tooltip>$(actions)</tooltip>
+    <enabled>false</enabled>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Live Plot Group</name>
+    <macros>
+      <mode>LIVE</mode>
+      <script>scripts/handle_action_button.py</script>
+    </macros>
+    <x>320</x>
+    <y>10</y>
+    <width>160</width>
+    <height>192</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="template" version="2.0.0">
+      <name>plot type array</name>
+      <file>opi/components/launcher/plot_button_array.bob</file>
+      <instances>
+        <instance>
+          <macros>
+            <title>Volts</title>
+            <dtype>VOLTS</dtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <title>Raw</title>
+            <dtype>RAW</dtype>
+          </macros>
+        </instance>
+      </instances>
+      <y>20</y>
+      <width>160</width>
+      <height>172</height>
+      <horizontal>true</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Plot Mode Label</name>
+      <text>Live</text>
+      <width>160</width>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Post Plot Group</name>
+    <macros>
+      <mode>POST</mode>
+      <script>scripts/handle_action_button.py</script>
+    </macros>
+    <x>490</x>
+    <y>10</y>
+    <width>160</width>
+    <height>192</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="template" version="2.0.0">
+      <name>plot type array</name>
+      <file>opi/components/launcher/plot_button_array.bob</file>
+      <instances>
+        <instance>
+          <macros>
+            <title>Volts</title>
+            <dtype>VOLTS</dtype>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <title>Raw</title>
+            <dtype>RAW</dtype>
+          </macros>
+        </instance>
+      </instances>
+      <y>20</y>
+      <width>160</width>
+      <height>172</height>
+      <horizontal>true</horizontal>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Plot Mode Label</name>
+      <text>Post</text>
+      <width>160</width>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
   </widget>
 </display>

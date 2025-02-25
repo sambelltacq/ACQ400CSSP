@@ -1,3 +1,4 @@
+import time
 from java.util.logging import Logger
 from org.csstudio.display.builder.runtime.script import ScriptUtil
 
@@ -24,12 +25,14 @@ def get_target(widget, propname="tooltip"):
         prop.append({})
     return prop[0], prop[1], prop[2]
 
+logger.info('Pressed {}'.format(widget))
+
 cmd, target, macros = get_target(widget)
 macros.update(get_macros(widget)) #merge display macros
 macros.update(get_macros(display)) #merge widget macros
+macros['timestamp'] = str(int(time.time()))
 
 if cmd == 'open':
     #open a new opi display
     opi = "opi/{}".format(target)
-    logger.info("{} {} {}".format(cmd, opi, macros))
     ScriptUtil.openDisplay(display, opi, "TAB", macros)
