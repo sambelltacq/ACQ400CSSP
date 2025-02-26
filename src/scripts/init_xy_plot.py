@@ -2,7 +2,7 @@ import time
 from java.util.logging import Logger
 from  org.csstudio.display.builder.model.properties import WidgetColor
 
-from org.csstudio.display.builder.runtime.script import ScriptUtil
+from org.csstudio.display.builder.runtime.script import PVUtil
 
 """ Init XY Plot from macros """
 
@@ -11,6 +11,30 @@ logger = Logger.getLogger('init_xy_plot')
 widget = locals()['widget']
 pvs = locals()['pvs']
 display = widget.getTopDisplayModel()
+
+max_traces = 8
+timestamp = int(time.time())
+trace_pv_fmt = "{uut}:{site}:AI:{pmode}:{chan:02d}{dtype}"
+
+pmodes = {
+    'LIVE': 'WF',
+    'POST': 'TW',
+}
+ptypes = {
+    'RAW': '',
+    'VOLTS': ':V.VALA',
+}
+
+colors = (
+    (21, 21, 196), # Blue
+    (242, 26, 26), # Red
+    (33, 179, 33), # Green
+    (0, 0, 0), # Black
+    (128, 0, 255), # Purple
+    (255, 170, 0), # Orange
+    (255, 0, 240), #Magenta
+    (243, 132, 132), #Coral
+)
 
 # Functions
 def list_of_channels(chanstr):
@@ -23,56 +47,59 @@ def list_of_channels(chanstr):
         chans.append(int(chan))
     return chans
 
+def get_pv_value(pvname):
+    timeout = 1000
+    try: PV = PVUtil.createPV(pvname, timeout)
+    except:
+        return False
+    return PVUtil.getVType(PV).getValue()
+
 # Main
-colors = (
-    (21, 21, 196), # Blue
-    (242, 26, 26), # Red
-    (33, 179, 33), # Green
-    (0, 0, 0), # Black
-    (128, 0, 255), # Purple
-    (255, 170, 0), # Orange
-    (255, 0, 240), #Magenta
-    (243, 132, 132), #Coral
-)
-
-max_traces = 8
-timestamp = int(time.time())
-
 uut = widget.getEffectiveMacros().getValue('UUT')
 site = widget.getEffectiveMacros().getValue('SITE')
-chx = widget.getEffectiveMacros().getValue('chx')
-mode = widget.getEffectiveMacros().getValue('mode')
-dtype = widget.getEffectiveMacros().getValue('dtype')
 
-#widget.propTitle().setValue("{}:{} CH{} {} {}".format(uut, site, chx, mode, dtype))
+pchans = widget.getEffectiveMacros().getValue('pchans')
+pmode = widget.getEffectiveMacros().getValue('pmode')
+ptype = widget.getEffectiveMacros().getValue('ptype')
+ptarget = widget.getEffectiveMacros().getValue('ptarget')
 
-modes = {
-    'LIVE': 'WF',
-    'POST': 'TW',
-}
+chans = list_of_channels(pchans)
+chanmap = {site: chans}
 
-dtypes = {
-    'RAW': '',
-    'VOLTS': ':V.VALA',
-}
+if ptarget == 'ALL':
+    current = 0
+    chanmap = {}
 
-chans = list_of_channels(chx)
+    for site_i in [1, 2, 3, 4, 5, 6]:
+        pvname = "{}:{}:NCHAN".format(uut, site_i)
+        nchan = get_pv_value(pvname) + current
+        while len(chans) > 0:
+            if chans[0] > nchan: break
+            chanmap.setdefault(site_i, [])
+            chanmap[site_i].append(chans.pop(0) - current)
+        current = nchan
 
-trace_pv_fmt = "{uut}:{site}:AI:{mode}:{chan:02d}{dtype}"
 env = {
     'uut': uut,
-    'site': site,
-    'dtype': dtypes.get(dtype,''),
-    'mode': modes.get(mode, 'WF'),
+    'dtype': ptypes.get(ptype,''),
+    'pmode': pmodes.get(pmode, 'WF'),
 }
 
-for trace_idx, chan in enumerate(chans):
-    if trace_idx >= max_traces: break
-    env['chan'] = chan
-    trace_pv = trace_pv_fmt.format(**env)
-    logger.info("CH{} Trace Pv {}".format(chan, trace_pv))
-    widget.setPropertyValue("traces[{}].color".format(trace_idx), WidgetColor(*colors[trace_idx]))
-    widget.setPropertyValue("traces[{}].name".format(trace_idx), trace_pv)
-    widget.setPropertyValue("traces[{}].y_pv".format(trace_idx), trace_pv)
+current = 0
+for site_i in chanmap:
+    for chan in chanmap[site_i]:
+        if current >= max_traces: break
 
-widget.setPropertyValue("y_axes[0].title", 'Volts (V)' if dtype == 'VOLTS' else 'Codes')
+        env['chan'] = chan
+        env['site'] = site_i
+        trace_pv = trace_pv_fmt.format(**env)
+        color = WidgetColor(*colors[current])
+
+        logger.info("CH{} Trace Pv {}".format(chan, trace_pv))
+        widget.setPropertyValue("traces[{}].color".format(current), color)
+        widget.setPropertyValue("traces[{}].name".format(current), trace_pv)
+        widget.setPropertyValue("traces[{}].y_pv".format(current), trace_pv)
+        current += 1
+
+widget.propTitle().setValue("{} Site {} CH{} {} {}".format(uut, ptarget, pchans, pmode, ptype))
+widget.setPropertyValue("y_axes[0].title", 'Volts (V)' if ptype == 'VOLTS' else 'Codes')
