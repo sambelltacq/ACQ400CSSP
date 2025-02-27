@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-27 14:26:39 by dt100-->
+<!--Saved on 2025-02-27 14:34:49 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <width>770</width>
@@ -148,7 +148,7 @@
     </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>Capture Button</name>
+    <name>SLOWMON TEMP BUTTON</name>
     <actions>
       <action type="execute">
         <script file="scripts/handle_action_button.py">
@@ -163,7 +163,7 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>Capture Button_1</name>
+    <name>Capture Button</name>
     <actions>
       <action type="execute">
         <script file="scripts/handle_action_button.py">
@@ -175,6 +175,10 @@
     <x>180</x>
     <y>300</y>
     <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -190,6 +194,10 @@
     <x>180</x>
     <y>270</y>
     <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -197,15 +205,6 @@
     <text>Clocktree</text>
     <x>380</x>
     <y>380</y>
-    <width>150</width>
-    <tooltip>$(actions)</tooltip>
-    <enabled>false</enabled>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_21</name>
-    <text>System</text>
-    <x>290</x>
-    <y>430</y>
     <width>150</width>
     <tooltip>$(actions)</tooltip>
     <enabled>false</enabled>
@@ -223,6 +222,10 @@
     <x>180</x>
     <y>330</y>
     <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="template" version="2.0.0">
@@ -495,7 +498,7 @@
     </widget>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>Sync Button_1</name>
+    <name>Firmware Button</name>
     <actions>
       <action type="execute">
         <script file="scripts/handle_action_button.py">
@@ -507,6 +510,29 @@
     <x>180</x>
     <y>360</y>
     <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>System Button</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open system.bob</description>
+      </action>
+    </actions>
+    <text>System</text>
+    <x>180</x>
+    <y>390</y>
+    <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
     <tooltip>$(actions)</tooltip>
   </widget>
 </display>
