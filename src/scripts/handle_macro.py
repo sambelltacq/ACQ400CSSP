@@ -16,7 +16,7 @@ def is_stale(pv):
     return t0 - timestamp > 1
 
 for pv in pvs:
-    if is_stale(pv): continue
+    #if is_stale(pv): continue # fix me
     pvname = pv.getName().split('://')[-1]
     pvvalue = PVUtil.getString(pv)
     display.getEffectiveMacros().add(pvname, str(pvvalue))

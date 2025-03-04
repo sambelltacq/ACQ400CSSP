@@ -38,6 +38,9 @@ model_def = {
     'acq1001': {
         'sites': 1,
     },
+    'acq1002': {
+        'sites': 2,
+    },
     'acq1102': {
         'sites': 2,
     },
@@ -69,21 +72,14 @@ if model:
     sitelist = get_pv_value("{}:SITELIST".format(uutname))
 
     if sitelist:
-        _, sites = sitelist.split(',', 1)
-        sites = {int(k): v for k, v in (site.split('=') for site in sites.split(','))}
+        sites = {int(k): v for k, v in (site.split('=') for site in sitelist.split(',', 1)[1].split(','))}
+        set_local('SITES', ','.join(map(str, sites.keys())))
 
-    for site in range(1, nsites + 1):
-        en_pv = "SITE_{}_EN".format(site)
-        model_pv = "SITE_{}_MODEL".format(site)
-
+    for site in range(1, 6 + 1):
+        pvname = "SITE_{}_MODEL".format(site)
+        value = "none"
         if site in sites:
-            en_val = 1
-            model_val = sites[site]
-        else:
-            en_val = 0
-            model_val = "Null"
-
-        set_local(en_pv, en_val)
-        set_local(model_pv, model_val)
+            value = sites[site]
+        display.getEffectiveMacros().add(pvname, str(value))
 
 logger.info("Complete {:0.2f}s".format(time.time() - t0))
