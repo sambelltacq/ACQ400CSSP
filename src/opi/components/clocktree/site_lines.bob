@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-03-04 15:57:35 by dt100-->
+<display version="2.0.0">
+  <name>Site Lines</name>
+  <width>940</width>
+  <height>470</height>
+  <widget type="template" version="2.0.0">
+    <name>SITE LINES</name>
+    <file>site_line.bob</file>
+    <instances>
+      <instance>
+        <macros>
+          <site>1</site>
+          <dx>d2</dx>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <site>2</site>
+          <dx>d3</dx>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <site>3</site>
+          <dx>d4</dx>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <site>4</site>
+          <dx>d5</dx>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <site>5</site>
+          <dx>d6</dx>
+        </macros>
+      </instance>
+      <instance>
+        <macros>
+          <site>6</site>
+          <dx>d7</dx>
+        </macros>
+      </instance>
+    </instances>
+    <y>60</y>
+    <width>940</width>
+    <height>410</height>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>MASTER SITES</name>
+    <width>770</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 1</name>
+      <macros>
+        <site>1</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>770</width>
+      <height>30</height>
+      <resize>2</resize>
+      <transparent>true</transparent>
+    </widget>
+  </widget>
+</display>

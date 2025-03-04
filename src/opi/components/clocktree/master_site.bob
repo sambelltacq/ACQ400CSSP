@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-03-04 15:48:20 by dt100-->
+<display version="2.0.0">
+  <name>Master Site</name>
+  <width>770</width>
+  <height>30</height>
+  <widget type="group" version="3.0.0">
+    <name>Master Site</name>
+    <macros>
+      <site>$(site=1)</site>
+    </macros>
+    <width>770</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="HIDE_NOT_MASTER" prop_id="visible" out_exp="true">
+        <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+          <expression>true</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>false</expression>
+        </exp>
+        <pv_name>${UUT}:${site}:ROLE</pv_name>
+      </rule>
+    </rules>
+    <widget type="group" version="3.0.0">
+      <name>Sig Group</name>
+      <macros>
+        <sig>CLK</sig>
+      </macros>
+      <x>110</x>
+      <width>330</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Sig label</name>
+        <text>$(sig)</text>
+        <width>80</width>
+        <height>30</height>
+        <transparent>false</transparent>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Sig En</name>
+        <pv_name>${UUT}:${site}:${sig}</pv_name>
+        <x>90</x>
+        <width>90</width>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Sig Src</name>
+        <pv_name>${UUT}:${site}:${sig}:DX</pv_name>
+        <x>190</x>
+        <width>50</width>
+        <rules>
+          <rule name="DISABLE" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0==0">
+              <value>false</value>
+            </exp>
+            <exp bool_exp="true">
+              <value>true</value>
+            </exp>
+            <pv_name>${UUT}:${SITE}:${sig}</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Sig Sens</name>
+        <pv_name>${UUT}:${site}:${sig}:SENSE</pv_name>
+        <x>250</x>
+        <width>80</width>
+        <rules>
+          <rule name="DISABLE" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0==0">
+              <value>false</value>
+            </exp>
+            <exp bool_exp="true">
+              <value>true</value>
+            </exp>
+            <pv_name>${UUT}:${SITE}:${sig}</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Master Site</text>
+      <width>120</width>
+      <height>30</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Div label</name>
+      <text>CLKDIV</text>
+      <x>450</x>
+      <width>90</width>
+      <height>30</height>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>Spinner</name>
+      <pv_name>${UUT}:${site}:CLKDIV</pv_name>
+      <x>540</x>
+      <width>80</width>
+      <height>30</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>${UUT}:0:SIG:CLK_S${site}:FREQ</pv_name>
+      <x>640</x>
+      <width>130</width>
+      <height>30</height>
+      <format>2</format>
+      <precision>3</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+</display>

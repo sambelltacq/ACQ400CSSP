@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-03-04 14:36:11 by dt100-->
+<display version="2.0.0">
+  <name>480 Site Bar</name>
+  <width>750</width>
+  <height>30</height>
+  <widget type="group" version="3.0.0">
+    <name>480 SITE</name>
+    <macros>
+      <pvname0>${UUT}:$(site):ACQ480:JC:PRESENT</pvname0>
+      <pvname1>${UUT}:$(site):ACQ480:JC:LOS</pvname1>
+      <pvname2>${UUT}:$(site):ACQ480:JC:LOL</pvname2>
+      <pvname3>${UUT}:$(site):ACQ480:TRAIN</pvname3>
+      <pvname4>${UUT}:0:SIG:CLK:TRAIN_REQ</pvname4>
+      <pvname5>${UUT}:$(site):SIG:CLK:TRAIN_BSY</pvname5>
+      <pvname6>${UUT}:$(site):ACQ480:LINK:LOTI</pvname6>
+      <pvname7>${UUT}:$(site):ACQ480:FIR:DECIM</pvname7>
+      <pvname8>${UUT}:$(site):SIG:clk_count:FREQ</pvname8>
+      <pvname9>${UUT}:$(site):ACQ480:FPGA:DECIM</pvname9>
+      <pvname10>${UUT}:$(site):ACQ480:OSR</pvname10>
+      <model>$(SITE_${site}_MODEL)</model>
+    </macros>
+    <width>750</width>
+    <height>30</height>
+    <style>3</style>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <rules>
+      <rule name="SHOW_480" prop_id="visible" out_exp="true">
+        <exp bool_exp="&quot;$(model)&quot;.startswith(&quot;48&quot;)">
+          <expression>true</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>false</expression>
+        </exp>
+        <pv_name>loc://SITES</pv_name>
+      </rule>
+    </rules>
+    <widget type="group" version="3.0.0">
+      <name>480 SITE INNER</name>
+      <width>750</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>Jit Clr</text>
+        <width>50</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_3</name>
+        <pv_name>$(pvname0)</pv_name>
+        <x>55</x>
+        <y>5</y>
+        <off_color>
+          <color red="102" green="102" blue="102">
+          </color>
+        </off_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_4</name>
+        <pv_name>$(pvname1)</pv_name>
+        <x>75</x>
+        <y>5</y>
+        <off_color>
+          <color red="102" green="102" blue="102">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="127" blue="0">
+          </color>
+        </on_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_6</name>
+        <pv_name>$(pvname2)</pv_name>
+        <x>95</x>
+        <y>5</y>
+        <off_color>
+          <color red="102" green="102" blue="102">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="127" blue="0">
+          </color>
+        </on_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_13</name>
+        <text>Link</text>
+        <x>120</x>
+        <width>50</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_1</name>
+        <pv_name>$(pvname3)</pv_name>
+        <x>180</x>
+        <width>110</width>
+        <height>30</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="GREEN_ON_READY" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==6">
+              <value>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pvname3)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_7</name>
+        <pv_name>$(pvname4)</pv_name>
+        <x>295</x>
+        <y>5</y>
+        <off_color>
+          <color red="102" green="102" blue="102">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="127" blue="0">
+          </color>
+        </on_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_8</name>
+        <pv_name>$(pvname5)</pv_name>
+        <x>315</x>
+        <y>5</y>
+        <off_color>
+          <color red="102" green="102" blue="102">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="127" blue="0">
+          </color>
+        </on_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_10</name>
+        <pv_name>$(pvname6)</pv_name>
+        <x>335</x>
+        <y>5</y>
+        <off_color>
+          <color red="102" green="102" blue="102">
+          </color>
+        </off_color>
+        <on_color>
+          <color red="255" green="0" blue="0">
+          </color>
+        </on_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_14</name>
+        <text>Dec: ADC</text>
+        <x>370</x>
+        <width>70</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_2</name>
+        <pv_name>$(pvname7)</pv_name>
+        <x>450</x>
+        <width>20</width>
+        <height>30</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="GREEN_ON_READY" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==6">
+              <value>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pvname3)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_15</name>
+        <text>&gt;</text>
+        <x>470</x>
+        <width>20</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_3</name>
+        <pv_name>$(pvname8)</pv_name>
+        <x>490</x>
+        <width>80</width>
+        <height>30</height>
+        <format>2</format>
+        <precision>3</precision>
+        <show_units>false</show_units>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="GREEN_ON_READY" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==6">
+              <value>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pvname3)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_16</name>
+        <text>FPGA</text>
+        <x>570</x>
+        <width>50</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_4</name>
+        <pv_name>$(pvname9)</pv_name>
+        <x>630</x>
+        <width>20</width>
+        <height>30</height>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="GREEN_ON_READY" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==6">
+              <value>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pvname3)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_17</name>
+        <text>&gt;</text>
+        <x>650</x>
+        <width>20</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_5</name>
+        <pv_name>$(pvname10)</pv_name>
+        <x>670</x>
+        <width>80</width>
+        <height>30</height>
+        <format>2</format>
+        <precision>3</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="GREEN_ON_READY" prop_id="background_color" out_exp="false">
+            <exp bool_exp="pv0==6">
+              <value>
+                <color name="OK" red="0" green="255" blue="0">
+                </color>
+              </value>
+            </exp>
+            <pv_name>$(pvname3)</pv_name>
+          </rule>
+        </rules>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+  </widget>
+</display>

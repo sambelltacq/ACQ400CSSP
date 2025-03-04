@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-03-04 17:30:57 by dt100-->
+<display version="2.0.0">
+  <name>Clocktree</name>
+  <width>1170</width>
+  <height>1170</height>
+  <scripts>
+    <script file="../scripts/init_clocktree.py">
+      <pv_name>$(UUT):0:MODEL</pv_name>
+      <pv_name>$(UUT):SITELIST</pv_name>
+    </script>
+  </scripts>
+  <widget type="embedded" version="2.0.0">
+    <name>SITE LINES</name>
+    <file>components/clocktree/site_lines.bob</file>
+    <x>10</x>
+    <y>480</y>
+    <width>940</width>
+    <height>470</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>SI5326</name>
+    <x>330</x>
+    <y>40</y>
+    <width>800</width>
+    <height>600</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
+        <exp bool_exp="pvStr0=='acq1001'||pvStr0=='acq1002'">
+          <expression>"components/clocktree/mbclk.bob"</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>"components/clocktree/Si5326.bob"</expression>
+        </exp>
+        <pv_name>loc://MODEL</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>SI53315</name>
+    <x>630</x>
+    <y>40</y>
+    <width>800</width>
+    <height>600</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
+        <exp bool_exp="pvStr0=='acq1001'||pvStr0=='acq1002'">
+          <expression>"components/clocktree/basic_out.bob"</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>"components/clocktree/Si53315.bob"</expression>
+        </exp>
+        <pv_name>loc://MODEL</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>INPUT</name>
+    <file>components/clocktree/input.bob</file>
+    <x>10</x>
+    <y>40</y>
+    <width>320</width>
+    <height>420</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>TITLE</name>
+    <text>$(UUT) CLOCKTREE</text>
+    <x>10</x>
+    <width>320</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>loc://MODEL</pv_name>
+    <x>450</x>
+    <y>20</y>
+    <width>80</width>
+  </widget>
+</display>
