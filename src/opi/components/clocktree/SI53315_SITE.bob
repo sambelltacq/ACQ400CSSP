@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-04 14:28:03 by dt100-->
+<!--Saved on 2025-03-05 11:52:24 by dt100-->
 <display version="2.0.0">
   <name>SI53315 Site</name>
   <width>390</width>
   <height>20</height>
   <widget type="group" version="3.0.0">
     <name>Group</name>
-    <macros>
-      <pvname0>$(pvname0)$(site)</pvname0>
-    </macros>
     <width>390</width>
     <height>20</height>
+    <visible>false</visible>
     <style>3</style>
     <transparent>true</transparent>
     <rules>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-27 13:57:43 by dt100-->
+<!--Saved on 2025-03-05 13:06:30 by dt100-->
 <display version="2.0.0">
   <name>Sync</name>
   <macros>
@@ -1394,7 +1394,7 @@
       <widget type="group" version="3.0.0">
         <name>EVENT BUS INNER</name>
         <macros>
-          <pvname0>${UUT}:0:SIG:EVENT_SRC:$(num)</pvname0>
+          <pvname0>${UUT}:0:SIG:EVENT_SRC:</pvname0>
         </macros>
         <x>10</x>
         <y>10</y>
@@ -1479,7 +1479,7 @@
       <widget type="group" version="3.0.0">
         <name>EVENT STATE INNER</name>
         <macros>
-          <pvname0>${UUT}:SIG:SYNC_BUS:TRG:D$(num)</pvname0>
+          <pvname0>${UUT}:SIG:SYNC_BUS:TRG:D</pvname0>
         </macros>
         <x>10</x>
         <y>10</y>
@@ -1564,7 +1564,7 @@
       <widget type="group" version="3.0.0">
         <name>TRIGGER STATE INNER</name>
         <macros>
-          <pvname0>${UUT}:SIG:SYNC_BUS:TRG:D$(num)</pvname0>
+          <pvname0>${UUT}:SIG:SYNC_BUS:TRG:D</pvname0>
         </macros>
         <x>10</x>
         <y>10</y>

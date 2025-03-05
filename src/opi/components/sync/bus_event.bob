@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-27 11:51:24 by dt100-->
+<!--Saved on 2025-03-05 13:05:45 by dt100-->
 <display version="2.0.0">
   <name>bus event</name>
   <width>30</width>
@@ -23,7 +23,7 @@
     </widget>
     <widget type="led" version="2.0.0">
       <name>led</name>
-      <pv_name>$(pvname0)</pv_name>
+      <pv_name>$(pvname0)$(num)</pv_name>
       <x>5</x>
       <y>20</y>
     </widget>

@@ -1,9 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-04 15:57:35 by dt100-->
+<!--Saved on 2025-03-05 14:18:03 by dt100-->
 <display version="2.0.0">
   <name>Site Lines</name>
   <width>940</width>
   <height>470</height>
+  <widget type="group" version="3.0.0">
+    <name>MASTER SITES</name>
+    <width>770</width>
+    <height>40</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 1</name>
+      <macros>
+        <site>1</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>780</width>
+      <height>40</height>
+      <visible>false</visible>
+      <resize>2</resize>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
+          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+            <expression>true</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>false</expression>
+          </exp>
+          <pv_name>${UUT}:${site}:ROLE</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 2</name>
+      <macros>
+        <site>2</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>780</width>
+      <height>40</height>
+      <visible>false</visible>
+      <resize>2</resize>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
+          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+            <expression>true</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>false</expression>
+          </exp>
+          <pv_name>${UUT}:${site}:ROLE</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 3</name>
+      <macros>
+        <site>3</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>780</width>
+      <height>40</height>
+      <visible>false</visible>
+      <resize>2</resize>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
+          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+            <expression>true</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>false</expression>
+          </exp>
+          <pv_name>${UUT}:${site}:ROLE</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 4</name>
+      <macros>
+        <site>4</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>780</width>
+      <height>40</height>
+      <visible>false</visible>
+      <resize>2</resize>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
+          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+            <expression>true</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>false</expression>
+          </exp>
+          <pv_name>${UUT}:${site}:ROLE</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 5</name>
+      <macros>
+        <site>5</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>780</width>
+      <height>40</height>
+      <visible>false</visible>
+      <resize>2</resize>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
+          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+            <expression>true</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>false</expression>
+          </exp>
+          <pv_name>${UUT}:${site}:ROLE</pv_name>
+        </rule>
+      </rules>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>MASTER SITE 6</name>
+      <macros>
+        <site>6</site>
+      </macros>
+      <file>master_site.bob</file>
+      <width>780</width>
+      <height>40</height>
+      <visible>false</visible>
+      <resize>2</resize>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
+          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
+            <expression>true</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>false</expression>
+          </exp>
+          <pv_name>${UUT}:${site}:ROLE</pv_name>
+        </rule>
+      </rules>
+    </widget>
+  </widget>
   <widget type="template" version="2.0.0">
     <name>SITE LINES</name>
     <file>site_line.bob</file>
@@ -48,23 +193,5 @@
     <y>60</y>
     <width>940</width>
     <height>410</height>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>MASTER SITES</name>
-    <width>770</width>
-    <height>30</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="embedded" version="2.0.0">
-      <name>MASTER SITE 1</name>
-      <macros>
-        <site>1</site>
-      </macros>
-      <file>master_site.bob</file>
-      <width>770</width>
-      <height>30</height>
-      <resize>2</resize>
-      <transparent>true</transparent>
-    </widget>
   </widget>
 </display>

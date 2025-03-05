@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-04 17:30:57 by dt100-->
+<!--Saved on 2025-03-05 14:18:18 by dt100-->
 <display version="2.0.0">
   <name>Clocktree</name>
-  <width>1170</width>
-  <height>1170</height>
-  <scripts>
-    <script file="../scripts/init_clocktree.py">
-      <pv_name>$(UUT):0:MODEL</pv_name>
-      <pv_name>$(UUT):SITELIST</pv_name>
-    </script>
-  </scripts>
+  <width>1440</width>
+  <height>950</height>
   <widget type="embedded" version="2.0.0">
     <name>SITE LINES</name>
     <file>components/clocktree/site_lines.bob</file>

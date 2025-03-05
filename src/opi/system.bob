@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-27 16:40:59 by dt100-->
+<!--Saved on 2025-03-05 12:30:24 by dt100-->
 <display version="2.0.0">
   <name>System</name>
+  <width>750</width>
+  <height>740</height>
   <widget type="group" version="3.0.0">
     <name>SYSTEM</name>
     <x>10</x>
@@ -263,6 +265,7 @@
       <x>490</x>
       <y>320</y>
       <width>140</width>
+      <visible>false</visible>
       <style>3</style>
       <transparent>true</transparent>
       <rules>

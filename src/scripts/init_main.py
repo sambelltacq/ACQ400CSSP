@@ -29,11 +29,6 @@ def get_model(uutname):
                 return model
     return None
 
-def set_local(pvname, value, pv=True):
-    display.getEffectiveMacros().add(pvname, str(value))
-    if pv:
-        PVUtil.writePV('loc://{}'.format(pvname), str(value), timeout)
-
 model_def = {
     'acq1001': {
         'sites': 1,
@@ -57,29 +52,30 @@ model_def = {
 
 # Main
 logger.info("Start")
+
 uutname = PVUtil.getString(pvs[0]).lower()
 model = get_model(uutname)
 
+
 if model:
     time.sleep(0.1)
-    set_local('UUT', uutname, pv=False)
-    set_local('MODEL', model)
+    display.getEffectiveMacros().add('UUT', uutname)
+    PVUtil.writePV('loc://MODEL', model, timeout)
 
     nsites = model_def[model]['sites']
-    set_local('NSITES', nsites)
+    PVUtil.writePV('loc://NSITES', nsites, timeout)
 
     sites = {}
     sitelist = get_pv_value("{}:SITELIST".format(uutname))
 
     if sitelist:
         sites = {int(k): v for k, v in (site.split('=') for site in sitelist.split(',', 1)[1].split(','))}
-        set_local('SITES', ','.join(map(str, sites.keys())))
+        site_str = ','.join(map(str, sites.keys()))
+        PVUtil.writePV('loc://SITES', site_str, timeout)
 
     for site in range(1, 6 + 1):
-        pvname = "SITE_{}_MODEL".format(site)
-        value = "none"
-        if site in sites:
-            value = sites[site]
-        display.getEffectiveMacros().add(pvname, str(value))
+        pvname = "loc://SITE_{}_MODEL".format(site)
+        value = sites[site] if site in sites else "none"
+        PVUtil.writePV(pvname, str(value), timeout)
 
 logger.info("Complete {:0.2f}s".format(time.time() - t0))
