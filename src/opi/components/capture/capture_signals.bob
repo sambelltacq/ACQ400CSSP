@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-06 11:55:31 by sam-->
+<!--Saved on 2025-03-06 13:33:37 by sam-->
 <display version="2.0.0">
   <name>capture_signals</name>
   <width>710</width>
@@ -288,6 +288,47 @@
       </widget>
     </widget>
     <widget type="group" version="3.0.0">
+      <name>Signals Group</name>
+      <macros>
+        <site>1</site>
+      </macros>
+      <x>20</x>
+      <y>50</y>
+      <width>330</width>
+      <height>150</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="template" version="2.0.0">
+        <name>Signals</name>
+        <file>signal_trinary.bob</file>
+        <instances>
+          <instance>
+            <macros>
+              <sig>TRG</sig>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <sig>EVENT0</sig>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <sig>EVENT1</sig>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <sig>RGM</sig>
+            </macros>
+          </instance>
+        </instances>
+        <width>330</width>
+        <height>150</height>
+        <transparent>true</transparent>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
       <name>Disable Cover</name>
       <y>40</y>
       <width>350</width>
@@ -327,47 +368,6 @@
         </background_color>
         <horizontal_alignment>1</horizontal_alignment>
         <auto_size>true</auto_size>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>Signals Group</name>
-      <macros>
-        <site>1</site>
-      </macros>
-      <x>20</x>
-      <y>50</y>
-      <width>330</width>
-      <height>150</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="template" version="2.0.0">
-        <name>Signals</name>
-        <file>signal_trinary.bob</file>
-        <instances>
-          <instance>
-            <macros>
-              <sig>TRG</sig>
-            </macros>
-          </instance>
-          <instance>
-            <macros>
-              <sig>EVENT0</sig>
-            </macros>
-          </instance>
-          <instance>
-            <macros>
-              <sig>EVENT1</sig>
-            </macros>
-          </instance>
-          <instance>
-            <macros>
-              <sig>RGM</sig>
-            </macros>
-          </instance>
-        </instances>
-        <width>330</width>
-        <height>150</height>
-        <transparent>true</transparent>
       </widget>
     </widget>
   </widget>
