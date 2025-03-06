@@ -8,7 +8,7 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
 
 - Clone repo
     ```bash
-    git clone https://github.com/sambelltacq/ACQ400CSSP
+    git clone https://github.com/D-TACQ/ACQ400CSSP
     cd ACQ400CSSP
     ```
 
