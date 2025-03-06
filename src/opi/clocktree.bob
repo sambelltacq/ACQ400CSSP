@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-05 14:18:18 by dt100-->
+<!--Saved on 2025-03-06 10:50:37 by sam-->
 <display version="2.0.0">
   <name>Clocktree</name>
   <width>1440</width>
-  <height>950</height>
+  <height>1050</height>
   <widget type="embedded" version="2.0.0">
     <name>SITE LINES</name>
     <file>components/clocktree/site_lines.bob</file>
     <x>10</x>
     <y>480</y>
-    <width>940</width>
-    <height>470</height>
+    <width>960</width>
+    <height>520</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -74,12 +74,5 @@
       </font>
     </font>
     <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>loc://MODEL</pv_name>
-    <x>450</x>
-    <y>20</y>
-    <width>80</width>
   </widget>
 </display>

@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-05 13:48:42 by dt100-->
+<!--Saved on 2025-03-06 10:48:32 by sam-->
 <display version="2.0.0">
   <name>Master Site</name>
-  <width>780</width>
-  <height>40</height>
+  <width>760</width>
+  <height>30</height>
   <widget type="group" version="3.0.0">
-    <name>Master Site</name>
-    <width>780</width>
-    <height>40</height>
+    <name>MASTER SITE</name>
+    <width>760</width>
+    <height>30</height>
     <style>3</style>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
       </color>
     </background_color>
     <widget type="group" version="3.0.0">
-      <name>Master Site Inner</name>
+      <name>MASTER SITE INNER</name>
       <macros>
         <site>$(site=1)</site>
       </macros>
       <x>5</x>
       <y>5</y>
-      <width>770</width>
-      <height>30</height>
+      <width>750</width>
+      <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="group" version="3.0.0">
-        <name>Sig Group</name>
+        <name>Sig Group_1</name>
         <macros>
           <sig>CLK</sig>
         </macros>
         <x>110</x>
-        <width>330</width>
-        <height>30</height>
+        <width>305</width>
+        <height>20</height>
         <style>3</style>
         <transparent>true</transparent>
         <widget type="label" version="2.0.0">
-          <name>Sig label</name>
+          <name>Sig label_1</name>
           <text>$(sig)</text>
-          <x>25</x>
           <width>55</width>
-          <height>30</height>
           <transparent>false</transparent>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
         </widget>
         <widget type="combo" version="2.0.0">
-          <name>Sig En</name>
+          <name>Sig En_1</name>
           <pv_name>${UUT}:${site}:${sig}</pv_name>
-          <x>90</x>
+          <x>65</x>
           <width>90</width>
+          <height>20</height>
           <border_alarm_sensitive>false</border_alarm_sensitive>
         </widget>
         <widget type="combo" version="2.0.0">
-          <name>Sig Src</name>
+          <name>Sig Src_1</name>
           <pv_name>${UUT}:${site}:${sig}:DX</pv_name>
-          <x>190</x>
+          <x>165</x>
           <width>50</width>
+          <height>20</height>
           <rules>
             <rule name="DISABLE" prop_id="enabled" out_exp="false">
               <exp bool_exp="pv0==0">
@@ -70,10 +70,11 @@
           <border_alarm_sensitive>false</border_alarm_sensitive>
         </widget>
         <widget type="combo" version="2.0.0">
-          <name>Sig Sens</name>
+          <name>Sig Sens_1</name>
           <pv_name>${UUT}:${site}:${sig}:SENSE</pv_name>
-          <x>250</x>
+          <x>225</x>
           <width>80</width>
+          <height>20</height>
           <rules>
             <rule name="DISABLE" prop_id="enabled" out_exp="false">
               <exp bool_exp="pv0==0">
@@ -89,10 +90,9 @@
         </widget>
       </widget>
       <widget type="label" version="2.0.0">
-        <name>Label</name>
-        <text>Master Site $(site)</text>
+        <name>Label_1</name>
+        <text>Master Site</text>
         <width>120</width>
-        <height>30</height>
         <font>
           <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
           </font>
@@ -100,21 +100,19 @@
         <vertical_alignment>1</vertical_alignment>
       </widget>
       <widget type="label" version="2.0.0">
-        <name>Div label</name>
+        <name>Div label_1</name>
         <text>CLKDIV</text>
-        <x>475</x>
+        <x>455</x>
         <width>75</width>
-        <height>30</height>
         <transparent>false</transparent>
         <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
       <widget type="spinner" version="2.0.0">
-        <name>Spinner</name>
+        <name>Spinner_1</name>
         <pv_name>${UUT}:${site}:CLKDIV</pv_name>
-        <x>555</x>
+        <x>535</x>
         <width>80</width>
-        <height>30</height>
         <background_color>
           <color name="Background" red="255" green="255" blue="255">
           </color>
@@ -123,11 +121,10 @@
         <vertical_alignment>1</vertical_alignment>
       </widget>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update</name>
+        <name>Text Update_1</name>
         <pv_name>${UUT}:0:SIG:CLK_S${site}:FREQ</pv_name>
-        <x>640</x>
-        <width>130</width>
-        <height>30</height>
+        <x>635</x>
+        <width>115</width>
         <background_color>
           <color name="Background" red="255" green="255" blue="255">
           </color>

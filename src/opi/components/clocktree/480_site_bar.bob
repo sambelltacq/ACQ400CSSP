@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-05 13:48:00 by dt100-->
+<!--Saved on 2025-03-06 10:46:25 by sam-->
 <display version="2.0.0">
   <name>480 Site Bar</name>
-  <width>750</width>
+  <width>760</width>
   <height>30</height>
   <widget type="group" version="3.0.0">
     <name>480 SITE</name>
@@ -19,12 +19,11 @@
       <pvname9>${UUT}:$(site):ACQ480:FPGA:DECIM</pvname9>
       <pvname10>${UUT}:$(site):ACQ480:OSR</pvname10>
     </macros>
-    <width>750</width>
+    <width>760</width>
     <height>30</height>
-    <visible>false</visible>
     <style>3</style>
     <background_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
+      <color name="Read_Background" red="240" green="240" blue="240">
       </color>
     </background_color>
     <rules>
@@ -40,15 +39,16 @@
     </rules>
     <widget type="group" version="3.0.0">
       <name>480 SITE INNER</name>
+      <x>5</x>
+      <y>5</y>
       <width>750</width>
-      <height>30</height>
+      <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="label" version="2.0.0">
         <name>Label_12</name>
         <text>Jit Clr</text>
         <width>50</width>
-        <height>30</height>
         <font>
           <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
           </font>
@@ -60,7 +60,6 @@
         <name>LED_3</name>
         <pv_name>$(pvname0)</pv_name>
         <x>55</x>
-        <y>5</y>
         <off_color>
           <color red="102" green="102" blue="102">
           </color>
@@ -71,7 +70,6 @@
         <name>LED_4</name>
         <pv_name>$(pvname1)</pv_name>
         <x>75</x>
-        <y>5</y>
         <off_color>
           <color red="102" green="102" blue="102">
           </color>
@@ -86,7 +84,6 @@
         <name>LED_6</name>
         <pv_name>$(pvname2)</pv_name>
         <x>95</x>
-        <y>5</y>
         <off_color>
           <color red="102" green="102" blue="102">
           </color>
@@ -102,7 +99,6 @@
         <text>Link</text>
         <x>120</x>
         <width>40</width>
-        <height>30</height>
         <font>
           <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
           </font>
@@ -115,7 +111,6 @@
         <pv_name>$(pvname3)</pv_name>
         <x>170</x>
         <width>130</width>
-        <height>30</height>
         <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <rules>
@@ -135,7 +130,6 @@
         <name>LED_7</name>
         <pv_name>$(pvname4)</pv_name>
         <x>310</x>
-        <y>5</y>
         <off_color>
           <color red="102" green="102" blue="102">
           </color>
@@ -150,7 +144,6 @@
         <name>LED_8</name>
         <pv_name>$(pvname5)</pv_name>
         <x>330</x>
-        <y>5</y>
         <off_color>
           <color red="102" green="102" blue="102">
           </color>
@@ -165,7 +158,6 @@
         <name>LED_10</name>
         <pv_name>$(pvname6)</pv_name>
         <x>350</x>
-        <y>5</y>
         <off_color>
           <color red="102" green="102" blue="102">
           </color>
@@ -176,102 +168,128 @@
         </on_color>
         <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_14</name>
-        <text>ADC</text>
-        <x>400</x>
-        <width>40</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      <widget type="group" version="3.0.0">
+        <name>ADC</name>
+        <x>395</x>
+        <width>170</width>
+        <height>20</height>
+        <style>3</style>
+        <background_color>
+          <color name="Grid" red="128" green="128" blue="128">
+          </color>
+        </background_color>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_14</name>
+          <text>ADC</text>
+          <width>40</width>
+          <font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
           </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_2</name>
-        <pv_name>$(pvname7)</pv_name>
-        <x>450</x>
-        <width>20</width>
-        <height>30</height>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_15</name>
-        <text>&gt;</text>
-        <x>470</x>
-        <width>20</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_2</name>
+          <pv_name>$(pvname7)</pv_name>
+          <x>40</x>
+          <width>30</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_15</name>
+          <text>&gt;</text>
+          <x>70</x>
+          <width>20</width>
+          <font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
           </font>
-        </font>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_3</name>
+          <pv_name>$(pvname8)</pv_name>
+          <x>90</x>
+          <width>80</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <format>2</format>
+          <precision>3</precision>
+          <show_units>false</show_units>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
       </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_3</name>
-        <pv_name>$(pvname8)</pv_name>
-        <x>490</x>
-        <width>80</width>
-        <height>30</height>
-        <format>2</format>
-        <precision>3</precision>
-        <show_units>false</show_units>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_16</name>
-        <text>FPGA</text>
-        <x>570</x>
-        <width>50</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      <widget type="group" version="3.0.0">
+        <name>FPGA</name>
+        <x>575</x>
+        <width>175</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>Label_16</name>
+          <text>FPGA</text>
+          <width>50</width>
+          <font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
           </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_4</name>
-        <pv_name>$(pvname9)</pv_name>
-        <x>630</x>
-        <width>20</width>
-        <height>30</height>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_17</name>
-        <text>&gt;</text>
-        <x>650</x>
-        <width>20</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_4</name>
+          <pv_name>$(pvname9)</pv_name>
+          <x>55</x>
+          <width>20</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_17</name>
+          <text>&gt;</text>
+          <x>75</x>
+          <width>20</width>
+          <font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
           </font>
-        </font>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_5</name>
-        <pv_name>$(pvname10)</pv_name>
-        <x>670</x>
-        <width>80</width>
-        <height>30</height>
-        <format>2</format>
-        <precision>3</precision>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update_5</name>
+          <pv_name>$(pvname10)</pv_name>
+          <x>95</x>
+          <width>80</width>
+          <background_color>
+            <color name="Background" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <format>2</format>
+          <precision>3</precision>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
       </widget>
     </widget>
   </widget>

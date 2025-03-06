@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-04 16:25:57 by dt100-->
+<!--Saved on 2025-03-06 11:03:40 by sam-->
 <display version="2.0.0">
   <name>Input</name>
   <width>320</width>
@@ -153,19 +153,20 @@
         </line_color>
         <arrows>2</arrows>
       </widget>
-      <widget type="combo" version="2.0.0">
-        <name>Combo Box</name>
-        <pv_name>${UUT}:0:SIG:ZCLK_SRC</pv_name>
-        <x>30</x>
-        <y>135</y>
-        <width>80</width>
-      </widget>
       <widget type="choice" version="2.0.0">
         <name>Choice Button</name>
         <pv_name>${UUT}:SYS:CLK:FPMUX</pv_name>
         <x>110</x>
         <width>80</width>
         <height>80</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <selected_color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </selected_color>
         <horizontal>false</horizontal>
         <items>
           <item>Item 1</item>
@@ -194,6 +195,18 @@
         <x>60</x>
         <y>5</y>
         <square>true</square>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Combo Box</name>
+        <pv_name>${UUT}:0:SIG:ZCLK_SRC</pv_name>
+        <x>20</x>
+        <y>140</y>
+        <width>110</width>
+        <height>20</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
       </widget>
     </widget>
     <widget type="led" version="2.0.0">
