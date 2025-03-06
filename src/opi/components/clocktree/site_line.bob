@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-06 10:38:00 by sam-->
+<!--Saved on 2025-03-06 11:17:33 by sam-->
 <display version="2.0.0">
   <name>Site Line</name>
   <width>960</width>
@@ -12,10 +12,10 @@
       <pvname0>${UUT}:0:SIG:CLK_S$(site):FREQ</pvname0>
       <pvname1>${UUT}:$(site):SIG:clk_count:ACTIVE</pvname1>
       <label>Site $(site)</label>
-      <opi0>$(opi0=480_site_bar.bob)</opi0>
     </macros>
     <width>960</width>
     <height>70</height>
+    <visible>false</visible>
     <style>3</style>
     <transparent>true</transparent>
     <rules>
@@ -211,21 +211,10 @@
       <name>MASTER SITE</name>
       <file>master_site.bob</file>
       <x>90</x>
-      <width>780</width>
+      <width>760</width>
       <height>30</height>
       <resize>2</resize>
       <transparent>true</transparent>
-      <rules>
-        <rule name="SHOW_MASTER" prop_id="visible" out_exp="true">
-          <exp bool_exp="pvStr0 == &quot;MASTER&quot;">
-            <expression>true</expression>
-          </exp>
-          <exp bool_exp="true">
-            <expression>false</expression>
-          </exp>
-          <pv_name>${UUT}:${site}:ROLE</pv_name>
-        </rule>
-      </rules>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>SITE 480</name>

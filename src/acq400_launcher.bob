@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-05 12:47:38 by dt100-->
+<!--Saved on 2025-03-06 11:08:30 by sam-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
-    <SITE_1_MODEL>none</SITE_1_MODEL>
-    <SITE_2_MODEL>none</SITE_2_MODEL>
-    <SITE_3_MODEL>none</SITE_3_MODEL>
-    <SITE_4_MODEL>none</SITE_4_MODEL>
-    <SITE_5_MODEL>none</SITE_5_MODEL>
-    <SITE_6_MODEL>none</SITE_6_MODEL>
-    <MODEL>none</MODEL>
+    <DEBUG>FALSE</DEBUG>
   </macros>
   <width>770</width>
   <height>999</height>
@@ -30,6 +24,7 @@
     <y>220</y>
     <width>339</width>
     <height>560</height>
+    <visible>$(DEBUG)</visible>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>INIT NSITES</name>
@@ -575,9 +570,9 @@
       <name>Capture Button</name>
       <actions>
         <action type="execute">
+          <description>open capture.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
-          <description>open capture.bob</description>
         </action>
       </actions>
       <text>Capture</text>
@@ -593,9 +588,9 @@
       <name>Counters Button</name>
       <actions>
         <action type="execute">
+          <description>open counters.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
-          <description>open counters.bob</description>
         </action>
       </actions>
       <text>Counters</text>
@@ -611,9 +606,9 @@
       <name>Sync Button</name>
       <actions>
         <action type="execute">
+          <description>open sync.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
-          <description>open sync.bob</description>
         </action>
       </actions>
       <text>Sync</text>
@@ -629,9 +624,9 @@
       <name>Firmware Button</name>
       <actions>
         <action type="execute">
+          <description>open firmware.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
-          <description>open firmware.bob</description>
         </action>
       </actions>
       <text>Firmware</text>
@@ -647,9 +642,9 @@
       <name>System Button</name>
       <actions>
         <action type="execute">
+          <description>open system.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
-          <description>open system.bob</description>
         </action>
       </actions>
       <text>System</text>
@@ -665,9 +660,9 @@
       <name>Counters Button_1</name>
       <actions>
         <action type="execute">
+          <description>open clocktree.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
-          <description>open clocktree.bob</description>
         </action>
       </actions>
       <text>Clocktree</text>
@@ -729,9 +724,9 @@
     <name>SLOWMON TEMP BUTTON</name>
     <actions>
       <action type="execute">
+        <description>open slowmon_strip.bob</description>
         <script file="scripts/handle_action_button.py">
         </script>
-        <description>open slowmon_strip.bob</description>
       </action>
     </actions>
     <text>Slowmon strip plot</text>
@@ -881,9 +876,9 @@
         <name>open plot custom</name>
         <actions execute_as_one="true">
           <action type="execute">
+            <description>$(cmd) $(opi)</description>
             <script file="$(script)">
             </script>
-            <description>$(cmd) $(opi)</description>
           </action>
         </actions>
         <text>Plot Custom</text>

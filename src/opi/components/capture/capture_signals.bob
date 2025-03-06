@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-25 16:11:17 by dt100-->
+<!--Saved on 2025-03-06 11:55:31 by sam-->
 <display version="2.0.0">
   <name>capture_signals</name>
   <width>710</width>
@@ -114,14 +114,14 @@
       <name>Set Soft Button</name>
       <actions execute_as_one="true">
         <action type="write_pv">
+          <description>SET SOFT</description>
           <pv_name>${UUT}:1:TRG:DX</pv_name>
           <value>1</value>
-          <description>SET SOFT</description>
         </action>
         <action type="write_pv">
+          <description>SET RISING</description>
           <pv_name>${UUT}:1:TRG:SENSE</pv_name>
           <value>1</value>
-          <description>SET RISING</description>
         </action>
       </actions>
       <text>SET SOFT TRG</text>
@@ -134,9 +134,9 @@
       <name>Pulse Soft Button</name>
       <actions execute_as_one="true">
         <action type="write_pv">
+          <description>PULSE SOFT TRG</description>
           <pv_name>${UUT}:SIG:SOFT_TRIGGER</pv_name>
           <value>1</value>
-          <description>PULSE SOFT TRG</description>
         </action>
       </actions>
       <text>PULSE SOFT TRG</text>
@@ -230,44 +230,13 @@
       </widget>
       <widget type="bool_button" version="2.0.0">
         <name>ES Button</name>
-        <pv_name>${UUT}:${SITE}:ES_ENABLE</pv_name>
+        <pv_name>${UUT}:1:ES_ENABLE</pv_name>
         <x>269</x>
         <width>50</width>
         <off_label>ES</off_label>
         <on_label>ES</on_label>
         <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
-    </widget>
-    <widget type="template" version="2.0.0">
-      <name>Signals</name>
-      <file>signal_trinary.bob</file>
-      <instances>
-        <instance>
-          <macros>
-            <sig>TRG</sig>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <sig>EVENT0</sig>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <sig>EVENT1</sig>
-          </macros>
-        </instance>
-        <instance>
-          <macros>
-            <sig>RGM</sig>
-          </macros>
-        </instance>
-      </instances>
-      <x>20</x>
-      <y>50</y>
-      <width>330</width>
-      <height>150</height>
-      <transparent>true</transparent>
     </widget>
     <widget type="group" version="3.0.0">
       <name>Translen Group</name>
@@ -287,7 +256,7 @@
       </widget>
       <widget type="textentry" version="3.0.0">
         <name>Translen Input</name>
-        <pv_name>${UUT}:${SITE}:RTM_TRANSLEN</pv_name>
+        <pv_name>${UUT}:1:RTM_TRANSLEN</pv_name>
         <x>102</x>
         <width>75</width>
         <height>30</height>
@@ -303,7 +272,7 @@
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Translen Value</name>
-        <pv_name>${UUT}:${SITE}:RTM_TRANSLENp:r</pv_name>
+        <pv_name>${UUT}:1:RTM_TRANSLENp:r</pv_name>
         <x>179</x>
         <width>75</width>
         <height>30</height>
@@ -358,6 +327,47 @@
         </background_color>
         <horizontal_alignment>1</horizontal_alignment>
         <auto_size>true</auto_size>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>Signals Group</name>
+      <macros>
+        <site>1</site>
+      </macros>
+      <x>20</x>
+      <y>50</y>
+      <width>330</width>
+      <height>150</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="template" version="2.0.0">
+        <name>Signals</name>
+        <file>signal_trinary.bob</file>
+        <instances>
+          <instance>
+            <macros>
+              <sig>TRG</sig>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <sig>EVENT0</sig>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <sig>EVENT1</sig>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <sig>RGM</sig>
+            </macros>
+          </instance>
+        </instances>
+        <width>330</width>
+        <height>150</height>
+        <transparent>true</transparent>
       </widget>
     </widget>
   </widget>

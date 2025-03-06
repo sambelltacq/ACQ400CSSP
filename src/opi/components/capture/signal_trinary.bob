@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 14:43:52 by dt100-->
+<!--Saved on 2025-03-06 12:04:01 by sam-->
 <display version="2.0.0">
   <name>signal trinary</name>
   <width>330</width>
@@ -16,7 +16,7 @@
     <widget type="label" version="2.0.0">
       <name>Sig label</name>
       <text>$(sig)</text>
-      <width>90</width>
+      <width>80</width>
       <height>30</height>
       <transparent>false</transparent>
       <horizontal_alignment>1</horizontal_alignment>
@@ -24,15 +24,15 @@
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig En</name>
-      <pv_name>${UUT}:${SITE}:${sig}</pv_name>
-      <x>100</x>
+      <pv_name>${UUT}:$(site):${sig}</pv_name>
+      <x>90</x>
       <width>80</width>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src</name>
-      <pv_name>${UUT}:${SITE}:${sig}:DX</pv_name>
-      <x>190</x>
+      <pv_name>${UUT}:$(site):${sig}:DX</pv_name>
+      <x>180</x>
       <width>50</width>
       <rules>
         <rule name="DISABLE" prop_id="enabled" out_exp="false">
@@ -42,16 +42,16 @@
           <exp bool_exp="true">
             <value>true</value>
           </exp>
-          <pv_name>${UUT}:${SITE}:${sig}</pv_name>
+          <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Sens</name>
-      <pv_name>${UUT}:${SITE}:${sig}:SENSE</pv_name>
-      <x>250</x>
-      <width>80</width>
+      <pv_name>${UUT}:$(site):${sig}:SENSE</pv_name>
+      <x>240</x>
+      <width>90</width>
       <rules>
         <rule name="DISABLE" prop_id="enabled" out_exp="false">
           <exp bool_exp="pv0==0">
@@ -60,7 +60,7 @@
           <exp bool_exp="true">
             <value>true</value>
           </exp>
-          <pv_name>${UUT}:${SITE}:${sig}</pv_name>
+          <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
       <border_alarm_sensitive>false</border_alarm_sensitive>

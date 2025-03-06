@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 11:44:06 by dt100-->
+<!--Saved on 2025-03-06 11:47:40 by sam-->
 <display version="2.0.0">
   <name>func counter</name>
   <width>530</width>
@@ -29,7 +29,7 @@
     </widget>
     <widget type="led" version="2.0.0">
       <name>Func Active</name>
-      <pv_name>${UUT}:${SITE}:SIG:${func}:ACTIVE</pv_name>
+      <pv_name>${UUT}:${site}:SIG:${func}:ACTIVE</pv_name>
       <x>170</x>
       <y>10</y>
       <width>30</width>
@@ -37,7 +37,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Func Count</name>
-      <pv_name>${UUT}:${SITE}:SIG:${func}:COUNT</pv_name>
+      <pv_name>${UUT}:${site}:SIG:${func}:COUNT</pv_name>
       <x>210</x>
       <y>10</y>
       <width>130</width>
@@ -51,7 +51,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Func Freq</name>
-      <pv_name>${UUT}:${SITE}:SIG:${func}:FREQ</pv_name>
+      <pv_name>${UUT}:${site}:SIG:${func}:FREQ</pv_name>
       <x>350</x>
       <y>10</y>
       <width>130</width>
@@ -68,9 +68,9 @@
       <name>Func Reset</name>
       <actions>
         <action type="write_pv">
-          <pv_name>${UUT}:${SITE}:SIG:${func}:RESET</pv_name>
-          <value>1</value>
           <description>Reset</description>
+          <pv_name>${UUT}:${site}:SIG:${func}:RESET</pv_name>
+          <value>1</value>
         </action>
       </actions>
       <text>C</text>
