@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-06 11:08:30 by sam-->
+<!--Saved on 2025-03-07 15:29:04 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -570,9 +570,9 @@
       <name>Capture Button</name>
       <actions>
         <action type="execute">
-          <description>open opi/capture.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
+          <description>open opi/capture.bob</description>
         </action>
       </actions>
       <text>Capture</text>
@@ -588,9 +588,9 @@
       <name>Counters Button</name>
       <actions>
         <action type="execute">
-          <description>open opi/counters.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
+          <description>open opi/counters.bob</description>
         </action>
       </actions>
       <text>Counters</text>
@@ -606,9 +606,9 @@
       <name>Sync Button</name>
       <actions>
         <action type="execute">
-          <description>open opi/sync.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
+          <description>open opi/sync.bob</description>
         </action>
       </actions>
       <text>Sync</text>
@@ -624,9 +624,9 @@
       <name>Firmware Button</name>
       <actions>
         <action type="execute">
-          <description>open opi/firmware.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
+          <description>open opi/firmware.bob</description>
         </action>
       </actions>
       <text>Firmware</text>
@@ -642,9 +642,9 @@
       <name>System Button</name>
       <actions>
         <action type="execute">
-          <description>open opi/system.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
+          <description>open opi/system.bob</description>
         </action>
       </actions>
       <text>System</text>
@@ -660,9 +660,9 @@
       <name>Counters Button_1</name>
       <actions>
         <action type="execute">
-          <description>open opi/clocktree.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
+          <description>open opi/clocktree.bob</description>
         </action>
       </actions>
       <text>Clocktree</text>
@@ -724,9 +724,9 @@
     <name>SLOWMON TEMP BUTTON</name>
     <actions>
       <action type="execute">
-        <description>open opi/slowmon_strip.bob</description>
         <script file="scripts/handle_action_button.py">
         </script>
+        <description>open opi/slowmon_strip.bob</description>
       </action>
     </actions>
     <text>Slowmon strip plot</text>
@@ -876,9 +876,9 @@
         <name>open plot custom</name>
         <actions execute_as_one="true">
           <action type="execute">
-            <description>$(cmd) $(opi)</description>
             <script file="$(script)">
             </script>
+            <description>$(cmd) $(opi)</description>
           </action>
         </actions>
         <text>Plot Custom</text>
@@ -887,5 +887,24 @@
         <tooltip>$(actions)</tooltip>
       </widget>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Slowmon Button</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open opi/slowmon.bob</description>
+      </action>
+    </actions>
+    <text>Slowmon</text>
+    <x>171</x>
+    <y>290</y>
+    <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>

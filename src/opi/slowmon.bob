@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-03-07 15:31:23 by dt100-->
+<display version="2.0.0">
+  <name>Slowmon</name>
+  <widget type="label" version="2.0.0">
+    <name>TITLE</name>
+    <text>$(UUT) SLOWMON</text>
+    <width>320</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <y>120</y>
+    <width>440</width>
+    <height>100</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>${UUT}:SYS:SYNC_ROLE</pv_name>
+      <y>30</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>${UUT}:0:NACC:PRES</pv_name>
+      <x>90</x>
+      <y>30</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>TODO CONTROLS</text>
+      <width>160</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_3</name>
+      <pv_name>${UUT}:0:NACC:NACC</pv_name>
+      <x>180</x>
+      <y>30</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_4</name>
+      <pv_name>${UUT}:0:NACC:START</pv_name>
+      <x>270</x>
+      <y>30</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_5</name>
+      <pv_name>${UUT}:0:NACC:SHR</pv_name>
+      <x>360</x>
+      <y>30</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_6</name>
+      <pv_name>${UUT}:0:SLOWMON:FIN:ACT</pv_name>
+      <y>70</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_7</name>
+      <pv_name>${UUT}:0:SLOWMON:FIN</pv_name>
+      <x>90</x>
+      <y>70</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>${UUT}:0:SLOWMON:NACC</pv_name>
+      <x>180</x>
+      <y>70</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>${UUT}:0:SLOWMON:FS</pv_name>
+      <x>270</x>
+      <y>70</y>
+      <width>80</width>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_10</name>
+      <pv_name>${UUT}:0:SLOWMON:FS</pv_name>
+      <x>360</x>
+      <y>70</y>
+      <width>80</width>
+      <height>30</height>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <wrap_words>true</wrap_words>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>${UUT}:NACC:DNA</pv_name>
+      <x>130</x>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Group</name>
+    <macros>
+      <SITE>0</SITE>
+    </macros>
+    <x>50</x>
+    <y>280</y>
+    <width>150</width>
+    <height>30</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>SLOWMON TEMP BUTTON</name>
+      <actions>
+        <action type="execute">
+          <script file="../scripts/handle_action_button.py">
+          </script>
+          <description>open ../strip_plot.bob</description>
+        </action>
+      </actions>
+      <text>PLOT</text>
+      <width>150</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+</display>
