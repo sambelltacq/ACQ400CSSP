@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-07 15:31:23 by dt100-->
+<!--Saved on 2025-03-07 15:39:05 by dt100-->
 <display version="2.0.0">
   <name>Slowmon</name>
   <widget type="label" version="2.0.0">
@@ -16,8 +16,8 @@
   <widget type="group" version="3.0.0">
     <name>Group</name>
     <y>120</y>
-    <width>440</width>
-    <height>100</height>
+    <width>630</width>
+    <height>140</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="textupdate" version="2.0.0">
@@ -83,7 +83,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_6</name>
       <pv_name>${UUT}:0:SLOWMON:FIN:ACT</pv_name>
-      <y>70</y>
+      <x>450</x>
+      <y>30</y>
       <width>80</width>
       <height>30</height>
       <horizontal_alignment>1</horizontal_alignment>
@@ -93,30 +94,8 @@
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_7</name>
       <pv_name>${UUT}:0:SLOWMON:FIN</pv_name>
-      <x>90</x>
-      <y>70</y>
-      <width>80</width>
-      <height>30</height>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_8</name>
-      <pv_name>${UUT}:0:SLOWMON:NACC</pv_name>
-      <x>180</x>
-      <y>70</y>
-      <width>80</width>
-      <height>30</height>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_9</name>
-      <pv_name>${UUT}:0:SLOWMON:FS</pv_name>
-      <x>270</x>
-      <y>70</y>
+      <x>540</x>
+      <y>30</y>
       <width>80</width>
       <height>30</height>
       <horizontal_alignment>1</horizontal_alignment>
@@ -126,8 +105,7 @@
     <widget type="textentry" version="3.0.0">
       <name>Text Update_10</name>
       <pv_name>${UUT}:0:SLOWMON:FS</pv_name>
-      <x>360</x>
-      <y>70</y>
+      <y>110</y>
       <width>80</width>
       <height>30</height>
       <background_color>
@@ -141,7 +119,38 @@
     <widget type="led" version="2.0.0">
       <name>LED</name>
       <pv_name>${UUT}:NACC:DNA</pv_name>
-      <x>130</x>
+      <x>180</x>
+      <y>75</y>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_11</name>
+      <pv_name>${UUT}:0:SLOWMON:SLOWMONMS</pv_name>
+      <x>90</x>
+      <y>110</y>
+      <width>80</width>
+      <height>30</height>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <wrap_words>true</wrap_words>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Update_12</name>
+      <pv_name>${UUT}:0:SLOWMON:EN</pv_name>
+      <x>180</x>
+      <y>110</y>
+      <width>80</width>
+      <height>30</height>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <wrap_words>true</wrap_words>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -168,5 +177,26 @@
       <width>150</width>
       <tooltip>$(actions)</tooltip>
     </widget>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>${UUT}:0:SLOWMON:NACC</pv_name>
+    <y>190</y>
+    <width>80</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>${UUT}:0:SLOWMON:FS</pv_name>
+    <x>90</x>
+    <y>190</y>
+    <width>80</width>
+    <height>30</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
 </display>
