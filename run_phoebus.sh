@@ -8,8 +8,11 @@ if [ -z "$UUT" ]; then
 fi
 
 ROOT_DIR=$(dirname "$(realpath "$0")")
-JAVA_EXE="java -Dlog.level=DEBUG"
 PHOEBUS_JAR="$ROOT_DIR/product-4.7.3/product-4.7.3.jar"
+PHOEBUS_JAR=($ROOT_DIR/product-?.?.?/*.jar) #find all Jars
+PHOEBUS_JAR="${PHOEBUS_JAR[0]}" # Get First Jar
+
+JAVA_EXE="java -Dlog.level=DEBUG"
 SETTINGS_BASE="$ROOT_DIR/src/settings_base.ini"
 LAUNCHER="$ROOT_DIR/src/acq400_launcher.bob"
 RESOURCE="${LAUNCHER}"
