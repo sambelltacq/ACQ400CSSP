@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-07 15:39:05 by dt100-->
+<!--Saved on 2025-03-07 17:41:24 by dt100-->
 <display version="2.0.0">
   <name>Slowmon</name>
+  <scripts>
+    <script file="../scripts/handle_macro.py">
+      <pv_name>loc://strip_chans</pv_name>
+    </script>
+  </scripts>
   <widget type="label" version="2.0.0">
     <name>TITLE</name>
     <text>$(UUT) SLOWMON</text>
@@ -157,23 +162,40 @@
     <name>Group</name>
     <macros>
       <SITE>0</SITE>
+      <pvbase>=elementAt({UUT}:0:SLOWMON:MEAN, {chan})</pvbase>
     </macros>
-    <x>50</x>
+    <x>10</x>
     <y>280</y>
-    <width>150</width>
-    <height>30</height>
+    <width>320</width>
+    <height>60</height>
     <style>3</style>
     <transparent>true</transparent>
+    <widget type="textentry" version="3.0.0">
+      <name>INIT VALUE_5</name>
+      <pv_name>loc://strip_chans&lt;VString&gt;("1-4")</pv_name>
+      <x>10</x>
+      <y>10</y>
+      <width>141</width>
+      <height>30</height>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <wrap_words>true</wrap_words>
+    </widget>
     <widget type="action_button" version="3.0.0">
       <name>SLOWMON TEMP BUTTON</name>
       <actions>
         <action type="execute">
           <script file="../scripts/handle_action_button.py">
           </script>
-          <description>open ../strip_plot.bob</description>
+          <description>open strip_chart.bob</description>
         </action>
       </actions>
       <text>PLOT</text>
+      <x>151</x>
+      <y>10</y>
       <width>150</width>
       <tooltip>$(actions)</tooltip>
     </widget>

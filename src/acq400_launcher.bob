@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-07 15:29:04 by dt100-->
+<!--Saved on 2025-03-07 15:55:19 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -10,6 +10,7 @@
   <scripts>
     <script file="scripts/handle_macro.py">
       <pv_name>loc://SITE</pv_name>
+      <pv_name>loc://NSITES</pv_name>
       <pv_name>loc://pmode</pv_name>
       <pv_name>loc://ptype</pv_name>
       <pv_name>loc://pchans</pv_name>
