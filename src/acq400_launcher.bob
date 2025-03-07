@@ -570,7 +570,7 @@
       <name>Capture Button</name>
       <actions>
         <action type="execute">
-          <description>open capture.bob</description>
+          <description>open opi/capture.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
         </action>
@@ -588,7 +588,7 @@
       <name>Counters Button</name>
       <actions>
         <action type="execute">
-          <description>open counters.bob</description>
+          <description>open opi/counters.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
         </action>
@@ -606,7 +606,7 @@
       <name>Sync Button</name>
       <actions>
         <action type="execute">
-          <description>open sync.bob</description>
+          <description>open opi/sync.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
         </action>
@@ -624,7 +624,7 @@
       <name>Firmware Button</name>
       <actions>
         <action type="execute">
-          <description>open firmware.bob</description>
+          <description>open opi/firmware.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
         </action>
@@ -642,7 +642,7 @@
       <name>System Button</name>
       <actions>
         <action type="execute">
-          <description>open system.bob</description>
+          <description>open opi/system.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
         </action>
@@ -660,7 +660,7 @@
       <name>Counters Button_1</name>
       <actions>
         <action type="execute">
-          <description>open clocktree.bob</description>
+          <description>open opi/clocktree.bob</description>
           <script file="scripts/handle_action_button.py">
           </script>
         </action>
@@ -724,7 +724,7 @@
     <name>SLOWMON TEMP BUTTON</name>
     <actions>
       <action type="execute">
-        <description>open slowmon_strip.bob</description>
+        <description>open opi/slowmon_strip.bob</description>
         <script file="scripts/handle_action_button.py">
         </script>
       </action>
@@ -740,7 +740,7 @@
     <macros>
       <script>scripts/handle_action_button.py</script>
       <cmd>$(cmd=open)</cmd>
-      <opi>$(opi=xy_plot.bob)</opi>
+      <opi>$(opi=opi/xy_plot.bob)</opi>
     </macros>
     <x>319</x>
     <y>9</y>

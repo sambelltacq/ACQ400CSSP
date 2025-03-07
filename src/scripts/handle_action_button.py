@@ -38,5 +38,5 @@ if cmd == 'open':
     #pprint(macros)
 
     #open a new opi display
-    opi = "opi/{}".format(target)
-    ScriptUtil.openDisplay(display, opi, "TAB", macros)
+    #opi = "opi/{}".format(target)
+    ScriptUtil.openDisplay(display, target, "TAB", macros)
