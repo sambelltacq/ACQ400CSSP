@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-26 15:25:24 by dt100-->
+<!--Saved on 2025-03-11 17:38:34 by dt100-->
 <display version="2.0.0">
   <name>plot button</name>
   <width>80</width>
@@ -9,7 +9,7 @@
     <macros>
       <cmd>$(cmd=open)</cmd>
       <opi>$(opi=xy_plot.bob)</opi>
-      <pchans>$(pchans=01-08)</pchans>
+      <pchans>$(xy_chans=01-08)</pchans>
     </macros>
     <width>80</width>
     <height>30</height>
