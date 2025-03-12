@@ -11,7 +11,7 @@ logger = Logger.getLogger('init_main')
 widget = locals()['widget']
 pvs = locals()['pvs']
 display = widget.getTopDisplayModel()
-timeout = 2
+timeout = 2 * 1000
 
 # Functions
 class DotDict(dict):
@@ -27,11 +27,10 @@ def set_macros(widget, macros):
     new_macros = Macros()
     for key in macros:
         print(key, macros[key])
-        new_macros.add(key, macros[key])
+        new_macros.add(key, str(macros[key]))
     widget.setPropertyValue("macros", new_macros)
 
 def read_pv(pvname):
-    #timeout = 1000
     try: PV = PVUtil.createPV(pvname, timeout)
     except: return False
     return PVUtil.getVType(PV).getValue()
@@ -95,9 +94,9 @@ if model:
 
     for site in range(1, 6 + 1):
         pvname = "SITE_{}_MODEL".format(site)
-        value = sites[site] if site in sites else "none"
-        PVUtil.writePV("loc://{}".format(pvname), str(value), timeout)
-        macros[pvname] = str(value)
+        site_model = sites[site] if site in sites else "none"
+        PVUtil.writePV("loc://{}".format(pvname), str(site_model), timeout)
+        macros[pvname] = site_model
 
     set_macros(display, macros)
 
