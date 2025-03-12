@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-12 10:29:25 by dt100-->
+<!--Saved on 2025-03-12 14:49:38 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
     <DEBUG>$(DEBUG=false)</DEBUG>
+    <SITE>1</SITE>
+    <MODEL>none</MODEL>
+    <SITE_1_MODEL>none</SITE_1_MODEL>
+    <SITE_2_MODEL>none</SITE_2_MODEL>
+    <SITE_3_MODEL>none</SITE_3_MODEL>
+    <SITE_4_MODEL>none</SITE_4_MODEL>
+    <SITE_5_MODEL>none</SITE_5_MODEL>
+    <SITE_6_MODEL>none</SITE_6_MODEL>
   </macros>
   <width>770</width>
   <height>999</height>
@@ -725,6 +733,25 @@
       </actions>
       <text>MGT</text>
       <y>399</y>
+      <width>150</width>
+      <font>
+        <font family="Ubuntu" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>White Rabbit Button</name>
+      <actions>
+        <action type="execute">
+          <script file="scripts/handle_action_button.py">
+          </script>
+          <description>open opi/white_rabbit.bob</description>
+        </action>
+      </actions>
+      <text>White Rabbit</text>
+      <x>-1</x>
+      <y>439</y>
       <width>150</width>
       <font>
         <font family="Ubuntu" style="BOLD" size="14.0">
