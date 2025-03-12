@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-10 17:46:54 by dt100-->
+<!--Saved on 2025-03-12 10:21:52 by dt100-->
 <display version="2.0.0">
-  <name>XY Plot</name>
+  <name>Scope Plot</name>
   <macros>
     <mode_LIVE>WF</mode_LIVE>
     <mode_POST>TW</mode_POST>
