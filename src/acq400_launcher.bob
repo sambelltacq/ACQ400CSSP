@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-12 10:17:34 by dt100-->
+<!--Saved on 2025-03-12 10:29:25 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -959,6 +959,25 @@
     <text>DAC DC</text>
     <x>171</x>
     <y>330</y>
+    <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>DIO32 Button</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open opi/dio_32.bob</description>
+      </action>
+    </actions>
+    <text>DIO 32</text>
+    <x>171</x>
+    <y>370</y>
     <width>150</width>
     <font>
       <font family="Ubuntu" style="BOLD" size="14.0">
