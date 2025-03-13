@@ -19,7 +19,9 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
 
     ```bash
     │── ACQ400CSSP
-    │   │── run_phoebus 
+    │   │── run_phoebus
+    │   │── workspaces
+    │   │── src
     │   │── phoebus
     │   │   │── phoebus-4.7.3.jar
     ```
@@ -40,7 +42,19 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
 run_phoebus acq2106_999
 ```
 
-Can also click on the script in windows explorer 
+You can also click on the script in windows explorer 
 
 
+## Updating
 
+- Update the repo
+
+```bash
+git pull
+```
+
+- Erase outdated workspaces
+
+```bash
+rm -rf workspaces
+```
