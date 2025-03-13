@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-12 15:45:36 by dt100-->
+<!--Saved on 2025-03-12 16:21:07 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -1015,6 +1015,25 @@
     <text>AI Monitor</text>
     <x>171</x>
     <y>410</y>
+    <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Judgement Button</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open opi/judgement.bob</description>
+      </action>
+    </actions>
+    <text>Judgment</text>
+    <x>171</x>
+    <y>450</y>
     <width>150</width>
     <font>
       <font family="Ubuntu" style="BOLD" size="14.0">
