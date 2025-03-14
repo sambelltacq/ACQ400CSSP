@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 14:55:42 by dt100-->
+<!--Saved on 2025-03-14 11:47:43 by dt100-->
 <display version="2.0.0">
   <name>Capture</name>
-  <width>730</width>
-  <height>750</height>
+  <width>1330</width>
+  <height>1020</height>
   <widget type="led" version="2.0.0">
     <name>Ready</name>
     <pv_name>${UUT}:IOC_READY</pv_name>
@@ -48,16 +48,16 @@
     <x>10</x>
     <y>280</y>
     <width>710</width>
-    <height>230</height>
+    <height>250</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Signals</name>
     <file>components/capture/capture_signals.bob</file>
     <x>10</x>
-    <y>530</y>
+    <y>550</y>
     <width>710</width>
-    <height>220</height>
+    <height>210</height>
     <resize>2</resize>
   </widget>
   <widget type="template" version="2.0.0">
@@ -75,6 +75,15 @@
     <y>400</y>
     <width>580</width>
     <height>270</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <file>components/capture/dataflow.bob</file>
+    <x>740</x>
+    <y>690</y>
+    <width>580</width>
+    <height>330</height>
     <resize>2</resize>
   </widget>
 </display>
