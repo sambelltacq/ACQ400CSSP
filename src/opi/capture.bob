@@ -1,89 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 11:47:43 by dt100-->
+<!--Saved on 2025-03-14 15:41:56 by dt100-->
 <display version="2.0.0">
   <name>Capture</name>
   <width>1330</width>
   <height>1020</height>
-  <widget type="led" version="2.0.0">
-    <name>Ready</name>
-    <pv_name>${UUT}:IOC_READY</pv_name>
-    <x>10</x>
-    <y>40</y>
-    <width>42</width>
-    <height>42</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Capture Label</name>
-    <text>$(UUT) Capture</text>
-    <x>10</x>
-    <width>320</width>
-    <height>25</height>
-    <font>
-      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
-      </font>
-    </font>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Capture State Bar</name>
-    <file>components/capture/capture_state.bob</file>
-    <x>90</x>
-    <y>40</y>
-    <width>627</width>
-    <height>42</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Transient</name>
-    <file>components/capture/transient.bob</file>
-    <x>10</x>
-    <y>100</y>
-    <width>710</width>
-    <height>160</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Stream</name>
-    <file>components/capture/stream.bob</file>
-    <x>10</x>
-    <y>280</y>
-    <width>710</width>
-    <height>250</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Signals</name>
-    <file>components/capture/capture_signals.bob</file>
-    <x>10</x>
-    <y>550</y>
-    <width>710</width>
-    <height>210</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="template" version="2.0.0">
-    <name>SyncRole</name>
-    <file>components/capture/sync_role.bob</file>
-    <x>740</x>
-    <y>100</y>
-    <width>580</width>
-    <height>280</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Stats</name>
-    <file>components/capture/stats.bob</file>
-    <x>740</x>
-    <y>400</y>
-    <width>580</width>
-    <height>270</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Embedded Display_1</name>
-    <file>components/capture/dataflow.bob</file>
-    <x>740</x>
-    <y>690</y>
-    <width>580</width>
-    <height>330</height>
-    <resize>2</resize>
+  <widget type="group" version="3.0.0">
+    <name>CAPTURE</name>
+    <width>1330</width>
+    <height>1120</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="3.0.0">
+      <name>CAPTURE INNER</name>
+      <x>10</x>
+      <y>10</y>
+      <width>1310</width>
+      <height>1080</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Capture Label</name>
+        <text>$(UUT) Capture</text>
+        <width>320</width>
+        <height>30</height>
+        <font>
+          <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+          </font>
+        </font>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="embedded" version="2.0.0">
+        <name>Transient</name>
+        <file>components/capture/transient.bob</file>
+        <y>120</y>
+        <width>710</width>
+        <height>160</height>
+        <resize>2</resize>
+      </widget>
+      <widget type="embedded" version="2.0.0">
+        <name>Stream</name>
+        <file>components/capture/stream.bob</file>
+        <y>300</y>
+        <width>710</width>
+        <height>220</height>
+        <resize>2</resize>
+      </widget>
+      <widget type="embedded" version="2.0.0">
+        <name>Signals</name>
+        <file>components/capture/capture_signals.bob</file>
+        <y>540</y>
+        <width>710</width>
+        <height>210</height>
+        <resize>2</resize>
+      </widget>
+      <widget type="template" version="2.0.0">
+        <name>SyncRole</name>
+        <file>components/capture/sync_role.bob</file>
+        <x>730</x>
+        <y>40</y>
+        <width>580</width>
+        <height>240</height>
+      </widget>
+      <widget type="embedded" version="2.0.0">
+        <name>Stats</name>
+        <file>components/capture/stats.bob</file>
+        <x>730</x>
+        <y>310</y>
+        <width>580</width>
+        <height>210</height>
+        <resize>2</resize>
+      </widget>
+      <widget type="embedded" version="2.0.0">
+        <name>DATAFLOW</name>
+        <file>components/capture/dataflow.bob</file>
+        <x>730</x>
+        <y>540</y>
+        <width>580</width>
+        <height>330</height>
+        <resize>2</resize>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>STATUS</name>
+        <y>40</y>
+        <width>710</width>
+        <height>60</height>
+        <style>3</style>
+        <background_color>
+          <color name="Read_Background" red="240" green="240" blue="240">
+          </color>
+        </background_color>
+        <widget type="group" version="3.0.0">
+          <name>STATUS INNER</name>
+          <x>10</x>
+          <y>10</y>
+          <width>692</width>
+          <height>40</height>
+          <style>3</style>
+          <transparent>true</transparent>
+          <widget type="embedded" version="2.0.0">
+            <name>Capture State Bar</name>
+            <file>components/capture/capture_state.bob</file>
+            <x>42</x>
+            <width>650</width>
+            <height>40</height>
+            <resize>2</resize>
+            <transparent>true</transparent>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>Ready</name>
+            <pv_name>${UUT}:IOC_READY</pv_name>
+            <y>5</y>
+            <width>30</width>
+            <height>30</height>
+          </widget>
+        </widget>
+      </widget>
+    </widget>
   </widget>
 </display>

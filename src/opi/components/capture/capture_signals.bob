@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 11:31:06 by dt100-->
+<!--Saved on 2025-03-14 15:47:19 by dt100-->
 <display version="2.0.0">
   <name>capture_signals</name>
   <width>710</width>
@@ -303,7 +303,7 @@
           <site>1</site>
         </macros>
         <y>40</y>
-        <width>360</width>
+        <width>350</width>
         <height>150</height>
         <style>3</style>
         <transparent>true</transparent>
@@ -332,13 +332,13 @@
               </macros>
             </instance>
           </instances>
-          <width>360</width>
+          <width>350</width>
           <height>150</height>
           <transparent>true</transparent>
         </widget>
         <widget type="group" version="3.0.0">
           <name>Disable Cover</name>
-          <width>360</width>
+          <width>350</width>
           <height>150</height>
           <visible>false</visible>
           <style>3</style>
@@ -361,10 +361,8 @@
           <widget type="label" version="2.0.0">
             <name>Disabled Lable</name>
             <text>NOT IDLE</text>
-            <x>130</x>
-            <y>70</y>
-            <width>84</width>
-            <height>21</height>
+            <width>350</width>
+            <height>150</height>
             <font>
               <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
               </font>
@@ -374,7 +372,7 @@
               </color>
             </background_color>
             <horizontal_alignment>1</horizontal_alignment>
-            <auto_size>true</auto_size>
+            <vertical_alignment>1</vertical_alignment>
           </widget>
         </widget>
       </widget>
