@@ -22,11 +22,13 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
     │   │── run_phoebus
     │   │── workspaces
     │   │── src
-    │   │── phoebus
-    │   │   │── phoebus-4.7.3.jar
+    │   │── product-1.2.3
+    │   │   │── phoebus-1.2.3.jar
     ```
 
-- Edit the run_phoebus script and set the PHOEBUS_JAR var to the correct path
+- The run script will try to find the phoebus jar within the directory
+- You can also hardcode the path by editing the PHOEBUS_JAR var within the script
+
 ## Usage
 
 
@@ -42,7 +44,7 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
 run_phoebus acq2106_999
 ```
 
-You can also click on the script in windows explorer 
+We recommend creating a shotcut to the run script
 
 
 ## Updating

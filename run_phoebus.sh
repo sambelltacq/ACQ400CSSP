@@ -3,14 +3,29 @@
 UUT=$1
 
 if [ -z "$UUT" ]; then
-    echo "Usage: $0 <UUT NAME>"
+    echo -e "\n[ACQ400CSSP]"
+    read -p "Connect to UUT : " UUT
+fi
+
+if [ ${#UUT} -lt 8 ]; then
+    echo "Invalid UUT"
     exit 1
 fi
 
 ROOT_DIR=$(dirname "$(realpath "$0")")
-PHOEBUS_JAR="$ROOT_DIR/product-4.7.3/product-4.7.3.jar"
-PHOEBUS_JAR=($ROOT_DIR/product-?.?.?/*.jar) #find all Jars
-PHOEBUS_JAR="${PHOEBUS_JAR[0]}" # Get First Jar
+PHOEBUS_JAR="$ROOT_DIR/product-4.7.3/product-4.7.3.jar" #CHANGE ME
+
+# Attempt to locate a phobus jar if not found
+if ! [ -f "$PHOEBUS_JAR" ]; then
+    shopt -s nullglob
+    PHOEBUS_JAR=($ROOT_DIR/product-*/*.jar)
+    if [ ${#PHOEBUS_JAR[@]} -eq 0 ]; then
+        echo "Error: Unable to locate phoebus jar"
+        exit 1
+    fi
+    PHOEBUS_JAR="${PHOEBUS_JAR[0]}"
+    echo "Found phobus jar ${PHOEBUS_JAR}"
+fi
 
 JAVA_EXE="java -Dlog.level=DEBUG"
 SETTINGS_BASE="$ROOT_DIR/src/settings_base.ini"
@@ -21,6 +36,9 @@ WORKSPACE="$ROOT_DIR/workspaces/$UUT"
 JAVA_PREFS="-Dphoebus.user=${WORKSPACE} -Dphoebus.folder.name.preference="
 SETTINGS="$WORKSPACE/settings.ini"
 MEMENTO="$WORKSPACE/memento"
+
+export EPICS_PVA_ADDR_LIST="${UUT}"
+export EPICS_CA_ADDR_LIST="${UUT}"
 
 if [ ! -f "$MEMENTO" ]; then
     echo "Creating new workspace $WORKSPACE"
