@@ -26,7 +26,6 @@ def get_macros(widget):
 def set_macros(widget, macros):
     new_macros = Macros()
     for key in macros:
-        print(key, macros[key])
         new_macros.add(key, str(macros[key]))
     widget.setPropertyValue("macros", new_macros)
 
@@ -72,7 +71,7 @@ model = get_model(uutname)
 
 
 if model:
-    time.sleep(0.1)
+    time.sleep(0.3)
     macros = get_macros(display)
     macros.UUT = uutname
 
