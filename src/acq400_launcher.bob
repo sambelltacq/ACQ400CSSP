@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-13 15:08:31 by dt100-->
+<!--Saved on 2025-03-19 12:55:59 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -1052,6 +1052,25 @@
     <text>Judgement</text>
     <x>171</x>
     <y>450</y>
+    <width>150</width>
+    <font>
+      <font family="Ubuntu" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>AWG Button</name>
+    <actions>
+      <action type="execute">
+        <script file="scripts/handle_action_button.py">
+        </script>
+        <description>open opi/awg.bob</description>
+      </action>
+    </actions>
+    <text>AWG</text>
+    <x>171</x>
+    <y>490</y>
     <width>150</width>
     <font>
       <font family="Ubuntu" style="BOLD" size="14.0">
