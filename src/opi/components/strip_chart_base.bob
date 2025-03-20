@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-10 17:41:02 by dt100-->
+<!--Saved on 2025-03-20 16:27:21 by dt100-->
 <display version="2.0.0">
   <name>Strip Chart Base</name>
   <widget type="textupdate" version="2.0.0">
@@ -14,10 +14,10 @@
       <SITE>$(SITE=0)</SITE>
       <NSITES>$(NSITES=6)</NSITES>
       <pv_fmt>$(pv_fmt==elementAt({UUT}:0:SLOWMON:MEAN, {chan} - 1))</pv_fmt>
-      <ptitle>$(ptitle=Strip Chart)</ptitle>
       <name_fmt>$(name_fmt=$(pv_fmt))</name_fmt>
       <y_label>$(y_label=Volts (V))</y_label>
       <max_traces>$(max_traces=8)</max_traces>
+      <title_fmt>$(title_fmt=Strip Chart)</title_fmt>
     </macros>
     <width>800</width>
     <height>600</height>
