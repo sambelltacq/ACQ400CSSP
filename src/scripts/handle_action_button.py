@@ -27,16 +27,13 @@ def get_target(widget, propname="tooltip"):
 
 logger.info('Pressed {}'.format(widget))
 
-cmd, target, macros = get_target(widget)
-macros.update(get_macros(widget)) #merge widget macros
-macros.update(get_macros(display)) #merge display macros
-macros['timestamp'] = str(int(time.time()))
+# Combine macros from display, widget and button
+cmd, target, button_macros = get_target(widget)
+passed_macros = get_macros(widget)
+passed_macros.update(get_macros(display))
+passed_macros.update(button_macros)
+passed_macros['timestamp'] = str(int(time.time()))
+
 
 if cmd == 'open':
-    
-    #from pprint import pprint
-    #pprint(macros)
-
-    #open a new opi display
-    #opi = "opi/{}".format(target)
-    ScriptUtil.openDisplay(display, target, "TAB", macros)
+    ScriptUtil.openDisplay(display, target, "TAB", passed_macros)

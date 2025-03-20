@@ -60,7 +60,8 @@ SITE        Target site 0-6: to Module -1: to UUT
 NSITES      Total sites
 strip_chans channels to plot ie 1,2,3,4-8
 pv_fmt      Trace pv format ie "=elementAt({UUT}:0:SLOWMON:MEAN, {chan} - 1)"
-name_fmt    Trace name format ie "{UUT}:{SITE}:{chan}
+name_fmt    Trace name format ie "{UUT}:{SITE}:{chan}"
+title_fmt   Title format ie "{UUT}:{SITE} {pchans} {xy_type} {xy_mode}"
 max_traces  Max traces to allow 1-8
 """
 
@@ -72,11 +73,13 @@ nsites = int(macros.NSITES)
 pv_fmt = macros.pv_fmt
 name_fmt = macros.name_fmt
 max_traces = int(macros.max_traces)
+title_fmt = macros.title_fmt
 
 chans = list_of_channels(macros.pchans)
 chanmap = {site: chans}
 
 if site < 0:
+    macros.SITE = 0
     current = 0
     chanmap = {}
     for site_idx in range(1, nsites + 1):
@@ -88,6 +91,9 @@ if site < 0:
             if chans[0] > nchan: break
             chanmap[site_idx].append(chans.pop(0) - current)
         current = nchan
+
+widget.propTitle().setValue(title_fmt.format(**macros))
+
 
 current = 0
 for site in chanmap:
