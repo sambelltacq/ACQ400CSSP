@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-19 17:59:54 by dt100-->
+<!--Saved on 2025-03-20 11:37:49 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -17,6 +17,10 @@
     </script>
     <script file="scripts/init_main.py">
       <pv_name>loc://UUT</pv_name>
+    </script>
+    <script file="scripts/handle_site.py">
+      <pv_name>loc://SITE</pv_name>
+      <pv_name trigger="false">loc://UUT</pv_name>
     </script>
   </scripts>
   <widget type="group" version="3.0.0">
@@ -340,7 +344,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_8</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -355,11 +359,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_8</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -378,7 +382,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_9</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -393,11 +397,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_9</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -416,7 +420,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_10</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -431,11 +435,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_10</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -454,7 +458,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_11</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -469,11 +473,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_11</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -492,7 +496,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_12</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -507,11 +511,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_12</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -530,7 +534,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_13</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -545,11 +549,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_13</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -568,7 +572,7 @@
               <widget type="label" version="2.0.0">
                 <name>INIT NAME_6</name>
                 <text>$(label)</text>
-                <width>70</width>
+                <width>50</width>
                 <font>
                   <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                   </font>
@@ -583,11 +587,11 @@
               <widget type="textupdate" version="2.0.0">
                 <name>INIT VALUE_6</name>
                 <pv_name>$(pvname)&lt;$(pvtype)&gt;($(pvvalue))</pv_name>
-                <x>80</x>
-                <width>70</width>
+                <x>60</x>
+                <width>80</width>
                 <precision>0</precision>
-                <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
+                <tooltip>$(pv_value)</tooltip>
               </widget>
             </widget>
             <widget type="led" version="2.0.0">
@@ -1026,6 +1030,19 @@
               </font>
             </font>
             <tooltip>$(actions)</tooltip>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update</name>
+            <pv_name>loc://SITE_MODEL</pv_name>
+            <x>130</x>
+            <width>270</width>
+            <height>30</height>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <transparent>true</transparent>
+            <vertical_alignment>1</vertical_alignment>
           </widget>
         </widget>
       </widget>

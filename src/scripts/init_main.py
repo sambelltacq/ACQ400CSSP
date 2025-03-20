@@ -93,10 +93,14 @@ if model:
 
     for site in range(1, 6 + 1):
         pvname = "SITE_{}_MODEL".format(site)
-        site_model = sites[site] if site in sites else "none"
+        site_model = "none"
+        if site in sites:
+            site_model = read_pv("{}:{}:PART_NUM".format(uutname, site))
+        #site_model = sites[site] if site in sites else "none"
         PVUtil.writePV("loc://{}".format(pvname), str(site_model), timeout)
         macros[pvname] = site_model
 
     set_macros(display, macros)
+    PVUtil.writePV('loc://SITE', 1, timeout)
 
 logger.info("Complete {:0.2f}s".format(time.time() - t0))
