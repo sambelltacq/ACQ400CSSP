@@ -3,6 +3,7 @@
 
 Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) for [D-Tacq](https://d-tacq.co.uk/) Digitizers.
 
+![multi_1_opi](https://github.com/sambelltacq/ACQ400CSSP/releases/download/v1.0.0/multi_1_opi.png)
 
 ## Installation
 
