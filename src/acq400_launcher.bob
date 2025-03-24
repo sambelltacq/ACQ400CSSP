@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-20 15:05:06 by dt100-->
+<!--Saved on 2025-03-24 15:09:41 by dt100-->
 <display version="2.0.0">
   <name>acq400_launcher</name>
   <macros>
@@ -622,30 +622,6 @@
                 <border_alarm_sensitive>false</border_alarm_sensitive>
               </widget>
             </widget>
-            <widget type="led" version="2.0.0">
-              <name>LED_1</name>
-              <pv_name>${UUT}:IOC_READY</pv_name>
-              <y>40</y>
-              <width>150</width>
-              <off_color>
-                <color name="MAJOR" red="255" green="0" blue="0">
-                </color>
-              </off_color>
-              <on_label>Ready</on_label>
-              <line_color>
-                <color name="Transparent" red="255" green="255" blue="255" alpha="0">
-                </color>
-              </line_color>
-              <square>true</square>
-              <rules>
-                <rule name="UPDATE_UUT" prop_id="pv_name" out_exp="true">
-                  <exp bool_exp="true">
-                    <expression>"{}:IOC_READY".format(pvStr0)</expression>
-                  </exp>
-                  <pv_name>loc://UUT</pv_name>
-                </rule>
-              </rules>
-            </widget>
             <widget type="textentry" version="3.0.0">
               <name>UUT Input</name>
               <pv_name>loc://UUT&lt;VString&gt;($(UUT))</pv_name>
@@ -660,6 +636,22 @@
                 </color>
               </background_color>
               <horizontal_alignment>1</horizontal_alignment>
+            </widget>
+            <widget type="embedded" version="2.0.0">
+              <name>CONNECTION STATUS</name>
+              <macros>
+                <UUT1>$(UUT1=$(UUT))</UUT1>
+              </macros>
+              <file>opi/components/launcher/connected.bob</file>
+              <y>40</y>
+              <width>150</width>
+              <height>30</height>
+              <resize>2</resize>
+              <scripts>
+                <script file="scripts/handle_conn_status.py">
+                  <pv_name>loc://UUT</pv_name>
+                </script>
+              </scripts>
             </widget>
           </widget>
           <widget type="picture" version="2.0.0">
