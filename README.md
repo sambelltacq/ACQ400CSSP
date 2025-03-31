@@ -13,40 +13,45 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
     cd ACQ400CSSP
     ```
 
-- Install [JDK17](https://adoptium.net/en-GB/temurin/archive/?version=17)
-- Download and extract phoebus https://www.controlsystemstudio.org/download/
+- Install [Java17](https://adoptium.net/en-GB/temurin/archive/?version=17)
+- Download and extract [Phoebus](https://www.controlsystemstudio.org/download/)
 
-- For ease of installation extract the phoebus jar directory to the repo directory ie.
+- For ease of installation extract or link the phoebus jar directory to the repo e.g.
 
     ```bash
     │── ACQ400CSSP
-    │   │── run_phoebus
+    │   │── ACQ400CSSP_launcher
     │   │── workspaces
-    │   │── src
-    │   │── product-1.2.3
-    │   │   │── phoebus-1.2.3.jar
+    │   │── CSSP.conf
+    │   │── product-0.0.0
+    │   │   │── phoebus-0.0.0.jar
     ```
 
-- The run script will try to find the phoebus jar within the directory
-- You can also hardcode the path by editing the PHOEBUS_JAR var within the script
+- You can create a CSSP.conf file to hardcode paths if needed:
+
+    ```bash
+    JAVA_BIN=C:\Program Files\Eclipse Adoptium\jre-17.0.12.7-hotspot\bin\java.exe
+    PHOEBUS_JAR=C:\Users\USER\PROJECTS\ACQ400CSSP\phoebus-4.7.4-SNAPSHOT\product-4.7.4-SNAPSHOT.jar
+    ```
 
 ## Usage
 
+#### Python (recommended)
+```bash
+./ACQ400CSSP_launcher.py acq2106_999
+```
 
-#### Linux
+##### Linux
 
 ```bash
 ./run_phoebus acq2106_999
 ```
 
-#### Windows
+##### Windows
 
 ```bash
 run_phoebus acq2106_999
 ```
-
-We recommend creating a shotcut to the run script
-
 
 ## Updating
 
