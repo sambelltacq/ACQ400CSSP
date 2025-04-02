@@ -45,12 +45,15 @@ def run_main(args):
     init_memento(args)
 
     CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} {TARGET}')
-    Popen(CMD, shell=True, stdout=DEVNULL, stderr=DEVNULL, start_new_session=True, env=ENV)
 
     if args.debug:
+        run(CMD, shell=True, env=ENV, text=True)
         print("CMD", CMD)
         print(globals())
         input()
+        return
+
+    Popen(CMD, shell=True, stdout=DEVNULL, stderr=DEVNULL, start_new_session=True, env=ENV)
 
 def read_conf():
     conf = {}
@@ -162,7 +165,7 @@ def run_cmd(cmd):
 def get_parser():
     parser = argparse.ArgumentParser(description='Start script for ACQ400CSSP')
     parser.add_argument('--debug', default=False, type=bool, help="enable debug")
-    parser.add_argument('uuts', nargs='?', help="uut hostnames")
+    parser.add_argument('uuts', nargs='*', help="uut hostnames")
     return parser
 
 if __name__ == '__main__':
