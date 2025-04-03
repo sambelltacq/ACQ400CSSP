@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-06 12:24:16 by sam-->
+<!--Saved on 2025-04-03 10:05:40 by dt100-->
 <display version="2.0.0">
   <name>Sync</name>
   <width>910</width>
@@ -673,7 +673,7 @@
               <horizontal_alignment>2</horizontal_alignment>
               <rules>
                 <rule name="ENABLE_WHEN_NOT_DO" prop_id="enabled" out_exp="true">
-                  <exp bool_exp="pv0&gt;1">
+                  <exp bool_exp="pv0&lt;=1">
                     <expression>true</expression>
                   </exp>
                   <exp bool_exp="true">
@@ -718,7 +718,7 @@
               <horizontal_alignment>2</horizontal_alignment>
               <rules>
                 <rule name="ENABLE_WHEN_NOT_DO" prop_id="enabled" out_exp="true">
-                  <exp bool_exp="pv0&gt;1">
+                  <exp bool_exp="pv0&lt;=1">
                     <expression>true</expression>
                   </exp>
                   <exp bool_exp="true">
@@ -763,7 +763,7 @@
               <horizontal_alignment>2</horizontal_alignment>
               <rules>
                 <rule name="ENABLE_WHEN_NOT_DO" prop_id="enabled" out_exp="true">
-                  <exp bool_exp="pv0&gt;1">
+                  <exp bool_exp="pv0&lt;=1">
                     <expression>true</expression>
                   </exp>
                   <exp bool_exp="true">
@@ -808,7 +808,7 @@
               <horizontal_alignment>2</horizontal_alignment>
               <rules>
                 <rule name="ENABLE_WHEN_NOT_DO" prop_id="enabled" out_exp="true">
-                  <exp bool_exp="pv0&gt;1">
+                  <exp bool_exp="pv0&lt;=1">
                     <expression>true</expression>
                   </exp>
                   <exp bool_exp="true">
