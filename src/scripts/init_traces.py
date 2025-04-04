@@ -6,24 +6,24 @@ from  org.csstudio.display.builder.model.properties import WidgetColor
 """ Init Strip Plot from macros """
 
 # Startup
-logger = Logger.getLogger('init traces')
+logger = Logger.getLogger('init_traces')
 widget = locals()['widget']
 pvs = locals()['pvs']
 display = widget.getTopDisplayModel()
+timeout = 1 * 1000
 
 colors = (
-    (21, 21, 196), # Blue
-    (242, 26, 26), # Red
-    (33, 179, 33), # Green
-    (0, 0, 0), # Black
-    (128, 0, 255), # Purple
-    (255, 170, 0), # Orange
-    (255, 0, 240), #Magenta
-    (243, 132, 132), #Coral
+    (21, 21, 196),      # Blue
+    (242, 26, 26),      # Red
+    (33, 179, 33),      # Green
+    (0, 0, 0),          # Black
+    (128, 0, 255),      # Purple
+    (255, 170, 0),      # Orange
+    (255, 0, 240),      # Magenta
+    (243, 132, 132),    # Coral
 )
 
 # Functions
-
 class DotDict(dict):
     __delattr__ = dict.__delitem__
     __getattr__ = dict.__getitem__
@@ -50,63 +50,48 @@ def read_pv(pvname):
     return PVUtil.getVType(PV).getValue()
 
 
-
 # Main
-"""
-Macro Args
-
-UUT         Target uut
-SITE        Target site 0-6: to Module -1: to UUT
-NSITES      Total sites
-strip_chans channels to plot ie 1,2,3,4-8
-pv_fmt      Trace pv format ie "=elementAt({UUT}:0:SLOWMON:MEAN, {chan} - 1)"
-name_fmt    Trace name format ie "{UUT}:{SITE}:{chan}"
-title_fmt   Title format ie "{UUT}:{SITE} {pchans} {xy_type} {xy_mode}"
-max_traces  Max traces to allow 1-8
-"""
-
 macros = get_macros(widget)
 
-uut = macros.UUT
-site = int(macros.SITE)
-nsites = int(macros.NSITES)
-pv_fmt = macros.pv_fmt
-name_fmt = macros.name_fmt
-max_traces = int(macros.max_traces)
-title_fmt = macros.title_fmt
+UUT = macros.UUT                            #Target UUT
+SITE = int(macros.SITE)                     #Target Site (-1 for all)
+SITES = macros.SITES                        #Valid Sites
+NSITES = len(SITES)                         #Total Sites
+CHANS = list_of_channels(macros.CHANS)      #Target Channels
+PV_FMT  = macros.PV_FMT                     #Format of trace pv
+NAME_FMT = macros.NAME_FMT                  #Format of trace name
+TITLE_FMT = macros.TITLE_FMT                #Scope title fmt
+MAX_TRACES = int(macros.MAX_TRACES)         #Max traces
 
-chans = list_of_channels(macros.pchans)
-chanmap = {site: chans}
-
-if site < 0:
-    macros.SITE = 0
+chanmap = {SITE: CHANS}
+if SITE < 0:
+    macros.SITE = ""
     current = 0
     chanmap = {}
-    for site_idx in range(1, nsites + 1):
-        if not len(chans) > 0: break
-        nchan_pv = "{}:{}:NCHAN".format(uut, site_idx)
+    for site_idx in range(1, NSITES + 1):
+        if not len(CHANS) > 0: break
+        nchan_pv = "{}:{}:NCHAN".format(UUT, site_idx)
         nchan = current + read_pv(nchan_pv)
         chanmap[site_idx] = []
-        while len(chans) > 0:
-            if chans[0] > nchan: break
-            chanmap[site_idx].append(chans.pop(0) - current)
+        while len(CHANS) > 0:
+            if CHANS[0] > nchan: break
+            chanmap[site_idx].append(CHANS.pop(0) - current)
         current = nchan
 
-widget.propTitle().setValue(title_fmt.format(**macros))
+widget.propTitle().setValue(TITLE_FMT.format(**macros))
 
-
+logger.info("Chanmap: {}".format(repr(chanmap)))
 current = 0
 for site in chanmap:
-    macros.site = site
     for chan in chanmap[site]:
-        if current >= max_traces: break
+        if current >= MAX_TRACES: break
         macros.site = site
         macros.chan = chan
-        trace_pv = pv_fmt.format(**macros)
-        trace_name = name_fmt.format(**macros)
+        trace_pv = PV_FMT.format(**macros)
+        trace_name = NAME_FMT.format(**macros)
         trace_color = WidgetColor(*colors[current])
 
-        logger.info("CH{} PV {} Trace {} Name {}".format(chan, trace_pv, current, trace_name))
+        logger.info("Trace[{}] Site[{}] CH[{}] PV {}".format(current, site, chan, trace_pv, current))
         widget.setPropertyValue("traces[{}].color".format(current), trace_color)
         widget.setPropertyValue("traces[{}].name".format(current), trace_name)
         widget.setPropertyValue("traces[{}].y_pv".format(current), trace_pv)
