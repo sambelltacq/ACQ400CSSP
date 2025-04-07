@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-19 16:09:08 by dt100-->
+<!--Saved on 2025-04-07 15:35:05 by dt100-->
 <display version="2.0.0">
   <name>DAC DC</name>
   <width>1170</width>
   <height>1190</height>
   <widget type="group" version="3.0.0">
     <name>DAC DC</name>
+    <macros>
+      <GAIN_AO424ELF>RANGE</GAIN_AO424ELF>
+      <GAIN>$(GAIN_$(SITE_MODEL)=AO:GAIN:CH)</GAIN>
+      <PREFIX_AO424ELF>0</PREFIX_AO424ELF>
+      <PREFIX>$(PREFIX_$(SITE_MODEL)=)</PREFIX>
+    </macros>
     <x>10</x>
     <y>10</y>
     <width>1170</width>
@@ -18,47 +24,47 @@
       <instances>
         <instance>
           <macros>
-            <id>1</id>
+            <id>$(PREFIX)1</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>2</id>
+            <id>$(PREFIX)2</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>3</id>
+            <id>$(PREFIX)3</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>4</id>
+            <id>$(PREFIX)4</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>5</id>
+            <id>$(PREFIX)5</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>6</id>
+            <id>$(PREFIX)6</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>7</id>
+            <id>$(PREFIX)7</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>8</id>
+            <id>$(PREFIX)8</id>
           </macros>
         </instance>
         <instance>
           <macros>
-            <id>9</id>
+            <id>$(PREFIX)9</id>
           </macros>
         </instance>
         <instance>
@@ -187,8 +193,8 @@
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_6</name>
-      <text>$(UUT):$(SITE) DAC DC CONTROL</text>
-      <width>380</width>
+      <text>$(UUT):$(SITE) DAC DC CONTROL $(SITE_MODEL)</text>
+      <width>1020</width>
       <height>30</height>
       <font>
         <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
@@ -198,11 +204,23 @@
     </widget>
     <widget type="group" version="3.0.0">
       <name>REFERENCE</name>
+      <x>350</x>
       <y>50</y>
       <width>170</width>
       <height>30</height>
       <style>3</style>
       <transparent>true</transparent>
+      <rules>
+        <rule name="NO_REF" prop_id="visible" out_exp="true">
+          <exp bool_exp="&quot;$(SITE_MODEL)&quot;.startswith(&quot;AO424&quot;)">
+            <expression>false</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>true</expression>
+          </exp>
+          <pv_name>=abs(1)</pv_name>
+        </rule>
+      </rules>
       <widget type="combo" version="2.0.0">
         <name>Combo Box</name>
         <pv_name>${UUT}:${SITE}:AO:REF</pv_name>
@@ -224,7 +242,6 @@
     </widget>
     <widget type="group" version="3.0.0">
       <name>SOURCE</name>
-      <x>170</x>
       <y>50</y>
       <width>170</width>
       <height>30</height>
@@ -251,7 +268,7 @@
     </widget>
     <widget type="group" version="3.0.0">
       <name>TRIGGER</name>
-      <x>340</x>
+      <x>170</x>
       <y>50</y>
       <width>170</width>
       <height>30</height>

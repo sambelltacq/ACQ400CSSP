@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 11:55:01 by dt100-->
+<!--Saved on 2025-04-08 10:43:58 by dt100-->
 <display version="2.0.0">
   <name>DC Slider</name>
   <width>120</width>
@@ -72,9 +72,10 @@
       </widget>
       <widget type="combo" version="2.0.0">
         <name>Combo Box</name>
-        <pv_name>${UUT}:${SITE}:AO:GAIN:CH:${id}</pv_name>
+        <pv_name>${UUT}:${SITE}:$(GAIN):${id}</pv_name>
         <y>210</y>
         <height>20</height>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update</name>
