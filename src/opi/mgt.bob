@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-11 12:57:05 by dt100-->
+<!--Saved on 2025-04-08 16:56:32 by dt100-->
 <display version="2.0.0">
-  <name>Mgt</name>
+  <name>MGT$(MUUT)</name>
   <width>1310</width>
   <height>1300</height>
   <widget type="label" version="2.0.0">

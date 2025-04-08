@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-20 12:52:05 by dt100-->
+<!--Saved on 2025-04-08 16:54:25 by dt100-->
 <display version="2.0.0">
-  <name>GAINS</name>
+  <name>GAINS$(MUUT):$(SITE)</name>
   <width>920</width>
   <height>390</height>
   <widget type="group" version="3.0.0">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-12 11:32:17 by dt100-->
+<!--Saved on 2025-04-08 16:53:48 by dt100-->
 <display version="2.0.0">
-  <name>DIO 32</name>
+  <name>DIO_32$(MUUT):$(SITE)</name>
   <width>630</width>
   <height>290</height>
   <widget type="group" version="3.0.0">

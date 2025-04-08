@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 15:41:56 by dt100-->
+<!--Saved on 2025-04-08 16:55:15 by dt100-->
 <display version="2.0.0">
-  <name>Capture</name>
+  <name>Capture$(MUUT)</name>
   <width>1330</width>
   <height>1020</height>
   <widget type="group" version="3.0.0">

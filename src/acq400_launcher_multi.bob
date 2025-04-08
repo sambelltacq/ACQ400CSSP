@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 14:26:04 by dt100-->
+<!--Saved on 2025-04-08 16:47:23 by dt100-->
 <display version="2.0.0">
-  <name>acq400 launcher multi</name>
+  <name>Launcher Multi</name>
   <macros>
     <LAUNCHER>acq400_launcher_multi.bob</LAUNCHER>
     <UUT1>$(UUT1=none)</UUT1>

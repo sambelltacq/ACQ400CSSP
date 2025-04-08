@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-19 15:30:24 by dt100-->
+<!--Saved on 2025-04-08 16:53:37 by dt100-->
 <display version="2.0.0">
-  <name>AWG</name>
+  <name>AWG$(MUUT):$(SITE)</name>
   <width>670</width>
   <height>920</height>
   <background_color>
