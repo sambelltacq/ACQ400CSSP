@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-02 16:55:19 by dt100-->
+<!--Saved on 2025-04-08 17:43:39 by dt100-->
 <display version="2.0.0">
-  <name>Scope $(UUT) $(SCOPE_CHANS)</name>
+  <name>Scope$(MUUT):$(SITE_TITLE) $(SCOPE_CHANS)</name>
   <macros>
     <CHANS>$(SCOPE_CHANS=1-8)</CHANS>
     <mode_LIVE>WF</mode_LIVE>
@@ -14,6 +14,11 @@
     <label_VOLTS>Volts (V)</label_VOLTS>
     <y_label>$(label_$(SCOPE_TYPE))</y_label>
     <trace_fmt>a</trace_fmt>
+    <SITE_-1>0</SITE_-1>
+    <SITE_TITLE>$(SITE_$(SITE)=$(SITE))</SITE_TITLE>
+    <SITE>$(SITE=1)</SITE>
+    <SCOPE_CHANS>$(SCOPE_CHANS=1,2,3,4)</SCOPE_CHANS>
+    <MUUT>$(MUUT=)</MUUT>
   </macros>
   <width>980</width>
   <height>810</height>
