@@ -3,7 +3,7 @@ from java.util.logging import Logger
 from org.phoebus.framework.macros import Macros
 from org.csstudio.display.builder.runtime.script import PVUtil
 
-""" Init uut  """
+""" Init UUT"""
 
 # Startup
 t0 = time.time()
@@ -77,12 +77,13 @@ def main():
 
     sites = {}
     if model:
-        macros.MODEL = get_model(macros.UUT)
+        macros.MODEL = model
+        macros.NSITES = model_def[model]['sites']
         sitelist = read_pv("{}:SITELIST".format(macros.UUT))
         sites = {int(k): v for k, v in (site.split('=') for site in sitelist.split(',', 1)[1].split(','))}
         site_str = ','.join(map(str, sites.keys()))
-        #PVUtil.writePV('loc://SITES', site_str, timeout) # Unneeded?
         macros.SITES = site_str
+    logger.info("model: {} active sites: ({} of {})".format(model, macros.SITES, macros.NSITES))
 
     for site in range(1, 6 + 1):
         site_key = "SITE_{}_MODEL".format(site)
@@ -91,6 +92,7 @@ def main():
             site_model = read_pv("{}:{}:PART_NUM".format(macros.UUT, site))
         macros[site_key] = site_model
 
+    set_macros(display, macros)
     set_macros(widget, macros)
     widget.setPropertyValue("file", "")
     widget.setPropertyValue("file", macros.FILE)

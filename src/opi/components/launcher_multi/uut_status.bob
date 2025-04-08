@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-01 16:23:43 by dt100-->
+<!--Saved on 2025-04-07 17:54:57 by dt100-->
 <display version="2.0.0">
   <name>UUT Status</name>
   <width>100</width>
   <height>330</height>
   <widget type="group" version="3.0.0">
-    <name>Group</name>
+    <name>UUT STATUS</name>
     <width>100</width>
     <height>330</height>
     <style>3</style>

@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-02 14:38:31 by dt100-->
+<!--Saved on 2025-04-08 14:57:39 by dt100-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
   <height>610</height>
-  <widget type="group" version="3.0.0">
-    <name>INIT LOC</name>
-    <x>10</x>
-    <y>500</y>
-    <width>130</width>
-    <height>20</height>
-    <visible>$(DEBUG)</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>INIT LOC://SITE</name>
-      <pv_name>loc://SITE_$(DID)&lt;VLong&gt;(1)</pv_name>
-      <width>130</width>
-      <background_color>
-        <color red="255" green="212" blue="0">
-        </color>
-      </background_color>
-      <format>1</format>
-      <precision>0</precision>
-      <show_units>false</show_units>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <tooltip></tooltip>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
-    </widget>
-  </widget>
   <widget type="group" version="3.0.0">
     <name>LAUNCHER</name>
     <macros>
@@ -41,8 +15,8 @@
       <SITE_4_MODEL>$(SITE_4_MODEL=none)</SITE_4_MODEL>
       <SITE_5_MODEL>$(SITE_5_MODEL=none)</SITE_5_MODEL>
       <SITE_6_MODEL>$(SITE_6_MODEL=none)</SITE_6_MODEL>
-      <SITES>1,2,3,4,5,6</SITES>
-      <NSITES>6</NSITES>
+      <SITES>$(SITES=1,2,3,4,5,6)</SITES>
+      <NSITES>$(NSITES=6)</NSITES>
       <SITE>1</SITE>
     </macros>
     <width>700</width>
@@ -56,11 +30,6 @@
       </script>
       <script file="../../../scripts/handle_boot.py">
         <pv_name>$(UUT):IOC_READY</pv_name>
-      </script>
-      <script file="../../../scripts/handle_macro.py">
-        <pv_name>loc://SCOPE_TYPE_$(DID)</pv_name>
-        <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-        <pv_name>loc://SCOPE_CHANS_$(DID)</pv_name>
       </script>
     </scripts>
     <widget type="group" version="3.0.0">

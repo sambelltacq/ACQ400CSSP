@@ -25,10 +25,8 @@ def get_macros(widget):
 
 def set_macros(widget, macros):
     new_macros = Macros()
-    for key in macros:
-        new_macros.add(key, str(macros[key]))
+    for key in macros: new_macros.add(key, str(macros[key]))
     widget.setPropertyValue("macros", new_macros)
-
 
 # Main
 macros = get_macros(display)

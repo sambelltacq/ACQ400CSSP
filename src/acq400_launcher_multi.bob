@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-02 18:03:37 by dt100-->
+<!--Saved on 2025-04-08 14:26:04 by dt100-->
 <display version="2.0.0">
   <name>acq400 launcher multi</name>
   <macros>
@@ -14,276 +14,264 @@
     <UUT8>$(UUT8=none)</UUT8>
     <FILE>opi/components/launcher_multi/uut_status.bob</FILE>
   </macros>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>loc://test1&lt;VStringArray&gt;("hello", "world")</pv_name>
-    <x>60</x>
-    <y>640</y>
-    <width>150</width>
-    <height>70</height>
-  </widget>
+  <width>870</width>
+  <height>330</height>
   <widget type="group" version="3.0.0">
-    <name>UUT 1 ROW</name>
+    <name>UUT ROWS</name>
     <macros>
-      <UUT>$(UUT1)</UUT>
+      <SITES>1,2,3,4,5,6</SITES>
+      <NSITES>6</NSITES>
     </macros>
-    <width>100</width>
+    <width>870</width>
     <height>330</height>
-    <visible>false</visible>
     <style>3</style>
     <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT1</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 1 ROW</name>
+      <macros>
+        <UUT>$(UUT1)</UUT>
+      </macros>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT1</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 2 ROW</name>
-    <macros>
-      <UUT>$(UUT2)</UUT>
-    </macros>
-    <x>110</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT2</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 2 ROW</name>
+      <macros>
+        <UUT>$(UUT2)</UUT>
+      </macros>
+      <x>110</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT2</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 3 ROW</name>
-    <macros>
-      <UUT>$(UUT3)</UUT>
-    </macros>
-    <x>220</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT3</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 3 ROW</name>
+      <macros>
+        <UUT>$(UUT3)</UUT>
+      </macros>
+      <x>220</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT3</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 4 ROW</name>
-    <macros>
-      <UUT>$(UUT4)</UUT>
-    </macros>
-    <x>330</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT4</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 4 ROW</name>
+      <macros>
+        <UUT>$(UUT4)</UUT>
+      </macros>
+      <x>330</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT4</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 5 ROW</name>
-    <macros>
-      <UUT>$(UUT5)</UUT>
-    </macros>
-    <x>440</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT5</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 5 ROW</name>
+      <macros>
+        <UUT>$(UUT5)</UUT>
+      </macros>
+      <x>440</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT5</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 6 ROW</name>
-    <macros>
-      <UUT>$(UUT6)</UUT>
-    </macros>
-    <x>550</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT6</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 6 ROW</name>
+      <macros>
+        <UUT>$(UUT6)</UUT>
+      </macros>
+      <x>550</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT6</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 7 ROW</name>
-    <macros>
-      <UUT>$(UUT7)</UUT>
-    </macros>
-    <x>660</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT7</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 7 ROW</name>
+      <macros>
+        <UUT>$(UUT7)</UUT>
+      </macros>
+      <x>660</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT7</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>UUT 8 ROW</name>
-    <macros>
-      <UUT>$(UUT8)</UUT>
-    </macros>
-    <x>770</x>
-    <width>100</width>
-    <height>330</height>
-    <visible>false</visible>
-    <style>3</style>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="true">
-          <expression>pvStr0</expression>
-        </exp>
-        <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
-      </rule>
-    </rules>
-    <widget type="embedded" version="2.0.0">
-      <name>UUT8</name>
-      <file>opi/components/launcher_multi/uut_status.bob</file>
+    <widget type="group" version="3.0.0">
+      <name>UUT 8 ROW</name>
+      <macros>
+        <UUT>$(UUT8)</UUT>
+      </macros>
+      <x>770</x>
       <width>100</width>
       <height>330</height>
-      <resize>2</resize>
-      <scripts>
-        <script file="scripts/init_uut.py" check_connections="false">
-        </script>
-      </scripts>
+      <visible>false</visible>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
+          <exp bool_exp="true">
+            <expression>pvStr0</expression>
+          </exp>
+          <pv_name>=!(strEqual("$(UUT)", "none"))</pv_name>
+        </rule>
+      </rules>
+      <widget type="embedded" version="2.0.0">
+        <name>UUT8</name>
+        <file>opi/components/launcher_multi/uut_status.bob</file>
+        <width>100</width>
+        <height>330</height>
+        <resize>2</resize>
+        <scripts>
+          <script file="scripts/init_uut.py" check_connections="false">
+          </script>
+        </scripts>
+      </widget>
     </widget>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>loc://test1</pv_name>
-    <x>60</x>
-    <y>730</y>
-    <width>170</width>
-    <height>110</height>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_1</name>
-    <pv_name>=elementAt("loc://test1", 0)</pv_name>
-    <x>60</x>
-    <y>860</y>
-    <width>170</width>
-    <height>110</height>
-ls
   </widget>
 </display>
