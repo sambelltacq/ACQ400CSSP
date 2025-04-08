@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-20 15:32:37 by dt100-->
+<!--Saved on 2025-04-02 16:55:19 by dt100-->
 <display version="2.0.0">
-  <name>Scope Plot</name>
+  <name>Scope $(UUT) $(SCOPE_CHANS)</name>
   <macros>
+    <CHANS>$(SCOPE_CHANS=1-8)</CHANS>
     <mode_LIVE>WF</mode_LIVE>
     <mode_POST>TW</mode_POST>
-    <mode>$(mode_$(xy_mode))</mode>
+    <mode>$(mode_$(SCOPE_MODE))</mode>
     <type_RAW></type_RAW>
     <type_VOLTS>:V.VALA</type_VOLTS>
-    <type>$(type_$(xy_type))</type>
+    <type>$(type_$(SCOPE_TYPE)=)</type>
     <label_RAW>Codes</label_RAW>
     <label_VOLTS>Volts (V)</label_VOLTS>
-    <y_label>$(label_$(xy_type))</y_label>
+    <y_label>$(label_$(SCOPE_TYPE))</y_label>
+    <trace_fmt>a</trace_fmt>
   </macros>
   <width>980</width>
-  <height>780</height>
+  <height>810</height>
   <widget type="group" version="3.0.0">
-    <name>Group</name>
+    <name>SCOPE</name>
+    <macros>
+      <MODE_LIVE>WF</MODE_LIVE>
+      <MODE_POST>TW</MODE_POST>
+      <MODE>$(mode_$(SCOPE_MODE)=WF)</MODE>
+      <TYPE_VOLTS>:V.VALA</TYPE_VOLTS>
+      <TYPE>$(TYPE_$(SCOPE_TYPE)=)</TYPE>
+      <Y_LABEL_RAW>Codes</Y_LABEL_RAW>
+      <Y_LABEL_VOLTS>Volts (V)</Y_LABEL_VOLTS>
+      <Y_LABEL>$(Y_LABEL_$(SCOPE_TYPE))</Y_LABEL>
+      <PV_FMT>{UUT}:{site}:AI:{MODE}:{chan:02d}{TYPE}</PV_FMT>
+      <NAME_FMT>$(PV_FMT)</NAME_FMT>
+      <MAX_TRACES>8</MAX_TRACES>
+      <X_LABEL>Samples</X_LABEL>
+    </macros>
     <x>10</x>
     <y>10</y>
     <width>960</width>
@@ -24,14 +40,7 @@
     <style>3</style>
     <transparent>true</transparent>
     <widget type="embedded" version="2.0.0">
-      <name>XY PLOT</name>
-      <macros>
-        <pv_fmt>{UUT}:{site}:AI:{mode}:{chan:02d}{type}</pv_fmt>
-        <name_fmt>$(pv_fmt)</name_fmt>
-        <max_traces>8</max_traces>
-        <pchans>$(xy_chans)</pchans>
-        <x_label>Samples</x_label>
-      </macros>
+      <name>SCOPE PLOT</name>
       <file>components/xy_plot_base.bob</file>
       <width>960</width>
       <height>720</height>
@@ -63,7 +72,7 @@
         <vertical_alignment>1</vertical_alignment>
         <rules>
           <rule name="HIDE_TW" prop_id="visible" out_exp="true">
-            <exp bool_exp="&quot;$(xy_mode)&quot;==&quot;LIVE&quot;">
+            <exp bool_exp="&quot;$(SCOPE_MODE)&quot;==&quot;LIVE&quot;">
               <expression>true</expression>
             </exp>
             <exp bool_exp="true">

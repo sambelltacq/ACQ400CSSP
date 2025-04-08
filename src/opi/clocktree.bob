@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-03 14:30:58 by dt100-->
+<!--Saved on 2025-04-08 11:10:46 by dt100-->
 <display version="2.0.0">
-  <name>Clocktree</name>
+  <name>Clocktree $(UUT)</name>
   <width>1440</width>
   <height>1050</height>
   <widget type="embedded" version="2.0.0">
@@ -28,13 +28,13 @@
     <name>SI5326</name>
     <x>330</x>
     <y>40</y>
-    <width>800</width>
-    <height>600</height>
-    <resize>2</resize>
+    <width>300</width>
+    <height>420</height>
+    <resize>4</resize>
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp="pvStr0=='acq1001'||pvStr0=='acq1002'">
+        <exp bool_exp=" '$(MODEL)'=='acq1001'|| '$(MODEL)'=='acq1002'">
           <expression>"components/clocktree/mbclk.bob"</expression>
         </exp>
         <exp bool_exp="pvStr0=='z7io'">
@@ -43,7 +43,7 @@
         <exp bool_exp="true">
           <expression>"components/clocktree/Si5326.bob"</expression>
         </exp>
-        <pv_name>loc://MODEL</pv_name>
+        <pv_name>=abs(1)</pv_name>
       </rule>
     </rules>
   </widget>
@@ -51,13 +51,13 @@
     <name>SI53315</name>
     <x>630</x>
     <y>40</y>
-    <width>800</width>
-    <height>600</height>
-    <resize>2</resize>
+    <width>530</width>
+    <height>420</height>
+    <resize>4</resize>
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp="pvStr0=='acq1001'||pvStr0=='acq1002'">
+        <exp bool_exp="&quot;$(MODEL)&quot;=='acq1001'||&quot;$(MODEL)&quot;=='acq1002'">
           <expression>"components/clocktree/basic_out.bob"</expression>
         </exp>
         <exp bool_exp="pvStr0=='z7io'">
@@ -66,7 +66,7 @@
         <exp bool_exp="true">
           <expression>"components/clocktree/Si53315.bob"</expression>
         </exp>
-        <pv_name>loc://MODEL</pv_name>
+        <pv_name>=abs(1)</pv_name>
       </rule>
     </rules>
   </widget>
@@ -77,7 +77,6 @@
     <y>40</y>
     <width>320</width>
     <height>420</height>
-    <resize>2</resize>
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-10 15:07:27 by dt100-->
+<!--Saved on 2025-04-02 16:54:20 by dt100-->
 <display version="2.0.0">
   <name>trace_viz_control</name>
   <width>160</width>
   <height>35</height>
   <widget type="group" version="3.0.0">
     <name>Group</name>
-    <macros>
-      <pvname>$(pvname=trace_en)</pvname>
-    </macros>
     <width>160</width>
     <height>35</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>Group</name>
-      <macros>
-        <pvname>loc://trace_en_$(DID)</pvname>
-      </macros>
       <width>160</width>
       <height>35</height>
       <style>3</style>
@@ -33,7 +27,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_1</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -61,7 +55,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_1</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -83,7 +77,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_2</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -111,7 +105,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_2</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -133,7 +127,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_3</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -161,7 +155,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_3</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -183,7 +177,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_4</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -211,7 +205,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_4</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -233,7 +227,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_5</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -261,7 +255,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_5</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -283,7 +277,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_6</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -311,7 +305,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_6</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -333,7 +327,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_7</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -361,7 +355,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_7</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>
@@ -383,7 +377,7 @@
         <transparent>true</transparent>
         <widget type="led" version="2.0.0">
           <name>Trace Indicator_8</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <width>19</width>
           <height>19</height>
@@ -411,7 +405,7 @@
         </widget>
         <widget type="checkbox" version="2.0.0">
           <name>Trace Checkbox_8</name>
-          <pv_name>$(pvname)</pv_name>
+          <pv_name>loc://trace_en_$(DID)</pv_name>
           <bit>$(bit)</bit>
           <label></label>
           <y>16</y>

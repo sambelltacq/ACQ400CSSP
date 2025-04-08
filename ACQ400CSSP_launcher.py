@@ -164,7 +164,7 @@ def run_cmd(cmd):
 
 def get_parser():
     parser = argparse.ArgumentParser(description='Start script for ACQ400CSSP')
-    parser.add_argument('--debug', default=False, type=bool, help="enable debug")
+    parser.add_argument('--debug', action='store_true', help="enable debug")
     parser.add_argument('uuts', nargs='*', help="uut hostnames")
     return parser
 
