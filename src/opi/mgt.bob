@@ -1,250 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:56:32 by dt100-->
+<!--Saved on 2025-04-09 15:15:40 by dt100-->
 <display version="2.0.0">
   <name>MGT$(MUUT)</name>
   <width>1310</width>
   <height>1300</height>
-  <widget type="label" version="2.0.0">
-    <name>Label_6</name>
-    <text>$(UUT) MGT</text>
-    <x>10</x>
-    <y>10</y>
-    <width>200</width>
-    <height>30</height>
-    <font>
-      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
-      </font>
-    </font>
-    <vertical_alignment>2</vertical_alignment>
-  </widget>
-  <widget type="template" version="2.0.0">
-    <name>MGT ARRAY</name>
-    <file>components/mgt/mgt_single.bob</file>
-    <instances>
-      <instance>
-        <macros>
-          <CH>A</CH>
-          <idx>0</idx>
-        </macros>
-      </instance>
-      <instance>
-        <macros>
-          <CH>B</CH>
-          <idx>1</idx>
-        </macros>
-      </instance>
-      <instance>
-        <macros>
-          <CH>C</CH>
-          <idx>2</idx>
-        </macros>
-      </instance>
-      <instance>
-        <macros>
-          <CH>D</CH>
-          <idx>3</idx>
-        </macros>
-      </instance>
-    </instances>
-    <y>60</y>
-    <width>1310</width>
-    <height>1230</height>
-    <horizontal>true</horizontal>
-    <wrap_count>2</wrap_count>
-  </widget>
   <widget type="group" version="3.0.0">
-    <name>SFP STATUS</name>
-    <x>250</x>
-    <y>20</y>
-    <width>320</width>
-    <height>20</height>
+    <name>MGT</name>
+    <width>1330</width>
+    <height>1320</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
-      <name>Label_3</name>
-      <text>SFP</text>
-      <width>40</width>
+      <name>Label_6</name>
+      <text>$(UUT) MGT</text>
+      <x>10</x>
+      <y>10</y>
+      <width>200</width>
+      <height>30</height>
       <font>
-        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
         </font>
       </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>2</vertical_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="template" version="2.0.0">
+      <name>MGT ARRAY</name>
+      <file>components/mgt/mgt_single.bob</file>
+      <instances>
+        <instance>
+          <macros>
+            <CH>A</CH>
+            <idx>0</idx>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <CH>B</CH>
+            <idx>1</idx>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <CH>C</CH>
+            <idx>2</idx>
+          </macros>
+        </instance>
+        <instance>
+          <macros>
+            <CH>D</CH>
+            <idx>3</idx>
+          </macros>
+        </instance>
+      </instances>
+      <x>10</x>
+      <y>80</y>
+      <width>1310</width>
+      <height>1230</height>
+      <horizontal>true</horizontal>
+      <wrap_count>2</wrap_count>
     </widget>
     <widget type="group" version="3.0.0">
-      <name>SFP STATUS_1</name>
-      <macros>
-        <num>1</num>
-      </macros>
-      <x>50</x>
-      <width>60</width>
+      <name>SFP STATUS</name>
+      <x>10</x>
+      <y>50</y>
+      <width>320</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
-      <widget type="led" version="2.0.0">
-        <name>LED_2</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):PRESENT</pv_name>
-        <x>20</x>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="led" version="2.0.0">
-        <name>LED_1</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):LOS</pv_name>
-        <x>40</x>
-        <off_color>
-          <color red="153" green="0" blue="0">
-          </color>
-        </off_color>
-        <on_color>
-          <color name="STOP" red="255" green="0" blue="0">
-          </color>
-        </on_color>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
       <widget type="label" version="2.0.0">
-        <name>LABEL_7</name>
-        <text>$(num)</text>
-        <width>20</width>
+        <name>Label_3</name>
+        <text>SFP</text>
+        <width>40</width>
         <font>
           <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
           </font>
         </font>
         <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
+        <vertical_alignment>2</vertical_alignment>
       </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>SFP STATUS_2</name>
-      <macros>
-        <num>2</num>
-      </macros>
-      <x>120</x>
-      <width>60</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="led" version="2.0.0">
-        <name>LED_3</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):PRESENT</pv_name>
-        <x>20</x>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="led" version="2.0.0">
-        <name>LED_4</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):LOS</pv_name>
-        <x>40</x>
-        <off_color>
-          <color red="153" green="0" blue="0">
-          </color>
-        </off_color>
-        <on_color>
-          <color name="STOP" red="255" green="0" blue="0">
-          </color>
-        </on_color>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>LABEL_8</name>
-        <text>$(num)</text>
-        <width>20</width>
-        <font>
-          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-          </font>
-        </font>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>SFP STATUS_3</name>
-      <macros>
-        <num>3</num>
-      </macros>
-      <x>190</x>
-      <width>60</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="led" version="2.0.0">
-        <name>LED_5</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):PRESENT</pv_name>
-        <x>20</x>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="led" version="2.0.0">
-        <name>LED_6</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):LOS</pv_name>
-        <x>40</x>
-        <off_color>
-          <color red="153" green="0" blue="0">
-          </color>
-        </off_color>
-        <on_color>
-          <color name="STOP" red="255" green="0" blue="0">
-          </color>
-        </on_color>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>LABEL_9</name>
-        <text>$(num)</text>
-        <width>20</width>
-        <font>
-          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-          </font>
-        </font>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>SFP STATUS_4</name>
-      <macros>
-        <num>4</num>
-      </macros>
-      <x>260</x>
-      <width>60</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="led" version="2.0.0">
-        <name>LED_7</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):PRESENT</pv_name>
-        <x>20</x>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="led" version="2.0.0">
-        <name>LED_8</name>
-        <pv_name>${UUT}:MGT:SFP:$(num):LOS</pv_name>
-        <x>40</x>
-        <off_color>
-          <color red="153" green="0" blue="0">
-          </color>
-        </off_color>
-        <on_color>
-          <color name="STOP" red="255" green="0" blue="0">
-          </color>
-        </on_color>
-        <square>true</square>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>LABEL_10</name>
-        <text>$(num)</text>
-        <width>20</width>
-        <font>
-          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-          </font>
-        </font>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
+      <widget type="template" version="2.0.0">
+        <name>SFP STATUS ARRAY</name>
+        <file>components/mgt/mgt_status.bob</file>
+        <instances>
+          <instance>
+            <macros>
+              <num>1</num>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <num>2</num>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <num>3</num>
+            </macros>
+          </instance>
+          <instance>
+            <macros>
+              <num>4</num>
+            </macros>
+          </instance>
+        </instances>
+        <x>50</x>
+        <width>270</width>
+        <height>20</height>
+        <horizontal>true</horizontal>
+        <transparent>true</transparent>
       </widget>
     </widget>
   </widget>
