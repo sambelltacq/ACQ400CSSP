@@ -27,6 +27,7 @@ def init_globals(args):
 
     SETTINGS_BASE=  f"{ROOT_DIR}/src/settings_base.ini"
     WORKSPACE=      f"{ROOT_DIR}/workspaces/{ID}"
+    LOGGING=        f"{ROOT_DIR}/src/logging.properties"
     SETTINGS=       f"{WORKSPACE}/settings.ini"
     MEMENTO=        f"{WORKSPACE}/memento"
     LAUNCHER=       f"{ROOT_DIR}/src/acq400_launcher.bob"
@@ -44,7 +45,7 @@ def run_main(args):
     check_phoebus()
     init_memento(args)
 
-    CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} {TARGET}')
+    CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} -logging {LOGGING} {TARGET}')
 
     if args.debug:
         run(CMD, shell=True, env=ENV, text=True)
