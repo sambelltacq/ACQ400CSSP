@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:47:23 by dt100-->
+<!--Saved on 2025-04-09 12:02:04 by dt100-->
 <display version="2.0.0">
   <name>Launcher Multi</name>
   <macros>
@@ -14,16 +14,17 @@
     <UUT8>$(UUT8=none)</UUT8>
     <FILE>opi/components/launcher_multi/uut_status.bob</FILE>
   </macros>
-  <width>870</width>
-  <height>330</height>
+  <width>1030</width>
+  <height>400</height>
   <widget type="group" version="3.0.0">
     <name>UUT ROWS</name>
     <macros>
       <SITES>1,2,3,4,5,6</SITES>
       <NSITES>6</NSITES>
     </macros>
-    <width>870</width>
-    <height>330</height>
+    <y>50</y>
+    <width>1030</width>
+    <height>350</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
@@ -31,7 +32,7 @@
       <macros>
         <UUT>$(UUT1)</UUT>
       </macros>
-      <width>100</width>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -47,8 +48,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT1</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -61,8 +62,8 @@
       <macros>
         <UUT>$(UUT2)</UUT>
       </macros>
-      <x>110</x>
-      <width>100</width>
+      <x>130</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -78,8 +79,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT2</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -92,8 +93,8 @@
       <macros>
         <UUT>$(UUT3)</UUT>
       </macros>
-      <x>220</x>
-      <width>100</width>
+      <x>260</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -109,8 +110,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT3</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -123,8 +124,8 @@
       <macros>
         <UUT>$(UUT4)</UUT>
       </macros>
-      <x>330</x>
-      <width>100</width>
+      <x>390</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -140,8 +141,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT4</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -154,8 +155,8 @@
       <macros>
         <UUT>$(UUT5)</UUT>
       </macros>
-      <x>440</x>
-      <width>100</width>
+      <x>520</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -171,8 +172,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT5</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -185,8 +186,8 @@
       <macros>
         <UUT>$(UUT6)</UUT>
       </macros>
-      <x>550</x>
-      <width>100</width>
+      <x>650</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -202,8 +203,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT6</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -216,8 +217,8 @@
       <macros>
         <UUT>$(UUT7)</UUT>
       </macros>
-      <x>660</x>
-      <width>100</width>
+      <x>780</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -233,8 +234,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT7</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -247,8 +248,8 @@
       <macros>
         <UUT>$(UUT8)</UUT>
       </macros>
-      <x>770</x>
-      <width>100</width>
+      <x>910</x>
+      <width>120</width>
       <height>330</height>
       <visible>false</visible>
       <style>3</style>
@@ -264,8 +265,8 @@
       <widget type="embedded" version="2.0.0">
         <name>UUT8</name>
         <file>opi/components/launcher_multi/uut_status.bob</file>
-        <width>100</width>
-        <height>330</height>
+        <width>120</width>
+        <height>350</height>
         <resize>2</resize>
         <scripts>
           <script file="scripts/init_uut.py" check_connections="false">
@@ -273,5 +274,15 @@
         </scripts>
       </widget>
     </widget>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Multi Launcher</text>
+    <width>210</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
   </widget>
 </display>
