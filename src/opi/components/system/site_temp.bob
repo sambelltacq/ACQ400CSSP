@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-05 12:29:13 by dt100-->
+<!--Saved on 2025-04-09 11:38:06 by dt100-->
 <display version="2.0.0">
   <name>Site Temp</name>
   <width>80</width>
   <height>230</height>
+  <widget type="rectangle" version="2.0.0">
+    <name>PLACEHOLDER</name>
+    <width>80</width>
+    <height>230</height>
+    <line_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </line_color>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+  </widget>
   <widget type="group" version="3.0.0">
     <name>SITE_TEMP_1</name>
     <macros>
@@ -17,16 +30,15 @@
     <height>230</height>
     <visible>false</visible>
     <style>3</style>
-    <transparent>true</transparent>
     <rules>
       <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="pvStr0.find(&quot;$(site)&quot;) &gt;= 0">
+        <exp bool_exp="&quot;$(SITES)&quot;.find(&quot;$(site)&quot;) &gt;= 0">
           <expression>true</expression>
         </exp>
         <exp bool_exp="true">
           <expression>false</expression>
         </exp>
-        <pv_name>loc://SITES</pv_name>
+        <pv_name>=abs(1)</pv_name>
       </rule>
     </rules>
     <widget type="label" version="2.0.0">
