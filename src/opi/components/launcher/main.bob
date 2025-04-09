@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-09 11:47:29 by dt100-->
+<!--Saved on 2025-04-09 12:32:39 by dt100-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
@@ -46,7 +46,7 @@
         <height>420</height>
         <style>3</style>
         <background_color>
-          <color red="55" green="66" blue="250">
+          <color red="0" green="51" blue="171">
           </color>
         </background_color>
         <widget type="group" version="3.0.0">
@@ -415,10 +415,16 @@
               <vertical_alignment>1</vertical_alignment>
             </widget>
           </widget>
-          <widget type="picture" version="2.0.0">
-            <name>logo</name>
-            <file>../../../images/dtacq.png</file>
+          <widget type="group" version="3.0.0">
+            <name>LOGO BOX</name>
+            <width>150</width>
             <height>119</height>
+            <style>3</style>
+            <widget type="picture" version="2.0.0">
+              <name>logo</name>
+              <file>../../../images/d-tacq_logo_tight.svg</file>
+              <height>119</height>
+            </widget>
           </widget>
         </widget>
       </widget>

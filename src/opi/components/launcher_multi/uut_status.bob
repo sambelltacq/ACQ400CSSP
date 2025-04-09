@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-09 12:01:42 by dt100-->
+<!--Saved on 2025-04-09 12:33:38 by dt100-->
 <display version="2.0.0">
   <name>UUT Status</name>
   <macros>
@@ -14,7 +14,7 @@
     <height>350</height>
     <style>3</style>
     <background_color>
-      <color red="55" green="66" blue="250">
+      <color red="0" green="51" blue="171">
       </color>
     </background_color>
     <widget type="group" version="3.0.0">
@@ -32,7 +32,7 @@
       <widget type="label" version="2.0.0">
         <name>LABEL_1</name>
         <text>$(UUT)</text>
-        <height>40</height>
+        <height>30</height>
         <font>
           <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
           </font>
