@@ -121,29 +121,32 @@ def gen_ID(args):
 def init_memento(args):
     global MEMENTO, WORKSPACE, JAVA_ARGS, TARGET, SETTINGS
     set_addr_list()
-    if os.path.exists(MEMENTO):
+    if os.path.exists(MEMENTO) and not args.debug:
         TARGET = f"-layout {MEMENTO}"
         return
+    new_lines = []
     macros_pref = "org.csstudio.display.builder.model/macros={macros}\n"
-    macros_pref = macros_pref.format(macros=gen_macros_pref(args.uuts))
+    new_lines.append(macros_pref.format(macros=gen_macros_pref(args.uuts, args.debug)))
+    if len(args.uuts) > 1: new_lines.append("org.phoebus.ui/home_display=src/acq400_launcher_multi.bob")
     print(f"Creating new workspace {WORKSPACE}")
     os.makedirs(WORKSPACE, exist_ok=True)
     with open(SETTINGS_BASE, 'r') as base_fp:
         with open(SETTINGS, 'w') as new_fp:
             lines = base_fp.readlines()
-            lines.append(macros_pref)
+            lines.extend(new_lines)
             new_fp.writelines(lines)
     resource = LAUNCHER
     if len(args.uuts) > 1: resource = LAUNCHER_MULTI
     TARGET=f"-resource {resource} -layout null"
     
-def gen_macros_pref(uuts):
+def gen_macros_pref(uuts, debug):
     macros="<UUT>{uut}</UUT>".format(uut=uuts[0])
     if len(uuts) > 1:
         macros=""
         for idx, uut in enumerate(uuts):
             idx += 1
             macros += f"<UUT{idx}>{uut}</UUT{idx}>"
+    macros += f"<DEBUG>{debug}</DEBUG>"
     return macros
 
 def set_addr_list():
