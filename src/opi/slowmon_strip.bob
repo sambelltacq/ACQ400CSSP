@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-02 17:03:54 by dt100-->
+<!--Saved on 2025-04-09 11:27:56 by dt100-->
 <display version="2.0.0">
-  <name>Slowmon Plot</name>
+  <name>Slowmon Plot$(MUUT)</name>
   <width>960</width>
   <height>720</height>
   <widget type="embedded" version="2.0.0">
@@ -11,21 +11,19 @@
       <MODE_LIVE>WF</MODE_LIVE>
       <MODE_POST>TW</MODE_POST>
       <MODE>$(mode_$(SCOPE_MODE)=WF)</MODE>
-
       <SCOPE_TYPE>RAW</SCOPE_TYPE>
       <TYPE_VOLTS>:V.VALA</TYPE_VOLTS>
       <TYPE>$(TYPE_$(SCOPE_TYPE)=)</TYPE>
-
       <Y_LABEL_RAW>Codes</Y_LABEL_RAW>
       <Y_LABEL_VOLTS>Volts (V)</Y_LABEL_VOLTS>
       <Y_LABEL>$(Y_LABEL_$(SCOPE_TYPE))</Y_LABEL>
-
       <PV_FMT>=elementAt({UUT}:0:SLOWMON:MEAN, {chan} - 1)</PV_FMT>
       <NAME_FMT>Slowmon CH{chan}</NAME_FMT>
       <TITLE_FMT>{UUT} Slowmon Plot</TITLE_FMT>
-
       <MAX_TRACES>4</MAX_TRACES>
       <X_LABEL>Samples</X_LABEL>
+      <CHANS>$(SCOPE_CHANS)</CHANS>
+      <SITE>0</SITE>
     </macros>
     <file>components/strip_chart_base.bob</file>
     <width>960</width>

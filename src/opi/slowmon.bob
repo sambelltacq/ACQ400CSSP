@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:55:05 by dt100-->
+<!--Saved on 2025-04-09 10:38:49 by dt100-->
 <display version="2.0.0">
   <name>Slowmon$(MUUT)</name>
   <width>760</width>
   <height>330</height>
-  <scripts>
-    <script file="../scripts/handle_macro.py">
-      <pv_name>loc://strip_chans</pv_name>
-    </script>
-  </scripts>
   <widget type="group" version="3.0.0">
     <name>INIT LOC</name>
-    <x>20</x>
-    <y>350</y>
+    <y>340</y>
     <width>130</width>
-    <height>20</height>
+    <height>80</height>
     <visible>$(DEBUG)</visible>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="textupdate" version="2.0.0">
       <name>INIT LOC://SCOPE_CHANS</name>
       <pv_name>loc://SCOPE_CHANS_$(DID)&lt;VString&gt;("1-4")</pv_name>
+      <y>40</y>
       <width>130</width>
       <background_color>
         <color red="255" green="212" blue="0">
@@ -28,6 +23,21 @@
       </background_color>
       <precision>0</precision>
       <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>GLOBAL_MACROS</name>
+      <text>GLOBAL MACROS</text>
+      <y>10</y>
+      <width>130</width>
+      <height>16</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <auto_size>true</auto_size>
+      <scripts>
+        <script file="../scripts/handle_macro.py">
+          <pv_name>loc://SCOPE_CHANS_$(DID)</pv_name>
+        </script>
+      </scripts>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">

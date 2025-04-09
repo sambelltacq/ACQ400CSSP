@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:54:48 by dt100-->
+<!--Saved on 2025-04-09 11:28:18 by dt100-->
 <display version="2.0.0">
   <name>Launcher$(MUUT)</name>
   <macros>
-    <DEBUG>$(DEBUG=true)</DEBUG>
+    <DEBUG>$(DEBUG=false)</DEBUG>
     <LAUNCHER>acq400_launcher.bob</LAUNCHER>
     <UUT2>$(UUT2=none)</UUT2>
     <MUUT_none>$(NULL=)</MUUT_none>
