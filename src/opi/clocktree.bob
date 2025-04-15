@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:55:48 by dt100-->
+<!--Saved on 2025-04-15 17:03:18 by dt100-->
 <display version="2.0.0">
   <name>Clocktree$(MUUT)</name>
   <width>1440</width>
@@ -12,67 +12,9 @@
     <width>960</width>
     <height>520</height>
     <resize>2</resize>
-    <rules>
-      <rule name="HIDE_IF_Z7IO" prop_id="visible" out_exp="true">
-        <exp bool_exp="pvStr0=='z7io'">
-          <expression>false</expression>
-        </exp>
-        <exp bool_exp="true">
-          <expression>true</expression>
-        </exp>
-        <pv_name>loc://MODEL</pv_name>
-      </rule>
-    </rules>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>SI5326</name>
-    <x>330</x>
-    <y>40</y>
-    <width>300</width>
-    <height>420</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp=" '$(MODEL)'=='acq1001'|| '$(MODEL)'=='acq1002'">
-          <expression>"components/clocktree/mbclk.bob"</expression>
-        </exp>
-        <exp bool_exp="pvStr0=='z7io'">
-          <expression>""</expression>
-        </exp>
-        <exp bool_exp="true">
-          <expression>"components/clocktree/Si5326.bob"</expression>
-        </exp>
-        <pv_name>=abs(1)</pv_name>
-      </rule>
-    </rules>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>SI53315</name>
-    <x>630</x>
-    <y>40</y>
-    <width>530</width>
-    <height>420</height>
-    <resize>4</resize>
-    <transparent>true</transparent>
-    <rules>
-      <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp="&quot;$(MODEL)&quot;=='acq1001'||&quot;$(MODEL)&quot;=='acq1002'">
-          <expression>"components/clocktree/basic_out.bob"</expression>
-        </exp>
-        <exp bool_exp="pvStr0=='z7io'">
-          <expression>""</expression>
-        </exp>
-        <exp bool_exp="true">
-          <expression>"components/clocktree/Si53315.bob"</expression>
-        </exp>
-        <pv_name>=abs(1)</pv_name>
-      </rule>
-    </rules>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>INPUT</name>
-    <file>components/clocktree/input.bob</file>
+    <name>LEFT</name>
     <x>10</x>
     <y>40</y>
     <width>320</width>
@@ -80,13 +22,13 @@
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp="pvStr0=='z7io'">
-          <expression>""</expression>
+        <exp bool_exp="&quot;$(MODEL)&quot;=='z7io'">
+          <expression>"components/clocktree/left_z7io.bob"</expression>
         </exp>
         <exp bool_exp="true">
-          <expression>components/clocktree/input.bob</expression>
+          <expression>"components/clocktree/input.bob"</expression>
         </exp>
-        <pv_name>loc://MODEL</pv_name>
+        <pv_name>=abs(1)</pv_name>
       </rule>
     </rules>
   </widget>
@@ -103,23 +45,48 @@
     <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="embedded" version="2.0.0">
-    <name>Z7IO</name>
-    <file>components/clocktree/z7io_tree.bob</file>
-    <x>10</x>
+    <name>MIDDLE</name>
+    <x>330</x>
     <y>40</y>
-    <width>642</width>
+    <width>300</width>
     <height>420</height>
-    <resize>2</resize>
+    <resize>4</resize>
     <transparent>true</transparent>
     <rules>
-      <rule name="LOAD_BY_MODEL" prop_id="visible" out_exp="true">
-        <exp bool_exp="pvStr0=='z7io'">
-          <expression>true</expression>
+      <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
+        <exp bool_exp=" '$(MODEL)'=='acq1001'|| '$(MODEL)'=='acq1002'">
+          <expression>"components/clocktree/mbclk.bob"</expression>
+        </exp>
+        <exp bool_exp=" '$(MODEL)'=='z7io'">
+          <expression>"components/clocktree/middle_z7io.bob"</expression>
         </exp>
         <exp bool_exp="true">
-          <expression>false</expression>
+          <expression>"components/clocktree/Si5326.bob"</expression>
         </exp>
-        <pv_name>loc://MODEL</pv_name>
+        <pv_name>=abs(1)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>RIGHT</name>
+    <x>630</x>
+    <y>40</y>
+    <width>530</width>
+    <height>420</height>
+    <resize>4</resize>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
+        <exp bool_exp="&quot;$(MODEL)&quot;=='acq1001'||&quot;$(MODEL)&quot;=='acq1002'">
+          <expression>"components/clocktree/basic_out.bob"</expression>
+        </exp>
+        <exp bool_exp="&quot;$(MODEL)&quot;=='z7io'">
+          <expression>"components/clocktree/right_z7io.bob"</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>"components/clocktree/Si53315.bob"</expression>
+        </exp>
+        <pv_name>=abs(1)</pv_name>
       </rule>
     </rules>
   </widget>
