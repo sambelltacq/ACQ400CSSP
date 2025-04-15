@@ -93,6 +93,7 @@ def main():
         macros[site_key] = site_model
 
     set_macros(display, macros)
+    if not model: return
     set_macros(widget, macros)
     widget.setPropertyValue("file", "")
     widget.setPropertyValue("file", macros.FILE)
