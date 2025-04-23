@@ -19,4 +19,5 @@ model_val = display.getPropertyValue("macros").getValue('SITE_{}_MODEL'.format(s
 
 if model_val: model_pv.setValue(str(model_val))
 display.getPropertyValue("macros").add("SITE", str(site_val))
+display.getPropertyValue("macros").add("SITE_MODEL", str(model_val))
 logger.info('Current Site: {} Model: {}'.format(site_val, model_val))
