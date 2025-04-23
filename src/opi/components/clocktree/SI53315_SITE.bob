@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-05 11:52:24 by dt100-->
+<!--Saved on 2025-04-23 10:01:33 by sam-->
 <display version="2.0.0">
   <name>SI53315 Site</name>
   <width>390</width>
@@ -13,13 +13,13 @@
     <transparent>true</transparent>
     <rules>
       <rule name="HIDE_EMPTY" prop_id="visible" out_exp="true">
-        <exp bool_exp="pvStr0.find(&quot;$(site)&quot;) &gt;= 0">
+        <exp bool_exp="&quot;$(SITES)&quot;.find(&quot;$(site)&quot;) &gt;= 0">
           <expression>true</expression>
         </exp>
         <exp bool_exp="true">
           <expression>false</expression>
         </exp>
-        <pv_name>loc://SITES</pv_name>
+        <pv_name>=abs(1)</pv_name>
       </rule>
     </rules>
     <widget type="bool_button" version="2.0.0">
