@@ -647,6 +647,25 @@
             </font>
             <tooltip>$(actions)</tooltip>
           </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>gpg Button</name>
+            <actions>
+              <action type="execute">
+                <description>open opi/gpg.bob</description>
+                <script file="../../../scripts/handle_action_button.py">
+                </script>
+              </action>
+            </actions>
+            <text>GPG</text>
+            <x>160</x>
+            <y>160</y>
+            <width>150</width>
+            <font>
+              <font family="Ubuntu" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <tooltip>$(actions)</tooltip>
+          </widget>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
