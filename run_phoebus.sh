@@ -49,6 +49,7 @@ if [ -n "$ADDR_LIST" ]; then
     JAVA_PREFS="${JAVA_PREFS} -Djca.use_env=true"
     export EPICS_PVA_ADDR_LIST="${ADDR_LIST}"
     export EPICS_CA_ADDR_LIST="${ADDR_LIST}"
+    export EPICS_CA_MAX_ARRAY_BYTES=500000
     echo "Using addr list: ${ADDR_LIST}"
 fi
 

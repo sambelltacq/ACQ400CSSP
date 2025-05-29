@@ -92,7 +92,7 @@ def locate_java_bin():
         if check_version(java_bin): return java_bin
     exit("[Error] Unable to find valid Java version")
 
-def check_version(path, version="17"):
+def check_version(path, version="21"):
     """Checks java bin version"""
     cmd = f'"{path}" -version'
     response, code = run_cmd(cmd)
