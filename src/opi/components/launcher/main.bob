@@ -849,33 +849,66 @@
             <transparent>true</transparent>
             <vertical_alignment>1</vertical_alignment>
           </widget>
-          <widget type="action_button" version="3.0.0">
-            <name>acq43x Button</name>
-            <actions>
-              <action type="execute">
-                <description>open opi/module_acq43x.bob</description>
-                <script file="../../../scripts/handle_action_button.py">
-                </script>
-              </action>
-            </actions>
-            <text>ACQ43X</text>
+          <widget type="group" version="3.0.0">
+            <name>MODULE OPIS</name>
             <x>320</x>
             <y>120</y>
             <width>150</width>
-            <visible>false</visible>
-            <font>
-              <font family="Ubuntu" style="BOLD" size="14.0">
+            <height>30</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <widget type="action_button" version="3.0.0">
+              <name>acq43x Button</name>
+              <actions>
+                <action type="execute">
+                  <description>open opi/module_acq43x.bob</description>
+                  <script file="../../../scripts/handle_action_button.py">
+                  </script>
+                </action>
+              </actions>
+              <text>ACQ43X</text>
+              <width>150</width>
+              <visible>false</visible>
+              <font>
+                <font family="Ubuntu" style="BOLD" size="14.0">
+                </font>
               </font>
-            </font>
-            <rules>
-              <rule name="SHOW_ON_MODULE" prop_id="visible" out_exp="false">
-                <exp bool_exp="pvStr0.upper().startswith(&quot;ACQ43&quot;)">
-                  <value>true</value>
-                </exp>
-                <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
-              </rule>
-            </rules>
-            <tooltip>$(actions)</tooltip>
+              <rules>
+                <rule name="SHOW_ON_MODULE" prop_id="visible" out_exp="false">
+                  <exp bool_exp="pvStr0.upper().startswith(&quot;ACQ43&quot;)">
+                    <value>true</value>
+                  </exp>
+                  <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
+                </rule>
+              </rules>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+            <widget type="action_button" version="3.0.0">
+              <name>acq48x Button</name>
+              <actions>
+                <action type="execute">
+                  <description>open opi/module_acq48x.bob</description>
+                  <script file="../../../scripts/handle_action_button.py">
+                  </script>
+                </action>
+              </actions>
+              <text>ACQ48X</text>
+              <width>150</width>
+              <visible>false</visible>
+              <font>
+                <font family="Ubuntu" style="BOLD" size="14.0">
+                </font>
+              </font>
+              <rules>
+                <rule name="SHOW_ON_MODULE" prop_id="visible" out_exp="false">
+                  <exp bool_exp="pvStr0.upper().startswith(&quot;ACQ48&quot;)">
+                    <value>true</value>
+                  </exp>
+                  <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
+                </rule>
+              </rules>
+              <tooltip>$(actions)</tooltip>
+            </widget>
           </widget>
         </widget>
       </widget>
