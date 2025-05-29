@@ -13,7 +13,7 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
     cd ACQ400CSSP
     ```
 
-- Install [Java17](https://adoptium.net/en-GB/temurin/archive/?version=17)
+- Install [Java17](https://adoptium.net/en-GB/temurin/releases/?os=any&arch=any&version=17)
 - Download and extract [Phoebus](https://www.controlsystemstudio.org/download/)
 
 - For ease of installation extract or link the phoebus jar directory to the repo e.g.
