@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-09 11:27:56 by dt100-->
+<!--Saved on 2025-05-30 17:25:09 by sam-->
 <display version="2.0.0">
   <name>Slowmon Plot$(MUUT)</name>
   <width>960</width>
@@ -18,9 +18,9 @@
       <Y_LABEL_VOLTS>Volts (V)</Y_LABEL_VOLTS>
       <Y_LABEL>$(Y_LABEL_$(SCOPE_TYPE))</Y_LABEL>
       <PV_FMT>=elementAt({UUT}:0:SLOWMON:MEAN, {chan} - 1)</PV_FMT>
-      <NAME_FMT>Slowmon CH{chan}</NAME_FMT>
+      <NAME_FMT>$(UUT):0:SLOWMON:MEAN[{index}]</NAME_FMT>
       <TITLE_FMT>{UUT} Slowmon Plot</TITLE_FMT>
-      <MAX_TRACES>4</MAX_TRACES>
+      <MAX_TRACES>8</MAX_TRACES>
       <X_LABEL>Samples</X_LABEL>
       <CHANS>$(SCOPE_CHANS)</CHANS>
       <SITE>0</SITE>

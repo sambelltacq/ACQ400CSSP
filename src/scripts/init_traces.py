@@ -87,6 +87,7 @@ for site in chanmap:
         if current >= MAX_TRACES: break
         macros.site = site
         macros.chan = chan
+        macros.index = int(chan) - 1
         trace_pv = PV_FMT.format(**macros)
         trace_name = NAME_FMT.format(**macros)
         trace_color = WidgetColor(*colors[current])
