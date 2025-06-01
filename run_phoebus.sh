@@ -28,7 +28,7 @@ JAVA_PREFS="-Dphoebus.user=${WORKSPACE} -Dphoebus.folder.name.preference= "
 SETTINGS="$WORKSPACE/settings.ini"
 MEMENTO="$WORKSPACE/memento"
 
-# Attempt to locate a phobus jar if not found at PHOEBUS_JAR
+# Attempt to locate a phoebus jar if not found at PHOEBUS_JAR
 if ! [ -f "$PHOEBUS_JAR" ]; then
     shopt -s nullglob
     PHOEBUS_JAR=($ROOT_DIR/product-*/*.jar)
@@ -37,7 +37,7 @@ if ! [ -f "$PHOEBUS_JAR" ]; then
         exit 1
     fi
     PHOEBUS_JAR="${PHOEBUS_JAR[0]}"
-    echo "Found phobus jar ${PHOEBUS_JAR}"
+    echo "Found phoebus jar ${PHOEBUS_JAR}"
 fi
 
 # If ioc_addr.conf or acq2106_000_addr.conf files exist use contents for ADDR_LIST
