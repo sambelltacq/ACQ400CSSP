@@ -36,6 +36,9 @@ def init_globals(args):
     LAUNCHER=       f"{ROOT_DIR}/src/acq400_launcher.bob"
     LAUNCHER_MULTI= f"{ROOT_DIR}/src/acq400_launcher_multi.bob"
 
+    PREFS=          f"{ROOT_DIR}/workspace.prefs"
+    UUT_PREFS=      f"{ROOT_DIR}/{ID}_workspace.prefs"
+
     JAVA_ARGS=      f"-Dphoebus.user={WORKSPACE} -Dphoebus.folder.name.preference= "
     TARGET=         ""
 
@@ -48,6 +51,8 @@ def run_main(args):
     check_system()
 
     init_memento(args)
+    update_pref()
+    
     CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} -logging {LOGGING} {TARGET}')
 
     if args.debug:
@@ -67,7 +72,7 @@ def read_conf():
             for line in fp.readlines():
                 try:
                     key, value = line.split('=', maxsplit=1)
-                    logging.debug(f"CSSP.conf got {key}={value}")
+                    logging.debug(f"CSSP.conf got {key}={repr(value)}")
                     conf[key.strip()] = value.strip()
                 except: pass
     return conf
@@ -136,8 +141,8 @@ def gen_ID(args):
 
 def init_memento(args):
     global MEMENTO, WORKSPACE, JAVA_ARGS, TARGET, SETTINGS
-    set_addr_list()
-    if os.path.exists(MEMENTO) and not args.debug:
+    if os.path.exists(MEMENTO):
+        print(f"Using existing workspace {WORKSPACE}")
         TARGET = f"-layout {MEMENTO}"
         return
     new_lines = []
@@ -165,17 +170,38 @@ def gen_macros_pref(uuts, debug):
     macros += f"<DEBUG>{debug}</DEBUG>"
     return macros
 
-def set_addr_list():
-    global ENV, JAVA_ARGS
-    ADDR_LIST = None
-    if 'ADDR_LIST' in globals():
-        ADDR_LIST = globals()['ADDR_LIST']
-    if f'{ID}_ADDR_LIST' in globals():
-        ADDR_LIST = globals()['{ID}_ADDR_LIST']
-    if ADDR_LIST:
-        JAVA_ARGS += "-Djca.use_env=true"
-        ENV['EPICS_PVA_ADDR_LIST'] = ADDR_LIST
-        ENV['EPICS_CA_ADDR_LIST'] = ADDR_LIST
+def update_pref():
+    global PREFS, UUT_PREFS, SETTINGS
+    """Updates the phoebus preference ini"""
+
+    if os.path.exists(UUT_PREFS): pref_file = UUT_PREFS
+    elif os.path.exists(PREFS): pref_file = PREFS
+    else: return
+    
+    with open(pref_file) as f:
+        prefs = {pref.split('=')[0]: pref.split('=')[1] for pref in f.readlines() if pref.find('=') != -1}
+
+    with open(SETTINGS, 'r+') as fp:
+        lines = fp.readlines()
+        changed_lines = 0
+        for idx, line in enumerate(lines):
+            for pref, value in prefs.copy().items():
+                if line.startswith(pref):
+                    new_line = f"{pref}={value}"
+                    del prefs[pref]
+                    if line != new_line:
+                        lines[idx] = new_line
+                        changed_lines += 1
+
+        for pref, value in prefs.items():
+            new_line = f"{pref}={value}"
+            lines.append(new_line)
+            changed_lines += 1
+
+        if changed_lines > 0:
+            fp.seek(0)
+            fp.writelines(lines)
+            fp.truncate()
 
 def run_cmd(cmd):
     result = run(cmd, shell=True, capture_output=True, text=True)
