@@ -4,6 +4,7 @@
 Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) for [D-Tacq](https://d-tacq.co.uk/) Digitizers.
 
 ![multi_1_opi](https://github.com/sambelltacq/ACQ400CSSP/releases/download/v1.0.0/multi_1_opi.png)
+More [examples](https://github.com/sambelltacq/ACQ400CSSP/blob/master/USERGUIDE.md)
 
 ## Installation
 
@@ -13,14 +14,14 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
     cd ACQ400CSSP
     ```
 
-- Install [Java17](https://adoptium.net/en-GB/temurin/releases/?os=any&arch=any&version=17)
+- Install [Java17+](https://adoptium.net/en-GB/temurin/releases/?os=any&arch=any&version=17)
 - Download and extract [Phoebus](https://www.controlsystemstudio.org/download/)
 
-- For ease of installation extract or link the phoebus jar directory to the repo e.g.
+- For ease of installation extract or link the phoebus jar directory into the repo e.g.
 
     ```bash
     │── ACQ400CSSP
-    │   │── ACQ400CSSP_launcher
+    │   │── ACQ400CSSP_launcher.py
     │   │── workspaces
     │   │── CSSP.conf
     │   │── product-0.0.0
@@ -36,21 +37,32 @@ Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) fo
 
 ## Usage
 
-#### Python (recommended)
+#### Python Launcher (recommended)
+Single UUT launch:
 ```bash
 ./ACQ400CSSP_launcher.py acq2106_999
 ```
-
-##### Linux
-
+Multi UUT launch:
 ```bash
-./run_phoebus acq2106_999
+./ACQ400CSSP_launcher.py acq2106_997 acq2106_998 acq2106_999
 ```
 
-##### Windows
+
+Each UUT generates a workspace containing it's memento and settings.ini.
+Create a workspace.prefs or a UUT_workspace.prefs to automatically override existing prefs on launch
+
+#### Native scripts (depreciated)
+
+##### Linux script
 
 ```bash
-run_phoebus acq2106_999
+./run_phoebus.sh acq2106_999
+```
+
+##### Windows script
+
+```bash
+run_phoebus.bat acq2106_999
 ```
 
 ## Updating
