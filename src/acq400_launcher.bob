@@ -33,6 +33,7 @@
       <auto_size>true</auto_size>
       <scripts>
         <script file="scripts/handle_macro.py">
+          <pv_name>loc://SITE_$(DID)</pv_name>
           <pv_name>loc://SCOPE_TYPE_$(DID)</pv_name>
           <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
           <pv_name>loc://SCOPE_CHANS_$(DID)</pv_name>
