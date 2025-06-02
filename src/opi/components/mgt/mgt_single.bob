@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 17:51:29 by dt100-->
+<!--Saved on 2025-06-02 11:00:14 by dt100-->
 <display version="2.0.0">
   <name>Mgt Single</name>
   <width>650</width>
@@ -96,7 +96,7 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -151,7 +151,7 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -206,7 +206,7 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -261,7 +261,7 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -316,7 +316,7 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -579,9 +579,9 @@
             <name>BUTTON_1</name>
             <actions>
               <action type="write_pv">
+                <description>CLEAR</description>
                 <pv_name>$(pv_name)</pv_name>
                 <value>0</value>
-                <description>CLEAR</description>
               </action>
             </actions>
             <pv_name>${UUT}:MGT:SFP:${CH}:CLRSTATS</pv_name>
@@ -918,7 +918,8 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
+              <precision>0</precision>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -933,8 +934,8 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <format>2</format>
-              <precision>2</precision>
+              <format>1</format>
+              <precision>0</precision>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -994,7 +995,8 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <precision>2</precision>
+              <format>1</format>
+              <precision>0</precision>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
@@ -1009,8 +1011,8 @@
                 <color name="Background" red="255" green="255" blue="255">
                 </color>
               </background_color>
-              <format>2</format>
-              <precision>2</precision>
+              <format>1</format>
+              <precision>0</precision>
               <show_units>false</show_units>
               <horizontal_alignment>1</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
