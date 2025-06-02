@@ -4,9 +4,12 @@ import argparse
 import os
 import platform
 import glob
+import re
+import logging
 from subprocess import run, Popen, DEVNULL
 
 """Starts ACQ400CSSP"""
+logging.basicConfig(level=logging.INFO)
 
 def init_globals(args):
     if not args.uuts:
@@ -21,8 +24,8 @@ def init_globals(args):
     ENV=            os.environ.copy()
 
     WORKSPACE=      f"{ROOT_DIR}/workspaces/{ID}"
-    JAVA_BIN=       "java"
-    PHOEBUS_JAR=    f"{ROOT_DIR}/product-4.7.3/product-4.7.3.jar"
+    JAVA_BIN=       None #"java"
+    PHOEBUS_JAR=    None #f"{ROOT_DIR}/product-4.7.3/product-4.7.3.jar"
     CSSP_CONF=      f"{ROOT_DIR}/CSSP.conf"
 
     SETTINGS_BASE=  f"{ROOT_DIR}/src/settings_base.ini"
@@ -36,21 +39,22 @@ def init_globals(args):
     JAVA_ARGS=      f"-Dphoebus.user={WORKSPACE} -Dphoebus.folder.name.preference= "
     TARGET=         ""
 
+    if args.debug: logging.getLogger().setLevel(logging.DEBUG)
     globals().update(locals())
 
 def run_main(args):
     init_globals(args)
     globals().update(read_conf())
-    check_java_bin()
-    check_phoebus()
-    init_memento(args)
+    check_system()
 
+    init_memento(args)
     CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} -logging {LOGGING} {TARGET}')
 
     if args.debug:
         run(CMD, shell=True, env=ENV, text=True)
+        print('END')
         print("CMD", CMD)
-        print(globals())
+        #print(globals())
         input()
         return
 
@@ -63,6 +67,7 @@ def read_conf():
             for line in fp.readlines():
                 try:
                     key, value = line.split('=', maxsplit=1)
+                    logging.debug(f"CSSP.conf got {key}={value}")
                     conf[key.strip()] = value.strip()
                 except: pass
     return conf
@@ -74,12 +79,20 @@ def write_conf(key, value):
         for key, value in conf.items():
             fp.write(f"{key}={value}\n")
 
-def check_java_bin():
-    global JAVA_BIN
-    if check_version(JAVA_BIN): return JAVA_BIN
-    JAVA_BIN = locate_java_bin()
-    write_conf("JAVA_BIN", JAVA_BIN)
-    return JAVA_BIN
+
+def check_system():
+    global JAVA_BIN, PHOEBUS_JAR
+
+    if not JAVA_BIN:
+        JAVA_BIN = locate_java_bin()
+        write_conf("JAVA_BIN", JAVA_BIN)
+    
+    if not PHOEBUS_JAR: 
+        PHOEBUS_JAR = locate_phoebus()
+        write_conf("PHOEBUS_JAR", PHOEBUS_JAR)
+
+    print(f"JAVA_BIN = {JAVA_BIN}")
+    print(f"PHOEBUS_JAR = {PHOEBUS_JAR}")
 
 def locate_java_bin():
     """Finds the Java bin with the correct version"""
@@ -90,27 +103,30 @@ def locate_java_bin():
     response, code = run_cmd(f"{cmd[OS_NAME]} java")
     for java_bin in response.split(separator[OS_NAME]):
         if check_version(java_bin): return java_bin
-    exit("[Error] Unable to find valid Java version")
+    logging.critical('Cannot find valid java version set manually in CSSP.conf')
+    exit(1)
 
-def check_version(path, version="21"):
+def check_version(path, min_version=17):
     """Checks java bin version"""
-    cmd = f'"{path}" -version'
+    cmd = f'"{path}" --version'
+    logging.debug(f"Checking java {path}")
     response, code = run_cmd(cmd)
     if code != 0: return False
-    is_v17 = response.splitlines()[0].find(f"{version}.") != -1
-    if is_v17: return True
+    match = re.search(r'(\d+)\.([\db_-]*)\.([\db_-]*)', response)
+    logging.debug(f"version {match.group(0)}")
+    if int(match.group(1)) >= min_version: return True
     return False
 
-def check_phoebus():
+def locate_phoebus():
     global PHOEBUS_JAR
-    if os.path.exists(PHOEBUS_JAR): return PHOEBUS_JAR
+    if PHOEBUS_JAR and os.path.exists(PHOEBUS_JAR): return PHOEBUS_JAR
     search_glob = os.path.join(ROOT_DIR, 'p*', 'p*.jar')
     matches = glob.glob(search_glob)
     if len(matches) != 0:
         PHOEBUS_JAR = matches[0]
-        write_conf("PHOEBUS_JAR", PHOEBUS_JAR)
         return PHOEBUS_JAR
-    exit("[Error] Unable to find Phoebus jar")
+    logging.critical('Cannot find phoebus jar set manually in CSSP.conf')
+    exit(1)
 
 def gen_ID(args):
     uuts = sorted(args.uuts)
