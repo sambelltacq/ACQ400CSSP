@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:54:25 by dt100-->
+<!--Saved on 2025-06-03 17:22:29 by dt100-->
 <display version="2.0.0">
   <name>GAINS$(MUUT):$(SITE)</name>
-  <width>920</width>
-  <height>390</height>
+  <width>710</width>
+  <height>700</height>
   <widget type="group" version="3.0.0">
     <name>GAINS</name>
     <x>10</x>
     <y>10</y>
-    <width>900</width>
-    <height>370</height>
+    <width>690</width>
+    <height>680</height>
     <style>3</style>
     <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>$(UUT):$(SITE) GAINS</text>
+      <width>380</width>
+      <height>30</height>
+      <font>
+        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="embedded" version="2.0.0">
+      <name>GAINS ALL</name>
+      <macros>
+        <chan>ALL</chan>
+      </macros>
+      <file>components/gains/chan_gain.bob</file>
+      <y>50</y>
+      <width>130</width>
+      <height>70</height>
+      <resize>2</resize>
+    </widget>
     <widget type="template" version="2.0.0">
       <name>GAINS ARRAY</name>
       <file>components/gains/chan_gain.bob</file>
@@ -177,35 +199,13 @@
           </macros>
         </instance>
       </instances>
-      <x>100</x>
+      <x>140</x>
       <y>50</y>
-      <width>790</width>
-      <height>310</height>
+      <width>550</width>
+      <height>630</height>
       <horizontal>true</horizontal>
-      <wrap_count>8</wrap_count>
+      <wrap_count>4</wrap_count>
       <transparent>true</transparent>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_6</name>
-      <text>$(UUT):$(SITE) GAINS</text>
-      <width>380</width>
-      <height>30</height>
-      <font>
-        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
-        </font>
-      </font>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="embedded" version="2.0.0">
-      <name>GAINS ALL</name>
-      <macros>
-        <chan>ALL</chan>
-      </macros>
-      <file>components/gains/chan_gain.bob</file>
-      <y>50</y>
-      <width>90</width>
-      <height>70</height>
-      <resize>2</resize>
     </widget>
   </widget>
 </display>

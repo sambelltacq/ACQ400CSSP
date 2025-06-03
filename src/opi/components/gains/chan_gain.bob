@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-20 12:51:30 by dt100-->
+<!--Saved on 2025-06-03 17:24:16 by dt100-->
 <display version="2.0.0">
   <name>chan gain</name>
-  <width>90</width>
+  <width>130</width>
   <height>70</height>
   <widget type="group" version="3.0.0">
     <name>CHAN GAIN</name>
-    <width>90</width>
+    <width>130</width>
     <height>70</height>
     <visible>false</visible>
     <style>3</style>
@@ -32,36 +32,33 @@
       <name>CHAN GAIN INNER</name>
       <x>10</x>
       <y>10</y>
-      <width>70</width>
+      <width>110</width>
       <height>50</height>
       <style>3</style>
       <transparent>true</transparent>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label</name>
-      <text>CH:$(chan)</text>
-      <x>10</x>
-      <y>10</y>
-      <width>70</width>
-      <font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>CH:$(chan)</text>
+        <width>110</width>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
         </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="combo" version="2.0.0">
-      <name>GAIN INPUT</name>
-      <pv_name>${UUT}:${SITE}:GAIN:${chan}</pv_name>
-      <x>10</x>
-      <y>40</y>
-      <width>70</width>
-      <height>20</height>
-      <background_color>
-        <color name="Background" red="255" green="255" blue="255">
-        </color>
-      </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>GAIN INPUT</name>
+        <pv_name>${UUT}:${SITE}:GAIN:${chan}</pv_name>
+        <y>30</y>
+        <width>110</width>
+        <height>20</height>
+        <background_color>
+          <color name="Background" red="255" green="255" blue="255">
+          </color>
+        </background_color>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
     </widget>
   </widget>
 </display>
