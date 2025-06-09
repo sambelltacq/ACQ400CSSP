@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-06 12:54:24 by dt100-->
+<!--Saved on 2025-06-09 11:13:11 by dt100-->
 <display version="2.0.0">
   <name>Scope$(MUUT):$(SITE_TITLE) $(mode) $(SCOPE_CHANS)</name>
   <macros>
@@ -55,7 +55,7 @@
     <widget type="group" version="3.0.0">
       <name>PLOT FOOTER</name>
       <y>730</y>
-      <width>370</width>
+      <width>270</width>
       <height>30</height>
       <style>3</style>
       <transparent>true</transparent>
@@ -68,30 +68,10 @@
         <vertical_alignment>1</vertical_alignment>
         <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>WF UPDATES</name>
-        <pv_name>$(UUT):1:AI:WF:01:UPDATES</pv_name>
-        <x>160</x>
-        <height>30</height>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <rules>
-          <rule name="HIDE_TW" prop_id="visible" out_exp="true">
-            <exp bool_exp="&quot;$(SCOPE_MODE)&quot;==&quot;LIVE&quot;">
-              <expression>true</expression>
-            </exp>
-            <exp bool_exp="true">
-              <expression>False</expression>
-            </exp>
-            <pv_name>loc://NSITES</pv_name>
-          </rule>
-        </rules>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
       <widget type="combo" version="2.0.0">
         <name>ADC_CAL Input</name>
         <pv_name>${UUT}:$(SITE):ADC_CAL</pv_name>
-        <x>270</x>
+        <x>160</x>
         <rules>
           <rule name="HIDE_BAD_SITE" prop_id="visible" out_exp="true">
             <exp bool_exp="int($(SITE)) &gt; 0">
@@ -105,6 +85,100 @@
         </rules>
         <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>SHOT STATE</name>
+    <x>790</x>
+    <y>10</y>
+    <width>130</width>
+    <height>35</height>
+    <visible>false</visible>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="SHOW_ELEMENT" prop_id="visible" out_exp="false">
+        <exp bool_exp="&quot;$(SCOPE_MODE)&quot;==&quot;POST&quot;">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>=abs(1)</pv_name>
+      </rule>
+    </rules>
+    <widget type="textupdate" version="2.0.0">
+      <name>SHOT UPDATE</name>
+      <pv_name>$(UUT):1:SHOT</pv_name>
+      <x>60</x>
+      <y>5</y>
+      <width>70</width>
+      <height>25</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>SHOT LABEL</name>
+      <text>SHOT</text>
+      <width>50</width>
+      <height>35</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>UPDATE STATE</name>
+    <x>790</x>
+    <y>10</y>
+    <width>140</width>
+    <height>35</height>
+    <visible>false</visible>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="SHOW_ELEMENT" prop_id="visible" out_exp="false">
+        <exp bool_exp="&quot;$(SCOPE_MODE)&quot;==&quot;LIVE&quot;">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>=abs(1)</pv_name>
+      </rule>
+    </rules>
+    <widget type="textupdate" version="2.0.0">
+      <name>UPDATE UPDATE</name>
+      <pv_name>$(UUT):1:SHOT</pv_name>
+      <x>70</x>
+      <y>5</y>
+      <width>70</width>
+      <height>25</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>UPDATE LABEL</name>
+      <text>UPDATE</text>
+      <width>60</width>
+      <height>35</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
 </display>
