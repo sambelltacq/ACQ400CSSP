@@ -30,7 +30,7 @@ def set_macros(widget, macros):
 
 # Main
 macros = get_macros(display)
-uut_val = PVUtil.getString(pvs[0]).lower()
+uut_val = PVUtil.getString(pvs[0])
 
 if uut_val != '0':
     if macros.UUT != uut_val:
