@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-09 11:13:11 by dt100-->
+<!--Saved on 2025-06-10 10:28:52 by dt100-->
 <display version="2.0.0">
   <name>Scope$(MUUT):$(SITE_TITLE) $(mode) $(SCOPE_CHANS)</name>
   <macros>
@@ -156,7 +156,7 @@
     </rules>
     <widget type="textupdate" version="2.0.0">
       <name>UPDATE UPDATE</name>
-      <pv_name>$(UUT):1:SHOT</pv_name>
+      <pv_name>$(UUT):1:AI:WF:01:UPDATES</pv_name>
       <x>70</x>
       <y>5</y>
       <width>70</width>
