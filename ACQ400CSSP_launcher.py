@@ -168,6 +168,7 @@ def gen_macros_pref(uuts, debug):
             idx += 1
             macros += f"<UUT{idx}>{uut}</UUT{idx}>"
     macros += f"<DEBUG>{debug}</DEBUG>"
+    macros += f"<UUTS>{','.join(uuts)}</UUTS>"
     return macros
 
 def update_pref():
