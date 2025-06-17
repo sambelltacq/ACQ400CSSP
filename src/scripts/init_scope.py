@@ -80,7 +80,7 @@ def format_channels(chans):
 
 macros = get_macros(display, widget)
 
-SCOPE_MAP = [item.strip() for item in macros.SCOPE_MAP.split('/')]
+SCOPE_MAP = [item.strip() for item in macros.SCOPE_MAP.split('/') if len(item.strip()) > 0]
 SCOPE_MODE = macros.SCOPE_MODE #LIVE, POST, STRIP
 SCOPE_XTYPE = macros.SCOPE_XTYPE #SAMPLES, TIME
 SCOPE_YTYPE = macros.SCOPE_YTYPE #CODES, VOLTS
@@ -102,16 +102,19 @@ MAX_TRACES = macros.get('MAX_TRACES', 8)
 OPI = macros.get('{}_OPI'.format(SCOPE_MODE), None)
 UUT = macros.get('UUT', None)
 SITE = int(macros.get('SITE', 1))
-CROSS_SITE = bool(macros.get('CROSS_SITE', False))
+CROSS_SITE = int(macros.get('CROSS_SITE', 0))
 SIZE = macros.get('SCOPE_SIZE', None)
 macros.mode = macros.get('MODE_{}'.format(SCOPE_MODE), 'WF')
+
+if SCOPE_MODE == 'STRIP': #Force strip chart to use volts. TODO fix
+    SCOPE_YTYPE = "VOLTS"
+    YTRACE_FMT = "{uut}:{site}:AI:{mode}:{chan:02d}"
+
 
 trace = 0
 new_macros = {}
 active_channels = {}
 cache = {}
-
-OPI = None if SCOPE_XTYPE == 'TIME' and SCOPE_MODE != 'POST' else OPI
 
 for i in range(MAX_TRACES):
     new_macros['TRACE_{}_YPV'.format(i)] = ""
@@ -134,7 +137,7 @@ for uutchans in SCOPE_MAP:
     chans = logical_to_physical(uut, site, chans, cache)
 
     for uut, site, chan in chans:
-        if trace > MAX_TRACES: break
+        if trace >= MAX_TRACES: break
         macros.uut = uut
         macros.site = site
         macros.chan = chan

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-19 15:28:26 by dt100-->
+<!--Saved on 2025-06-17 17:19:53 by dt100-->
 <display version="2.0.0">
   <name>SCOPE OPTIONS</name>
-  <width>630</width>
-  <height>50</height>
+  <width>150</width>
+  <height>230</height>
   <widget type="choice" version="2.0.0">
     <name>MODE CHOICE</name>
     <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
@@ -23,8 +23,7 @@
   <widget type="choice" version="2.0.0">
     <name>XTYPE CHOICE</name>
     <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-    <x>160</x>
-    <y>20</y>
+    <y>80</y>
     <width>150</width>
     <height>30</height>
     <font>
@@ -33,14 +32,13 @@
     </font>
     <items>
       <item>SAMPLES</item>
-      <item>SECONDS</item>
+      <item>TIME</item>
     </items>
   </widget>
   <widget type="choice" version="2.0.0">
     <name>YTYPE CHOICE</name>
     <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-    <x>320</x>
-    <y>20</y>
+    <y>140</y>
     <width>150</width>
     <height>30</height>
     <font>
@@ -55,8 +53,7 @@
   <widget type="choice" version="2.0.0">
     <name>SIZE CHOICE</name>
     <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-    <x>480</x>
-    <y>20</y>
+    <y>200</y>
     <width>150</width>
     <height>30</height>
     <font>
@@ -82,7 +79,7 @@
   <widget type="label" version="2.0.0">
     <name>LABEL 2</name>
     <text>X Axis</text>
-    <x>160</x>
+    <y>60</y>
     <width>150</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -93,7 +90,7 @@
   <widget type="label" version="2.0.0">
     <name>LABEL 3</name>
     <text>Y Axis</text>
-    <x>320</x>
+    <y>120</y>
     <width>150</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -104,7 +101,7 @@
   <widget type="label" version="2.0.0">
     <name>LABEL 4</name>
     <text>Size</text>
-    <x>480</x>
+    <y>180</y>
     <width>150</width>
     <font>
       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">

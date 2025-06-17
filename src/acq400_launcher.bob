@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-09 11:28:18 by dt100-->
+<!--Saved on 2025-06-19 16:04:54 by dt100-->
 <display version="2.0.0">
   <name>Launcher$(MUUT)</name>
   <macros>
@@ -10,7 +10,7 @@
     <MUUT>$(MUUT_$(UUT2)= $(UUT))</MUUT>
   </macros>
   <width>700</width>
-  <height>610</height>
+  <height>970</height>
   <scripts>
     <script file="scripts/handle_uut.py">
       <pv_name>loc://UUT_$(DID)</pv_name>
@@ -18,8 +18,8 @@
   </scripts>
   <widget type="group" version="3.0.0">
     <name>INIT LOC</name>
-    <x>240</x>
-    <y>630</y>
+    <x>20</x>
+    <y>670</y>
     <width>130</width>
     <height>300</height>
     <visible>$(DEBUG)</visible>
@@ -34,9 +34,6 @@
       <scripts>
         <script file="scripts/handle_macro.py">
           <pv_name>loc://SITE_$(DID)</pv_name>
-          <pv_name>loc://SCOPE_TYPE_$(DID)</pv_name>
-          <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-          <pv_name>loc://SCOPE_CHANS_$(DID)</pv_name>
         </script>
       </scripts>
     </widget>
@@ -56,42 +53,6 @@
       <name>INIT LOC://SITE_MODEL</name>
       <pv_name>loc://SITE_MODEL_$(DID)&lt;VString&gt;(none)</pv_name>
       <y>50</y>
-      <width>130</width>
-      <background_color>
-        <color red="255" green="212" blue="0">
-        </color>
-      </background_color>
-      <precision>0</precision>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>INIT LOC://SCOPE_TYPE</name>
-      <pv_name>loc://SCOPE_TYPE_$(DID)&lt;VEnum&gt;(0, VOLTS, RAW)</pv_name>
-      <y>70</y>
-      <width>130</width>
-      <background_color>
-        <color red="255" green="212" blue="0">
-        </color>
-      </background_color>
-      <precision>0</precision>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>INIT LOC://SCOPE_MODE</name>
-      <pv_name>loc://SCOPE_MODE_$(DID)&lt;VEnum&gt;(0, LIVE, POST)</pv_name>
-      <y>90</y>
-      <width>130</width>
-      <background_color>
-        <color red="255" green="212" blue="0">
-        </color>
-      </background_color>
-      <precision>0</precision>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>INIT LOC://SCOPE_CHANS</name>
-      <pv_name>loc://SCOPE_CHANS_$(DID)&lt;VString&gt;("1,2,3,4-8")</pv_name>
-      <y>110</y>
       <width>130</width>
       <background_color>
         <color red="255" green="212" blue="0">
@@ -127,12 +88,63 @@
     </macros>
     <file>opi/components/launcher/main.bob</file>
     <width>700</width>
-    <height>610</height>
+    <height>650</height>
     <resize>2</resize>
     <transparent>true</transparent>
     <scripts>
       <script file="scripts/init_uut.py" check_connections="false">
       </script>
     </scripts>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>INIT LOCAL</name>
+    <x>350</x>
+    <y>670</y>
+    <width>220</width>
+    <height>180</height>
+    <visible>$(DEBUG)</visible>
+    <style>1</style>
+    <foreground_color>
+      <color name="Header_ForeGround" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="3.0.0">
+      <name>INIT OPTIONS</name>
+      <width>90</width>
+      <height>140</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE YTYPE</name>
+        <pv_name>loc://SCOPE_YTYPE_$(DID)&lt;VEnum&gt;(0, "CODES", "VOLTS")</pv_name>
+        <width>90</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE XTYPE</name>
+        <pv_name>loc://SCOPE_XTYPE_$(DID)&lt;VEnum&gt;(0, "SAMPLES", "SECONDS")</pv_name>
+        <y>20</y>
+        <width>90</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE MODE</name>
+        <pv_name>loc://SCOPE_MODE_$(DID)&lt;VEnum&gt;(0, "LIVE", "POST", "STRIP")</pv_name>
+        <y>40</y>
+        <width>90</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE SIZE</name>
+        <pv_name>loc://SCOPE_SIZE_$(DID)&lt;VEnum&gt;(1, "S", "M", "L")</pv_name>
+        <y>60</y>
+        <width>90</width>
+      </widget>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>INIT SCOPE CHANMAP</name>
+      <pv_name>loc://SCOPE_MAP_$(DID)&lt;VString&gt;("1-8")</pv_name>
+      <x>90</x>
+      <width>120</width>
+      <height>160</height>
+    </widget>
   </widget>
 </display>

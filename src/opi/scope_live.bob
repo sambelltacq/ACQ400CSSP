@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-12 17:43:30 by dt100-->
+<!--Saved on 2025-06-17 18:07:33 by dt100-->
 <display version="2.0.0">
   <name>$(SCOPE_TITLE)</name>
   <macros>
@@ -8,9 +8,31 @@
     <TRACE_WIDTH>$(TRACE_WIDTH=1)</TRACE_WIDTH>
     <SCOPE_TITLE>$(SCOPE_TITLE=LIVE SCOPE)</SCOPE_TITLE>
   </macros>
+  <width>820</width>
+  <height>630</height>
+  <widget type="group" version="3.0.0">
+    <name>INIT LOCAL</name>
+    <x>590</x>
+    <width>120</width>
+    <height>40</height>
+    <visible>$(DEBUG)</visible>
+    <style>1</style>
+    <foreground_color>
+      <color name="Header_ForeGround" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <tooltip></tooltip>
+    <widget type="textupdate" version="2.0.0">
+      <name>INIT TRACE EN</name>
+      <pv_name>loc://trace_en_$(DID)&lt;VDouble&gt;(255)</pv_name>
+      <width>120</width>
+    </widget>
+  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>LIVE SCOPE</name>
     <x>10</x>
+    <y>30</y>
     <width>$(WIDTH)</width>
     <height>$(HEIGHT)</height>
     <title>$(SCOPE_TITLE)</title>
@@ -269,99 +291,61 @@
       </trace>
     </traces>
   </widget>
-  <widget type="group" version="3.0.0">
-    <name>INIT LOCAL</name>
-    <x>450</x>
-    <y>$(HEIGHT)</y>
-    <width>120</width>
-    <height>70</height>
-    <visible>$(DEBUG)</visible>
-    <style>1</style>
-    <foreground_color>
-      <color name="Header_ForeGround" red="255" green="255" blue="255">
-      </color>
-    </foreground_color>
-    <transparent>true</transparent>
-    <tooltip>aaa</tooltip>
-    <widget type="textupdate" version="2.0.0">
-      <name>INIT TRACE EN</name>
-      <pv_name>loc://trace_en_$(DID)&lt;VDouble&gt;(255)</pv_name>
-      <width>120</width>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>SCOPE CONTROLS</name>
+  <widget type="embedded" version="2.0.0">
+    <name>TRACE VIZ CONTROL</name>
+    <file>components/scope/trace_viz_controls.bob</file>
     <x>10</x>
-    <y>$(HEIGHT)</y>
-    <width>350</width>
-    <height>90</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>SCOPE CONTROLS INNER</name>
-      <y>30</y>
-      <width>350</width>
-      <height>60</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>TRACE VIZ CONTROL</name>
-        <file>components/scope/trace_viz_controls.bob</file>
-        <width>200</width>
-        <height>25</height>
-        <resize>2</resize>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>DATA TYPE</name>
-        <pv_name>$(UUT):1:AI:WF:01.FTVL</pv_name>
-        <y>35</y>
-        <width>120</width>
-        <height>25</height>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="combo" version="2.0.0">
-        <name>ADC_CAL Input</name>
-        <pv_name>${UUT}:$(SITE):ADC_CAL</pv_name>
-        <x>130</x>
-        <y>35</y>
-        <height>25</height>
-        <rules>
-          <rule name="HIDE_BAD_SITE" prop_id="visible" out_exp="true">
-            <exp bool_exp="int($(SITE)) &gt; 0">
-              <expression>true</expression>
-            </exp>
-            <exp bool_exp="true">
-              <expression>false</expression>
-            </exp>
-            <pv_name>loc://UUT</pv_name>
-          </rule>
-        </rules>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>UPDATE LABEL</name>
-        <text>UPDATE</text>
-        <x>210</x>
-        <width>60</width>
-        <height>25</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>UPDATE UPDATE</name>
-        <pv_name>$(UUT):1:AI:WF:01:UPDATES</pv_name>
-        <x>280</x>
-        <width>70</width>
-        <height>25</height>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
-      </widget>
-    </widget>
+    <width>200</width>
+    <height>25</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>UPDATE LABEL</name>
+    <text>UPDATE</text>
+    <x>440</x>
+    <width>60</width>
+    <height>25</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>UPDATE UPDATE</name>
+    <pv_name>$(UUT):1:AI:WF:01:UPDATES</pv_name>
+    <x>510</x>
+    <width>70</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>DATA TYPE</name>
+    <pv_name>$(UUT):1:AI:WF:01.FTVL</pv_name>
+    <x>220</x>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>ADC_CAL Input</name>
+    <pv_name>${UUT}:$(SITE):ADC_CAL</pv_name>
+    <x>330</x>
+    <height>25</height>
+    <rules>
+      <rule name="HIDE_BAD_SITE" prop_id="visible" out_exp="true">
+        <exp bool_exp="int($(SITE)) &gt; 0">
+          <expression>true</expression>
+        </exp>
+        <exp bool_exp="true">
+          <expression>false</expression>
+        </exp>
+        <pv_name>loc://UUT</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
 </display>
