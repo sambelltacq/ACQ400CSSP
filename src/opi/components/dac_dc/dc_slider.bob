@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 10:43:58 by dt100-->
+<!--Saved on 2025-06-19 16:52:04 by dt100-->
 <display version="2.0.0">
   <name>DC Slider</name>
   <width>120</width>
@@ -83,6 +83,7 @@
         <y>180</y>
         <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
       <widget type="scaledslider" version="2.0.0">
         <name>Scaled Slider_1</name>
@@ -93,6 +94,7 @@
         <height>120</height>
         <horizontal>false</horizontal>
         <major_tick_step_hint>20</major_tick_step_hint>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>
