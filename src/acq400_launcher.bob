@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-19 16:04:54 by dt100-->
+<!--Saved on 2025-06-20 14:37:54 by dt100-->
 <display version="2.0.0">
   <name>Launcher$(MUUT)</name>
   <macros>
@@ -16,6 +16,57 @@
       <pv_name>loc://UUT_$(DID)</pv_name>
     </script>
   </scripts>
+  <widget type="group" version="3.0.0">
+    <name>INIT LOCAL</name>
+    <x>350</x>
+    <y>670</y>
+    <width>220</width>
+    <height>180</height>
+    <visible>$(DEBUG)</visible>
+    <style>1</style>
+    <foreground_color>
+      <color name="Header_ForeGround" red="255" green="255" blue="255">
+      </color>
+    </foreground_color>
+    <transparent>true</transparent>
+    <widget type="group" version="3.0.0">
+      <name>INIT OPTIONS</name>
+      <width>90</width>
+      <height>140</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE YTYPE</name>
+        <pv_name>loc://SCOPE_YTYPE_$(DID)&lt;VEnum&gt;(0, "CODES", "VOLTS")</pv_name>
+        <width>90</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE XTYPE</name>
+        <pv_name>loc://SCOPE_XTYPE_$(DID)&lt;VEnum&gt;(0, "SAMPLES", "SECONDS")</pv_name>
+        <y>20</y>
+        <width>90</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE MODE</name>
+        <pv_name>loc://SCOPE_MODE_$(DID)&lt;VEnum&gt;(0, "LIVE", "POST", "STRIP")</pv_name>
+        <y>40</y>
+        <width>90</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>INIT SCOPE SIZE</name>
+        <pv_name>loc://SCOPE_SIZE_$(DID)&lt;VEnum&gt;(1, "S", "M", "L")</pv_name>
+        <y>60</y>
+        <width>90</width>
+      </widget>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>INIT SCOPE CHANMAP</name>
+      <pv_name>loc://SCOPE_MAP_$(DID)&lt;VString&gt;("1-8")</pv_name>
+      <x>90</x>
+      <width>120</width>
+      <height>160</height>
+    </widget>
+  </widget>
   <widget type="group" version="3.0.0">
     <name>INIT LOC</name>
     <x>20</x>
@@ -88,63 +139,12 @@
     </macros>
     <file>opi/components/launcher/main.bob</file>
     <width>700</width>
-    <height>650</height>
+    <height>660</height>
     <resize>2</resize>
     <transparent>true</transparent>
     <scripts>
       <script file="scripts/init_uut.py" check_connections="false">
       </script>
     </scripts>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>INIT LOCAL</name>
-    <x>350</x>
-    <y>670</y>
-    <width>220</width>
-    <height>180</height>
-    <visible>$(DEBUG)</visible>
-    <style>1</style>
-    <foreground_color>
-      <color name="Header_ForeGround" red="255" green="255" blue="255">
-      </color>
-    </foreground_color>
-    <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>INIT OPTIONS</name>
-      <width>90</width>
-      <height>140</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>INIT SCOPE YTYPE</name>
-        <pv_name>loc://SCOPE_YTYPE_$(DID)&lt;VEnum&gt;(0, "CODES", "VOLTS")</pv_name>
-        <width>90</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>INIT SCOPE XTYPE</name>
-        <pv_name>loc://SCOPE_XTYPE_$(DID)&lt;VEnum&gt;(0, "SAMPLES", "SECONDS")</pv_name>
-        <y>20</y>
-        <width>90</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>INIT SCOPE MODE</name>
-        <pv_name>loc://SCOPE_MODE_$(DID)&lt;VEnum&gt;(0, "LIVE", "POST", "STRIP")</pv_name>
-        <y>40</y>
-        <width>90</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>INIT SCOPE SIZE</name>
-        <pv_name>loc://SCOPE_SIZE_$(DID)&lt;VEnum&gt;(1, "S", "M", "L")</pv_name>
-        <y>60</y>
-        <width>90</width>
-      </widget>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>INIT SCOPE CHANMAP</name>
-      <pv_name>loc://SCOPE_MAP_$(DID)&lt;VString&gt;("1-8")</pv_name>
-      <x>90</x>
-      <width>120</width>
-      <height>160</height>
-    </widget>
   </widget>
 </display>
