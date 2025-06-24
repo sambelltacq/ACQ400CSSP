@@ -101,8 +101,8 @@ def check_system():
 
 def locate_java_bin():
     """Finds the Java bin with the correct version"""
-    cmd = {'windows': 'where', 'linux': 'whereis'}
-    separator = {'windows': '\n', 'linux': ' '}
+    cmd = {'windows': 'where', 'linux': 'whereis', 'darwin': 'whereis'}
+    separator = {'windows': '\n', 'linux': ' ', 'darwin': ' '}
     java_bin = "java"
     if check_version(java_bin): return java_bin
     response, code = run_cmd(f"{cmd[OS_NAME]} java")
