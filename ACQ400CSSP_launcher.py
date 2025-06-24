@@ -105,7 +105,15 @@ def locate_java_bin():
     separator = {'windows': '\n', 'linux': ' ', 'darwin': ' '}
     java_bin = "java"
     if check_version(java_bin): return java_bin
-    response, code = run_cmd(f"{cmd[OS_NAME]} java")
+    try:
+        response, code = run_cmd(f"{cmd[OS_NAME]} java")
+    except KeyError:
+        raise NotImplementedError(
+            f"Unsupported Operating System: The script has detected that you are running on '{OS_NAME}'. "
+            f"This is not a supported platform for this launcher (Windows, Mac or Linux recommended). "
+            f"Cannot determine how to search for 'java' binary. "
+            f"Try configuring java location manually in CSSP.conf file." 
+        )
     for java_bin in response.split(separator[OS_NAME]):
         if check_version(java_bin): return java_bin
     logging.critical('Cannot find valid java version set manually in CSSP.conf')
