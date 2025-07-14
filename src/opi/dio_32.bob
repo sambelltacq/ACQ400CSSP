@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:53:48 by dt100-->
+<!--Saved on 2025-07-14 10:36:22 by sam-->
 <display version="2.0.0">
   <name>DIO_32$(MUUT):$(SITE)</name>
-  <width>630</width>
-  <height>290</height>
+  <width>650</width>
+  <height>280</height>
   <widget type="group" version="3.0.0">
     <name>DIO 32</name>
     <x>10</x>
     <y>10</y>
-    <width>610</width>
-    <height>270</height>
+    <width>630</width>
+    <height>260</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>DO</name>
-      <x>320</x>
+      <x>330</x>
       <y>40</y>
       <width>240</width>
       <height>180</height>
@@ -29,7 +29,17 @@
         <y>60</y>
         <width>240</width>
         <height>30</height>
+        <visible>false</visible>
         <resize>2</resize>
+        <rules>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
+            <exp bool_exp="true">
+              <expression>pv0!=pv1</expression>
+            </exp>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="embedded" version="2.0.0">
         <name>DO BYTE 2</name>
@@ -40,7 +50,17 @@
         <y>90</y>
         <width>240</width>
         <height>30</height>
+        <visible>false</visible>
         <resize>2</resize>
+        <rules>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
+            <exp bool_exp="true">
+              <expression>pv0!=pv1</expression>
+            </exp>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="embedded" version="2.0.0">
         <name>DO BYTE 3</name>
@@ -51,7 +71,17 @@
         <y>120</y>
         <width>240</width>
         <height>30</height>
+        <visible>false</visible>
         <resize>2</resize>
+        <rules>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
+            <exp bool_exp="true">
+              <expression>pv0!=pv1</expression>
+            </exp>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="embedded" version="2.0.0">
         <name>DO BYTE 4</name>
@@ -62,7 +92,17 @@
         <y>150</y>
         <width>240</width>
         <height>30</height>
+        <visible>false</visible>
         <resize>2</resize>
+        <rules>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
+            <exp bool_exp="true">
+              <expression>pv0!=pv1</expression>
+            </exp>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
+            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+          </rule>
+        </rules>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_8</name>
@@ -211,16 +251,17 @@
         <transparent>true</transparent>
         <widget type="byte_monitor" version="2.0.0">
           <name>DI BYTE_1</name>
-          <pv_name>${UUT}:${SITE}:IMM:DI:BYTE1</pv_name>
+          <pv_name>$(pvname0)</pv_name>
           <width>240</width>
           <height>30</height>
+          <visible>false</visible>
           <rules>
             <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
               <exp bool_exp="true">
                 <expression>pv0!=pv1</expression>
               </exp>
-              <pv_name>$(pvname1)</pv_name>
-              <pv_name>$(pvname2)</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
             </rule>
           </rules>
         </widget>
@@ -240,16 +281,17 @@
         <transparent>true</transparent>
         <widget type="byte_monitor" version="2.0.0">
           <name>DI BYTE_2</name>
-          <pv_name>${UUT}:${SITE}:IMM:DI:BYTE1</pv_name>
+          <pv_name>$(pvname0)</pv_name>
           <width>240</width>
           <height>30</height>
+          <visible>false</visible>
           <rules>
             <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
               <exp bool_exp="true">
                 <expression>pv0!=pv1</expression>
               </exp>
-              <pv_name>$(pvname1)</pv_name>
-              <pv_name>$(pvname2)</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
             </rule>
           </rules>
         </widget>
@@ -269,16 +311,17 @@
         <transparent>true</transparent>
         <widget type="byte_monitor" version="2.0.0">
           <name>DI BYTE_3</name>
-          <pv_name>${UUT}:${SITE}:IMM:DI:BYTE1</pv_name>
+          <pv_name>$(pvname0)</pv_name>
           <width>240</width>
           <height>30</height>
+          <visible>false</visible>
           <rules>
             <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
               <exp bool_exp="true">
                 <expression>pv0!=pv1</expression>
               </exp>
-              <pv_name>$(pvname1)</pv_name>
-              <pv_name>$(pvname2)</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
             </rule>
           </rules>
         </widget>
@@ -298,16 +341,17 @@
         <transparent>true</transparent>
         <widget type="byte_monitor" version="2.0.0">
           <name>DI BYTE_4</name>
-          <pv_name>${UUT}:${SITE}:IMM:DI:BYTE1</pv_name>
+          <pv_name>$(pvname0)</pv_name>
           <width>240</width>
           <height>30</height>
+          <visible>false</visible>
           <rules>
             <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
               <exp bool_exp="true">
                 <expression>pv0!=pv1</expression>
               </exp>
-              <pv_name>$(pvname1)</pv_name>
-              <pv_name>$(pvname2)</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
+              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
             </rule>
           </rules>
         </widget>
@@ -491,7 +535,7 @@
     <widget type="led" version="2.0.0">
       <name>LED</name>
       <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE1</pv_name>
-      <x>570</x>
+      <x>590</x>
       <y>100</y>
       <width>30</width>
       <height>30</height>
@@ -499,7 +543,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_22</name>
       <text>BYTE OUT</text>
-      <x>570</x>
+      <x>590</x>
       <y>40</y>
       <width>40</width>
       <height>40</height>
@@ -512,7 +556,7 @@
     <widget type="led" version="2.0.0">
       <name>LED_1</name>
       <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE2</pv_name>
-      <x>570</x>
+      <x>590</x>
       <y>130</y>
       <width>30</width>
       <height>30</height>
@@ -520,7 +564,7 @@
     <widget type="led" version="2.0.0">
       <name>LED_2</name>
       <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE3</pv_name>
-      <x>570</x>
+      <x>590</x>
       <y>160</y>
       <width>30</width>
       <height>30</height>
@@ -528,7 +572,7 @@
     <widget type="led" version="2.0.0">
       <name>LED_3</name>
       <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE4</pv_name>
-      <x>570</x>
+      <x>590</x>
       <y>190</y>
       <width>30</width>
       <height>30</height>
@@ -536,7 +580,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_23</name>
       <text>MODE</text>
-      <y>240</y>
+      <y>230</y>
       <width>60</width>
       <height>30</height>
       <font>
@@ -550,7 +594,7 @@
       <name>Combo Box</name>
       <pv_name>${UUT}:${SITE}:DIO:MODE</pv_name>
       <x>70</x>
-      <y>240</y>
+      <y>230</y>
     </widget>
     <widget type="label" version="2.0.0">
       <name>TITLE</name>
