@@ -1038,12 +1038,14 @@
               <width>150</width>
               <height>30</height>
               <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                <font family="Roboto" style="BOLD" size="14.0">
                 </font>
               </font>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
               <items>
-                <item>SAMPLES</item>
-                <item>TIME</item>
+                <item>test1</item>
+                <item>test1</item>
+                <item>test1</item>
               </items>
             </widget>
           </widget>
@@ -1072,12 +1074,12 @@
               <width>150</width>
               <height>30</height>
               <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                <font family="Arial" style="BOLD" size="14.0">
                 </font>
               </font>
+              <border_alarm_sensitive>false</border_alarm_sensitive>
               <items>
-                <item>CODES</item>
-                <item>VOLTS</item>
+                <item>test 2</item>
               </items>
             </widget>
           </widget>
