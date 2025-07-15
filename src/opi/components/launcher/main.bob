@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-15 15:30:28 by sam-->
+<!--Saved on 2025-07-15 15:40:35 by sam-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
@@ -998,143 +998,6 @@
             </color>
           </background_color>
           <transparent>true</transparent>
-          <widget type="group" version="3.0.0">
-            <name>SCOPE MODE</name>
-            <y>30</y>
-            <width>270</width>
-            <height>50</height>
-            <style>3</style>
-            <transparent>true</transparent>
-            <widget type="label" version="2.0.0">
-              <name>LABEL 1</name>
-              <text>Mode</text>
-              <width>150</width>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <vertical_alignment>1</vertical_alignment>
-            </widget>
-            <widget type="choice" version="2.0.0">
-              <name>MODE CHOICE</name>
-              <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-              <y>20</y>
-              <width>270</width>
-              <height>30</height>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <items>
-                <item>LIVE</item>
-                <item>POST</item>
-                <item>STRIP</item>
-              </items>
-            </widget>
-          </widget>
-          <widget type="group" version="3.0.0">
-            <name>SCOPE X</name>
-            <x>290</x>
-            <y>30</y>
-            <width>180</width>
-            <height>50</height>
-            <style>3</style>
-            <transparent>true</transparent>
-            <widget type="label" version="2.0.0">
-              <name>LABEL 2</name>
-              <text>X Axis</text>
-              <width>150</width>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <vertical_alignment>1</vertical_alignment>
-            </widget>
-            <widget type="choice" version="2.0.0">
-              <name>XTYPE CHOICE</name>
-              <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-              <y>20</y>
-              <width>170</width>
-              <height>30</height>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <items>
-                <item>SAMPLES</item>
-                <item>SECONDS</item>
-              </items>
-            </widget>
-          </widget>
-          <widget type="group" version="3.0.0">
-            <name>SCOPE Y</name>
-            <x>290</x>
-            <y>90</y>
-            <width>180</width>
-            <height>50</height>
-            <style>3</style>
-            <transparent>true</transparent>
-            <widget type="label" version="2.0.0">
-              <name>LABEL 3</name>
-              <text>Y Axis</text>
-              <width>150</width>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <vertical_alignment>1</vertical_alignment>
-            </widget>
-            <widget type="choice" version="2.0.0">
-              <name>YTYPE CHOICE</name>
-              <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-              <y>20</y>
-              <width>170</width>
-              <height>30</height>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <items>
-                <item>CODES</item>
-                <item>VOLTS</item>
-              </items>
-            </widget>
-          </widget>
-          <widget type="group" version="3.0.0">
-            <name>SCOPE SIZE</name>
-            <x>290</x>
-            <y>150</y>
-            <width>180</width>
-            <height>50</height>
-            <style>3</style>
-            <transparent>true</transparent>
-            <widget type="label" version="2.0.0">
-              <name>LABEL 4</name>
-              <text>Size</text>
-              <width>150</width>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <vertical_alignment>1</vertical_alignment>
-            </widget>
-            <widget type="choice" version="2.0.0">
-              <name>SIZE CHOICE</name>
-              <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-              <y>20</y>
-              <width>170</width>
-              <height>30</height>
-              <font>
-                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                </font>
-              </font>
-              <items>
-                <item>S</item>
-                <item>M</item>
-                <item>L</item>
-              </items>
-            </widget>
-          </widget>
           <widget type="label" version="2.0.0">
             <name>TITLE_5</name>
             <text>Scope</text>
@@ -1146,313 +1009,411 @@
             </font>
             <vertical_alignment>1</vertical_alignment>
           </widget>
-          <widget type="group" version="3.0.0">
-            <name>SITE CHANS</name>
+          <widget type="label" version="2.0.0">
+            <name>LABEL 2</name>
+            <text>X Axis</text>
+            <x>290</x>
+            <y>30</y>
+            <width>150</width>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="choice" version="2.0.0">
+            <name>XTYPE CHOICE</name>
+            <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+            <x>290</x>
+            <y>50</y>
+            <width>180</width>
+            <height>30</height>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <items>
+              <item>SAMPLES</item>
+              <item>SECONDS</item>
+            </items>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>LABEL 3</name>
+            <text>Y Axis</text>
+            <x>290</x>
             <y>90</y>
-            <width>270</width>
-            <height>50</height>
+            <width>150</width>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="choice" version="2.0.0">
+            <name>YTYPE CHOICE</name>
+            <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+            <x>290</x>
+            <y>110</y>
+            <width>180</width>
+            <height>30</height>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <items>
+              <item>CODES</item>
+              <item>VOLTS</item>
+            </items>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>LABEL 4</name>
+            <text>Size</text>
+            <x>290</x>
+            <y>150</y>
+            <width>150</width>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="choice" version="2.0.0">
+            <name>SIZE CHOICE</name>
+            <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+            <x>290</x>
+            <y>170</y>
+            <width>180</width>
+            <height>30</height>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <items>
+              <item>S</item>
+              <item>M</item>
+              <item>L</item>
+            </items>
+          </widget>
+          <widget type="textentry" version="3.0.0">
+            <name>CARRIER CHANS INPUT</name>
+            <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+            <y>170</y>
+            <width>130</width>
+            <height>30</height>
+            <background_color>
+              <color name="Read_Background" red="240" green="240" blue="240">
+              </color>
+            </background_color>
+            <format>6</format>
+            <show_units>false</show_units>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>CARRIER CHANS LABEL</name>
+            <text>Carrier Chans</text>
+            <y>150</y>
+            <width>130</width>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="group" version="3.0.0">
+            <name>PLOT_LAUNCHER</name>
+            <macros>
+              <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
+              <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <POST_OPI>opi/scope_post.bob</POST_OPI>
+              <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+              <CROSS_SITE>1</CROSS_SITE>
+              <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
+              <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+              <WIDTH_S>500</WIDTH_S>
+              <HEIGHT_S>380</HEIGHT_S>
+              <WIDTH_L>1000</WIDTH_L>
+              <HEIGHT_L>700</HEIGHT_L>
+              <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+              <MODE_POST>TW</MODE_POST>
+            </macros>
+            <x>140</x>
+            <y>170</y>
+            <width>130</width>
+            <height>30</height>
             <style>3</style>
             <transparent>true</transparent>
-            <widget type="group" version="3.0.0">
-              <name>PLOT_LAUNCHER_1-8</name>
-              <macros>
-                <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-                <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
-                <POST_OPI>opi/scope_post.bob</POST_OPI>
-                <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
-                <CROSS_SITE>0</CROSS_SITE>
-                <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
-                <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
-                <WIDTH_S>500</WIDTH_S>
-                <HEIGHT_S>380</HEIGHT_S>
-                <WIDTH_L>1000</WIDTH_L>
-                <HEIGHT_L>700</HEIGHT_L>
-                <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
-                <MODE_POST>TW</MODE_POST>
-                <SCOPE_MAP>1-8</SCOPE_MAP>
-                <MODE_STRIP>CH</MODE_STRIP>
-              </macros>
-              <y>20</y>
-              <width>60</width>
-              <height>30</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <scripts>
-                <script file="../../../scripts/handle_local.py">
-                  <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-                </script>
-              </scripts>
-              <widget type="action_button" version="3.0.0">
-                <name>1-8 Button</name>
-                <actions>
-                  <action type="execute">
-                    <description>Execute Script</description>
-                    <script file="../../../scripts/init_scope.py">
-                    </script>
-                  </action>
-                </actions>
-                <text>1-8</text>
-                <width>60</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <tooltip>$(actions)</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>PLOT_LAUNCHER_9-16</name>
-              <macros>
-                <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-                <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
-                <POST_OPI>opi/scope_post.bob</POST_OPI>
-                <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
-                <CROSS_SITE>0</CROSS_SITE>
-                <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
-                <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
-                <WIDTH_S>500</WIDTH_S>
-                <HEIGHT_S>380</HEIGHT_S>
-                <WIDTH_L>1000</WIDTH_L>
-                <HEIGHT_L>700</HEIGHT_L>
-                <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
-                <MODE_POST>TW</MODE_POST>
-                <SCOPE_MAP>9-16</SCOPE_MAP>
-              </macros>
-              <x>70</x>
-              <y>20</y>
-              <width>60</width>
-              <height>30</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <scripts>
-                <script file="../../../scripts/handle_local.py">
-                  <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-                </script>
-              </scripts>
-              <widget type="action_button" version="3.0.0">
-                <name>9-16 Button</name>
-                <actions>
-                  <action type="execute">
-                    <description>Execute Script</description>
-                    <script file="../../../scripts/init_scope.py">
-                    </script>
-                  </action>
-                </actions>
-                <text>9-16</text>
-                <width>60</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <tooltip>$(actions)</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>PLOT_LAUNCHER_17-24</name>
-              <macros>
-                <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-                <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
-                <POST_OPI>opi/scope_post.bob</POST_OPI>
-                <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
-                <CROSS_SITE>0</CROSS_SITE>
-                <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
-                <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
-                <WIDTH_S>500</WIDTH_S>
-                <HEIGHT_S>380</HEIGHT_S>
-                <WIDTH_L>1000</WIDTH_L>
-                <HEIGHT_L>700</HEIGHT_L>
-                <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
-                <MODE_POST>TW</MODE_POST>
-                <SCOPE_MAP>17-24</SCOPE_MAP>
-              </macros>
-              <x>140</x>
-              <y>20</y>
-              <width>60</width>
-              <height>30</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <scripts>
-                <script file="../../../scripts/handle_local.py">
-                  <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-                </script>
-              </scripts>
-              <widget type="action_button" version="3.0.0">
-                <name>17-24 Button</name>
-                <actions>
-                  <action type="execute">
-                    <description>Execute Script</description>
-                    <script file="../../../scripts/init_scope.py">
-                    </script>
-                  </action>
-                </actions>
-                <text>17-24</text>
-                <width>60</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <tooltip>$(actions)</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>PLOT_LAUNCHER_25-32</name>
-              <macros>
-                <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-                <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
-                <POST_OPI>opi/scope_post.bob</POST_OPI>
-                <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
-                <CROSS_SITE>0</CROSS_SITE>
-                <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
-                <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
-                <WIDTH_S>500</WIDTH_S>
-                <HEIGHT_S>380</HEIGHT_S>
-                <WIDTH_L>1000</WIDTH_L>
-                <HEIGHT_L>700</HEIGHT_L>
-                <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
-                <MODE_POST>TW</MODE_POST>
-                <SCOPE_MAP>25-32</SCOPE_MAP>
-              </macros>
-              <x>210</x>
-              <y>20</y>
-              <width>60</width>
-              <height>30</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <scripts>
-                <script file="../../../scripts/handle_local.py">
-                  <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-                </script>
-              </scripts>
-              <widget type="action_button" version="3.0.0">
-                <name>25-32 Button</name>
-                <actions>
-                  <action type="execute">
-                    <description>Execute Script</description>
-                    <script file="../../../scripts/init_scope.py">
-                    </script>
-                  </action>
-                </actions>
-                <text>25-32</text>
-                <width>60</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <tooltip>$(actions)</tooltip>
-              </widget>
-            </widget>
-            <widget type="label" version="2.0.0">
-              <name>CHANS LABEL</name>
-              <text>SIte Chans</text>
+            <scripts>
+              <script file="../../../scripts/handle_local.py">
+                <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+              </script>
+            </scripts>
+            <widget type="action_button" version="3.0.0">
+              <name>OPEN PLOT</name>
+              <actions>
+                <action type="execute">
+                  <description>Execute Script</description>
+                  <script file="../../../scripts/init_scope.py">
+                  </script>
+                </action>
+              </actions>
+              <text>Plot</text>
               <width>130</width>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <vertical_alignment>1</vertical_alignment>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>LABEL 1</name>
+            <text>Mode</text>
+            <y>30</y>
+            <width>150</width>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="choice" version="2.0.0">
+            <name>MODE CHOICE</name>
+            <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+            <y>50</y>
+            <width>270</width>
+            <height>30</height>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <items>
+              <item>LIVE</item>
+              <item>POST</item>
+              <item>STRIP</item>
+            </items>
+          </widget>
+          <widget type="group" version="3.0.0">
+            <name>PLOT_LAUNCHER_1-8</name>
+            <macros>
+              <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
+              <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <POST_OPI>opi/scope_post.bob</POST_OPI>
+              <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+              <CROSS_SITE>0</CROSS_SITE>
+              <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
+              <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+              <WIDTH_S>500</WIDTH_S>
+              <HEIGHT_S>380</HEIGHT_S>
+              <WIDTH_L>1000</WIDTH_L>
+              <HEIGHT_L>700</HEIGHT_L>
+              <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+              <MODE_POST>TW</MODE_POST>
+              <SCOPE_MAP>1-8</SCOPE_MAP>
+              <MODE_STRIP>CH</MODE_STRIP>
+            </macros>
+            <y>110</y>
+            <width>60</width>
+            <height>30</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <scripts>
+              <script file="../../../scripts/handle_local.py">
+                <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+              </script>
+            </scripts>
+            <widget type="action_button" version="3.0.0">
+              <name>1-8 Button</name>
+              <actions>
+                <action type="execute">
+                  <description>Execute Script</description>
+                  <script file="../../../scripts/init_scope.py">
+                  </script>
+                </action>
+              </actions>
+              <text>1-8</text>
+              <width>60</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+              <tooltip>$(actions)</tooltip>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
-            <name>CARRIER CHANS</name>
-            <y>150</y>
-            <width>270</width>
-            <height>50</height>
+            <name>PLOT_LAUNCHER_9-16</name>
+            <macros>
+              <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
+              <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <POST_OPI>opi/scope_post.bob</POST_OPI>
+              <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+              <CROSS_SITE>0</CROSS_SITE>
+              <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
+              <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+              <WIDTH_S>500</WIDTH_S>
+              <HEIGHT_S>380</HEIGHT_S>
+              <WIDTH_L>1000</WIDTH_L>
+              <HEIGHT_L>700</HEIGHT_L>
+              <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+              <MODE_POST>TW</MODE_POST>
+              <SCOPE_MAP>9-16</SCOPE_MAP>
+            </macros>
+            <x>70</x>
+            <y>110</y>
+            <width>60</width>
+            <height>30</height>
             <style>3</style>
             <transparent>true</transparent>
-            <widget type="textentry" version="3.0.0">
-              <name>CARRIER CHANS INPUT</name>
-              <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
-              <y>20</y>
-              <width>130</width>
-              <height>30</height>
-              <background_color>
-                <color name="Read_Background" red="240" green="240" blue="240">
-                </color>
-              </background_color>
-              <format>6</format>
-              <show_units>false</show_units>
-            </widget>
-            <widget type="label" version="2.0.0">
-              <name>CARRIER CHANS LABEL</name>
-              <text>Carrier Chans</text>
-              <width>130</width>
+            <scripts>
+              <script file="../../../scripts/handle_local.py">
+                <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+              </script>
+            </scripts>
+            <widget type="action_button" version="3.0.0">
+              <name>9-16 Button</name>
+              <actions>
+                <action type="execute">
+                  <description>Execute Script</description>
+                  <script file="../../../scripts/init_scope.py">
+                  </script>
+                </action>
+              </actions>
+              <text>9-16</text>
+              <width>60</width>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <vertical_alignment>1</vertical_alignment>
+              <tooltip>$(actions)</tooltip>
             </widget>
-            <widget type="group" version="3.0.0">
-              <name>PLOT_LAUNCHER</name>
-              <macros>
-                <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-                <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
-                <POST_OPI>opi/scope_post.bob</POST_OPI>
-                <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
-                <CROSS_SITE>1</CROSS_SITE>
-                <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
-                <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
-                <WIDTH_S>500</WIDTH_S>
-                <HEIGHT_S>380</HEIGHT_S>
-                <WIDTH_L>1000</WIDTH_L>
-                <HEIGHT_L>700</HEIGHT_L>
-                <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
-                <MODE_POST>TW</MODE_POST>
-              </macros>
-              <x>140</x>
-              <y>20</y>
-              <width>130</width>
-              <height>30</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <scripts>
-                <script file="../../../scripts/handle_local.py">
-                  <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
-                  <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
-                </script>
-              </scripts>
-              <widget type="action_button" version="3.0.0">
-                <name>OPEN PLOT</name>
-                <actions>
-                  <action type="execute">
-                    <description>Execute Script</description>
-                    <script file="../../../scripts/init_scope.py">
-                    </script>
-                  </action>
-                </actions>
-                <text>Plot</text>
-                <width>130</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
+          </widget>
+          <widget type="group" version="3.0.0">
+            <name>PLOT_LAUNCHER_17-24</name>
+            <macros>
+              <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
+              <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <POST_OPI>opi/scope_post.bob</POST_OPI>
+              <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+              <CROSS_SITE>0</CROSS_SITE>
+              <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
+              <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+              <WIDTH_S>500</WIDTH_S>
+              <HEIGHT_S>380</HEIGHT_S>
+              <WIDTH_L>1000</WIDTH_L>
+              <HEIGHT_L>700</HEIGHT_L>
+              <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+              <MODE_POST>TW</MODE_POST>
+              <SCOPE_MAP>17-24</SCOPE_MAP>
+            </macros>
+            <x>140</x>
+            <y>110</y>
+            <width>60</width>
+            <height>30</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <scripts>
+              <script file="../../../scripts/handle_local.py">
+                <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+              </script>
+            </scripts>
+            <widget type="action_button" version="3.0.0">
+              <name>17-24 Button</name>
+              <actions>
+                <action type="execute">
+                  <description>Execute Script</description>
+                  <script file="../../../scripts/init_scope.py">
+                  </script>
+                </action>
+              </actions>
+              <text>17-24</text>
+              <width>60</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
-                <tooltip>$(actions)</tooltip>
-              </widget>
+              </font>
+              <tooltip>$(actions)</tooltip>
             </widget>
+          </widget>
+          <widget type="group" version="3.0.0">
+            <name>PLOT_LAUNCHER_25-32</name>
+            <macros>
+              <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
+              <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <POST_OPI>opi/scope_post.bob</POST_OPI>
+              <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+              <CROSS_SITE>0</CROSS_SITE>
+              <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
+              <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+              <WIDTH_S>500</WIDTH_S>
+              <HEIGHT_S>380</HEIGHT_S>
+              <WIDTH_L>1000</WIDTH_L>
+              <HEIGHT_L>700</HEIGHT_L>
+              <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+              <MODE_POST>TW</MODE_POST>
+              <SCOPE_MAP>25-32</SCOPE_MAP>
+            </macros>
+            <x>210</x>
+            <y>110</y>
+            <width>60</width>
+            <height>30</height>
+            <style>3</style>
+            <transparent>true</transparent>
+            <scripts>
+              <script file="../../../scripts/handle_local.py">
+                <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+              </script>
+            </scripts>
+            <widget type="action_button" version="3.0.0">
+              <name>25-32 Button</name>
+              <actions>
+                <action type="execute">
+                  <description>Execute Script</description>
+                  <script file="../../../scripts/init_scope.py">
+                  </script>
+                </action>
+              </actions>
+              <text>25-32</text>
+              <width>60</width>
+              <font>
+                <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                </font>
+              </font>
+              <tooltip>$(actions)</tooltip>
+            </widget>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>CHANS LABEL</name>
+            <text>Site Chans</text>
+            <y>90</y>
+            <width>130</width>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <vertical_alignment>1</vertical_alignment>
           </widget>
         </widget>
       </widget>
