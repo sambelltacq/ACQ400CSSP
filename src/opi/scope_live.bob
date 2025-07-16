@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-17 18:07:33 by dt100-->
+<!--Saved on 2025-07-16 12:18:20 by sam-->
 <display version="2.0.0">
   <name>$(SCOPE_TITLE)</name>
   <macros>
@@ -8,11 +8,11 @@
     <TRACE_WIDTH>$(TRACE_WIDTH=1)</TRACE_WIDTH>
     <SCOPE_TITLE>$(SCOPE_TITLE=LIVE SCOPE)</SCOPE_TITLE>
   </macros>
-  <width>820</width>
-  <height>630</height>
+  <width>810</width>
+  <height>640</height>
   <widget type="group" version="3.0.0">
     <name>INIT LOCAL</name>
-    <x>590</x>
+    <y>40</y>
     <width>120</width>
     <height>40</height>
     <visible>$(DEBUG)</visible>
@@ -22,7 +22,6 @@
       </color>
     </foreground_color>
     <transparent>true</transparent>
-    <tooltip></tooltip>
     <widget type="textupdate" version="2.0.0">
       <name>INIT TRACE EN</name>
       <pv_name>loc://trace_en_$(DID)&lt;VDouble&gt;(255)</pv_name>
@@ -32,7 +31,7 @@
   <widget type="xyplot" version="3.0.0">
     <name>LIVE SCOPE</name>
     <x>10</x>
-    <y>30</y>
+    <y>35</y>
     <width>$(WIDTH)</width>
     <height>$(HEIGHT)</height>
     <title>$(SCOPE_TITLE)</title>
@@ -295,6 +294,7 @@
     <name>TRACE VIZ CONTROL</name>
     <file>components/scope/trace_viz_controls.bob</file>
     <x>10</x>
+    <y>5</y>
     <width>200</width>
     <height>25</height>
     <resize>2</resize>
@@ -303,6 +303,7 @@
     <name>UPDATE LABEL</name>
     <text>UPDATE</text>
     <x>440</x>
+    <y>5</y>
     <width>60</width>
     <height>25</height>
     <font>
@@ -315,6 +316,7 @@
     <name>UPDATE UPDATE</name>
     <pv_name>$(UUT):1:AI:WF:01:UPDATES</pv_name>
     <x>510</x>
+    <y>5</y>
     <width>70</width>
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -325,6 +327,7 @@
     <name>DATA TYPE</name>
     <pv_name>$(UUT):1:AI:WF:01.FTVL</pv_name>
     <x>220</x>
+    <y>5</y>
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
@@ -334,6 +337,7 @@
     <name>ADC_CAL Input</name>
     <pv_name>${UUT}:$(SITE):ADC_CAL</pv_name>
     <x>330</x>
+    <y>5</y>
     <height>25</height>
     <rules>
       <rule name="HIDE_BAD_SITE" prop_id="visible" out_exp="true">
@@ -347,5 +351,53 @@
       </rule>
     </rules>
     <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>PREPCT </name>
+    <x>610</x>
+    <y>5</y>
+    <width>200</width>
+    <height>25</height>
+    <visible>false</visible>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="HIDE" prop_id="visible" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvInt0==2</expression>
+        </exp>
+        <pv_name>${UUT}:LIVE:MODE</pv_name>
+      </rule>
+    </rules>
+    <widget type="textupdate" version="2.0.0">
+      <name>PREPCT PRE</name>
+      <pv_name>${UUT}:LIVE:PRE</pv_name>
+      <width>60</width>
+      <height>25</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>PREPCT INPUT</name>
+      <pv_name>${UUT}:LIVE:PREPCT</pv_name>
+      <x>70</x>
+      <width>60</width>
+      <height>25</height>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>PREPCT POST</name>
+      <pv_name>${UUT}:LIVE:POST</pv_name>
+      <x>140</x>
+      <width>60</width>
+      <height>25</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
   </widget>
 </display>
