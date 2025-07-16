@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-15 15:40:35 by sam-->
+<!--Saved on 2025-07-16 13:34:47 by sam-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
@@ -1123,7 +1123,7 @@
             <macros>
               <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
               <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <XTRACE_FMT_SECONDS>{uut}:1:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
               <POST_OPI>opi/scope_post.bob</POST_OPI>
               <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
               <CROSS_SITE>1</CROSS_SITE>
@@ -1201,7 +1201,7 @@
             <macros>
               <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
               <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <XTRACE_FMT_SECONDS>{uut}:1:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
               <POST_OPI>opi/scope_post.bob</POST_OPI>
               <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
               <CROSS_SITE>0</CROSS_SITE>
@@ -1253,7 +1253,7 @@
             <macros>
               <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
               <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <XTRACE_FMT_SECONDS>{uut}:1:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
               <POST_OPI>opi/scope_post.bob</POST_OPI>
               <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
               <CROSS_SITE>0</CROSS_SITE>
@@ -1305,7 +1305,7 @@
             <macros>
               <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
               <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <XTRACE_FMT_SECONDS>{uut}:1:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
               <POST_OPI>opi/scope_post.bob</POST_OPI>
               <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
               <CROSS_SITE>0</CROSS_SITE>
@@ -1357,7 +1357,7 @@
             <macros>
               <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
               <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
-              <XTRACE_FMT_SECONDS>{uut}:{site}:AI:TW:TB.VALA</XTRACE_FMT_SECONDS>
+              <XTRACE_FMT_SECONDS>{uut}:1:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
               <POST_OPI>opi/scope_post.bob</POST_OPI>
               <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
               <CROSS_SITE>0</CROSS_SITE>
