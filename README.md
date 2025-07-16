@@ -15,7 +15,7 @@ More [examples](https://github.com/sambelltacq/ACQ400CSSP/blob/master/USERGUIDE.
     ```
 
 - Install [Java17+](https://adoptium.net/en-GB/temurin/releases/?os=any&arch=any&version=17)
-- Download and extract [Phoebus](https://www.controlsystemstudio.org/download/)
+- Download and extract [Phoebus](https://www.controlsystemstudio.org/download/) >= 5.0.0
 
 - For ease of installation extract or link the phoebus jar directory into the repo e.g.
 
@@ -24,15 +24,15 @@ More [examples](https://github.com/sambelltacq/ACQ400CSSP/blob/master/USERGUIDE.
     │   │── ACQ400CSSP_launcher.py
     │   │── workspaces
     │   │── CSSP.conf
-    │   │── product-0.0.0
-    │   │   │── phoebus-0.0.0.jar
+    │   │── product-5.0.0
+    │   │   │── phoebus-5.0.0.jar
     ```
 
 - You can create a CSSP.conf file to hardcode paths if needed:
 
     ```bash
     JAVA_BIN=C:\Program Files\Eclipse Adoptium\jre-17.0.12.7-hotspot\bin\java.exe
-    PHOEBUS_JAR=C:\Users\USER\PROJECTS\ACQ400CSSP\phoebus-4.7.4-SNAPSHOT\product-4.7.4-SNAPSHOT.jar
+    PHOEBUS_JAR=C:\Users\sam\PROJECTS\ACQ400CSSP\product-5.0.0\product-5.0.0.jar
     ```
 
 ## Usage
