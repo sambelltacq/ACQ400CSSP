@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-16 13:34:47 by sam-->
+<!--Saved on 2025-08-14 17:11:44 by dt100-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
@@ -105,7 +105,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):1:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -149,7 +149,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):2:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -193,7 +193,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):3:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -237,7 +237,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):4:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -281,7 +281,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):5:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -325,7 +325,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):6:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -369,7 +369,7 @@
                 <horizontal_alignment>1</horizontal_alignment>
                 <vertical_alignment>1</vertical_alignment>
                 <wrap_words>false</wrap_words>
-                <tooltip>$(text)</tooltip>
+                <tooltip>$(UUT):0:MODEL</tooltip>
               </widget>
             </widget>
             <widget type="textentry" version="3.0.0">
@@ -386,6 +386,7 @@
                 </color>
               </background_color>
               <horizontal_alignment>1</horizontal_alignment>
+              <tooltip>UUT Hostname</tooltip>
             </widget>
             <widget type="led" version="2.0.0">
               <name>LED</name>
@@ -477,7 +478,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Data Capture Controls</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Sync Button</name>
@@ -496,7 +497,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>System Timing Highway</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Clocktree Button</name>
@@ -514,7 +515,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>System clocking</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Counters Button</name>
@@ -532,7 +533,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Counters</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>System Button</name>
@@ -551,7 +552,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Temp + Voltage</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>White Rabbit Button</name>
@@ -570,7 +571,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>White Rabbit Timing</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Firmware Button</name>
@@ -589,7 +590,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Firmware</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>MGT Button</name>
@@ -608,7 +609,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Multi-Gigabit Transceiver</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>HUDP Button</name>
@@ -627,7 +628,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Hardware UDP</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Slowmon Button</name>
@@ -645,7 +646,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Slow Monitor</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>gpg Button</name>
@@ -664,7 +665,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Gate Pulse Generator</tooltip>
           </widget>
         </widget>
       </widget>
@@ -714,6 +715,7 @@
             </font>
             <transparent>true</transparent>
             <vertical_alignment>1</vertical_alignment>
+            <tooltip>Current Module</tooltip>
           </widget>
           <widget type="spinner" version="2.0.0">
             <name>SITE INPUT</name>
@@ -732,7 +734,7 @@
             </background_color>
             <horizontal_alignment>1</horizontal_alignment>
             <vertical_alignment>1</vertical_alignment>
-            <tooltip></tooltip>
+            <tooltip>Select Site</tooltip>
             <border_alarm_sensitive>false</border_alarm_sensitive>
             <minimum>1.0</minimum>
             <maximum>6.0</maximum>
@@ -754,7 +756,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>DAC Direct Current</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>DIO32 Button</name>
@@ -772,7 +774,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Digital IO</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>AI Monitor Button</name>
@@ -790,7 +792,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Analog Input Monitor</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>ADC Stats Button</name>
@@ -809,7 +811,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Analog Digital Converter Stats</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Judgement Button</name>
@@ -828,7 +830,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Rapid Burst Judgement</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>AWG Button</name>
@@ -847,7 +849,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Arbitrary Waveform Generator</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Gains Button</name>
@@ -866,7 +868,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Module Gains</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>Anatrg Button</name>
@@ -885,7 +887,7 @@
               <font family="Ubuntu" style="BOLD" size="14.0">
               </font>
             </font>
-            <tooltip>$(actions)</tooltip>
+            <tooltip>Analog Trigger Thresholds</tooltip>
           </widget>
           <widget type="group" version="3.0.0">
             <name>MODULE OPIS</name>
@@ -919,7 +921,7 @@
                   <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
                 </rule>
               </rules>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>ACQ43x Controls</tooltip>
             </widget>
             <widget type="action_button" version="3.0.0">
               <name>acq48x Button</name>
@@ -945,7 +947,7 @@
                   <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
                 </rule>
               </rules>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>ACQ48x Controls</tooltip>
             </widget>
             <widget type="action_button" version="3.0.0">
               <name>acq42x Button</name>
@@ -971,7 +973,7 @@
                   <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
                 </rule>
               </rules>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>ACQ42x Controls</tooltip>
             </widget>
           </widget>
         </widget>
@@ -1032,6 +1034,7 @@
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
             </font>
+            <tooltip>X Axis</tooltip>
             <items>
               <item>SAMPLES</item>
               <item>SECONDS</item>
@@ -1060,6 +1063,7 @@
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
             </font>
+            <tooltip>Y Axis</tooltip>
             <items>
               <item>CODES</item>
               <item>VOLTS</item>
@@ -1088,6 +1092,7 @@
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
             </font>
+            <tooltip>Scope Size</tooltip>
             <items>
               <item>S</item>
               <item>M</item>
@@ -1106,6 +1111,7 @@
             </background_color>
             <format>6</format>
             <show_units>false</show_units>
+            <tooltip>Set Custom Chans</tooltip>
           </widget>
           <widget type="label" version="2.0.0">
             <name>CARRIER CHANS LABEL</name>
@@ -1166,7 +1172,7 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>Scope Custom</tooltip>
             </widget>
           </widget>
           <widget type="label" version="2.0.0">
@@ -1245,7 +1251,7 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>Scope 01-08</tooltip>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -1297,7 +1303,7 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>Scope 09-16</tooltip>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -1349,7 +1355,7 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>Scope 17-24</tooltip>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
@@ -1401,7 +1407,7 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <tooltip>$(actions)</tooltip>
+              <tooltip>Scope 25-32</tooltip>
             </widget>
           </widget>
           <widget type="label" version="2.0.0">
