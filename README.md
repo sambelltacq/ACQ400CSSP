@@ -1,7 +1,7 @@
-
+  
 # ACQ400CSSP
 
-Set of phoebus OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) for [D-Tacq](https://d-tacq.co.uk/) Digitizers.
+Set of [Phoebus](https://github.com/ControlSystemStudio/phoebus) OPIs based on [ACQ400CSS](https://github.com/D-TACQ/ACQ400CSS) for [D-Tacq](https://d-tacq.co.uk/) Digitizers.
 
 ![multi_1_opi](https://github.com/sambelltacq/ACQ400CSSP/releases/download/v1.0.0/multi_1_opi.png)
 More [examples](https://github.com/sambelltacq/ACQ400CSSP/blob/master/USERGUIDE.md)
@@ -15,7 +15,10 @@ More [examples](https://github.com/sambelltacq/ACQ400CSSP/blob/master/USERGUIDE.
     ```
 
 - Install [Java17+](https://adoptium.net/en-GB/temurin/releases/?os=any&arch=any&version=17)
-- Download and extract [Phoebus](https://www.controlsystemstudio.org/download/) >= 5.0.0
+- Download and extract Phoebus (5.0.0):
+	-  [Linux](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.0/phoebus-5.0.0.tar.gz) 
+	- [Windows](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.0/phoebus-5.0.0-win.zip)
+	- [Mac](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.0/phoebus-5.0.0-mac-arm64.tar.gz)
 
 - For ease of installation extract or link the phoebus jar directory into the repo e.g.
 
