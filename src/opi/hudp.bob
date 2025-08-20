@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:56:56 by dt100-->
+<!--Saved on 2025-08-20 10:31:07 by dt100-->
 <display version="2.0.0">
   <name>HUDP$(MUUT)</name>
   <macros>
@@ -470,7 +470,7 @@
       <widget type="group" version="3.0.0">
         <name>CONTROLS</name>
         <y>90</y>
-        <width>290</width>
+        <width>480</width>
         <height>50</height>
         <style>3</style>
         <transparent>true</transparent>
@@ -512,25 +512,52 @@
         </widget>
         <widget type="label" version="2.0.0">
           <name>Label_26</name>
-          <text>SPP</text>
+          <text>DIST Source</text>
           <x>200</x>
-          <width>90</width>
+          <width>110</width>
           <font>
             <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
             </font>
           </font>
           <vertical_alignment>1</vertical_alignment>
         </widget>
-        <widget type="textupdate" version="2.0.0">
+        <widget type="combo" version="2.0.0">
           <name>Combo Box_2</name>
-          <pv_name>${UUT}:${hudp_site}:HUDP:TX:SPP</pv_name>
+          <pv_name>${UUT}:0:DISTRIBUTOR:COMMS</pv_name>
           <x>200</x>
+          <y>20</y>
+          <width>110</width>
+          <rules>
+            <rule name="DISABLE_IF_AGG" prop_id="enabled" out_exp="false">
+              <exp bool_exp="pvInt0==0">
+                <value>false</value>
+              </exp>
+              <pv_name>${UUT}:${hudp_site}:HUDP:UDP:DATA_SRC</pv_name>
+            </rule>
+          </rules>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Combo Box_3</name>
+          <pv_name>${UUT}:${hudp_site}:HUDP:TX:SPP</pv_name>
+          <x>320</x>
           <y>20</y>
           <width>90</width>
           <height>30</height>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
           <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label_27</name>
+          <text>SPP</text>
+          <x>320</x>
+          <width>90</width>
+          <font>
+            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </font>
+          <vertical_alignment>1</vertical_alignment>
         </widget>
       </widget>
     </widget>
