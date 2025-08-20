@@ -1,16 +1,29 @@
 # VPN-HOWTO
 
-Phoebus defaults to using EPICS PV-access. Currently, we're unable to access this over a VPN.
-The solution is to switch to using EPICS Channel Access (CA) and additionally to pass name-hint information
-as environment variables to Phoebus on Launch
+  
 
-## Create a set of ip-addresses to search, store in ./ioc_addr.conf
+Phoebus defaults to using EPICS PV-access. Currently, we're unable to access this over a VPN.
+
+The solution is to switch to using EPICS Channel Access (CA) and additionally to pass name-hint information to Phoebus on Launch
+
+## Using python script
+- Create a `workspace.prefs` file in the root folder containing UUT IPs see below example:
+	```
+	org.phoebus.pv/default=ca  
+	org.phoebus.pv.ca/addr_list=10.12.197.2 10.12.197.3 10.12.197.4
+	org.phoebus.pv.ca/auto_addr_list=true
+	```
+- You can use helper script `USAGE: ./make_addr_list.sh URL`
+- To undo: the workspace and the `workspace.prefs` file should be erased
+  
+## Using bash script
+### Create a set of ip-addresses to search, store in ./ioc_addr.conf
 
 Assuming a hosts(5) file of ip-address->DNS name mappings, save as follows
 
 cat HOSTS-SUBSET | ./hosts2ioc_addr
 
-### example: we have our hosts in the paste buffer already (eg from multimon):
+#### example: we have our hosts in the paste buffer already (eg from multimon):
 ```
 (base) pgm@hoy6:~/PROJECTS/ACQ400CSSP$ ./hosts2ioc_addr
 # PASTE
@@ -29,16 +42,16 @@ cat HOSTS-SUBSET | ./hosts2ioc_addr
 #hosts 10.12.197.125 10.12.197.21 10.12.197.52 10.12.197.11 10.12.197.36 10.12.197.65 10.12.197.90 10.12.197.27
 ```
 
-## Set default ca. NB: must APPEND
+### Set default ca. NB: must APPEND
 
 echo "org.phoebus.pv/default=ca" >> src/settings_base.ini
 
-## Create workspace in the normal way - ioc_addr.conf forces use of environment variables to enable remote CA
+### Create workspace in the normal way - ioc_addr.conf forces use of environment variables to enable remote CA
 
 ./run_phoebus.sh UUT
 
 
-## Bonus run a multiple workspace remotely
+### Bonus run a multiple workspace remotely  
 
 example - creates WS multi_acq1102_043_acq1102_044_acq1102_045_acq1102_046
 ```
