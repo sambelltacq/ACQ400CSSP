@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-08-14 17:11:44 by dt100-->
+<!--Saved on 2025-08-28 12:22:29 by dt100-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
@@ -706,8 +706,8 @@
           <widget type="textupdate" version="2.0.0">
             <name>Text Update</name>
             <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
-            <x>130</x>
-            <width>181</width>
+            <x>110</x>
+            <width>200</width>
             <height>30</height>
             <font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -721,7 +721,7 @@
             <name>SITE INPUT</name>
             <pv_name>loc://SITE_$(DID)</pv_name>
             <x>50</x>
-            <width>62</width>
+            <width>50</width>
             <height>30</height>
             <font>
               <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
@@ -892,7 +892,6 @@
           <widget type="group" version="3.0.0">
             <name>MODULE OPIS</name>
             <x>320</x>
-            <y>120</y>
             <width>150</width>
             <height>30</height>
             <style>3</style>
@@ -975,6 +974,25 @@
               </rules>
               <tooltip>ACQ42x Controls</tooltip>
             </widget>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>QEN Button_1</name>
+            <actions>
+              <action type="execute">
+                <description>open opi/qen.bob</description>
+                <script file="../../../scripts/handle_action_button.py">
+                </script>
+              </action>
+            </actions>
+            <text>QEN</text>
+            <x>320</x>
+            <y>120</y>
+            <width>150</width>
+            <font>
+              <font family="Ubuntu" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <tooltip>Quadrature Encoder</tooltip>
           </widget>
         </widget>
       </widget>
