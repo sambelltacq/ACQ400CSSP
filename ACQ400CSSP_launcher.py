@@ -91,8 +91,8 @@ def check_system():
     if not JAVA_BIN:
         JAVA_BIN = locate_java_bin()
         write_conf("JAVA_BIN", JAVA_BIN)
-    
-    if not PHOEBUS_JAR: 
+
+    if not PHOEBUS_JAR or not os.path.exists(PHOEBUS_JAR):
         PHOEBUS_JAR = locate_phoebus()
         write_conf("PHOEBUS_JAR", PHOEBUS_JAR)
 
