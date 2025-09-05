@@ -538,7 +538,7 @@
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_8</name>
-        <text>Mask Sliders</text>
+        <text>Window Sliders</text>
         <x>110</x>
         <width>120</width>
         <height>30</height>
