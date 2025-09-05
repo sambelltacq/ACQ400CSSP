@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:55:23 by dt100-->
+<!--Saved on 2025-09-05 11:01:36 by sam-->
 <display version="2.0.0">
   <name>Sync$(MUUT)</name>
   <width>910</width>
@@ -1717,7 +1717,7 @@
         <widget type="polyline" version="2.0.0">
           <name>TRG CONNECTED</name>
           <macros>
-            <knob>CLK</knob>
+            <knob>TRG</knob>
           </macros>
           <x>17</x>
           <y>44</y>
@@ -1754,7 +1754,7 @@
         <widget type="polyline" version="2.0.0">
           <name>SYNC CONNECTED</name>
           <macros>
-            <knob>CLK</knob>
+            <knob>SYNC</knob>
           </macros>
           <x>14</x>
           <y>76</y>
