@@ -15,10 +15,10 @@ More [examples](https://github.com/sambelltacq/ACQ400CSSP/blob/master/USERGUIDE.
     ```
 
 - Install [Java17+](https://adoptium.net/en-GB/temurin/releases/?os=any&arch=any&version=17)
-- Download and extract Phoebus (5.0.0):
-	-  [Linux](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.0/phoebus-5.0.0.tar.gz) 
-	- [Windows](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.0/phoebus-5.0.0-win.zip)
-	- [Mac](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.0/phoebus-5.0.0-mac-arm64.tar.gz)
+- Download and extract Phoebus (5.0.2):
+	- [Linux](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.2/phoebus-5.0.2-linux.tar.gz) 
+	- [Windows](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.2/phoebus-5.0.2-win.zip)
+	- [Mac](https://github.com/ControlSystemStudio/phoebus/releases/download/v5.0.2/phoebus-5.0.2-mac-arm64.tar.gz)
 
 - For ease of installation extract or link the phoebus jar directory into the repo e.g.
 
