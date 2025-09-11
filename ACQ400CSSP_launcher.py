@@ -236,7 +236,7 @@ def validate_uut_hostname(hostname):
     # If any check fails, raise the error for argparse to handle.
     raise argparse.ArgumentTypeError(
         f"'{hostname}' is not a valid UUT hostname. It must be one of the model numbers {VALID_MODELS}"
-        f"followed by an underscore and a 3-digit number (e.g., acq1001_042)."
+        f" followed by an underscore and a 3-digit number (e.g., acq1001_042)."
     )
 
 def get_parser():
