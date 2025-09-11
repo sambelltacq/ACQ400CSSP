@@ -217,10 +217,32 @@ def run_cmd(cmd):
     response = result.stdout if result.stdout else result.stderr
     return response, result.returncode
 
+def validate_uut_hostname(hostname):
+    """Validates the UUT hostname against a set of prefixes and suffix format."""
+    VALID_MODELS = {'acq1001', 'acq1102', 'acq2106', 'acq2206', 'z7io'}
+    try:
+        model, build_number = hostname.split('_')
+        is_valid_model = model in VALID_MODELS
+        is_valid_build_number = len(build_number) == 3 and build_number.isdigit()
+        
+        if is_valid_model and is_valid_build_number:
+            return hostname
+            
+    except ValueError:
+        # This catches cases where hostname.split('_') fails 
+        # because there is no underscore.
+        pass
+
+    # If any check fails, raise the error for argparse to handle.
+    raise argparse.ArgumentTypeError(
+        f"'{hostname}' is not a valid UUT hostname. It must be one of the model numbers {VALID_MODELS}"
+        f"followed by an underscore and a 3-digit number (e.g., acq1001_042)."
+    )
+
 def get_parser():
     parser = argparse.ArgumentParser(description='Start script for ACQ400CSSP')
     parser.add_argument('--debug', action='store_true', help="enable debug")
-    parser.add_argument('uuts', nargs='*', help="uut hostnames")
+    parser.add_argument('uuts', nargs='*', type=validate_uut_hostname, help="uut hostnames")
     return parser
 
 if __name__ == '__main__':
