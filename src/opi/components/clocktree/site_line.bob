@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-16 15:56:22 by dt100-->
 <display version="2.0.0">
   <name>Site Line</name>
   <width>960</width>
@@ -18,21 +17,6 @@
     <height>70</height>
     <style>3</style>
     <transparent>true</transparent>
-    <rules>
-      <rule name="SHOW_PHYSICAL_SITES" prop_id="visible" out_exp="false">
-        <exp bool_exp="pvStr0.find(&quot;$(site)&quot;) &gt; -1">
-          <value>true</value>
-        </exp>
-        <exp bool_exp="pvStr1.find(&quot;$(site)&quot;) &gt; -1">
-          <value>true</value>
-        </exp>
-        <exp bool_exp="true">
-          <value>false</value>
-        </exp>
-        <pv_name>$(UUT):0:AGGREGATOR:SITES</pv_name>
-        <pv_name>$(UUT):0:DISTRIBUTOR:SITES</pv_name>
-      </rule>
-    </rules>
     <widget type="group" version="3.0.0">
       <name>PLACEHOLDER</name>
       <width>960</width>
