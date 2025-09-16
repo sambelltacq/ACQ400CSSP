@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-16 12:18:20 by sam-->
 <display version="2.0.0">
   <name>$(SCOPE_TITLE)</name>
   <macros>
@@ -341,7 +340,7 @@
     <height>25</height>
     <rules>
       <rule name="HIDE_BAD_SITE" prop_id="visible" out_exp="true">
-        <exp bool_exp="int($(SITE)) &gt; 0">
+        <exp bool_exp="int($(SITE)) &gt; 0 and &quot;$(SCOPE_YTYPE)&quot;==&quot;VOLTS&quot;">
           <expression>true</expression>
         </exp>
         <exp bool_exp="true">
