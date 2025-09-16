@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-15 17:16:06 by dt100-->
 <display version="2.0.0">
   <name>Counter</name>
   <width>102</width>
@@ -13,17 +12,6 @@
       <color name="Button_Background" red="210" green="210" blue="210">
       </color>
     </background_color>
-    <rules>
-      <rule name="HIDE_NOSITE" prop_id="visible" out_exp="true">
-        <exp bool_exp="int(&quot;$(NSITES)&quot;) + 1 &gt;= int(&quot;$(NUM)&quot;)">
-          <expression>true</expression>
-        </exp>
-        <exp bool_exp="true">
-          <expression>false</expression>
-        </exp>
-        <pv_name>=abs(1)</pv_name>
-      </rule>
-    </rules>
     <widget type="label" version="2.0.0">
       <name>Counter Title</name>
       <text>${FUNC}.d${NUM}</text>
@@ -92,7 +80,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>loc://NSITES</pv_name>
+          <pv_name>=abs(1)</pv_name>
         </rule>
         <rule name="SITE_TEXT_COLOR " prop_id="foreground_color" out_exp="false">
           <exp bool_exp="$(NUM)==0">
@@ -107,7 +95,7 @@
               </color>
             </value>
           </exp>
-          <pv_name>loc://NSITES</pv_name>
+          <pv_name>=abs(1)</pv_name>
         </rule>
       </rules>
     </widget>
@@ -164,9 +152,9 @@
       <name>Counter Reset</name>
       <actions>
         <action type="write_pv">
+          <description>WritePV</description>
           <pv_name>$(pv_name)</pv_name>
           <value>1</value>
-          <description>WritePV</description>
         </action>
       </actions>
       <pv_name>${UUT}:0:SIG:${FUNC}_${TARGET}:RESET</pv_name>
