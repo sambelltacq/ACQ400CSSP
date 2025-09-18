@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:55:15 by dt100-->
 <display version="2.0.0">
   <name>Capture$(MUUT)</name>
   <width>1330</width>
-  <height>1020</height>
+  <height>800</height>
   <widget type="group" version="3.0.0">
     <name>CAPTURE</name>
     <width>1330</width>
-    <height>1120</height>
+    <height>800</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
@@ -15,7 +14,7 @@
       <x>10</x>
       <y>10</y>
       <width>1310</width>
-      <height>1080</height>
+      <height>780</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="label" version="2.0.0">
@@ -59,13 +58,13 @@
         <x>730</x>
         <y>40</y>
         <width>580</width>
-        <height>240</height>
+        <height>140</height>
       </widget>
       <widget type="embedded" version="2.0.0">
         <name>Stats</name>
         <file>components/capture/stats.bob</file>
         <x>730</x>
-        <y>310</y>
+        <y>200</y>
         <width>580</width>
         <height>210</height>
         <resize>2</resize>
@@ -74,7 +73,7 @@
         <name>DATAFLOW</name>
         <file>components/capture/dataflow.bob</file>
         <x>730</x>
-        <y>540</y>
+        <y>430</y>
         <width>580</width>
         <height>330</height>
         <resize>2</resize>

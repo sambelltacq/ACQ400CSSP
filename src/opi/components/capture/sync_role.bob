@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 15:38:53 by dt100-->
 <display version="2.0.0">
   <name>sync role</name>
   <width>580</width>
-  <height>240</height>
+  <height>140</height>
   <widget type="group" version="3.0.0">
     <name>SYNC ROLE</name>
     <width>580</width>
-    <height>250</height>
+    <height>140</height>
     <style>3</style>
     <background_color>
       <color red="0" green="149" blue="255">
@@ -18,7 +17,7 @@
       <x>10</x>
       <y>10</y>
       <width>560</width>
-      <height>230</height>
+      <height>120</height>
       <style>3</style>
       <background_color>
         <color red="0" green="149" blue="255">
@@ -55,180 +54,44 @@
         <vertical_alignment>1</vertical_alignment>
       </widget>
       <widget type="group" version="3.0.0">
-        <name>INPUTS</name>
-        <y>130</y>
-        <width>540</width>
-        <height>60</height>
-        <style>3</style>
-        <transparent>true</transparent>
-        <widget type="label" version="2.0.0">
-          <name>Role label</name>
-          <text>ROLE</text>
-          <width>120</width>
-          <height>30</height>
-          <font>
-            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-            </font>
-          </font>
-          <background_color>
-            <color name="Transparent" red="255" green="255" blue="255" alpha="0">
-            </color>
-          </background_color>
-          <vertical_alignment>1</vertical_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>Role Input</name>
-          <pv_name>${UUT}:SYS:SYNC_ROLE:SET:ROLE</pv_name>
-          <y>30</y>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="label" version="2.0.0">
-          <name>FS label</name>
-          <text>FS</text>
-          <x>110</x>
-          <width>120</width>
-          <height>30</height>
-          <font>
-            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-            </font>
-          </font>
-          <background_color>
-            <color name="Transparent" red="255" green="255" blue="255" alpha="0">
-            </color>
-          </background_color>
-          <vertical_alignment>1</vertical_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>FS input</name>
-          <pv_name>${UUT}:SYS:SYNC_ROLE:SET:FS</pv_name>
-          <x>110</x>
-          <y>30</y>
-          <width>80</width>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>FS Modifier</name>
-          <pv_name>${UUT}:SYS:SYNC_ROLE:SET:FS:M</pv_name>
-          <x>190</x>
-          <y>30</y>
-          <width>40</width>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="label" version="2.0.0">
-          <name>Fin label</name>
-          <text>FIN</text>
-          <x>240</x>
-          <width>120</width>
-          <height>30</height>
-          <font>
-            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-            </font>
-          </font>
-          <background_color>
-            <color name="Transparent" red="255" green="255" blue="255" alpha="0">
-            </color>
-          </background_color>
-          <vertical_alignment>1</vertical_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>Fin Input</name>
-          <pv_name>${UUT}:SYS:SYNC_ROLE:SET:FIN</pv_name>
-          <x>240</x>
-          <y>30</y>
-          <width>80</width>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>Fin Modifier</name>
-          <pv_name>${UUT}:SYS:SYNC_ROLE:SET:FIN:M</pv_name>
-          <x>320</x>
-          <y>30</y>
-          <width>40</width>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-        <widget type="label" version="2.0.0">
-          <name>Modifier Label</name>
-          <text>MODIFIER</text>
-          <x>370</x>
-          <width>120</width>
-          <height>30</height>
-          <font>
-            <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-            </font>
-          </font>
-          <background_color>
-            <color name="Transparent" red="255" green="255" blue="255" alpha="0">
-            </color>
-          </background_color>
-          <vertical_alignment>1</vertical_alignment>
-        </widget>
-        <widget type="combo" version="2.0.0">
-          <name>Modifier Input</name>
-          <pv_name>${UUT}:SYS:SYNC_ROLE:SET:MODIFIER</pv_name>
-          <x>370</x>
-          <y>30</y>
-          <width>170</width>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
-        </widget>
-      </widget>
-      <widget type="action_button" version="3.0.0">
-        <name>Commit button</name>
-        <actions>
-          <action type="write_pv">
-            <pv_name>${UUT}:SYS:SYNC_ROLE:SET</pv_name>
-            <value>1</value>
-            <description>SET SYNC ROLE</description>
-          </action>
-        </actions>
-        <text>Commit</text>
-        <y>200</y>
-        <width>190</width>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <tooltip>$(actions)</tooltip>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>Disable Cover</name>
-      <x>10</x>
-      <y>40</y>
-      <width>560</width>
-      <height>210</height>
-      <visible>false</visible>
-      <style>3</style>
-      <background_color>
-        <color red="0" green="149" blue="255" alpha="210">
-        </color>
-      </background_color>
-      <rules>
-        <rule name="DISABLE" prop_id="visible" out_exp="false">
-          <exp bool_exp="pv0!=0||pv1!=0">
-            <value>true</value>
-          </exp>
-          <exp bool_exp="true">
-            <value>false</value>
-          </exp>
-          <pv_name>${UUT}:MODE:TRANS_ACT:STATE</pv_name>
-          <pv_name>${UUT}:MODE:CONTINUOUS:STATE</pv_name>
-        </rule>
-      </rules>
-      <widget type="label" version="2.0.0">
-        <name>Disabled Lable</name>
-        <text>NOT IDLE</text>
+        <name>Disable Cover</name>
+        <y>30</y>
         <width>560</width>
-        <height>200</height>
-        <font>
-          <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-          </font>
-        </font>
+        <height>90</height>
+        <visible>false</visible>
+        <style>3</style>
         <background_color>
-          <color red="0" green="149" blue="255">
+          <color red="0" green="149" blue="255" alpha="210">
           </color>
         </background_color>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
+        <rules>
+          <rule name="DISABLE" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0!=0||pv1!=0">
+              <value>true</value>
+            </exp>
+            <exp bool_exp="true">
+              <value>false</value>
+            </exp>
+            <pv_name>${UUT}:MODE:TRANS_ACT:STATE</pv_name>
+            <pv_name>${UUT}:MODE:CONTINUOUS:STATE</pv_name>
+          </rule>
+        </rules>
+        <widget type="label" version="2.0.0">
+          <name>Disabled Lable</name>
+          <text>NOT IDLE</text>
+          <width>560</width>
+          <height>90</height>
+          <font>
+            <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+            </font>
+          </font>
+          <background_color>
+            <color red="0" green="149" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
       </widget>
     </widget>
   </widget>
