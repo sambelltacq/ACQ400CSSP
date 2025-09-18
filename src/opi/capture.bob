@@ -128,7 +128,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_2</name>
-          <file>../images/external_link.svg</file>
+          <file>../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>
@@ -162,7 +162,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_3</name>
-          <file>../images/external_link.svg</file>
+          <file>../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>
@@ -196,7 +196,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_4</name>
-          <file>../images/external_link.svg</file>
+          <file>../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>
@@ -230,7 +230,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_6</name>
-          <file>../images/external_link.svg</file>
+          <file>../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>
