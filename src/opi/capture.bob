@@ -114,6 +114,142 @@
           </widget>
         </widget>
       </widget>
+      <widget type="group" version="3.0.0">
+        <name>DOC_LINK_2</name>
+        <macros>
+          <TARGET>12.2 Universal Clock command : sync_role</TARGET>
+          <URL>${USER_GUIDE}#${TARGET}</URL>
+        </macros>
+        <x>850</x>
+        <y>50</y>
+        <width>25</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="picture" version="2.0.0">
+          <name>LINK_SYMBOL_2</name>
+          <file>../images/external_link.svg</file>
+          <width>25</width>
+          <height>25</height>
+        </widget>
+        <widget type="action_button" version="3.0.0">
+          <name>OPEN_LINK_BUTTON_2</name>
+          <actions>
+            <action type="open_webpage">
+              <description>Open Web Page</description>
+              <url>$(URL)</url>
+            </action>
+          </actions>
+          <text></text>
+          <width>25</width>
+          <height>25</height>
+          <transparent>true</transparent>
+          <tooltip>$(URL)</tooltip>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>DOC_LINK_3</name>
+        <macros>
+          <TARGET>10.5 Transient Data Capture</TARGET>
+          <URL>${USER_GUIDE}#${TARGET}</URL>
+        </macros>
+        <x>210</x>
+        <y>130</y>
+        <width>25</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="picture" version="2.0.0">
+          <name>LINK_SYMBOL_3</name>
+          <file>../images/external_link.svg</file>
+          <width>25</width>
+          <height>25</height>
+        </widget>
+        <widget type="action_button" version="3.0.0">
+          <name>OPEN_LINK_BUTTON_3</name>
+          <actions>
+            <action type="open_webpage">
+              <description>Open Web Page</description>
+              <url>$(URL)</url>
+            </action>
+          </actions>
+          <text></text>
+          <width>25</width>
+          <height>25</height>
+          <transparent>true</transparent>
+          <tooltip>$(URL)</tooltip>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>DOC_LINK_4</name>
+        <macros>
+          <TARGET>10.4 Continuous (Streaming Capture)</TARGET>
+          <URL>${USER_GUIDE}#${TARGET}</URL>
+        </macros>
+        <x>180</x>
+        <y>310</y>
+        <width>25</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="picture" version="2.0.0">
+          <name>LINK_SYMBOL_4</name>
+          <file>../images/external_link.svg</file>
+          <width>25</width>
+          <height>25</height>
+        </widget>
+        <widget type="action_button" version="3.0.0">
+          <name>OPEN_LINK_BUTTON_4</name>
+          <actions>
+            <action type="open_webpage">
+              <description>Open Web Page</description>
+              <url>$(URL)</url>
+            </action>
+          </actions>
+          <text></text>
+          <width>25</width>
+          <height>25</height>
+          <transparent>true</transparent>
+          <tooltip>$(URL)</tooltip>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>DOC_LINK_6</name>
+        <macros>
+          <TARGET>10 Data Capture</TARGET>
+          <URL>${USER_GUIDE}#${TARGET}</URL>
+        </macros>
+        <x>242</x>
+        <y>4</y>
+        <width>25</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="picture" version="2.0.0">
+          <name>LINK_SYMBOL_6</name>
+          <file>../images/external_link.svg</file>
+          <width>25</width>
+          <height>25</height>
+        </widget>
+        <widget type="action_button" version="3.0.0">
+          <name>OPEN_LINK_BUTTON_6</name>
+          <actions>
+            <action type="open_webpage">
+              <description>Open Web Page</description>
+              <url>$(URL)</url>
+            </action>
+          </actions>
+          <text></text>
+          <width>25</width>
+          <height>25</height>
+          <transparent>true</transparent>
+          <tooltip>$(URL)</tooltip>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+      </widget>
     </widget>
   </widget>
 </display>

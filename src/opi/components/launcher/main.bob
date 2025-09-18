@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-08-28 12:22:29 by dt100-->
 <display version="2.0.0">
   <name>Main</name>
   <width>700</width>
@@ -18,6 +17,7 @@
       <SITES>$(SITES=1,2,3,4,5,6)</SITES>
       <NSITES>$(NSITES=6)</NSITES>
       <SITE>1</SITE>
+      <USER_GUIDE>https://www.d-tacq.com/resources/d-tacq-4G-acq4xx-UserGuide-r49.pdf</USER_GUIDE>
     </macros>
     <width>700</width>
     <height>660</height>
