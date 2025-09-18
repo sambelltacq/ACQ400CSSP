@@ -150,7 +150,7 @@ def gen_ID(args):
     return f"{prefix}{uuts}"
 
 def init_memento(args):
-    global MEMENTO, WORKSPACE, JAVA_ARGS, TARGET, SETTINGS
+    global MEMENTO, WORKSPACE, JAVA_ARGS, TARGET, SETTINGS, ID
     if os.path.exists(MEMENTO):
         print(f"Using existing workspace {WORKSPACE}")
         TARGET = f"-layout {MEMENTO}"
@@ -158,7 +158,16 @@ def init_memento(args):
     new_lines = []
     macros_pref = "org.csstudio.display.builder.model/macros={macros}\n"
     new_lines.append(macros_pref.format(macros=gen_macros_pref(args.uuts, args.debug)))
-    if len(args.uuts) > 1: new_lines.append("org.phoebus.ui/home_display=src/acq400_launcher_multi.bob")
+    if len(args.uuts) > 1:
+        args.console = False
+        new_lines.append("org.phoebus.ui/home_display=src/acq400_launcher_multi.bob")
+
+    if args.console:
+        relative_path = os.path.relpath(ROOT_DIR, os.path.expanduser("~"))
+        helper_path = os.path.normpath(os.path.join(relative_path, "src/scripts/console_helper.py")).replace(os.sep, "/")
+        new_lines.append(f"org.phoebus.applications.console/prompt={ID}> \\ \n")
+        new_lines.append(f"org.phoebus.applications.console/shell=python3 {helper_path} {ID}\n")
+
     print(f"Creating new workspace {WORKSPACE}")
     os.makedirs(WORKSPACE, exist_ok=True)
     with open(SETTINGS_BASE, 'r') as base_fp:
@@ -229,6 +238,7 @@ def check_uut_hostnames(hostnames):
 def get_parser():
     parser = argparse.ArgumentParser(description='Start script for ACQ400CSSP')
     parser.add_argument('--debug', action='store_true', help="enable debug")
+    parser.add_argument('--console', action='store_true', help="enable console")
     parser.add_argument('uuts', nargs='*', help="uut hostnames")
     return parser
 
