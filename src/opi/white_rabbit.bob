@@ -480,6 +480,40 @@
         <width>110</width>
         <height>90</height>
       </widget>
+      <widget type="group" version="3.0.0">
+        <name>DOC_LINK_1</name>
+        <macros>
+          <TARGET>25 White Rabbit Endpoint</TARGET>
+          <URL>${USER_GUIDE}#${TARGET}</URL>
+        </macros>
+        <x>400</x>
+        <y>10</y>
+        <width>25</width>
+        <height>25</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="picture" version="2.0.0">
+          <name>LINK_SYMBOL_1</name>
+          <file>../images/doc_link.png</file>
+          <width>25</width>
+          <height>25</height>
+        </widget>
+        <widget type="action_button" version="3.0.0">
+          <name>OPEN_LINK_BUTTON_1</name>
+          <actions>
+            <action type="open_webpage">
+              <description>Open Web Page</description>
+              <url>$(URL)</url>
+            </action>
+          </actions>
+          <text></text>
+          <width>25</width>
+          <height>25</height>
+          <transparent>true</transparent>
+          <tooltip>$(URL)</tooltip>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+      </widget>
     </widget>
   </widget>
 </display>
