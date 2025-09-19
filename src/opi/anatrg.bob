@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-15 18:01:29 by sam-->
 <display version="2.0.0">
   <name>ANATRG$(MUUT):$(SITE)</name>
   <width>820</width>
@@ -786,6 +785,39 @@
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <wrap_words>false</wrap_words>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>DOC_LINK_1</name>
+    <macros>
+      <URL>https://d-tacq.co.uk/resources/ATD_Guide.pdf</URL>
+    </macros>
+    <x>380</x>
+    <y>10</y>
+    <width>25</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="picture" version="2.0.0">
+      <name>LINK_SYMBOL_1</name>
+      <file>../images/doc_link.png</file>
+      <width>25</width>
+      <height>25</height>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>OPEN_LINK_BUTTON_1</name>
+      <actions>
+        <action type="open_webpage">
+          <description>Open Web Page</description>
+          <url>$(URL)</url>
+        </action>
+      </actions>
+      <text></text>
+      <width>25</width>
+      <height>25</height>
+      <transparent>true</transparent>
+      <tooltip>$(URL)</tooltip>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
   </widget>
 </display>
