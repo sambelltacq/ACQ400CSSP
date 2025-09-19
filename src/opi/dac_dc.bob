@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:50:41 by dt100-->
 <display version="2.0.0">
   <name>DAC_DC$(MUUT):$(SITE)</name>
-  <width>1170</width>
-  <height>1190</height>
+  <width>1190</width>
+  <height>1150</height>
   <widget type="group" version="3.0.0">
     <name>DAC DC</name>
     <macros>
@@ -361,6 +360,40 @@
             <tooltip>$(actions)</tooltip>
           </widget>
         </widget>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>DOC_LINK_1</name>
+      <macros>
+        <TARGET>14.1 SLOW AO (DC) OUTPUT</TARGET>
+        <URL>${USER_GUIDE}#${TARGET}</URL>
+      </macros>
+      <x>540</x>
+      <y>50</y>
+      <width>25</width>
+      <height>25</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="picture" version="2.0.0">
+        <name>LINK_SYMBOL_1</name>
+        <file>../images/doc_link.png</file>
+        <width>25</width>
+        <height>25</height>
+      </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>OPEN_LINK_BUTTON_1</name>
+        <actions>
+          <action type="open_webpage">
+            <description>Open Web Page</description>
+            <url>$(URL)</url>
+          </action>
+        </actions>
+        <text></text>
+        <width>25</width>
+        <height>25</height>
+        <transparent>true</transparent>
+        <tooltip>$(URL)</tooltip>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>
