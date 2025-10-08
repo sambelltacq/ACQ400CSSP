@@ -33,7 +33,7 @@ macros = get_macros(display)
 uut_val = PVUtil.getString(pvs[0])
 
 if uut_val != '0':
-    if macros.UUT != uut_val:
+    if macros.get('UUT') != uut_val:
         logger.info("Set UUT to {}".format(uut_val))
         macros.UUT = uut_val
         set_macros(display, macros)
