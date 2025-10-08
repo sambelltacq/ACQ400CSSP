@@ -85,13 +85,17 @@ def main():
         macros.SITES = site_str
     logger.info("model: {} active sites: ({} of {})".format(model, macros.SITES, macros.NSITES))
 
+    AGG_FIRST_SITE = None
     for site in range(1, 6 + 1):
         site_key = "SITE_{}_MODEL".format(site)
         site_model = "none"
         if site in sites:
             site_model = read_pv("{}:{}:PART_NUM".format(macros.UUT, site))
-        macros[site_key] = site_model
+            if not AGG_FIRST_SITE and site_model.upper().startswith('ACQ'):
+                AGG_FIRST_SITE = site
 
+        macros[site_key] = site_model
+    macros.AGG_FIRST_SITE = max(AGG_FIRST_SITE, 1)
     set_macros(display, macros)
     if not model: return
     set_macros(widget, macros)

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <name>Capture$(MUUT)</name>
+  <macros>
+    <SITE>$(AGG_FIRST_SITE=1)</SITE>
+  </macros>
   <width>1330</width>
   <height>800</height>
   <widget type="group" version="3.0.0">

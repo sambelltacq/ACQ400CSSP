@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 15:48:04 by dt100-->
 <display version="2.0.0">
   <name>Stream</name>
   <width>710</width>
@@ -133,7 +132,7 @@
       <widget type="embedded" version="2.0.0">
         <name>Counter Func</name>
         <macros>
-          <site>1</site>
+          <site>$(SITE)</site>
           <func>SIG:sample_count</func>
           <label>sample_count</label>
         </macros>
@@ -166,7 +165,7 @@
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Text Update_2</name>
-          <pv_name>${UUT}:1:AI:WF:FREQ</pv_name>
+          <pv_name>${UUT}:$(SITE):AI:WF:FREQ</pv_name>
           <y>30</y>
           <width>110</width>
           <height>30</height>

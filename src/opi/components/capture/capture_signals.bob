@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 15:47:19 by dt100-->
 <display version="2.0.0">
   <name>capture_signals</name>
   <width>710</width>
@@ -29,14 +28,14 @@
         <name>Set Soft Button</name>
         <actions execute_as_one="true">
           <action type="write_pv">
-            <pv_name>${UUT}:1:TRG:DX</pv_name>
-            <value>1</value>
             <description>SET SOFT</description>
+            <pv_name>${UUT}:$(SITE):TRG:DX</pv_name>
+            <value>1</value>
           </action>
           <action type="write_pv">
-            <pv_name>${UUT}:1:TRG:SENSE</pv_name>
-            <value>1</value>
             <description>SET RISING</description>
+            <pv_name>${UUT}:$(SITE):TRG:SENSE</pv_name>
+            <value>1</value>
           </action>
         </actions>
         <text>SET SOFT TRG</text>
@@ -49,9 +48,9 @@
         <name>Pulse Soft Button</name>
         <actions execute_as_one="true">
           <action type="write_pv">
+            <description>PULSE SOFT TRG</description>
             <pv_name>${UUT}:SIG:SOFT_TRIGGER</pv_name>
             <value>1</value>
-            <description>PULSE SOFT TRG</description>
           </action>
         </actions>
         <text>PULSE SOFT TRG</text>
@@ -145,7 +144,7 @@
         </widget>
         <widget type="bool_button" version="2.0.0">
           <name>ES Button</name>
-          <pv_name>${UUT}:1:ES_ENABLE</pv_name>
+          <pv_name>${UUT}:$(SITE):ES_ENABLE</pv_name>
           <x>269</x>
           <width>50</width>
           <off_label>ES</off_label>
@@ -171,7 +170,7 @@
         </widget>
         <widget type="textentry" version="3.0.0">
           <name>Translen Input</name>
-          <pv_name>${UUT}:1:RTM_TRANSLEN</pv_name>
+          <pv_name>${UUT}:$(SITE):RTM_TRANSLEN</pv_name>
           <x>102</x>
           <width>75</width>
           <height>30</height>
@@ -187,7 +186,7 @@
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Translen Value</name>
-          <pv_name>${UUT}:1:RTM_TRANSLENp:r</pv_name>
+          <pv_name>${UUT}:$(SITE):RTM_TRANSLENp:r</pv_name>
           <x>179</x>
           <width>75</width>
           <height>30</height>
@@ -300,7 +299,7 @@
       <widget type="group" version="3.0.0">
         <name>Signals Group</name>
         <macros>
-          <site>1</site>
+          <site>$(SITE)</site>
         </macros>
         <y>40</y>
         <width>350</width>

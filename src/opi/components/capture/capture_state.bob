@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-14 14:37:32 by dt100-->
 <display version="2.0.0">
   <name>capture_state</name>
   <width>650</width>
@@ -33,7 +32,7 @@
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Shot Value</name>
-        <pv_name>${UUT}:1:SHOT</pv_name>
+        <pv_name>${UUT}:$(SITE):SHOT</pv_name>
         <y>20</y>
         <background_color>
           <color name="Background" red="255" green="255" blue="255">
@@ -208,7 +207,7 @@
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Runtime Value</name>
-        <pv_name>${UUT}:1:SIG:sample_count:nzcount</pv_name>
+        <pv_name>${UUT}:$(SITE):SIG:sample_count:nzcount</pv_name>
         <y>20</y>
         <background_color>
           <color name="Background" red="255" green="255" blue="255">

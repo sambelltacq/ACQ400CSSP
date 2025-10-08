@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-02-20 11:43:25 by dt100-->
 <display version="2.0.0">
   <name>transient</name>
   <width>710</width>
@@ -203,9 +202,9 @@
       </font>
       <actions>
         <action type="write_pv">
-          <pv_name>${UUT}:1:TRG:DX</pv_name>
-          <value>${UUT}:MODE:TRANSIENT:SOFT_TRIGGER</value>
           <description>WritePV</description>
+          <pv_name>${UUT}:$(SITE):TRG:DX</pv_name>
+          <value>${UUT}:MODE:TRANSIENT:SOFT_TRIGGER</value>
         </action>
       </actions>
       <border_alarm_sensitive>false</border_alarm_sensitive>
@@ -215,19 +214,19 @@
       <name>Default PRE/POST</name>
       <actions execute_as_one="true">
         <action type="write_pv">
+          <description>SET PRE</description>
           <pv_name>${UUT}:MODE:TRANSIENT:PRE</pv_name>
           <value>50000</value>
-          <description>SET PRE</description>
         </action>
         <action type="write_pv">
+          <description>SET POST</description>
           <pv_name>${UUT}:MODE:TRANSIENT:POST</pv_name>
           <value>50000</value>
-          <description>SET POST</description>
         </action>
         <action type="write_pv">
+          <description>SET OSAM</description>
           <pv_name>${UUT}:MODE:TRANSIENT:OSAM</pv_name>
           <value>1</value>
-          <description>SET OSAM</description>
         </action>
       </actions>
       <text>Default PRE/POST</text>
@@ -240,19 +239,19 @@
       <name>Default PRE/POST_1</name>
       <actions execute_as_one="true">
         <action type="write_pv">
+          <description>SET PRE</description>
           <pv_name>${UUT}:MODE:TRANSIENT:PRE</pv_name>
           <value>0</value>
-          <description>SET PRE</description>
         </action>
         <action type="write_pv">
+          <description>SET POST</description>
           <pv_name>${UUT}:MODE:TRANSIENT:POST</pv_name>
           <value>100000</value>
-          <description>SET POST</description>
         </action>
         <action type="write_pv">
+          <description>SET OSAM</description>
           <pv_name>${UUT}:MODE:TRANSIENT:OSAM</pv_name>
           <value>1</value>
-          <description>SET OSAM</description>
         </action>
       </actions>
       <text>Default POST</text>
