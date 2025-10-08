@@ -83,9 +83,9 @@ def main():
         sites = {int(k): v for k, v in (site.split('=') for site in sitelist.split(',', 1)[1].split(','))}
         site_str = ','.join(map(str, sites.keys()))
         macros.SITES = site_str
-    logger.info("model: {} active sites: ({} of {})".format(model, macros.SITES, macros.NSITES))
 
     AGG_FIRST_SITE = None
+    DIST_FIRST_SITE = None
     for site in range(1, 6 + 1):
         site_key = "SITE_{}_MODEL".format(site)
         site_model = "none"
@@ -93,9 +93,12 @@ def main():
             site_model = read_pv("{}:{}:PART_NUM".format(macros.UUT, site))
             if not AGG_FIRST_SITE and site_model.upper().startswith('ACQ'):
                 AGG_FIRST_SITE = site
+            if not DIST_FIRST_SITE and site_model.upper().startswith('AO'):
+                DIST_FIRST_SITE = site
 
         macros[site_key] = site_model
     macros.AGG_FIRST_SITE = max(AGG_FIRST_SITE, 1)
+    macros.DIST_FIRST_SITE = max(DIST_FIRST_SITE, 1)
     set_macros(display, macros)
     if not model: return
     set_macros(widget, macros)

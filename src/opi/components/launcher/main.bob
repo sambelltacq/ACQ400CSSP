@@ -667,6 +667,25 @@
             </font>
             <tooltip>Gate Pulse Generator</tooltip>
           </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>AWG Button</name>
+            <actions>
+              <action type="execute">
+                <description>open opi/awg.bob</description>
+                <script file="../../../scripts/handle_action_button.py">
+                </script>
+              </action>
+            </actions>
+            <text>AWG</text>
+            <x>320</x>
+            <y>160</y>
+            <width>150</width>
+            <font>
+              <font family="Ubuntu" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <tooltip>Arbitrary Waveform Generator</tooltip>
+          </widget>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -833,25 +852,6 @@
             <tooltip>Rapid Burst Judgement</tooltip>
           </widget>
           <widget type="action_button" version="3.0.0">
-            <name>AWG Button</name>
-            <actions>
-              <action type="execute">
-                <description>open opi/awg.bob</description>
-                <script file="../../../scripts/handle_action_button.py">
-                </script>
-              </action>
-            </actions>
-            <text>AWG</text>
-            <x>320</x>
-            <y>40</y>
-            <width>150</width>
-            <font>
-              <font family="Ubuntu" style="BOLD" size="14.0">
-              </font>
-            </font>
-            <tooltip>Arbitrary Waveform Generator</tooltip>
-          </widget>
-          <widget type="action_button" version="3.0.0">
             <name>Gains Button</name>
             <actions>
               <action type="execute">
@@ -986,7 +986,7 @@
             </actions>
             <text>QEN</text>
             <x>320</x>
-            <y>120</y>
+            <y>40</y>
             <width>150</width>
             <font>
               <font family="Ubuntu" style="BOLD" size="14.0">

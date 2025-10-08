@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:53:37 by dt100-->
 <display version="2.0.0">
-  <name>AWG$(MUUT):$(SITE)</name>
+  <name>AWG$(MUUT)</name>
+  <macros>
+    <SITE>$(DIST_FIRST_SITE=1)</SITE>
+  </macros>
   <width>670</width>
   <height>920</height>
   <background_color>
