@@ -300,7 +300,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>DATA TYPE</name>
-    <pv_name>$(UUT):1:AI:WF:01.FTVL</pv_name>
+    <pv_name>$(UUT):$(SITE):AI:WF:01.FTVL</pv_name>
     <x>220</x>
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -339,7 +339,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>SHOT UPDATE</name>
-    <pv_name>$(UUT):1:SHOT</pv_name>
+    <pv_name>$(UUT):$(SITE):SHOT</pv_name>
     <x>490</x>
     <width>70</width>
     <height>25</height>

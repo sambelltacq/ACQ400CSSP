@@ -252,7 +252,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>DATA TYPE</name>
-    <pv_name>$(UUT):1:AI:WF:01.FTVL</pv_name>
+    <pv_name>$(UUT):$(SITE):AI:WF:01.FTVL</pv_name>
     <x>220</x>
     <width>120</width>
     <height>25</height>
@@ -292,7 +292,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>UPDATE UPDATE</name>
-    <pv_name>$(UUT):1:AI:WF:01:UPDATES</pv_name>
+    <pv_name>$(UUT):$(SITE):AI:WF:01:UPDATES</pv_name>
     <x>540</x>
     <width>70</width>
     <height>25</height>
