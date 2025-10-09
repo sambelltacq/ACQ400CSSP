@@ -1095,27 +1095,26 @@
               <pvname0>${UUT}:0:SIG:FP:$(label)</pvname0>
             </macros>
             <y>50</y>
-            <width>149</width>
+            <width>143</width>
             <height>30</height>
             <style>3</style>
             <transparent>true</transparent>
             <widget type="label" version="2.0.0">
               <name>label_19</name>
               <text>$(label)</text>
-              <width>60</width>
+              <width>39</width>
               <height>30</height>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="combo" version="2.0.0">
               <name>menu0_8</name>
               <pv_name>$(pvname0)</pv_name>
-              <x>70</x>
-              <width>79</width>
+              <x>49</x>
+              <width>94</width>
               <font>
                 <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
                 </font>
@@ -1130,27 +1129,26 @@
               <pvname0>${UUT}:0:SIG:FP:$(knob)</pvname0>
             </macros>
             <y>130</y>
-            <width>149</width>
+            <width>143</width>
             <height>30</height>
             <style>3</style>
             <transparent>true</transparent>
             <widget type="label" version="2.0.0">
               <name>label_20</name>
               <text>$(knob)</text>
-              <width>58</width>
+              <width>39</width>
               <height>30</height>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="combo" version="2.0.0">
               <name>menu0_9</name>
               <pv_name>$(pvname0)</pv_name>
-              <x>70</x>
-              <width>79</width>
+              <x>49</x>
+              <width>94</width>
               <font>
                 <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
                 </font>
@@ -1176,27 +1174,26 @@
               <pvname0>${UUT}:0:SIG:FP:$(knob)</pvname0>
             </macros>
             <y>170</y>
-            <width>149</width>
+            <width>143</width>
             <height>30</height>
             <style>3</style>
             <transparent>true</transparent>
             <widget type="label" version="2.0.0">
               <name>label_21</name>
               <text>$(knob)</text>
-              <width>60</width>
+              <width>39</width>
               <height>30</height>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="combo" version="2.0.0">
               <name>menu0_10</name>
               <pv_name>$(pvname0)</pv_name>
-              <x>70</x>
-              <width>79</width>
+              <x>49</x>
+              <width>94</width>
               <font>
                 <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
                 </font>
@@ -1219,21 +1216,20 @@
             <name>label_23</name>
             <text>CLK</text>
             <y>90</y>
-            <width>60</width>
+            <width>39</width>
             <height>30</height>
             <font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
               </font>
             </font>
-            <horizontal_alignment>2</horizontal_alignment>
             <vertical_alignment>1</vertical_alignment>
           </widget>
           <widget type="label" version="2.0.0">
             <name>HIGHWAY d0_1</name>
             <text>IN</text>
-            <x>70</x>
+            <x>49</x>
             <y>20</y>
-            <width>79</width>
+            <width>94</width>
             <height>30</height>
             <font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
@@ -1257,20 +1253,19 @@
             <widget type="label" version="2.0.0">
               <name>label_22</name>
               <text>$(knob)</text>
-              <width>50</width>
+              <width>31</width>
               <height>30</height>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="combo" version="2.0.0">
               <name>menu0_11</name>
               <pv_name>$(pvname0)</pv_name>
-              <x>60</x>
-              <width>79</width>
+              <x>50</x>
+              <width>89</width>
               <font>
                 <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
                 </font>
@@ -1304,20 +1299,19 @@
             <widget type="label" version="2.0.0">
               <name>label_24</name>
               <text>$(knob)</text>
-              <width>50</width>
+              <width>31</width>
               <height>30</height>
               <font>
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="combo" version="2.0.0">
               <name>menu0_12</name>
               <pv_name>$(pvname0)</pv_name>
-              <x>60</x>
-              <width>79</width>
+              <x>50</x>
+              <width>89</width>
               <font>
                 <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
                 </font>
@@ -1353,7 +1347,6 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="led" version="2.0.0">
@@ -1380,7 +1373,6 @@
                 <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                 </font>
               </font>
-              <horizontal_alignment>2</horizontal_alignment>
               <vertical_alignment>1</vertical_alignment>
             </widget>
             <widget type="led" version="2.0.0">
@@ -1393,9 +1385,9 @@
           <widget type="label" version="2.0.0">
             <name>HIGHWAY d0_2</name>
             <text>OUT</text>
-            <x>219</x>
+            <x>209</x>
             <y>20</y>
-            <width>79</width>
+            <width>89</width>
             <height>30</height>
             <font>
               <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
