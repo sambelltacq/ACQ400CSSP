@@ -164,7 +164,7 @@
       <width>25</width>
       <height>20</height>
       <tooltip>$(actions)</tooltip>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>Counter Status</name>

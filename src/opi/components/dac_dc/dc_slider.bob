@@ -67,7 +67,7 @@
         </background_color>
         <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         <maximum>10.0</maximum>
       </widget>
       <widget type="combo" version="2.0.0">
@@ -75,7 +75,7 @@
         <pv_name>${UUT}:${SITE}:$(GAIN):${id}</pv_name>
         <y>210</y>
         <height>20</height>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update</name>
@@ -83,7 +83,7 @@
         <y>180</y>
         <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
       <widget type="scaledslider" version="2.0.0">
         <name>Scaled Slider_1</name>
@@ -94,7 +94,7 @@
         <height>120</height>
         <horizontal>false</horizontal>
         <major_tick_step_hint>20</major_tick_step_hint>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>

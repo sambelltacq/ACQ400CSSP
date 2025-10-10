@@ -59,7 +59,7 @@
         <color name="MAJOR" red="255" green="0" blue="0">
         </color>
       </fill_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <limits_from_pv>false</limits_from_pv>
       <maximum>75.0</maximum>
     </widget>

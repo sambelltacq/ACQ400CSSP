@@ -305,7 +305,7 @@
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>ADC_CAL Input</name>
@@ -323,7 +323,7 @@
         <pv_name>loc://UUT</pv_name>
       </rule>
     </rules>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
   </widget>
   <widget type="label" version="2.0.0">
     <name>SHOT LABEL</name>
@@ -345,6 +345,6 @@
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
-    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
   </widget>
 </display>

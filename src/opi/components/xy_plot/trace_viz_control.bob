@@ -62,7 +62,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -112,7 +112,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -162,7 +162,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -212,7 +212,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -262,7 +262,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -312,7 +312,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -362,7 +362,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -412,7 +412,7 @@
           <width>19</width>
           <height>19</height>
           <tooltip></tooltip>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
     </widget>

@@ -39,7 +39,7 @@
         <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
 </display>

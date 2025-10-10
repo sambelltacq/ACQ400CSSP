@@ -168,7 +168,7 @@
             <x>90</x>
             <y>80</y>
             <width>70</width>
-            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
             <items>
               <item>PLAN</item>
             </items>
@@ -194,7 +194,7 @@
               </color>
             </background_color>
             <vertical_alignment>1</vertical_alignment>
-            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           </widget>
           <widget type="led" version="2.0.0">
             <name>LED_6</name>
@@ -239,7 +239,7 @@
             <width>70</width>
             <off_label></off_label>
             <on_label></on_label>
-            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           </widget>
         </widget>
       </widget>
@@ -284,7 +284,7 @@
           </color>
         </background_color>
         <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
       <widget type="label" version="2.0.0">
         <name>Label_10</name>
@@ -368,7 +368,7 @@
         <height>25</height>
         <transparent>true</transparent>
         <tooltip>$(URL)</tooltip>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>

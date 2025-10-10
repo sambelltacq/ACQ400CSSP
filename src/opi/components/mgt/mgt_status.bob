@@ -42,7 +42,7 @@
       <pv_name>${UUT}:MGT:SFP:$(num):PRESENT</pv_name>
       <x>20</x>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_3</name>
@@ -57,7 +57,7 @@
         </color>
       </on_color>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_7</name>

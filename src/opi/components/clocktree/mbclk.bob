@@ -69,7 +69,7 @@
               </color>
             </background_color>
             <vertical_alignment>1</vertical_alignment>
-            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           </widget>
           <widget type="textupdate" version="2.0.0">
             <name>Spinner_1</name>
@@ -85,7 +85,7 @@
             <precision>3</precision>
             <show_units>false</show_units>
             <vertical_alignment>1</vertical_alignment>
-            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           </widget>
         </widget>
         <widget type="polyline" version="2.0.0">
@@ -204,7 +204,7 @@
           </color>
         </background_color>
         <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
       <widget type="textupdate" version="2.0.0">
         <name>Spinner_4</name>
@@ -220,7 +220,7 @@
         <precision>3</precision>
         <show_units>false</show_units>
         <vertical_alignment>1</vertical_alignment>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
     <widget type="polyline" version="2.0.0">
@@ -270,7 +270,7 @@
         <height>25</height>
         <transparent>true</transparent>
         <tooltip>$(URL)</tooltip>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>

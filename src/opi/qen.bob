@@ -58,7 +58,7 @@
       <width>200</width>
       <numBits>4</numBits>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>BYTE_LABEL_1</name>
@@ -140,7 +140,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="bool_button" version="2.0.0">
       <name>EN_1</name>
@@ -150,7 +150,7 @@
       <width>30</width>
       <off_label></off_label>
       <on_label></on_label>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_5</name>
@@ -177,7 +177,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="bool_button" version="2.0.0">
       <name>EN_2</name>
@@ -187,7 +187,7 @@
       <width>30</width>
       <off_label></off_label>
       <on_label></on_label>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_6</name>
@@ -214,7 +214,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_7</name>
@@ -239,7 +239,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_8</name>
@@ -266,7 +266,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="bool_button" version="2.0.0">
       <name>EN_3</name>
@@ -276,7 +276,7 @@
       <width>30</width>
       <off_label></off_label>
       <on_label></on_label>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="rectangle" version="2.0.0">
       <name>UPDATE_END</name>
@@ -311,7 +311,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_1</name>
@@ -346,7 +346,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_3</name>
@@ -371,7 +371,7 @@
       </background_color>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="action_button" version="3.0.0">
       <name>CLEAR_BUTTON</name>
@@ -387,7 +387,7 @@
       <x>130</x>
       <y>120</y>
       <width>70</width>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_1</name>
@@ -397,7 +397,7 @@
       <width>30</width>
       <height>30</height>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_2</name>
@@ -407,7 +407,7 @@
       <width>30</width>
       <height>30</height>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_3</name>
@@ -417,7 +417,7 @@
       <width>30</width>
       <height>30</height>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_4</name>
@@ -427,7 +427,7 @@
       <width>30</width>
       <height>30</height>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="polyline" version="2.0.0">
       <name>ARROW_1</name>

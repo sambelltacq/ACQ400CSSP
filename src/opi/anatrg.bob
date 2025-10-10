@@ -61,7 +61,7 @@
       <y>50</y>
       <width>110</width>
       <height>20</height>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <items>
         <item>item 0</item>
         <item>Item 1</item>
@@ -74,7 +74,7 @@
       <y>100</y>
       <width>110</width>
       <height>20</height>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <items>
         <item>item 0</item>
         <item>Item 1</item>
@@ -95,7 +95,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <maximum>10.0</maximum>
     </widget>
     <widget type="spinner" version="2.0.0">
@@ -113,7 +113,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <maximum>10.0</maximum>
     </widget>
     <widget type="action_button" version="3.0.0">
@@ -231,7 +231,7 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <items>
         <item>item 0</item>
         <item>Item 1</item>
@@ -264,7 +264,7 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <items>
         <item>item 0</item>
         <item>Item 1</item>
@@ -309,7 +309,7 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <items>
         <item>item 0</item>
         <item>Item 1</item>
@@ -371,7 +371,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <maximum>10.0</maximum>
     </widget>
     <widget type="label" version="2.0.0">
@@ -729,7 +729,7 @@
       <pv_name>${UUT}:0:SIG:EVT_EXT:ACTIVE</pv_name>
       <width>130</width>
       <square>true</square>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>ANY TRG TITLE</name>
@@ -817,7 +817,7 @@
       <height>25</height>
       <transparent>true</transparent>
       <tooltip>$(URL)</tooltip>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
 </display>

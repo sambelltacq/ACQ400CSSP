@@ -222,7 +222,7 @@
       <height>30</height>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>WF UPDATES</name>
@@ -233,14 +233,14 @@
       <visible>$($(pmode)_UPDATE)</visible>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>ADC_CAL Input</name>
       <pv_name>${UUT}:${SITE}:ADC_CAL</pv_name>
       <x>210</x>
       <y>810</y>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display</name>

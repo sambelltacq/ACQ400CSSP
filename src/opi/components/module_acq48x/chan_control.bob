@@ -37,7 +37,7 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>GAIN MENU</name>
@@ -48,7 +48,7 @@
         <color name="Read_Background" red="240" green="240" blue="240">
         </color>
       </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>FILTER MENU</name>
@@ -59,7 +59,7 @@
         <color name="Read_Background" red="240" green="240" blue="240">
         </color>
       </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="bool_button" version="2.0.0">
       <name>LFNS BUTTON</name>
@@ -73,7 +73,7 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="bool_button" version="2.0.0">
       <name>50R BUTTON</name>
@@ -87,7 +87,7 @@
         <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
         </font>
       </font>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
 </display>

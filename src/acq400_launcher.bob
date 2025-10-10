@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-20 14:37:54 by dt100-->
 <display version="2.0.0">
   <name>Launcher$(MUUT)</name>
   <macros>
@@ -8,6 +7,7 @@
     <UUT2>$(UUT2=none)</UUT2>
     <MUUT_none>$(NULL=)</MUUT_none>
     <MUUT>$(MUUT_$(UUT2)= $(UUT))</MUUT>
+    <SHOW_ALARM>1</SHOW_ALARM>
   </macros>
   <width>700</width>
   <height>970</height>
@@ -127,7 +127,7 @@
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
       <tooltip></tooltip>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="embedded" version="2.0.0">

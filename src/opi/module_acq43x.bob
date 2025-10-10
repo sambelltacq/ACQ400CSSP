@@ -68,7 +68,7 @@
         <color name="Read_Background" red="240" green="240" blue="240">
         </color>
       </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>UPDATE_1</name>
@@ -80,7 +80,7 @@
       <precision>3</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -101,7 +101,7 @@
         <color name="Read_Background" red="240" green="240" blue="240">
         </color>
       </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_2</name>
@@ -140,7 +140,7 @@
       <precision>3</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>UPDATE_3</name>
@@ -153,7 +153,7 @@
       <precision>3</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>UPDATE_4</name>
@@ -165,7 +165,7 @@
       <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_3</name>
@@ -234,7 +234,7 @@
       <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_7</name>
@@ -261,7 +261,7 @@
       <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>LABEL_8</name>
@@ -287,7 +287,7 @@
       <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="polyline" version="2.0.0">
       <name>LINE_3</name>
@@ -363,7 +363,7 @@
       <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       <border_width>1</border_width>
     </widget>
   </widget>
@@ -395,7 +395,7 @@
       <precision>0</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -423,7 +423,7 @@
         <color name="Read_Background" red="240" green="240" blue="240">
         </color>
       </background_color>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -458,7 +458,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -493,7 +493,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -528,7 +528,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -560,7 +560,7 @@
       <precision>3</precision>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -592,7 +592,7 @@
       <pv_name>${UUT}:$(site):${sig}</pv_name>
       <x>80</x>
       <width>90</width>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src_1</name>
@@ -610,7 +610,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Sens_1</name>
@@ -628,7 +628,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -660,7 +660,7 @@
       <pv_name>${UUT}:$(site):${sig}</pv_name>
       <x>80</x>
       <width>90</width>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src_2</name>
@@ -678,7 +678,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Sens_2</name>
@@ -696,7 +696,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -728,7 +728,7 @@
       <pv_name>${UUT}:$(site):${sig}</pv_name>
       <x>80</x>
       <width>90</width>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src_3</name>
@@ -746,7 +746,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Sens_3</name>
@@ -764,7 +764,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -796,7 +796,7 @@
       <pv_name>${UUT}:$(site):${sig}</pv_name>
       <x>80</x>
       <width>90</width>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src_4</name>
@@ -814,7 +814,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Sens_4</name>
@@ -832,7 +832,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -864,7 +864,7 @@
       <pv_name>${UUT}:$(site):${sig}</pv_name>
       <x>80</x>
       <width>90</width>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Src_5</name>
@@ -882,7 +882,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="combo" version="2.0.0">
       <name>Sig Sens_5</name>
@@ -900,7 +900,7 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
 </display>

@@ -57,7 +57,7 @@
           <color name="Background" red="255" green="255" blue="255">
           </color>
         </background_color>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>

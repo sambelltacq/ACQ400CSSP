@@ -260,7 +260,7 @@
           </color>
         </background_color>
         <wrap_words>true</wrap_words>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
     <widget type="group" version="3.0.0">
@@ -298,7 +298,7 @@
           </color>
         </background_color>
         <wrap_words>true</wrap_words>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>

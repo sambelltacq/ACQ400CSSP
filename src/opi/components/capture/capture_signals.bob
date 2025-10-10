@@ -112,7 +112,7 @@
               <pv_name>${UUT}:MODE:TRANS_ACT:FIND_EV:STA</pv_name>
             </rule>
           </rules>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Find Current</name>
@@ -126,7 +126,7 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Find Buffer</name>
@@ -140,7 +140,7 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="bool_button" version="2.0.0">
           <name>ES Button</name>
@@ -149,7 +149,7 @@
           <width>50</width>
           <off_label>ES</off_label>
           <on_label>ES</on_label>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -182,7 +182,7 @@
           <precision>0</precision>
           <show_units>false</show_units>
           <horizontal_alignment>1</horizontal_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Translen Value</name>
@@ -199,7 +199,7 @@
           <show_units>false</show_units>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -233,7 +233,7 @@
           <precision>0</precision>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           <border_color>
             <color name="Grid" red="128" green="128" blue="128">
             </color>
@@ -269,7 +269,7 @@
           <precision>0</precision>
           <show_units>false</show_units>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           <border_color>
             <color name="Grid" red="128" green="128" blue="128">
             </color>
@@ -289,7 +289,7 @@
           <show_units>false</show_units>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           <border_color>
             <color name="Grid" red="128" green="128" blue="128">
             </color>

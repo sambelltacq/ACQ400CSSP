@@ -72,7 +72,7 @@
           </background_color>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Text Update_6</name>
@@ -90,7 +90,7 @@
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
           <wrap_words>false</wrap_words>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Text Update_7</name>
@@ -105,7 +105,7 @@
           </background_color>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="led" version="2.0.0">
           <name>LED</name>
@@ -230,7 +230,7 @@
           </background_color>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Text Update_21</name>
@@ -245,7 +245,7 @@
           </background_color>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Text Update_22</name>
@@ -263,7 +263,7 @@
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
           <wrap_words>false</wrap_words>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="textupdate" version="2.0.0">
           <name>Text Update_23</name>
@@ -278,7 +278,7 @@
           </background_color>
           <horizontal_alignment>2</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="led" version="2.0.0">
           <name>LED_9</name>

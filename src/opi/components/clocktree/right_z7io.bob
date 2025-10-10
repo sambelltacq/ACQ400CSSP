@@ -41,7 +41,7 @@
       <show_units>false</show_units>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>Label_12</name>
@@ -228,7 +228,7 @@
         <width>25</width>
         <height>20</height>
         <tooltip>$(actions)</tooltip>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
       <widget type="led" version="2.0.0">
         <name>Counter Status</name>
@@ -276,7 +276,7 @@
           <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
           </font>
         </font>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
     <widget type="label" version="2.0.0">

@@ -51,7 +51,7 @@
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <wrap_words>true</wrap_words>
-      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
     <widget type="label" version="2.0.0">
       <name>MS LABEL</name>

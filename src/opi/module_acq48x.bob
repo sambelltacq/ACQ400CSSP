@@ -199,7 +199,7 @@
             <color name="Read_Background" red="240" green="240" blue="240">
             </color>
           </background_color>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="bool_button" version="2.0.0">
           <name>LFNS BUTTON</name>
@@ -213,7 +213,7 @@
             <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
             </font>
           </font>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="bool_button" version="2.0.0">
           <name>50R BUTTON</name>
@@ -227,7 +227,7 @@
             <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
             </font>
           </font>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="polyline" version="2.0.0">
           <name>Polyline_2</name>
@@ -303,7 +303,7 @@
             <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
             </font>
           </font>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="combo" version="2.0.0">
           <name>MR_EVSEL1</name>
@@ -323,7 +323,7 @@
               <pv_name>${UUT}:${SITE}:ACQ480:MR:EN</pv_name>
             </rule>
           </rules>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="combo" version="2.0.0">
           <name>MR_EVSEL0</name>
@@ -343,7 +343,7 @@
               <pv_name>${UUT}:${SITE}:ACQ480:MR:EN</pv_name>
             </rule>
           </rules>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="combo" version="2.0.0">
           <name>MR_10DEC</name>
@@ -363,7 +363,7 @@
               <pv_name>${UUT}:${SITE}:ACQ480:MR:EN</pv_name>
             </rule>
           </rules>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
@@ -383,7 +383,7 @@
             <color name="Read_Background" red="240" green="240" blue="240">
             </color>
           </background_color>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="label" version="2.0.0">
           <name>LABEL_7</name>
@@ -506,7 +506,7 @@
               <pv_name>${UUT}:$(SITE):ACQ480:TRAIN</pv_name>
             </rule>
           </rules>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="label" version="2.0.0">
           <name>LABEL_9</name>
@@ -532,7 +532,7 @@
           <height>30</height>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="label" version="2.0.0">
           <name>LABEL_10</name>
@@ -558,7 +558,7 @@
           <height>30</height>
           <horizontal_alignment>1</horizontal_alignment>
           <vertical_alignment>1</vertical_alignment>
-          <border_alarm_sensitive>false</border_alarm_sensitive>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
         </widget>
         <widget type="action_button" version="3.0.0">
           <name>TRAIN REQ BUTTON</name>

@@ -255,7 +255,7 @@
           <color name="Transparent" red="255" green="255" blue="255" alpha="0">
           </color>
         </line_color>
-        <border_alarm_sensitive>false</border_alarm_sensitive>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>
