@@ -46,15 +46,14 @@ def logical_to_physical(uut, site, chans, cache={}):
     for chan in chans:
         prev_chans = 0
         for site in [1, 2, 3, 4, 5, 6]:
-            
-            in_cache = uut in cache and site <= len(cache[uut])
+            in_cache = uut in cache and site <= len(cache.get(uut, []))
             if not in_cache:
                 cache.setdefault(uut, [])
                 nchan = read_pv("{}:{}:NCHAN".format(uut, site))
-                if not nchan: break
-                cache[uut].append(nchan)
+                cache[uut].append(nchan if nchan else 0)
 
             nchan = cache[uut][site - 1]
+            if nchan == 0: continue
             max_chan = nchan + prev_chans
             if chan <= max_chan:
                 physical_chans.append((uut, site, chan - prev_chans))
@@ -102,6 +101,7 @@ MAX_TRACES = macros.get('MAX_TRACES', 8)
 OPI = macros.get('{}_OPI'.format(SCOPE_MODE), None)
 UUT = macros.get('UUT', None)
 SITE = int(macros.get('SITE', 1))
+FIRST_SITE = 0
 CROSS_SITE = int(macros.get('CROSS_SITE', 0))
 SIZE = macros.get('SCOPE_SIZE', None)
 macros.mode = macros.get('MODE_{}'.format(SCOPE_MODE), 'WF')
@@ -138,6 +138,8 @@ for uutchans in SCOPE_MAP:
 
     for uut, site, chan in chans:
         if trace >= MAX_TRACES: break
+
+        if FIRST_SITE == 0: FIRST_SITE = site
         macros.uut = uut
         macros.site = site
         macros.chan = chan
@@ -178,7 +180,7 @@ new_macros['SCOPE_TAB'] = TITLE_FMT.format(**macros)
 new_macros['XAXIS_LABEL'] = macros.get('XAXIS_{}_LABEL'.format(SCOPE_XTYPE), SCOPE_XTYPE)
 new_macros['YAXIS_LABEL'] = macros.get('YAXIS_{}_LABEL'.format(SCOPE_YTYPE), SCOPE_YTYPE)
 new_macros['UUT'] = active_channels.keys()[0]
-new_macros['SITE'] = SITE
+new_macros['SITE'] = max(FIRST_SITE, 1)
 new_macros['WIDTH'] = macros.get('WIDTH_{}'.format(SIZE), 800)
 new_macros['HEIGHT'] = macros.get('HEIGHT_{}'.format(SIZE), 600)
 new_macros['TRACE_WIDTH'] = macros.get('TRACE_WIDTH', 2)
