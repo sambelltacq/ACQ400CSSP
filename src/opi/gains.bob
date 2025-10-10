@@ -248,7 +248,7 @@
         </widget>
         <widget type="led" version="2.0.0">
           <name>ACTIVE LED</name>
-          <pv_name>${UUT}:${SITE}:ACTIVE</pv_name>
+          <pv_name>${UUT}:0:ACTIVE</pv_name>
           <x>50</x>
           <off_color>
             <color name="Grid" red="128" green="128" blue="128">
@@ -276,7 +276,7 @@
             <exp bool_exp="pv0&gt;0">
               <value>true</value>
             </exp>
-            <pv_name>${UUT}:${SITE}:ACTIVE</pv_name>
+            <pv_name>${UUT}:0:ACTIVE</pv_name>
           </rule>
         </rules>
         <widget type="label" version="2.0.0">
