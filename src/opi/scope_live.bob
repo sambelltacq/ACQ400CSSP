@@ -356,10 +356,9 @@
     <x>610</x>
     <y>5</y>
     <width>200</width>
-    <height>25</height>
+    <height>52</height>
     <visible>false</visible>
     <style>3</style>
-    <transparent>true</transparent>
     <rules>
       <rule name="HIDE" prop_id="visible" out_exp="true">
         <exp bool_exp="true">
@@ -368,34 +367,63 @@
         <pv_name>${UUT}:LIVE:MODE</pv_name>
       </rule>
     </rules>
-    <widget type="textupdate" version="2.0.0">
-      <name>PREPCT PRE</name>
-      <pv_name>${UUT}:LIVE:PRE</pv_name>
-      <width>60</width>
-      <height>25</height>
-      <horizontal_alignment>1</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="spinner" version="2.0.0">
+    <widget type="scrollbar" version="2.0.0">
       <name>PREPCT INPUT</name>
       <pv_name>${UUT}:LIVE:PREPCT</pv_name>
-      <x>70</x>
+      <width>200</width>
+      <height>25</height>
+      <show_value_tip>false</show_value_tip>
+      <tooltip>$(pv_name)</tooltip>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>PREPCT POST</name>
+      <pv_name>${UUT}:LIVE:POST</pv_name>
+      <x>140</x>
+      <y>27</y>
       <width>60</width>
       <height>25</height>
       <background_color>
-        <color name="Background" red="255" green="255" blue="255">
+        <color name="Button_Background" red="210" green="210" blue="210">
         </color>
       </background_color>
       <horizontal_alignment>1</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="textupdate" version="2.0.0">
-      <name>PREPCT POST</name>
-      <pv_name>${UUT}:LIVE:POST</pv_name>
-      <x>140</x>
+      <name>PREPCT PRE</name>
+      <pv_name>${UUT}:LIVE:PRE</pv_name>
+      <y>27</y>
       <width>60</width>
       <height>25</height>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+      <show_units>false</show_units>
       <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>PREPCT PCT</name>
+      <pv_name>${UUT}:LIVE:PREPCT</pv_name>
+      <x>70</x>
+      <y>27</y>
+      <width>60</width>
+      <height>25</height>
+      <background_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>PCT SYMBOL</name>
+      <text>%</text>
+      <x>112</x>
+      <y>27</y>
+      <width>20</width>
+      <height>25</height>
       <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
