@@ -42,17 +42,22 @@ def read_pv(pvname):
 def logical_to_physical(uut, site, chans, cache={}):
     """Convert logical (chan 33) to physical (site 2 chan 1) """
     if site != 0: return [(uut, site, chan) for chan in chans]
+    cache.setdefault(uut, {"nchan": [], "sites": []})
+
+    if len(cache[uut]["sites"]) == 0:
+        sitelist = read_pv("{}:SITELIST".format(uut))
+        cache[uut]["sites"] = [int(site.split('=')[0]) for site in sitelist.split(',', 1)[1].split(',')]
+
     physical_chans = []
     for chan in chans:
         prev_chans = 0
-        for site in [1, 2, 3, 4, 5, 6]:
-            in_cache = uut in cache and site <= len(cache.get(uut, []))
-            if not in_cache:
-                cache.setdefault(uut, [])
-                nchan = read_pv("{}:{}:NCHAN".format(uut, site))
-                cache[uut].append(nchan if nchan else 0)
+        for idx, site in enumerate(cache[uut]["sites"]):
 
-            nchan = cache[uut][site - 1]
+            if idx >= len(cache[uut]["nchan"]):
+                nchan = read_pv("{}:{}:NCHAN".format(uut, site))
+                cache[uut]["nchan"].append(nchan if nchan else 0)
+
+            nchan = cache[uut]["nchan"][idx]
             if nchan == 0: continue
             max_chan = nchan + prev_chans
             if chan <= max_chan:
