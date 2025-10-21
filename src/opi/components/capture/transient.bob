@@ -13,8 +13,8 @@
       </color>
     </background_color>
     <widget type="textupdate" version="2.0.0">
-      <name>LOC://UNSET</name>
-      <pv_name>loc://UNSET&lt;VInt&gt;(1)</pv_name>
+      <name>loc://UNSET_$(DID)</name>
+      <pv_name>loc://UNSET_$(DID)&lt;VInt&gt;(1)</pv_name>
       <x>260</x>
       <y>10</y>
       <width>120</width>
@@ -419,7 +419,7 @@
           </action>
           <action type="write_pv">
             <description>DISABLE ARM</description>
-            <pv_name>loc://UNSET</pv_name>
+            <pv_name>loc://UNSET_$(DID)</pv_name>
             <value>1</value>
           </action>
         </actions>
@@ -439,7 +439,7 @@
               <value>false</value>
             </exp>
             <pv_name>${UUT}:MODE:CONTINUOUS</pv_name>
-            <pv_name>loc://UNSET</pv_name>
+            <pv_name>loc://UNSET_$(DID)</pv_name>
             <pv_name>${UUT}:SYS:VERSION:SW</pv_name>
           </rule>
         </rules>
@@ -564,7 +564,7 @@
           </action>
           <action type="write_pv">
             <description>ENABLE ARM</description>
-            <pv_name>loc://UNSET</pv_name>
+            <pv_name>loc://UNSET_$(DID)</pv_name>
             <value>0</value>
           </action>
         </actions>
