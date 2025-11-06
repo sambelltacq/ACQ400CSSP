@@ -290,7 +290,7 @@
       <transparent>true</transparent>
       <widget type="label" version="2.0.0">
         <name>SOFT TRIGGER LABEL</name>
-        <text>OUTPUT SOFT TRIGGER</text>
+        <text>AUTO TRG</text>
         <font>
           <font family="Liberation Sans" style="BOLD" size="14.0">
           </font>
