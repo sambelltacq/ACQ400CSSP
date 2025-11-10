@@ -375,6 +375,35 @@
           </widget>
         </widget>
       </widget>
+      <widget type="group" version="3.0.0">
+        <name>STACK_GROUP</name>
+        <x>370</x>
+        <y>120</y>
+        <width>150</width>
+        <height>30</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>STACK_LABEL</name>
+          <text>Stack 480</text>
+          <width>80</width>
+          <height>30</height>
+          <transparent>false</transparent>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="combo" version="2.0.0">
+          <name>STACK_BUTTON</name>
+          <pv_name>${UUT}:0:STACK_480</pv_name>
+          <x>80</x>
+          <width>70</width>
+          <background_color>
+            <color name="Header_ForeGround" red="255" green="255" blue="255">
+            </color>
+          </background_color>
+          <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+        </widget>
+      </widget>
     </widget>
   </widget>
 </display>
