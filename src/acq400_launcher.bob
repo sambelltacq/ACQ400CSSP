@@ -85,6 +85,7 @@
       <scripts>
         <script file="scripts/handle_macro.py">
           <pv_name>loc://SITE_$(DID)</pv_name>
+          <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
         </script>
       </scripts>
     </widget>
