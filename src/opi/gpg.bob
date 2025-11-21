@@ -2,11 +2,11 @@
 <display version="2.0.0">
   <name>GPG$(MUUT)</name>
   <width>690</width>
-  <height>500</height>
+  <height>550</height>
   <widget type="group" version="3.0.0">
     <name>GPG</name>
     <width>690</width>
-    <height>500</height>
+    <height>550</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="3.0.0">
@@ -14,7 +14,7 @@
       <x>10</x>
       <y>10</y>
       <width>670</width>
-      <height>480</height>
+      <height>530</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="label" version="2.0.0">
@@ -284,7 +284,7 @@
           <sig>GPG_TRG</sig>
           <site>0</site>
         </macros>
-        <y>220</y>
+        <y>210</y>
         <width>370</width>
         <height>30</height>
         <style>3</style>
@@ -352,7 +352,7 @@
           <sig>GPG_CLK</sig>
           <site>0</site>
         </macros>
-        <y>270</y>
+        <y>260</y>
         <width>370</width>
         <height>30</height>
         <style>3</style>
@@ -420,7 +420,7 @@
           <sig>GPG_SYNC</sig>
           <site>0</site>
         </macros>
-        <y>320</y>
+        <y>310</y>
         <width>370</width>
         <height>30</height>
         <style>3</style>
@@ -484,8 +484,7 @@
       </widget>
       <widget type="group" version="3.0.0">
         <name>FRONT</name>
-        <x>390</x>
-        <y>210</y>
+        <y>360</y>
         <width>170</width>
         <height>150</height>
         <style>3</style>
@@ -640,90 +639,6 @@
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
-        <name>EVENT BUS</name>
-        <y>380</y>
-        <width>660</width>
-        <height>100</height>
-        <style>3</style>
-        <background_color>
-          <color red="225" green="92" blue="254">
-          </color>
-        </background_color>
-        <widget type="group" version="3.0.0">
-          <name>EVENT BUS INNER</name>
-          <macros>
-            <pvname0>${UUT}:0:SIG:EVENT_SRC:</pvname0>
-          </macros>
-          <x>10</x>
-          <y>10</y>
-          <width>640</width>
-          <height>80</height>
-          <style>3</style>
-          <transparent>true</transparent>
-          <widget type="template" version="2.0.0">
-            <name>EVENT BUS ARRAY</name>
-            <file>components/sync/bus_source.bob</file>
-            <instances>
-              <instance>
-                <macros>
-                  <num>0</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>1</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>2</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>3</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>4</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>5</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>6</num>
-                </macros>
-              </instance>
-              <instance>
-                <macros>
-                  <num>7</num>
-                </macros>
-              </instance>
-            </instances>
-            <y>20</y>
-            <width>640</width>
-            <height>60</height>
-            <horizontal>true</horizontal>
-            <gap>0</gap>
-            <transparent>true</transparent>
-          </widget>
-          <widget type="label" version="2.0.0">
-            <name>EVENT BUS LABEL</name>
-            <text>EVENT BUS SOURCE</text>
-            <width>470</width>
-            <font>
-              <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
-              </font>
-            </font>
-          </widget>
-        </widget>
-      </widget>
-      <widget type="group" version="3.0.0">
         <name>Disable Cover</name>
         <x>80</x>
         <y>220</y>
@@ -794,6 +709,90 @@
           <transparent>true</transparent>
           <tooltip>$(URL)</tooltip>
           <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+        </widget>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>EVENT BUS</name>
+        <x>390</x>
+        <y>210</y>
+        <width>190</width>
+        <height>320</height>
+        <style>3</style>
+        <background_color>
+          <color red="225" green="92" blue="254">
+          </color>
+        </background_color>
+        <widget type="group" version="3.0.0">
+          <name>EVENT BUS INNER</name>
+          <macros>
+            <pvname0>${UUT}:0:SIG:EVENT_SRC:</pvname0>
+          </macros>
+          <x>10</x>
+          <y>10</y>
+          <width>170</width>
+          <height>300</height>
+          <style>3</style>
+          <transparent>true</transparent>
+          <widget type="template" version="2.0.0">
+            <name>EVENT BUS ARRAY</name>
+            <file>components/sync/bus_source.bob</file>
+            <instances>
+              <instance>
+                <macros>
+                  <num>0</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>1</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>2</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>3</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>4</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>5</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>6</num>
+                </macros>
+              </instance>
+              <instance>
+                <macros>
+                  <num>7</num>
+                </macros>
+              </instance>
+            </instances>
+            <y>20</y>
+            <width>160</width>
+            <height>275</height>
+            <gap>5</gap>
+            <transparent>true</transparent>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>EVENT BUS LABEL</name>
+            <text>EVENT BUS SOURCE</text>
+            <width>470</width>
+            <font>
+              <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+              </font>
+            </font>
+          </widget>
         </widget>
       </widget>
     </widget>
