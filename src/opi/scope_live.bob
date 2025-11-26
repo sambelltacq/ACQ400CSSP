@@ -26,6 +26,12 @@
       <pv_name>loc://trace_en_$(DID)&lt;VDouble&gt;(255)</pv_name>
       <width>120</width>
     </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>INIT PLOT_SCALE</name>
+      <pv_name>loc://plot_scale_$(DID)&lt;VEnum&gt;(0, AUTO , 10V, 5V, 2.5V, 1.25V)</pv_name>
+      <y>31</y>
+      <width>120</width>
+    </widget>
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>LIVE SCOPE</name>
@@ -109,6 +115,11 @@
         <pv_name>loc://trace_en_$(DID)</pv_name>
       </rule>
     </rules>
+    <scripts>
+      <script file="../scripts/handle_plot_scale.py">
+        <pv_name>loc://plot_scale_$(DID)</pv_name>
+      </script>
+    </scripts>
     <x_axis>
       <title>$(XAXIS_LABEL)</title>
       <autoscale>true</autoscale>
@@ -338,6 +349,7 @@
     <x>330</x>
     <y>5</y>
     <height>25</height>
+    <visible>false</visible>
     <rules>
       <rule name="HIDE_BAD_SITE" prop_id="visible" out_exp="true">
         <exp bool_exp="int($(SITE)) &gt; 0 and &quot;$(SCOPE_YTYPE)&quot;==&quot;VOLTS&quot;">
@@ -424,6 +436,44 @@
       <y>27</y>
       <width>20</width>
       <height>25</height>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>PLOT SCALE</name>
+    <x>470</x>
+    <y>42</y>
+    <width>140</width>
+    <height>20</height>
+    <visible>false</visible>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="SHOW_WHEN_VOLTS" prop_id="visible" out_exp="false">
+        <exp bool_exp="&quot;$(SCOPE_YTYPE)&quot;==&quot;VOLTS&quot;">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+    </rules>
+    <widget type="combo" version="2.0.0">
+      <name>PLOT SCALE INPUT</name>
+      <pv_name>loc://plot_scale_$(DID)</pv_name>
+      <x>60</x>
+      <width>80</width>
+      <height>20</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>PLOT SCALE LABEL</name>
+      <text>Scaling</text>
+      <width>60</width>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
       <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
