@@ -188,7 +188,7 @@ new_macros['UUT'] = active_channels.keys()[0]
 new_macros['SITE'] = max(FIRST_SITE, 1)
 new_macros['WIDTH'] = macros.get('WIDTH_{}'.format(SIZE), 800)
 new_macros['HEIGHT'] = macros.get('HEIGHT_{}'.format(SIZE), 600)
-new_macros['TRACE_WIDTH'] = macros.get('TRACE_WIDTH', 2)
+new_macros['TRACE_WIDTH'] = macros.get('TRACE_WIDTH', 1)
 
 new_macros = dict((k, str(v)) for k, v in new_macros.items())
 
