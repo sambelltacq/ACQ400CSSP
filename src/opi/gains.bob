@@ -5,6 +5,9 @@
   <height>720</height>
   <widget type="group" version="3.0.0">
     <name>GAINS</name>
+    <macros>
+      <IS_PROD>$(IS_PROD=0)</IS_PROD>
+    </macros>
     <width>710</width>
     <height>720</height>
     <style>3</style>
@@ -273,6 +276,9 @@
         </background_color>
         <rules>
           <rule name="DISABLE_ON_ACTIVE" prop_id="visible" out_exp="false">
+            <exp bool_exp="int($(IS_PROD))&gt;0">
+              <value>false</value>
+            </exp>
             <exp bool_exp="pv0&gt;0">
               <value>true</value>
             </exp>
