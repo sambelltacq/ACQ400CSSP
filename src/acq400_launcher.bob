@@ -86,6 +86,7 @@
         <script file="scripts/handle_macro.py">
           <pv_name>loc://SITE_$(DID)</pv_name>
           <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
+          <pv_name>loc://IS_PROD_$(DID)</pv_name>
         </script>
       </scripts>
     </widget>
@@ -129,6 +130,18 @@
       <vertical_alignment>1</vertical_alignment>
       <tooltip></tooltip>
       <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>INIT LOC://IS_PROD</name>
+      <pv_name>loc://IS_PROD_$(DID)&lt;VLong&gt;(0)</pv_name>
+      <y>79</y>
+      <width>130</width>
+      <background_color>
+        <color red="255" green="212" blue="0">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
   <widget type="embedded" version="2.0.0">
