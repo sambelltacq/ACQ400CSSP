@@ -1002,7 +1002,7 @@
             </widget>
           </widget>
           <widget type="action_button" version="3.0.0">
-            <name>QEN Button_1</name>
+            <name>QEN Button</name>
             <actions>
               <action type="execute">
                 <description>open opi/qen.bob</description>
@@ -1019,6 +1019,25 @@
               </font>
             </font>
             <tooltip>Quadrature Encoder</tooltip>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>PG Button</name>
+            <actions>
+              <action type="execute">
+                <description>open opi/pg.bob</description>
+                <script file="../../../scripts/handle_action_button.py">
+                </script>
+              </action>
+            </actions>
+            <text>PG</text>
+            <x>320</x>
+            <y>120</y>
+            <width>150</width>
+            <font>
+              <font family="Ubuntu" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <tooltip>Pulse Generator</tooltip>
           </widget>
         </widget>
       </widget>
