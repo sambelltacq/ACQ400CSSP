@@ -435,7 +435,7 @@
             <exp bool_exp="pv0&gt;0">
               <value>false</value>
             </exp>
-            <exp bool_exp="pv1&gt;0 &amp;&amp; int(pvStr2.split('-')[1]) &lt; 773">
+            <exp bool_exp="pv1&gt;0 &amp;&amp; int(pvStr2.split('-')[1]) &lt; 9999">
               <value>false</value>
             </exp>
             <pv_name>${UUT}:MODE:CONTINUOUS</pv_name>
@@ -548,7 +548,7 @@
       <transparent>true</transparent>
       <rules>
         <rule name="SHOW_IF_REL&lt;773" prop_id="visible" out_exp="false">
-          <exp bool_exp="int(pvStr0.split('-')[1]) &lt; 773">
+          <exp bool_exp="int(pvStr0.split('-')[1]) &lt; 9999">
             <value>true</value>
           </exp>
           <pv_name>${UUT}:SYS:VERSION:SW</pv_name>
