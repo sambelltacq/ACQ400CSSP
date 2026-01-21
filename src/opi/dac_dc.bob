@@ -7,9 +7,11 @@
     <name>DAC DC</name>
     <macros>
       <GAIN_AO424ELF>RANGE</GAIN_AO424ELF>
-      <GAIN>$(GAIN_$(SITE_MODEL)=AO:GAIN:CH)</GAIN>
       <PREFIX_AO424ELF>0</PREFIX_AO424ELF>
+      <GAIN_AO424ELF-LLC>RANGE</GAIN_AO424ELF-LLC>
+      <PREFIX_AO424ELF-LLC>0</PREFIX_AO424ELF-LLC>
       <PREFIX>$(PREFIX_$(SITE_MODEL)=)</PREFIX>
+      <GAIN>$(GAIN_$(SITE_MODEL)=AO:GAIN:CH)</GAIN>
     </macros>
     <x>10</x>
     <y>10</y>
@@ -331,9 +333,9 @@
             <name>ZERO BUTTON</name>
             <actions>
               <action type="write_pv">
+                <description>ZERO</description>
                 <pv_name>${UUT}:${SITE}:AO:SLOW_SET:CH:ALL</pv_name>
                 <value>0</value>
-                <description>ZERO</description>
               </action>
             </actions>
             <font>
@@ -346,9 +348,9 @@
             <name>IDENT BUTTON</name>
             <actions>
               <action type="execute">
+                <description>IDENT</description>
                 <script file="../scripts/ident_dc.py">
                 </script>
-                <description>IDENT</description>
               </action>
             </actions>
             <pv_name>$(UUT):$(SITE):NCHAN</pv_name>
