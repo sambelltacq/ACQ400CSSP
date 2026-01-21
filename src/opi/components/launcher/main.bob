@@ -1000,6 +1000,35 @@
               </rules>
               <tooltip>ACQ42x Controls</tooltip>
             </widget>
+            <widget type="action_button" version="3.0.0">
+              <name>ao420 Button</name>
+              <actions>
+                <action type="execute">
+                  <description>open opi/module_ao420.bob</description>
+                  <script file="../../../scripts/handle_action_button.py">
+                  </script>
+                </action>
+              </actions>
+              <text>AO420</text>
+              <width>150</width>
+              <visible>false</visible>
+              <font>
+                <font family="Ubuntu" style="BOLD" size="14.0">
+                </font>
+              </font>
+              <rules>
+                <rule name="SHOW_ON_MODULE" prop_id="visible" out_exp="false">
+                  <exp bool_exp="pvStr0.upper().startswith(&quot;AO420&quot;)">
+                    <value>true</value>
+                  </exp>
+                  <exp bool_exp="pvStr0.upper().startswith(&quot;AO422&quot;)">
+                    <value>true</value>
+                  </exp>
+                  <pv_name>loc://SITE_MODEL_$(DID)</pv_name>
+                </rule>
+              </rules>
+              <tooltip>ACQ42x Controls</tooltip>
+            </widget>
           </widget>
           <widget type="action_button" version="3.0.0">
             <name>QEN Button</name>
