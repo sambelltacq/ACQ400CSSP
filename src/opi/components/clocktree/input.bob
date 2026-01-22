@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-06 11:03:40 by sam-->
 <display version="2.0.0">
   <name>Input</name>
   <width>320</width>
@@ -27,17 +26,10 @@
         </color>
       </line_color>
     </widget>
-    <widget type="rectangle" version="2.0.0">
-      <name>Rectangle</name>
-      <x>195</x>
-      <y>45</y>
-      <width>90</width>
-      <height>90</height>
-    </widget>
     <widget type="label" version="2.0.0">
       <name>Label</name>
       <text>XCLK</text>
-      <y>60</y>
+      <y>70</y>
       <width>90</width>
       <height>40</height>
       <font>
@@ -55,7 +47,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_1</name>
       <text>FP CLK</text>
-      <y>120</y>
+      <y>130</y>
       <width>90</width>
       <height>40</height>
       <font>
@@ -73,7 +65,7 @@
     <widget type="label" version="2.0.0">
       <name>Label_2</name>
       <text>ZCLK</text>
-      <y>180</y>
+      <y>190</y>
       <width>90</width>
       <height>40</height>
       <font>
@@ -98,13 +90,13 @@
       <transparent>true</transparent>
       <widget type="polyline" version="2.0.0">
         <name>Polyline_7</name>
-        <y>30</y>
-        <width>85</width>
-        <height>3</height>
+        <y>20</y>
+        <width>90</width>
+        <height>40</height>
         <points>
-          <point x="0.0" y="0.0">
+          <point x="0.0" y="20.0">
           </point>
-          <point x="105.0" y="0.0">
+          <point x="85.0" y="20.0">
           </point>
         </points>
         <line_color>
@@ -115,17 +107,15 @@
       </widget>
       <widget type="polyline" version="2.0.0">
         <name>Polyline_8</name>
-        <y>90</y>
-        <width>85</width>
-        <height>3</height>
+        <y>60</y>
+        <width>120</width>
+        <height>60</height>
         <points>
-          <point x="0.0" y="0.0">
+          <point x="0.0" y="40.0">
           </point>
-          <point x="50.0" y="0.0">
+          <point x="120.0" y="40.0">
           </point>
-          <point x="50.0" y="-40.0">
-          </point>
-          <point x="105.0" y="-40.0">
+          <point x="120.0" y="5.0">
           </point>
         </points>
         <line_color>
@@ -136,15 +126,15 @@
       </widget>
       <widget type="polyline" version="2.0.0">
         <name>Polyline_9</name>
-        <y>150</y>
-        <width>85</width>
-        <height>3</height>
+        <y>60</y>
+        <width>200</width>
+        <height>120</height>
         <points>
-          <point x="0.0" y="0.0">
+          <point x="0.0" y="100.0">
           </point>
-          <point x="155.0" y="0.0">
+          <point x="180.0" y="100.0">
           </point>
-          <point x="155.0" y="-65.0">
+          <point x="180.0" y="5.0">
           </point>
         </points>
         <line_color>
@@ -153,54 +143,25 @@
         </line_color>
         <arrows>2</arrows>
       </widget>
-      <widget type="choice" version="2.0.0">
-        <name>Choice Button</name>
-        <pv_name>${UUT}:SYS:CLK:FPMUX</pv_name>
-        <x>110</x>
-        <width>80</width>
-        <height>80</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <selected_color>
-          <color name="OK" red="0" green="255" blue="0">
-          </color>
-        </selected_color>
-        <horizontal>false</horizontal>
-        <items>
-          <item>Item 1</item>
-          <item>Item 2</item>
-          <item>Item 3</item>
-          <item>Item 4</item>
-        </items>
-      </widget>
-      <widget type="led" version="2.0.0">
-        <name>LED_1</name>
-        <pv_name>${UUT}:SYS:CLK:_FP_OE</pv_name>
-        <x>60</x>
-        <y>55</y>
-        <square>true</square>
-      </widget>
       <widget type="led" version="2.0.0">
         <name>LED</name>
         <pv_name>${UUT}:SYS:CLK:_ZCLK_OE</pv_name>
-        <x>160</x>
-        <y>110</y>
+        <x>170</x>
+        <y>100</y>
         <square>true</square>
       </widget>
       <widget type="led" version="2.0.0">
         <name>LED_2</name>
         <pv_name>${UUT}:SYS:CLK:_OSC_X_OE</pv_name>
-        <x>60</x>
-        <y>5</y>
+        <x>30</x>
+        <y>30</y>
         <square>true</square>
       </widget>
       <widget type="combo" version="2.0.0">
         <name>Combo Box</name>
         <pv_name>${UUT}:0:SIG:ZCLK_SRC</pv_name>
         <x>20</x>
-        <y>140</y>
+        <y>150</y>
         <width>110</width>
         <height>20</height>
         <font>
@@ -208,19 +169,51 @@
           </font>
         </font>
       </widget>
-    </widget>
-    <widget type="led" version="2.0.0">
-      <name>LED_3</name>
-      <pv_name>$(UUT):SYS:CLK:_OSC_X_CLK_OE</pv_name>
-      <x>290</x>
-      <y>40</y>
-      <square>true</square>
+      <widget type="rectangle" version="2.0.0">
+        <name>Rectangle</name>
+        <x>90</x>
+        <y>20</y>
+        <width>115</width>
+        <height>40</height>
+      </widget>
+      <widget type="led" version="2.0.0">
+        <name>LED_1</name>
+        <pv_name>${UUT}:SYS:CLK:_FP_OE</pv_name>
+        <x>80</x>
+        <y>90</y>
+        <square>true</square>
+      </widget>
+      <widget type="combo" version="2.0.0">
+        <name>Choice Button</name>
+        <pv_name>${UUT}:SYS:CLK:FPMUX</pv_name>
+        <x>93</x>
+        <y>23</y>
+        <width>109</width>
+        <height>33</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <items>
+          <item>Item 1</item>
+          <item>Item 2</item>
+          <item>Item 3</item>
+          <item>Item 4</item>
+        </items>
+      </widget>
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED_4</name>
       <pv_name>${UUT}:SYS:CLK:_FP_CLK_OE</pv_name>
-      <x>290</x>
-      <y>65</y>
+      <x>300</x>
+      <y>60</y>
+      <square>true</square>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_3</name>
+      <pv_name>$(UUT):SYS:CLK:_OSC_X_CLK_OE</pv_name>
+      <x>300</x>
+      <y>30</y>
       <square>true</square>
     </widget>
   </widget>
