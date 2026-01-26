@@ -1842,7 +1842,7 @@
             <name>menu0_13</name>
             <pv_name>${UUT}:SIG:SOFT_TRIGGER:REPEAT</pv_name>
             <y>40</y>
-            <width>80</width>
+            <width>110</width>
             <font>
               <font name="Comment" family="Liberation Sans" style="ITALIC" size="14.0">
               </font>
