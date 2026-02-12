@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>XRM scratchpad</name>
+  <widget type="label" version="2.0.0">
+    <name>OPI TITLE</name>
+    <text>XRM scratchpad</text>
+    <x>10</x>
+    <y>10</y>
+    <width>390</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>OPI SITE INFO</name>
+    <text>$(UUT):$(SITE) $(SITE_MODEL)</text>
+    <x>10</x>
+    <y>40</y>
+    <width>390</width>
+    <font>
+      <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+</display>

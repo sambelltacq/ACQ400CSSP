@@ -454,6 +454,33 @@
             </widget>
           </widget>
         </widget>
+        <widget type="action_button" version="3.0.0">
+          <name>Scratchpad Button</name>
+          <actions>
+            <action type="execute">
+              <description>open opi/scratchpad.bob</description>
+              <script file="../../../scripts/handle_action_button.py">
+              </script>
+            </action>
+          </actions>
+          <text></text>
+          <width>10</width>
+          <height>10</height>
+          <font>
+            <font family="Ubuntu" style="BOLD" size="14.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="OK" red="0" green="255" blue="0">
+            </color>
+          </background_color>
+          <transparent>true</transparent>
+          <tooltip>XRM</tooltip>
+        </widget>
       </widget>
       <widget type="group" version="3.0.0">
         <name>UUT OPIS</name>
