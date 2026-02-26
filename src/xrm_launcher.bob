@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>XRM scratchpad</name>
+  <widget type="label" version="2.0.0">
+    <name>OPI TITLE</name>
+    <text>XRM Launcher</text>
+    <x>10</x>
+    <y>10</y>
+    <width>390</width>
+    <height>30</height>
+    <font>
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>OPI SITE INFO</name>
+    <text>$(UUT):$(SITE) $(SITE_MODEL)</text>
+    <x>10</x>
+    <y>40</y>
+    <width>390</width>
+    <font>
+      <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>XRM GROUP</name>
+    <x>20</x>
+    <y>80</y>
+    <width>150</width>
+    <height>150</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="action_button" version="3.0.0">
+      <name>soe ht Button</name>
+      <actions>
+        <action type="execute">
+          <description>open opi/soe_ht.bob</description>
+          <script file="scripts/handle_action_button.py">
+          </script>
+        </action>
+      </actions>
+      <text>SOE HT</text>
+      <y>80</y>
+      <width>150</width>
+      <font>
+        <font family="Ubuntu" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <tooltip>SOE HT</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>fmt sim Button</name>
+      <actions>
+        <action type="execute">
+          <description>open opi/fmt_sim.bob</description>
+          <script file="scripts/handle_action_button.py">
+          </script>
+        </action>
+      </actions>
+      <text>FMT SIM</text>
+      <width>150</width>
+      <font>
+        <font family="Ubuntu" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <tooltip>FMT SIM</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>fmt rx Button_3</name>
+      <actions>
+        <action type="execute">
+          <description>open opi/fmt_rx.bob</description>
+          <script file="scripts/handle_action_button.py">
+          </script>
+        </action>
+      </actions>
+      <text>FMT RX</text>
+      <y>40</y>
+      <width>150</width>
+      <font>
+        <font family="Ubuntu" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <tooltip>FMT RX</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>soe lut Button_2</name>
+      <actions>
+        <action type="execute">
+          <description>open opi/soe_lut.bob</description>
+          <script file="scripts/handle_action_button.py">
+          </script>
+        </action>
+      </actions>
+      <text>SOE LUT</text>
+      <y>120</y>
+      <width>150</width>
+      <font>
+        <font family="Ubuntu" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <tooltip>SOE LUT</tooltip>
+    </widget>
+  </widget>
+</display>

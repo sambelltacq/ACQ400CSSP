@@ -455,10 +455,10 @@
           </widget>
         </widget>
         <widget type="action_button" version="3.0.0">
-          <name>Scratchpad Button</name>
+          <name>xrm launcher Button</name>
           <actions>
             <action type="execute">
-              <description>open opi/scratchpad.bob</description>
+              <description>open xrm_launcher.bob</description>
               <script file="../../../scripts/handle_action_button.py">
               </script>
             </action>
@@ -479,7 +479,7 @@
             </color>
           </background_color>
           <transparent>true</transparent>
-          <tooltip>XRM</tooltip>
+          <tooltip>XRM Launcher</tooltip>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
