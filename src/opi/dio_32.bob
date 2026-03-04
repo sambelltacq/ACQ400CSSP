@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-14 10:36:22 by sam-->
 <display version="2.0.0">
   <name>DIO_32$(MUUT):$(SITE)</name>
   <width>650</width>
@@ -607,5 +606,74 @@
       </font>
       <vertical_alignment>1</vertical_alignment>
     </widget>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE1</pv_name>
+    <x>800</x>
+    <y>280</y>
+    <width>70</width>
+    <height>70</height>
+    <numBits>1</numBits>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_1</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE3</pv_name>
+    <x>800</x>
+    <y>360</y>
+    <width>80</width>
+    <height>80</height>
+    <numBits>1</numBits>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_2</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE3</pv_name>
+    <x>800</x>
+    <y>440</y>
+    <width>70</width>
+    <height>70</height>
+    <numBits>1</numBits>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_3</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE4</pv_name>
+    <x>800</x>
+    <y>520</y>
+    <width>70</width>
+    <height>70</height>
+    <numBits>1</numBits>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_4</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE5</pv_name>
+    <x>630</x>
+    <y>600</y>
+    <width>230</width>
+    <height>57</height>
+    <numBits>4</numBits>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_5</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE6</pv_name>
+    <x>300</x>
+    <y>750</y>
+    <width>560</width>
+    <height>70</height>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_6</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE6</pv_name>
+    <x>300</x>
+    <y>670</y>
+    <width>560</width>
+    <height>70</height>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_7</name>
+    <pv_name>acq2206_098:6:IMM:DI:BYTE8</pv_name>
+    <x>310</x>
+    <y>840</y>
+    <width>560</width>
+    <height>70</height>
   </widget>
 </display>
