@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-27 07:16:40 by pgm-->
+<!--Saved on 2026-03-05 08:48:38 by pgm-->
 <display version="2.0.0">
   <name>SOE HT $(MUUT)</name>
   <width>750</width>
@@ -24,60 +24,109 @@
       <vertical_alignment>1</vertical_alignment>
     </widget>
     <widget type="group" version="3.0.0">
-      <name>Control</name>
-      <x>570</x>
-      <width>250</width>
+      <name>Sample Composition</name>
+      <x>300</x>
+      <width>440</width>
       <height>120</height>
-      <widget type="bool_button" version="2.0.0">
-        <name>Boolean Button</name>
-        <pv_name>${UUT}:SOE:RUNSTOP</pv_name>
-        <x>3</x>
-        <y>12</y>
-        <height>50</height>
-        <off_label>RUN</off_label>
-        <on_label>STOP</on_label>
-        <actions>
-          <action type="write_pv">
-            <description>Write PV</description>
-            <pv_name>$(pv_name)</pv_name>
-            <value>1</value>
-          </action>
-          <action type="write_pv">
-            <description>Write PV</description>
-            <pv_name>$(pv_name)</pv_name>
-            <value>0</value>
-          </action>
-        </actions>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_8</name>
+        <pv_name>${UUT}:SOE:SMPL_SP_INDEX</pv_name>
+        <x>302</x>
+        <y>62</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update</name>
-        <pv_name>${UUT}:SOE:UPDATES</pv_name>
-        <x>3</x>
-        <y>72</y>
-        <width>111</width>
+        <name>Text Update_9</name>
+        <pv_name>${UUT}:SOE:SMPL_SP_COUNT</pv_name>
+        <x>302</x>
+        <y>32</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_5</name>
+        <text>SP32</text>
+        <x>312</x>
+        <y>2</y>
+        <width>70</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_10</name>
+        <pv_name>${UUT}:SOE:SMPL_AI_COUNT</pv_name>
+        <x>142</x>
+        <y>32</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_11</name>
+        <pv_name>${UUT}:SOE:SMPL_DI_COUNT</pv_name>
+        <x>222</x>
+        <y>32</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_12</name>
+        <pv_name>${UUT}:SOE:SMPL_DI_INDEX</pv_name>
+        <x>222</x>
+        <y>62</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_6</name>
+        <text>AI16</text>
+        <x>142</x>
+        <y>2</y>
+        <width>70</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_7</name>
+        <text>DI32</text>
+        <x>222</x>
+        <y>2</y>
+        <width>70</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_8</name>
+        <text>Count</text>
+        <x>32</x>
+        <y>32</y>
+        <width>70</width>
+        <height>30</height>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_9</name>
+        <text>Index</text>
+        <x>32</x>
+        <y>62</y>
+        <width>70</width>
+        <height>30</height>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_11</name>
+        <text>0</text>
+        <x>142</x>
+        <y>62</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
       </widget>
     </widget>
   </widget>
   <widget type="table" version="2.0.0">
-    <name>Table_1</name>
-    <x>630</x>
-    <y>1010</y>
-    <width>1</width>
-    <height>1</height>
-    <columns>
-      <column>
-        <name>Column 1</name>
-        <width>100</width>
-        <editable>true</editable>
-      </column>
-    </columns>
-  </widget>
-  <widget type="table" version="2.0.0">
     <name>Table</name>
     <pv_name>${UUT}:SOE_HLD:TAB:Tbl</pv_name>
-    <x>50</x>
+    <x>10</x>
     <y>130</y>
-    <width>1460</width>
+    <width>1560</width>
     <height>930</height>
     <show_toolbar>true</show_toolbar>
     <columns>
@@ -156,5 +205,47 @@
       </column>
     </columns>
     <selection_pv>TST:Tbl</selection_pv>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Control</name>
+    <x>1330</x>
+    <y>10</y>
+    <width>250</width>
+    <height>120</height>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button</name>
+      <pv_name>${UUT}:SOE:RUNSTOP</pv_name>
+      <x>3</x>
+      <y>12</y>
+      <height>50</height>
+      <off_label>RUN</off_label>
+      <on_label>STOP</on_label>
+      <actions>
+        <action type="write_pv">
+          <description>Write PV</description>
+          <pv_name>$(pv_name)</pv_name>
+          <value>1</value>
+        </action>
+        <action type="write_pv">
+          <description>Write PV</description>
+          <pv_name>$(pv_name)</pv_name>
+          <value>0</value>
+        </action>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update</name>
+      <pv_name>${UUT}:SOE:UPDATES</pv_name>
+      <x>103</x>
+      <y>72</y>
+      <width>111</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>UPDATES</text>
+      <x>3</x>
+      <y>72</y>
+      <width>70</width>
+    </widget>
   </widget>
 </display>
