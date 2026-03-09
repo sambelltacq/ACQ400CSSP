@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-05 09:17:26 by pgm-->
+<!--Saved on 2026-03-09 09:31:04 by pgm-->
 <display version="2.0.0">
-  <name>SOE HT $(MUUT)</name>
+  <name>PM $(MUUT)</name>
   <width>750</width>
   <height>740</height>
   <widget type="group" version="3.0.0">
@@ -14,7 +14,7 @@
     <transparent>true</transparent>
     <widget type="label" version="2.0.0">
       <name>TITLE_1</name>
-      <text>SOE HT $(UUT)</text>
+      <text>PM $(UUT)</text>
       <width>330</width>
       <height>50</height>
       <font>
@@ -22,119 +22,6 @@
         </font>
       </font>
       <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>Sample Composition</name>
-      <x>300</x>
-      <width>580</width>
-      <height>120</height>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_8</name>
-        <pv_name>${UUT}:SOE:SMPL_SP_INDEX</pv_name>
-        <x>302</x>
-        <y>62</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_9</name>
-        <pv_name>${UUT}:SOE:SMPL_SP_COUNT</pv_name>
-        <x>302</x>
-        <y>32</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_5</name>
-        <text>SP32</text>
-        <x>312</x>
-        <y>2</y>
-        <width>70</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_10</name>
-        <pv_name>${UUT}:SOE:SMPL_AI_COUNT</pv_name>
-        <x>142</x>
-        <y>32</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_11</name>
-        <pv_name>${UUT}:SOE:SMPL_DI_COUNT</pv_name>
-        <x>222</x>
-        <y>32</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_12</name>
-        <pv_name>${UUT}:SOE:SMPL_DI_INDEX</pv_name>
-        <x>222</x>
-        <y>62</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_6</name>
-        <text>AI16</text>
-        <x>142</x>
-        <y>2</y>
-        <width>70</width>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_7</name>
-        <text>DI32</text>
-        <x>222</x>
-        <y>2</y>
-        <width>70</width>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_8</name>
-        <text>Count</text>
-        <x>32</x>
-        <y>32</y>
-        <width>70</width>
-        <height>30</height>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_9</name>
-        <text>Index</text>
-        <x>32</x>
-        <y>62</y>
-        <width>70</width>
-        <height>30</height>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_11</name>
-        <text>0</text>
-        <x>142</x>
-        <y>62</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_12</name>
-        <text>SSB</text>
-        <x>442</x>
-        <y>2</y>
-        <width>70</width>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_13</name>
-        <pv_name>${UUT}:0:SSB</pv_name>
-        <x>432</x>
-        <y>32</y>
-        <width>70</width>
-        <height>30</height>
-        <horizontal_alignment>2</horizontal_alignment>
-      </widget>
     </widget>
   </widget>
   <widget type="table" version="2.0.0">
@@ -230,7 +117,7 @@
     <height>120</height>
     <widget type="bool_button" version="2.0.0">
       <name>Boolean Button</name>
-      <pv_name>${UUT}:SOE:RUNSTOP</pv_name>
+      <pv_name>${UUT}:PM:RUNSTOP</pv_name>
       <x>3</x>
       <y>12</y>
       <height>50</height>
@@ -251,7 +138,7 @@
     </widget>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update</name>
-      <pv_name>${UUT}:SOE:UPDATES</pv_name>
+      <pv_name>${UUT}:PM:UPDATES</pv_name>
       <x>103</x>
       <y>72</y>
       <width>111</width>
@@ -262,6 +149,135 @@
       <x>3</x>
       <y>72</y>
       <width>70</width>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>Sample Composition</name>
+    <x>310</x>
+    <y>10</y>
+    <width>680</width>
+    <height>120</height>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_8</name>
+      <pv_name>${UUT}:SOE:SMPL_SP_INDEX</pv_name>
+      <x>302</x>
+      <y>62</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_9</name>
+      <pv_name>${UUT}:SOE:SMPL_SP_COUNT</pv_name>
+      <x>302</x>
+      <y>32</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_5</name>
+      <text>SP32</text>
+      <x>312</x>
+      <y>2</y>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_10</name>
+      <pv_name>${UUT}:SOE:SMPL_AI_COUNT</pv_name>
+      <x>142</x>
+      <y>32</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_11</name>
+      <pv_name>${UUT}:SOE:SMPL_DI_COUNT</pv_name>
+      <x>222</x>
+      <y>32</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_12</name>
+      <pv_name>${UUT}:SOE:SMPL_DI_INDEX</pv_name>
+      <x>222</x>
+      <y>62</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_6</name>
+      <text>AI16</text>
+      <x>142</x>
+      <y>2</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_7</name>
+      <text>DI32</text>
+      <x>222</x>
+      <y>2</y>
+      <width>70</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>Count</text>
+      <x>32</x>
+      <y>32</y>
+      <width>70</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>Index</text>
+      <x>32</x>
+      <y>62</y>
+      <width>70</width>
+      <height>30</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>0</text>
+      <x>142</x>
+      <y>62</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_12</name>
+      <text>SSB</text>
+      <x>442</x>
+      <y>2</y>
+      <width>70</width>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_13</name>
+      <pv_name>${UUT}:0:SSB</pv_name>
+      <x>432</x>
+      <y>32</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_14</name>
+      <pv_name>${UUT}:1:RTM_TRANSLEN</pv_name>
+      <x>542</x>
+      <y>32</y>
+      <width>70</width>
+      <height>30</height>
+      <horizontal_alignment>2</horizontal_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_13</name>
+      <text>TRANSLEN</text>
+      <x>542</x>
+      <y>2</y>
     </widget>
   </widget>
 </display>
