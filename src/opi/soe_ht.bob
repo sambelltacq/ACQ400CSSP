@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-05 08:48:38 by pgm-->
+<!--Saved on 2026-03-05 09:17:26 by pgm-->
 <display version="2.0.0">
   <name>SOE HT $(MUUT)</name>
   <width>750</width>
@@ -26,7 +26,7 @@
     <widget type="group" version="3.0.0">
       <name>Sample Composition</name>
       <x>300</x>
-      <width>440</width>
+      <width>580</width>
       <height>120</height>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update_8</name>
@@ -115,6 +115,22 @@
         <text>0</text>
         <x>142</x>
         <y>62</y>
+        <width>70</width>
+        <height>30</height>
+        <horizontal_alignment>2</horizontal_alignment>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>SSB</text>
+        <x>442</x>
+        <y>2</y>
+        <width>70</width>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_13</name>
+        <pv_name>${UUT}:0:SSB</pv_name>
+        <x>432</x>
+        <y>32</y>
         <width>70</width>
         <height>30</height>
         <horizontal_alignment>2</horizontal_alignment>
