@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-09 09:31:04 by pgm-->
+<!--Saved on 2026-03-09 19:53:24 by pgm-->
 <display version="2.0.0">
   <name>PM $(MUUT)</name>
   <width>750</width>
@@ -26,7 +26,7 @@
   </widget>
   <widget type="table" version="2.0.0">
     <name>Table</name>
-    <pv_name>${UUT}:SOE_HLD:TAB:Tbl</pv_name>
+    <pv_name>${UUT}:PM:TAB:Tbl</pv_name>
     <x>10</x>
     <y>130</y>
     <width>1560</width>
