@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-10 08:06:53 by pgm-->
+<!--Saved on 2026-03-10 17:44:26 by pgm-->
 <display version="2.0.0">
   <name>PM $(MUUT)</name>
   <width>750</width>
@@ -31,7 +31,6 @@
     <y>130</y>
     <width>1560</width>
     <height>930</height>
-    <show_toolbar>true</show_toolbar>
     <columns>
       <column>
         <name>Column 1</name>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-24 21:42:36 by pgm-->
+<!--Saved on 2026-03-10 17:45:19 by pgm-->
 <display version="2.0.0">
   <name>SOE_LUT $(MUUT)</name>
   <width>750</width>
@@ -30,7 +30,6 @@
       <y>50</y>
       <width>560</width>
       <height>850</height>
-      <show_toolbar>true</show_toolbar>
       <columns>
         <column>
           <name>Column 1</name>
