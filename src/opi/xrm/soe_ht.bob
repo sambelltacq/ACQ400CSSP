@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-10 17:44:43 by pgm-->
+<!--Saved on 2026-03-11 07:46:44 by pgm-->
 <display version="2.0.0">
   <name>SOE HT $(MUUT)</name>
   <width>750</width>
@@ -216,6 +216,11 @@
       <column>
         <name>Column 14</name>
         <width>200</width>
+        <editable>true</editable>
+      </column>
+      <column>
+        <name>Column 15</name>
+        <width>100</width>
         <editable>true</editable>
       </column>
     </columns>
