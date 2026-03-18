@@ -9,7 +9,7 @@
     <width>530</width>
     <height>420</height>
     <style>3</style>
-    <transparent>true</transparent>
+    <transparent>false</transparent>
     <widget type="polyline" version="2.0.0">
       <name>Polyline_13</name>
       <y>150</y>

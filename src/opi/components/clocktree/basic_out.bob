@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-04 17:26:42 by dt100-->
 <display version="2.0.0">
   <name>BasicOut</name>
   <width>530</width>
@@ -9,7 +8,6 @@
     <width>530</width>
     <height>420</height>
     <style>3</style>
-    <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>d1 line</name>
       <macros>

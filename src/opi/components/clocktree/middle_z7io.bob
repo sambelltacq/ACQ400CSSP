@@ -8,7 +8,7 @@
     <name>Si5326</name>
     <height>420</height>
     <style>3</style>
-    <transparent>true</transparent>
+    <transparent>false</transparent>
     <widget type="group" version="3.0.0">
       <name>Group_4</name>
       <x>80</x>

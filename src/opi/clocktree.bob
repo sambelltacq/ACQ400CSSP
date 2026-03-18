@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-15 17:03:18 by dt100-->
 <display version="2.0.0">
   <name>Clocktree$(MUUT)</name>
   <width>1440</width>
   <height>1050</height>
+  <widget type="label" version="2.0.0">
+    <name>PLACEHOLDER</name>
+    <text>X</text>
+    <x>10</x>
+    <y>40</y>
+    <width>960</width>
+    <height>420</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
   <widget type="embedded" version="2.0.0">
     <name>SITE LINES</name>
     <file>components/clocktree/site_lines.bob</file>
@@ -22,13 +40,13 @@
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp="&quot;$(MODEL)&quot;=='z7io'">
+        <exp bool_exp="pvStr0.startswith('z7io')">
           <expression>"components/clocktree/left_z7io.bob"</expression>
         </exp>
         <exp bool_exp="true">
           <expression>"components/clocktree/input.bob"</expression>
         </exp>
-        <pv_name>=abs(1)</pv_name>
+        <pv_name>$(UUT):0:MODEL</pv_name>
       </rule>
     </rules>
   </widget>
@@ -54,16 +72,19 @@
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp=" '$(MODEL)'=='acq1001'|| '$(MODEL)'=='acq1002'">
+        <exp bool_exp="pvStr0.startswith('acq1001')">
           <expression>"components/clocktree/mbclk.bob"</expression>
         </exp>
-        <exp bool_exp=" '$(MODEL)'=='z7io'">
+        <exp bool_exp="pvStr0.startswith('acq1002')">
+          <expression>"components/clocktree/mbclk.bob"</expression>
+        </exp>
+        <exp bool_exp="pvStr0.startswith('z7io')">
           <expression>"components/clocktree/middle_z7io.bob"</expression>
         </exp>
         <exp bool_exp="true">
           <expression>"components/clocktree/Si5326.bob"</expression>
         </exp>
-        <pv_name>=abs(1)</pv_name>
+        <pv_name>$(UUT):0:MODEL</pv_name>
       </rule>
     </rules>
   </widget>
@@ -77,16 +98,19 @@
     <transparent>true</transparent>
     <rules>
       <rule name="LOAD_BY_MODEL" prop_id="file" out_exp="true">
-        <exp bool_exp="&quot;$(MODEL)&quot;=='acq1001'||&quot;$(MODEL)&quot;=='acq1002'">
+        <exp bool_exp="pvStr0.startswith('acq1001')">
           <expression>"components/clocktree/basic_out.bob"</expression>
         </exp>
-        <exp bool_exp="&quot;$(MODEL)&quot;=='z7io'">
+        <exp bool_exp="pvStr0.startswith('acq1002')">
+          <expression>"components/clocktree/basic_out.bob"</expression>
+        </exp>
+        <exp bool_exp="pvStr0.startswith('z7io')">
           <expression>"components/clocktree/right_z7io.bob"</expression>
         </exp>
         <exp bool_exp="true">
           <expression>"components/clocktree/Si53315.bob"</expression>
         </exp>
-        <pv_name>=abs(1)</pv_name>
+        <pv_name>$(UUT):0:MODEL</pv_name>
       </rule>
     </rules>
   </widget>

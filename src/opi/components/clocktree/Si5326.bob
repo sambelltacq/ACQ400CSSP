@@ -7,7 +7,6 @@
     <name>Si5326</name>
     <height>420</height>
     <style>3</style>
-    <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>Si5326 MAIN</name>
       <x>40</x>
@@ -182,18 +181,18 @@
             <horizontal_alignment>2</horizontal_alignment>
             <vertical_alignment>1</vertical_alignment>
           </widget>
-          <widget type="spinner" version="2.0.0">
+          <widget type="textentry" version="3.0.0">
             <name>Spinner</name>
             <pv_name>${UUT}:0:SIG:CLK_MB:SET</pv_name>
             <x>90</x>
             <y>40</y>
             <height>30</height>
-            <format>2</format>
             <background_color>
               <color name="Background" red="255" green="255" blue="255">
               </color>
             </background_color>
-            <vertical_alignment>1</vertical_alignment>
+            <format>3</format>
+            <show_units>false</show_units>
             <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
           </widget>
           <widget type="led" version="2.0.0">

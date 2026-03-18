@@ -7,7 +7,6 @@
     <name>Si5326</name>
     <height>420</height>
     <style>3</style>
-    <transparent>true</transparent>
     <widget type="polyline" version="2.0.0">
       <name>Polyline_16</name>
       <y>75</y>

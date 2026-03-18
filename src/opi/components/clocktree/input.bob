@@ -8,7 +8,6 @@
     <width>320</width>
     <height>420</height>
     <style>3</style>
-    <transparent>true</transparent>
     <widget type="polyline" version="2.0.0">
       <name>Polyline_15</name>
       <x>280</x>
