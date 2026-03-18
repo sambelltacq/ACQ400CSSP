@@ -64,314 +64,6 @@
             <height>270</height>
             <style>3</style>
             <transparent>true</transparent>
-            <widget type="group" version="3.0.0">
-              <name>INIT SITE 1 MODEL</name>
-              <macros>
-                <pvname>loc://SITE_1_MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Site 1</label>
-              </macros>
-              <y>100</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_8</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_8</name>
-                <text>$(SITE_1_MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):1:MODEL</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>INIT SITE 2 MODEL</name>
-              <macros>
-                <pvname>loc://SITE_2_MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Site 2</label>
-              </macros>
-              <y>130</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_9</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_9</name>
-                <text>$(SITE_2_MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):2:MODEL</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>INIT SITE 3 MODEL</name>
-              <macros>
-                <pvname>loc://SITE_3_MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Site 3</label>
-              </macros>
-              <y>160</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_10</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_10</name>
-                <text>$(SITE_3_MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):3:MODEL</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>INIT SITE 4 MODEL</name>
-              <macros>
-                <pvname>loc://SITE_4_MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Site 4</label>
-              </macros>
-              <y>190</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_11</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_11</name>
-                <text>$(SITE_4_MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):4:MODEL</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>INIT SITE 5 MODEL</name>
-              <macros>
-                <pvname>loc://SITE_5_MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Site 5</label>
-              </macros>
-              <y>220</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_12</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_12</name>
-                <text>$(SITE_5_MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):5:MODEL</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>INIT SITE 6 MODEL</name>
-              <macros>
-                <pvname>loc://SITE_6_MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Site 6</label>
-              </macros>
-              <y>250</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_13</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_13</name>
-                <text>$(SITE_6_MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):6:MODEL</tooltip>
-              </widget>
-            </widget>
-            <widget type="group" version="3.0.0">
-              <name>INIT MODEL</name>
-              <macros>
-                <pvname>loc://MODEL</pvname>
-                <pvtype>VString</pvtype>
-                <pvvalue>none</pvvalue>
-                <label>Carrier</label>
-              </macros>
-              <y>70</y>
-              <width>150</width>
-              <height>20</height>
-              <style>3</style>
-              <transparent>true</transparent>
-              <widget type="label" version="2.0.0">
-                <name>INIT NAME_14</name>
-                <text>$(label)</text>
-                <width>50</width>
-                <font>
-                  <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-                  </font>
-                </font>
-                <foreground_color>
-                  <color name="Background" red="255" green="255" blue="255">
-                  </color>
-                </foreground_color>
-                <horizontal_alignment>2</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-              </widget>
-              <widget type="label" version="2.0.0">
-                <name>INIT VALUE_14</name>
-                <text>$(MODEL)</text>
-                <x>60</x>
-                <width>90</width>
-                <background_color>
-                  <color name="Read_Background" red="240" green="240" blue="240">
-                  </color>
-                </background_color>
-                <transparent>false</transparent>
-                <horizontal_alignment>1</horizontal_alignment>
-                <vertical_alignment>1</vertical_alignment>
-                <wrap_words>false</wrap_words>
-                <tooltip>$(UUT):0:MODEL</tooltip>
-              </widget>
-            </widget>
             <widget type="textentry" version="3.0.0">
               <name>UUT Input</name>
               <pv_name>loc://UUT_$(DID)</pv_name>
@@ -440,6 +132,56 @@
               <tooltip></tooltip>
               <show_confirm_dialog>2</show_confirm_dialog>
               <confirm_message>Enable Production Mode?</confirm_message>
+            </widget>
+            <widget type="template" version="2.0.0">
+              <name>SITE_STATUSES</name>
+              <file>site_status.bob</file>
+              <instances>
+                <instance>
+                  <macros>
+                  </macros>
+                </instance>
+                <instance>
+                  <macros>
+                    <sitenum>1</sitenum>
+                    <label>Site 1</label>
+                  </macros>
+                </instance>
+                <instance>
+                  <macros>
+                    <sitenum>2</sitenum>
+                    <label>Site 2</label>
+                  </macros>
+                </instance>
+                <instance>
+                  <macros>
+                    <sitenum>3</sitenum>
+                    <label>Site 3</label>
+                  </macros>
+                </instance>
+                <instance>
+                  <macros>
+                    <sitenum>4</sitenum>
+                    <label>Site 4</label>
+                  </macros>
+                </instance>
+                <instance>
+                  <macros>
+                    <sitenum>5</sitenum>
+                    <label>Site 5</label>
+                  </macros>
+                </instance>
+                <instance>
+                  <macros>
+                    <sitenum>6</sitenum>
+                    <label>Site 6</label>
+                  </macros>
+                </instance>
+              </instances>
+              <y>70</y>
+              <width>150</width>
+              <height>200</height>
+              <transparent>true</transparent>
             </widget>
           </widget>
           <widget type="group" version="3.0.0">
