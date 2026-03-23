@@ -417,11 +417,6 @@
             <pv_name>${UUT}:MODE:TRANSIENT:SET_ARM</pv_name>
             <value>1</value>
           </action>
-          <action type="write_pv">
-            <description>DISABLE ARM</description>
-            <pv_name>loc://UNSET_$(DID)</pv_name>
-            <value>1</value>
-          </action>
         </actions>
         <pv_name>${UUT}:MODE:TRANSIENT:SET_ARM</pv_name>
         <text>ARM</text>
@@ -431,20 +426,27 @@
           </font>
         </font>
         <rules>
-          <rule name="DISABLE" prop_id="enabled" out_exp="false">
-            <exp bool_exp="pv0&gt;0">
+          <rule name="DISABLE_IF_CHANGED" prop_id="enabled" out_exp="false">
+            <exp bool_exp="True">
               <value>false</value>
             </exp>
-            <exp bool_exp="pv1&gt;0 &amp;&amp; int(pvStr2.split('-')[1]) &lt; 9999">
-              <value>false</value>
+            <pv_name>$(UUT):MODE:TRANSIENT:PRE</pv_name>
+            <pv_name>$(UUT):MODE:TRANSIENT:POST</pv_name>
+            <pv_name>$(UUT):MODE:TRANSIENT:OSAM</pv_name>
+            <pv_name>$(UUT):MODE:TRANSIENT:REPEAT</pv_name>
+            <pv_name>$(UUT):MODE:TRANSIENT:SOFT_TRIGGER</pv_name>
+            <pv_name>${UUT}:MODE:TRANSIENT:DEMUX</pv_name>
+          </rule>
+          <rule name="ENABLE_IF_SET" prop_id="enabled" out_exp="false">
+            <exp bool_exp="True">
+              <value>true</value>
             </exp>
-            <pv_name>${UUT}:MODE:CONTINUOUS</pv_name>
             <pv_name>loc://UNSET_$(DID)</pv_name>
-            <pv_name>${UUT}:SYS:VERSION:SW</pv_name>
           </rule>
         </rules>
         <tooltip>ARM TRANSIENT</tooltip>
         <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+        <enabled>false</enabled>
       </widget>
       <widget type="led" version="2.0.0">
         <name>SET ARM LED</name>
