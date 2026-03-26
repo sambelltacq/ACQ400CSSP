@@ -2,7 +2,7 @@
 <display version="2.0.0">
   <name>DAC_DC$(MUUT):$(SITE)</name>
   <width>1190</width>
-  <height>1150</height>
+  <height>1160</height>
   <widget type="group" version="3.0.0">
     <name>DAC DC</name>
     <macros>
@@ -16,9 +16,189 @@
     <x>10</x>
     <y>10</y>
     <width>1170</width>
-    <height>1130</height>
+    <height>1140</height>
     <style>3</style>
     <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>TITLE</name>
+      <text>DAC DC CONTROL $(UUT):$(SITE) </text>
+      <width>540</width>
+      <height>30</height>
+      <font>
+        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>REFERENCE</name>
+      <x>350</x>
+      <y>60</y>
+      <width>170</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <rules>
+        <rule name="NO_REF" prop_id="visible" out_exp="true">
+          <exp bool_exp="&quot;$(SITE_MODEL)&quot;.startswith(&quot;AO424&quot;)">
+            <expression>false</expression>
+          </exp>
+          <exp bool_exp="true">
+            <expression>true</expression>
+          </exp>
+          <pv_name>=abs(1)</pv_name>
+        </rule>
+      </rules>
+      <widget type="combo" version="2.0.0">
+        <name>Combo Box</name>
+        <pv_name>${UUT}:${SITE}:AO:REF</pv_name>
+        <x>80</x>
+        <width>90</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label</name>
+        <text>Reference</text>
+        <width>70</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>SOURCE</name>
+      <y>60</y>
+      <width>170</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="combo" version="2.0.0">
+        <name>Combo Box_2</name>
+        <pv_name>${UUT}:${SITE}:AWG:DIST</pv_name>
+        <x>80</x>
+        <width>90</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_1</name>
+        <text>Source</text>
+        <width>70</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>TRIGGER</name>
+      <x>170</x>
+      <y>60</y>
+      <width>170</width>
+      <height>30</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="combo" version="2.0.0">
+        <name>Combo Box_3</name>
+        <pv_name>${UUT}:${SITE}:TRG</pv_name>
+        <x>80</x>
+        <width>90</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_2</name>
+        <text>Trigger</text>
+        <width>70</width>
+        <height>30</height>
+        <font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </font>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="3.0.0">
+      <name>DC SLIDER ALL</name>
+      <y>110</y>
+      <width>120</width>
+      <height>330</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="embedded" version="2.0.0">
+        <name>DC SLIDER BASE</name>
+        <macros>
+          <id>ALL</id>
+        </macros>
+        <file>components/dac_dc/dc_slider.bob</file>
+        <width>120</width>
+        <height>250</height>
+        <resize>2</resize>
+        <transparent>true</transparent>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>ALL BUTTONS</name>
+        <y>250</y>
+        <width>120</width>
+        <height>80</height>
+        <style>3</style>
+        <background_color>
+          <color red="230" green="230" blue="230">
+          </color>
+        </background_color>
+        <rules>
+          <rule name="HIDE_IF_AWG" prop_id="visible" out_exp="false">
+            <exp bool_exp="pvStr0.upper() == 'AWG'">
+              <value>false</value>
+            </exp>
+            <pv_name>${UUT}:${SITE}:AWG:DIST</pv_name>
+          </rule>
+        </rules>
+        <widget type="group" version="3.0.0">
+          <name>ALL BUTTONS INNER</name>
+          <x>10</x>
+          <width>100</width>
+          <height>70</height>
+          <style>3</style>
+          <transparent>true</transparent>
+          <widget type="action_button" version="3.0.0">
+            <name>ZERO BUTTON</name>
+            <actions>
+              <action type="write_pv">
+                <description>ZERO</description>
+                <pv_name>${UUT}:${SITE}:AO:SLOW_SET:CH:ALL</pv_name>
+                <value>0</value>
+              </action>
+            </actions>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>IDENT BUTTON</name>
+            <actions>
+              <action type="execute">
+                <description>IDENT</description>
+                <script file="../scripts/ident_dc.py">
+                </script>
+              </action>
+            </actions>
+            <pv_name>$(UUT):$(SITE):NCHAN</pv_name>
+            <y>40</y>
+            <font>
+              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <tooltip>$(actions)</tooltip>
+          </widget>
+        </widget>
+      </widget>
+    </widget>
     <widget type="template" version="2.0.0">
       <name>DC SLIDER ARRAY</name>
       <file>components/dac_dc/dc_slider.bob</file>
@@ -185,184 +365,12 @@
         </instance>
       </instances>
       <x>140</x>
-      <y>100</y>
+      <y>110</y>
       <width>1030</width>
       <height>1030</height>
       <horizontal>true</horizontal>
       <wrap_count>8</wrap_count>
       <transparent>true</transparent>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_6</name>
-      <text>$(UUT):$(SITE) DAC DC CONTROL $(SITE_MODEL)</text>
-      <width>1020</width>
-      <height>30</height>
-      <font>
-        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
-        </font>
-      </font>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>REFERENCE</name>
-      <x>350</x>
-      <y>50</y>
-      <width>170</width>
-      <height>30</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <rules>
-        <rule name="NO_REF" prop_id="visible" out_exp="true">
-          <exp bool_exp="&quot;$(SITE_MODEL)&quot;.startswith(&quot;AO424&quot;)">
-            <expression>false</expression>
-          </exp>
-          <exp bool_exp="true">
-            <expression>true</expression>
-          </exp>
-          <pv_name>=abs(1)</pv_name>
-        </rule>
-      </rules>
-      <widget type="combo" version="2.0.0">
-        <name>Combo Box</name>
-        <pv_name>${UUT}:${SITE}:AO:REF</pv_name>
-        <x>80</x>
-        <width>90</width>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label</name>
-        <text>Reference</text>
-        <width>70</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>SOURCE</name>
-      <y>50</y>
-      <width>170</width>
-      <height>30</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="combo" version="2.0.0">
-        <name>Combo Box_2</name>
-        <pv_name>${UUT}:${SITE}:AWG:DIST</pv_name>
-        <x>80</x>
-        <width>90</width>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_1</name>
-        <text>Source</text>
-        <width>70</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>TRIGGER</name>
-      <x>170</x>
-      <y>50</y>
-      <width>170</width>
-      <height>30</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="combo" version="2.0.0">
-        <name>Combo Box_3</name>
-        <pv_name>${UUT}:${SITE}:TRG</pv_name>
-        <x>80</x>
-        <width>90</width>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>Label_2</name>
-        <text>Trigger</text>
-        <width>70</width>
-        <height>30</height>
-        <font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </font>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>DC SLIDER ALL</name>
-      <y>100</y>
-      <width>120</width>
-      <height>330</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="embedded" version="2.0.0">
-        <name>DC SLIDER BASE</name>
-        <macros>
-          <id>ALL</id>
-        </macros>
-        <file>components/dac_dc/dc_slider.bob</file>
-        <width>120</width>
-        <height>250</height>
-        <resize>2</resize>
-        <transparent>true</transparent>
-      </widget>
-      <widget type="group" version="3.0.0">
-        <name>ALL BUTTONS</name>
-        <y>250</y>
-        <width>120</width>
-        <height>80</height>
-        <style>3</style>
-        <background_color>
-          <color red="230" green="230" blue="230">
-          </color>
-        </background_color>
-        <widget type="group" version="3.0.0">
-          <name>ALL BUTTONS INNER</name>
-          <x>10</x>
-          <width>100</width>
-          <height>70</height>
-          <style>3</style>
-          <transparent>true</transparent>
-          <widget type="action_button" version="3.0.0">
-            <name>ZERO BUTTON</name>
-            <actions>
-              <action type="write_pv">
-                <description>ZERO</description>
-                <pv_name>${UUT}:${SITE}:AO:SLOW_SET:CH:ALL</pv_name>
-                <value>0</value>
-              </action>
-            </actions>
-            <font>
-              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-              </font>
-            </font>
-            <tooltip>$(actions)</tooltip>
-          </widget>
-          <widget type="action_button" version="3.0.0">
-            <name>IDENT BUTTON</name>
-            <actions>
-              <action type="execute">
-                <description>IDENT</description>
-                <script file="../scripts/ident_dc.py">
-                </script>
-              </action>
-            </actions>
-            <pv_name>$(UUT):$(SITE):NCHAN</pv_name>
-            <y>40</y>
-            <font>
-              <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-              </font>
-            </font>
-            <tooltip>$(actions)</tooltip>
-          </widget>
-        </widget>
-      </widget>
     </widget>
     <widget type="group" version="3.0.0">
       <name>DOC_LINK_1</name>
@@ -371,7 +379,7 @@
         <URL>${USER_GUIDE}#${TARGET}</URL>
       </macros>
       <x>540</x>
-      <y>50</y>
+      <y>60</y>
       <width>25</width>
       <height>25</height>
       <style>3</style>
@@ -397,6 +405,23 @@
         <tooltip>$(URL)</tooltip>
         <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>OPI MODEL</name>
+      <pv_name>${UUT}:${SITE}:PART_NUM</pv_name>
+      <y>30</y>
+      <width>430</width>
+      <height>30</height>
+      <font>
+        <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Background" red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <transparent>true</transparent>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
 </display>
