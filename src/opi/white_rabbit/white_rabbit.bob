@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-08 16:56:47 by dt100-->
 <display version="2.0.0">
   <name>White_Rabbit$(MUUT)</name>
   <macros>
-    <site_acq2106>3</site_acq2106>
-    <port_acq2106>C</port_acq2106>
-    <site_acq2206>3</site_acq2206>
-    <port_acq2206>C</port_acq2206>
+    <site_acq2106sfp>3</site_acq2106sfp>
+    <port_acq2106sfp>C</port_acq2106sfp>
+    <site_acq2206sfp>3</site_acq2206sfp>
+    <port_acq2206sfp>C</port_acq2206sfp>
     <site_acq1102>2</site_acq1102>
     <port_acq1102>B</port_acq1102>
     <wr_port>$(port_$(MODEL)=unknown)</wr_port>
@@ -240,7 +239,7 @@
           <label>PPS</label>
           <site>0</site>
         </macros>
-        <file>components/func_counter.bob</file>
+        <file>../components/func_counter.bob</file>
         <y>270</y>
         <width>530</width>
         <height>50</height>
@@ -253,7 +252,7 @@
           <label>TS</label>
           <site>0</site>
         </macros>
-        <file>components/func_counter.bob</file>
+        <file>../components/func_counter.bob</file>
         <y>320</y>
         <width>530</width>
         <height>50</height>
@@ -266,7 +265,7 @@
           <label>WRTT0</label>
           <site>0</site>
         </macros>
-        <file>components/func_counter.bob</file>
+        <file>../components/func_counter.bob</file>
         <y>430</y>
         <width>530</width>
         <height>50</height>
@@ -279,7 +278,7 @@
           <label>WRTT1</label>
           <site>0</site>
         </macros>
-        <file>components/func_counter.bob</file>
+        <file>../components/func_counter.bob</file>
         <y>480</y>
         <width>530</width>
         <height>50</height>
@@ -296,9 +295,9 @@
           <name>TUNE BUTTON</name>
           <actions>
             <action type="write_pv">
+              <description>TUNE</description>
               <pv_name>${UUT}:11:Si5326:TUNEPHASE</pv_name>
               <value>1</value>
-              <description>TUNE</description>
             </action>
           </actions>
           <height>40</height>
@@ -398,9 +397,9 @@
         <name>WRTD_TXI BUTTON</name>
         <actions>
           <action type="write_pv">
+            <description>WRTD_TXI</description>
             <pv_name>${UUT}:11:WRTD_TXI</pv_name>
             <value>1</value>
-            <description>WRTD_TXI</description>
           </action>
         </actions>
         <x>300</x>
@@ -475,7 +474,7 @@
       </widget>
       <widget type="picture" version="2.0.0">
         <name>Picture</name>
-        <file>../images/WR_logo.png</file>
+        <file>../../images/WR_logo.png</file>
         <x>420</x>
         <width>110</width>
         <height>90</height>
@@ -494,7 +493,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_1</name>
-          <file>../images/doc_link.png</file>
+          <file>../../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>

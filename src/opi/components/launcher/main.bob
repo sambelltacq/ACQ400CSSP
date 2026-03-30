@@ -353,7 +353,7 @@
             <name>White Rabbit Button</name>
             <actions>
               <action type="execute">
-                <description>open opi/white_rabbit.bob</description>
+                <description>open opi/white_rabbit/loader.bob</description>
                 <script file="../../../scripts/handle_action_button.py">
                 </script>
               </action>
