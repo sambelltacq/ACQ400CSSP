@@ -2,10 +2,10 @@
 <display version="2.0.0">
   <name>HUDP$(MUUT)</name>
   <macros>
-    <port_acq2106>D</port_acq2106>
-    <site_acq2106>10</site_acq2106>
-    <port_acq2206>D</port_acq2206>
-    <site_acq2206>10</site_acq2206>
+    <port_acq2106sfp>D</port_acq2106sfp>
+    <site_acq2106sfp>10</site_acq2106sfp>
+    <port_acq2206sfp>D</port_acq2206sfp>
+    <site_acq2206sfp>10</site_acq2206sfp>
     <port_acq1102>A</port_acq1102>
     <site_acq1102>13</site_acq1102>
     <hudp_site>$(site_$(MODEL)=unknown)</hudp_site>
@@ -119,7 +119,7 @@
             <func>SIG:HUDP_TX_PKT</func>
             <site>$(hudp_site)</site>
           </macros>
-          <file>components/func_counter.bob</file>
+          <file>../components/func_counter.bob</file>
           <y>90</y>
           <width>530</width>
           <height>50</height>
@@ -295,7 +295,7 @@
             <func>SIG:HUDP_RX_PKT</func>
             <site>$(hudp_site)</site>
           </macros>
-          <file>components/func_counter.bob</file>
+          <file>../components/func_counter.bob</file>
           <y>90</y>
           <width>530</width>
           <height>50</height>
@@ -397,7 +397,7 @@
             <func>SIG:HUDP_DISCO</func>
             <site>$(hudp_site)</site>
           </macros>
-          <file>components/func_counter.bob</file>
+          <file>../components/func_counter.bob</file>
           <y>210</y>
           <width>530</width>
           <height>50</height>
@@ -571,7 +571,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_1</name>
-          <file>../images/doc_link.png</file>
+          <file>../../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>

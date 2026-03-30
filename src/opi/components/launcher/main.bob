@@ -410,7 +410,7 @@
             <name>HUDP Button</name>
             <actions>
               <action type="execute">
-                <description>open opi/hudp.bob</description>
+                <description>open opi/hudp/loader.bob</description>
                 <script file="../../../scripts/handle_action_button.py">
                 </script>
               </action>
