@@ -2,7 +2,7 @@
 <display version="2.0.0">
   <name>AWG$(MUUT)</name>
   <macros>
-    <SITE>$(DIST_FIRST_SITE=1)</SITE>
+    <SITE>$(DISTRIBUTOR_S1=1)</SITE>
   </macros>
   <width>670</width>
   <height>920</height>
@@ -19,7 +19,6 @@
       <color red="255" green="230" blue="128">
       </color>
     </background_color>
-    <transparent>true</transparent>
     <widget type="group" version="3.0.0">
       <name>AWG INNER</name>
       <x>10</x>
@@ -526,9 +525,9 @@
             <name>Pulse Soft Button</name>
             <actions execute_as_one="true">
               <action type="write_pv">
+                <description>PULSE SOFT TRG</description>
                 <pv_name>${UUT}:SIG:SOFT_TRIGGER</pv_name>
                 <value>1</value>
-                <description>PULSE SOFT TRG</description>
               </action>
             </actions>
             <text>PULSE</text>
@@ -546,14 +545,14 @@
             <name>Set Soft Button</name>
             <actions execute_as_one="true">
               <action type="write_pv">
+                <description>SET SOFT</description>
                 <pv_name>${UUT}:1:TRG:DX</pv_name>
                 <value>1</value>
-                <description>SET SOFT</description>
               </action>
               <action type="write_pv">
+                <description>SET RISING</description>
                 <pv_name>${UUT}:1:TRG:SENSE</pv_name>
                 <value>1</value>
-                <description>SET RISING</description>
               </action>
             </actions>
             <text>SELECT</text>
@@ -856,7 +855,7 @@
           <label>sample_count</label>
           <site>$(SITE)</site>
         </macros>
-        <file>components/func_counter.bob</file>
+        <file>../components/func_counter.bob</file>
         <y>850</y>
         <width>530</width>
         <height>50</height>
@@ -1000,7 +999,7 @@
             <label>clk_count</label>
             <site>$(SITE)</site>
           </macros>
-          <file>components/func_counter.bob</file>
+          <file>../components/func_counter.bob</file>
           <width>530</width>
           <height>50</height>
           <resize>2</resize>
@@ -1040,7 +1039,7 @@
         <transparent>true</transparent>
         <widget type="picture" version="2.0.0">
           <name>LINK_SYMBOL_1</name>
-          <file>../images/doc_link.png</file>
+          <file>../../images/doc_link.png</file>
           <width>25</width>
           <height>25</height>
         </widget>

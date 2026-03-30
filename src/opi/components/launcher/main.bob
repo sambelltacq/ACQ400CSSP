@@ -466,7 +466,7 @@
             <name>AWG Button</name>
             <actions>
               <action type="execute">
-                <description>open opi/awg.bob</description>
+                <description>open opi/awg/loader.bob</description>
                 <script file="../../../scripts/handle_action_button.py">
                 </script>
               </action>
