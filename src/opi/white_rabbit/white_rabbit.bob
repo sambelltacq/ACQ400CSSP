@@ -2,14 +2,7 @@
 <display version="2.0.0">
   <name>White_Rabbit$(MUUT)</name>
   <macros>
-    <site_acq2106sfp>3</site_acq2106sfp>
-    <port_acq2106sfp>C</port_acq2106sfp>
-    <site_acq2206sfp>3</site_acq2206sfp>
-    <port_acq2206sfp>C</port_acq2206sfp>
-    <site_acq1102>2</site_acq1102>
-    <port_acq1102>B</port_acq1102>
-    <wr_port>$(port_$(MODEL)=unknown)</wr_port>
-    <wr_site>$(site_$(MODEL)=unknown)</wr_site>
+    <wr_site>$(s11_WRSFP=3)</wr_site>
   </macros>
   <width>550</width>
   <height>590</height>

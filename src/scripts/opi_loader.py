@@ -18,17 +18,18 @@ def get_macros(widget):
 def set_macros(widget, macros):
     new_macros = Macros()
     for key in macros:
-        new_macros.add(key.replace(':', '_'), str(macros[key]))
+        new_macros.add(key, str(macros[key]))
     widget.setPropertyValue("macros", new_macros)
 
 def convert_to_macros(pvs, macros, prefix):
     logger.info('macro prefix: {}'.format(prefix))
     for pv in pvs:
         try:
-            pvname = pv.name.replace(prefix, '')
+            pvname = pv.name.replace(prefix, '').replace(':', '_')
+            if pvname[0].isdigit(): pvname = 's{}'.format(pvname)
             pvvalue = PVUtil.getVType(pv).getValue()
             macros[pvname] = pvvalue
-            logger.info('new macro ({}={})'.format(pvname, pvvalue))
+            logger.info('new macro {} > ({}={})'.format(pv.name, pvname, pvvalue))
         except:
             logger.warning("Failed to convert PV {}".format(pv.name))
     return macros

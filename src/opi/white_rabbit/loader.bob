@@ -8,7 +8,7 @@
     <macros>
       <FILE>white_rabbit.bob</FILE>
       <SITE>0</SITE>
-      <PREFIX>$(UUT):$(SITE):</PREFIX>
+      <PREFIX>$(UUT):</PREFIX>
     </macros>
     <width>550</width>
     <height>590</height>
@@ -19,7 +19,7 @@
     </background_color>
     <widget type="label" version="2.0.0">
       <name>LOADER_PLACEHOLDER</name>
-      <text>LOAD OPI
+      <text>LOAD ERROR
 FILE: $(FILE)
 UUT: $(UUT)
 SITE: $(SITE)
@@ -40,12 +40,14 @@ PREFIX $(PREFIX)</text>
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>LOADER_INNER</name>
+      <file>white_rabbit.bob</file>
       <width>550</width>
       <height>590</height>
       <transparent>true</transparent>
       <scripts>
-        <script file="../../scripts/opi_loader.py" check_connections="false">
-          <pv_name trigger="false">$(UUT):$(SITE):MODEL</pv_name>
+        <script file="../../scripts/opi_loader.py">
+          <pv_name>$(UUT):$(SITE):MODEL</pv_name>
+          <pv_name>$(UUT):11:WRSFP</pv_name>
         </script>
       </scripts>
     </widget>
