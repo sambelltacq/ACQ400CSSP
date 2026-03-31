@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-03 17:24:16 by dt100-->
 <display version="2.0.0">
   <name>chan gain</name>
   <width>130</width>
@@ -57,6 +56,14 @@
           <color name="Background" red="255" green="255" blue="255">
           </color>
         </background_color>
+        <rules>
+          <rule name="DISABLE_ON_RDIS_DISABLE" prop_id="enabled" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>false</value>
+            </exp>
+            <pv_name>$(UUT):$(SITE):GAIN:RDIS</pv_name>
+          </rule>
+        </rules>
         <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>

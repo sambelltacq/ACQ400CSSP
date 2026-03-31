@@ -302,6 +302,43 @@
           <vertical_alignment>1</vertical_alignment>
         </widget>
       </widget>
+      <widget type="group" version="3.0.0">
+        <name>RDIS</name>
+        <x>540</x>
+        <y>30</y>
+        <width>60</width>
+        <height>20</height>
+        <style>3</style>
+        <transparent>true</transparent>
+        <widget type="label" version="2.0.0">
+          <name>RDIS LABEL</name>
+          <text>RDIS</text>
+          <width>40</width>
+          <font>
+            <font family="Liberation Sans" style="BOLD" size="14.0">
+            </font>
+          </font>
+          <background_color>
+            <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+            </color>
+          </background_color>
+          <transparent>false</transparent>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>RDIS LED</name>
+          <pv_name>${UUT}:${SITE}:GAIN:RDIS</pv_name>
+          <x>40</x>
+          <off_color>
+            <color name="Grid" red="128" green="128" blue="128">
+            </color>
+          </off_color>
+          <on_color>
+            <color red="0" green="0" blue="255">
+            </color>
+          </on_color>
+        </widget>
+      </widget>
     </widget>
   </widget>
 </display>
