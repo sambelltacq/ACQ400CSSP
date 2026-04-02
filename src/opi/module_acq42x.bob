@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-20 14:05:38 by dt100-->
 <display version="2.0.0">
   <name>acq42x$(MUUT):$(SITE)</name>
   <width>550</width>
-  <height>420</height>
+  <height>540</height>
   <widget type="group" version="3.0.0">
     <name>OPI HEADER</name>
     <x>10</x>
@@ -453,6 +452,238 @@
           <pv_name>${UUT}:$(site):${sig}</pv_name>
         </rule>
       </rules>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="3.0.0">
+    <name>AWG_427</name>
+    <x>10</x>
+    <y>420</y>
+    <width>520</width>
+    <height>110</height>
+    <visible>false</visible>
+    <style>3</style>
+    <transparent>true</transparent>
+    <rules>
+      <rule name="SHOW_IS_ACQ427" prop_id="visible" out_exp="false">
+        <exp bool_exp="pvStr0=='40'">
+          <value>true</value>
+        </exp>
+        <pv_name>$(UUT):$(SITE):MTYPE</pv_name>
+      </rule>
+    </rules>
+    <widget type="label" version="2.0.0">
+      <name>CHANNEL_LABEL_1</name>
+      <text>CH 01</text>
+      <x>90</x>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>GAIN_PERCENT_1</name>
+      <pv_name>${UUT}:${SITE}:AWG:G:1</pv_name>
+      <x>90</x>
+      <y>40</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>OFFSET_VALUE_1</name>
+      <pv_name>${UUT}:${SITE}:AWG:D:1</pv_name>
+      <x>90</x>
+      <y>80</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>0</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>ROW_LABEL_1</name>
+      <text>GAIN %</text>
+      <y>40</y>
+      <width>80</width>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>ROW_LABEL_2</name>
+      <text>OFFSET %</text>
+      <y>80</y>
+      <width>80</width>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <transparent>false</transparent>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CHANNEL_LABEL_2</name>
+      <text>CH 02</text>
+      <x>200</x>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>GAIN_PERCENT_2</name>
+      <pv_name>${UUT}:${SITE}:AWG:G:2</pv_name>
+      <x>200</x>
+      <y>40</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>OFFSET_VALUE_2</name>
+      <pv_name>${UUT}:${SITE}:AWG:D:2</pv_name>
+      <x>200</x>
+      <y>80</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>0</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CHANNEL_LABEL_3</name>
+      <text>CH 03</text>
+      <x>310</x>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>GAIN_PERCENT_3</name>
+      <pv_name>${UUT}:${SITE}:AWG:G:3</pv_name>
+      <x>310</x>
+      <y>40</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>OFFSET_VALUE_3</name>
+      <pv_name>${UUT}:${SITE}:AWG:D:3</pv_name>
+      <x>310</x>
+      <y>80</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>0</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>CHANNEL_LABEL_4</name>
+      <text>CH 04</text>
+      <x>420</x>
+      <height>30</height>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>GAIN_PERCENT_4</name>
+      <pv_name>${UUT}:${SITE}:AWG:G:4</pv_name>
+      <x>420</x>
+      <y>40</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>3</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+    </widget>
+    <widget type="spinner" version="2.0.0">
+      <name>OFFSET_VALUE_4</name>
+      <pv_name>${UUT}:${SITE}:AWG:D:4</pv_name>
+      <x>420</x>
+      <y>80</y>
+      <height>30</height>
+      <format>0</format>
+      <precision>0</precision>
+      <show_units>true</show_units>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
       <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
     </widget>
   </widget>
