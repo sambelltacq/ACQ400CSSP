@@ -70,7 +70,7 @@
     <y>150</y>
     <height>30</height>
     <format>0</format>
-    <precision>0</precision>
+    <precision>3</precision>
     <show_units>true</show_units>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
@@ -146,7 +146,7 @@
     <y>150</y>
     <height>30</height>
     <format>0</format>
-    <precision>0</precision>
+    <precision>3</precision>
     <show_units>true</show_units>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
@@ -194,7 +194,7 @@
     <y>150</y>
     <height>30</height>
     <format>0</format>
-    <precision>0</precision>
+    <precision>3</precision>
     <show_units>true</show_units>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
@@ -242,7 +242,7 @@
     <y>150</y>
     <height>30</height>
     <format>0</format>
-    <precision>0</precision>
+    <precision>3</precision>
     <show_units>true</show_units>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
