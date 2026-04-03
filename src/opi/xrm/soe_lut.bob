@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-17 19:07:17 by pgm-->
+<!--Saved on 2026-04-02 09:15:06 by pgm-->
 <display version="2.0.0">
   <name>SOE_LUT $(MUUT)</name>
   <width>750</width>
@@ -96,6 +96,13 @@
         <y>72</y>
         <width>111</width>
       </widget>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>${UUT}:SOE:MON_RL</pv_name>
+      <x>230</x>
+      <y>10</y>
+      <width>110</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -223,20 +230,6 @@
       <vertical_alignment>1</vertical_alignment>
       <border_width>1</border_width>
     </widget>
-  </widget>
-  <widget type="table" version="2.0.0">
-    <name>Table_1</name>
-    <x>630</x>
-    <y>1010</y>
-    <width>1</width>
-    <height>1</height>
-    <columns>
-      <column>
-        <name>Column 1</name>
-        <width>100</width>
-        <editable>true</editable>
-      </column>
-    </columns>
   </widget>
   <widget type="group" version="3.0.0">
     <name>Row Edit</name>

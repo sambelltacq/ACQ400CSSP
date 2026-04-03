@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-11 07:46:10 by pgm-->
+<!--Saved on 2026-04-02 09:16:43 by pgm-->
 <display version="2.0.0">
   <name>PM $(MUUT)</name>
   <width>750</width>
@@ -263,5 +263,12 @@
       <x>542</x>
       <y>2</y>
     </widget>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>${UUT}:PM:MON_RL</pv_name>
+    <x>1070</x>
+    <y>40</y>
+    <width>110</width>
   </widget>
 </display>

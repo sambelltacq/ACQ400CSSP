@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-13 13:33:31 by pgm-->
+<!--Saved on 2026-04-02 09:16:01 by pgm-->
 <display version="2.0.0">
   <name>SOE HT $(MUUT)</name>
   <width>750</width>
@@ -135,6 +135,13 @@
         <height>30</height>
         <horizontal_alignment>2</horizontal_alignment>
       </widget>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>${UUT}:SOE:MON_RL</pv_name>
+      <x>50</x>
+      <y>60</y>
+      <width>110</width>
     </widget>
   </widget>
   <widget type="table" version="2.0.0">

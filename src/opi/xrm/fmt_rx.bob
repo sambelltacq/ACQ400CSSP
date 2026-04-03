@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-03-10 17:45:03 by pgm-->
+<!--Saved on 2026-04-01 22:57:20 by pgm-->
 <display version="2.0.0">
   <name>FMT RX $(MUUT)</name>
   <width>750</width>
@@ -96,6 +96,13 @@
         <y>72</y>
         <width>111</width>
       </widget>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>${UUT}:FMT:MON_RL</pv_name>
+      <x>360</x>
+      <y>10</y>
+      <width>110</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
