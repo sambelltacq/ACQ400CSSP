@@ -190,14 +190,25 @@ def gen_macros_pref(uuts, debug):
     macros += f"<UUTS>{','.join(uuts)}</UUTS>"
     return macros
 
+
 def update_pref():
     global PREFS, UUT_PREFS, SETTINGS
     """Updates the phoebus preference ini"""
 
-    if os.path.exists(UUT_PREFS): pref_file = UUT_PREFS
-    elif os.path.exists(PREFS): pref_file = PREFS
-    else: return
-    
+    if os.path.exists(UUT_PREFS):
+        pref_file = UUT_PREFS
+    elif os.path.exists(PREFS):
+        pref_file = PREFS
+    else:
+        pref_file = None
+
+    if pref_file:
+        try:
+            _update_pref(SETTINGS, pref_file)
+        except PermissionError:
+            print(f"Customer set {pref_file} READONLY. Don't touch it")
+
+def _update_pref(SETTINGS, pref_file):
     with open(pref_file) as f:
         prefs = {pref.split('=')[0]: pref.split('=')[1] for pref in f.readlines() if pref.find('=') != -1}
 
