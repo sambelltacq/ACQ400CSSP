@@ -206,7 +206,7 @@ def update_pref():
         try:
             _update_pref(SETTINGS, pref_file)
         except PermissionError:
-            print(f"Customer set {pref_file} READONLY. Don't touch it")
+            print(f"Customer set {SETTINGS} READONLY. Don't touch it")
 
 def _update_pref(SETTINGS, pref_file):
     with open(pref_file) as f:

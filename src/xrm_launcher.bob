@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-04-04 17:18:47 by pgm-->
+<!--Saved on 2026-04-04 21:03:44 by pgm-->
 <display version="2.0.0">
-  <name>XRM scratchpad</name>
+  <name>XRM Launcher</name>
   <widget type="label" version="2.0.0">
     <name>OPI TITLE</name>
     <text>XRM Launcher</text>
