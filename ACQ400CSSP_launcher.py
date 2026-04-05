@@ -151,10 +151,12 @@ def gen_ID(args):
 
 def init_memento(args):
     global MEMENTO, WORKSPACE, JAVA_ARGS, TARGET, SETTINGS, ID
+    print(f'init_memento {args} MEMENTO:{MEMENTO}')
     if os.path.exists(MEMENTO):
         print(f"Using existing workspace {WORKSPACE}")
         TARGET = f"-layout {MEMENTO}"
         return
+
     new_lines = []
     macros_pref = "org.csstudio.display.builder.model/macros={macros}\n"
     new_lines.append(macros_pref.format(macros=gen_macros_pref(args.uuts, args.debug)))
@@ -168,16 +170,23 @@ def init_memento(args):
         new_lines.append(f"org.phoebus.applications.console/prompt={ID}> \\ \n")
         new_lines.append(f"org.phoebus.applications.console/shell=python3 {helper_path} {ID}\n")
 
-    print(f"Creating new workspace {WORKSPACE}")
-    os.makedirs(WORKSPACE, exist_ok=True)
-    with open(SETTINGS_BASE, 'r') as base_fp:
-        with open(SETTINGS, 'w') as new_fp:
-            lines = base_fp.readlines()
-            lines.extend(new_lines)
-            new_fp.writelines(lines)
+    if not os.path.exists(SETTINGS):
+        print(f"Creating new workspace {WORKSPACE}")
+        os.makedirs(WORKSPACE, exist_ok=True)
+
+    try:
+        with open(SETTINGS_BASE, 'r') as base_fp:
+            with open(SETTINGS, 'w') as new_fp:
+                lines = base_fp.readlines()
+                lines.extend(new_lines)
+                new_fp.writelines(lines)
+    except PermissionError:
+            print(f"Customer set {SETTINGS} READONLY. Don't touch it")
+
     resource = LAUNCHER
     if len(args.uuts) > 1: resource = LAUNCHER_MULTI
     TARGET=f"-resource {resource} -layout null"
+    print(f'init_memento TARGET {TARGET}')
     
 def gen_macros_pref(uuts, debug):
     macros="<UUT>{uut}</UUT>".format(uut=uuts[0])
