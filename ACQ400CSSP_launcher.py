@@ -151,10 +151,9 @@ def gen_ID(args):
 
 def init_memento(args):
     global MEMENTO, WORKSPACE, JAVA_ARGS, TARGET, SETTINGS, ID
-    print(f'init_memento {args} MEMENTO:{MEMENTO}')
     if os.path.exists(MEMENTO):
-        print(f"Using existing workspace {WORKSPACE}")
         TARGET = f"-layout {MEMENTO}"
+        print(f"Using existing workspace {WORKSPACE} TARGET {TARGET}")
         return
 
     new_lines = []
@@ -181,12 +180,12 @@ def init_memento(args):
                 lines.extend(new_lines)
                 new_fp.writelines(lines)
     except PermissionError:
-            print(f"Customer set {SETTINGS} READONLY. Don't touch it")
+        print(f"init_memento():Customer set {SETTINGS} READONLY. Don't touch it")
 
     resource = LAUNCHER
     if len(args.uuts) > 1: resource = LAUNCHER_MULTI
     TARGET=f"-resource {resource} -layout null"
-    print(f'init_memento TARGET {TARGET}')
+    print(f'init_memento() workspace {WORKSPACE} TARGET {TARGET}')
     
 def gen_macros_pref(uuts, debug):
     macros="<UUT>{uut}</UUT>".format(uut=uuts[0])
@@ -215,7 +214,7 @@ def update_pref():
         try:
             _update_pref(SETTINGS, pref_file)
         except PermissionError:
-            print(f"Customer set {SETTINGS} READONLY. Don't touch it")
+            print(f"update_pref():Customer set {SETTINGS} READONLY. Don't touch it")
 
 def _update_pref(SETTINGS, pref_file):
     with open(pref_file) as f:
