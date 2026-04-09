@@ -317,6 +317,80 @@
         <x>400</x>
       </widget>
     </widget>
+    <widget type="choice" version="2.0.0">
+      <name>Combo Box_4</name>
+      <pv_name>$(UUT):0:SIG:SRC:CLK:0</pv_name>
+      <x>170</x>
+      <y>10</y>
+      <width>80</width>
+      <height>160</height>
+      <visible>false</visible>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <selected_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </selected_color>
+      <horizontal>false</horizontal>
+      <rules>
+        <rule name="SHOW_OVERLAY" prop_id="visible" out_exp="false">
+          <exp bool_exp="pv0&gt;0">
+            <value>true</value>
+          </exp>
+          <pv_name>loc://SHOW_OVERLAY</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <items>
+        <item>item 0</item>
+        <item>Item 2</item>
+        <item>Item 3</item>
+        <item>Item 4</item>
+        <item>Item 5</item>
+        <item>Item 6</item>
+      </items>
+    </widget>
+    <widget type="choice" version="2.0.0">
+      <name>Combo Box_5</name>
+      <pv_name>$(UUT):0:SIG:SRC:CLK:1</pv_name>
+      <x>170</x>
+      <y>200</y>
+      <width>80</width>
+      <height>90</height>
+      <visible>false</visible>
+      <font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </font>
+      <background_color>
+        <color name="Read_Background" red="240" green="240" blue="240">
+        </color>
+      </background_color>
+      <selected_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </selected_color>
+      <horizontal>false</horizontal>
+      <rules>
+        <rule name="SHOW_OVERLAY" prop_id="visible" out_exp="false">
+          <exp bool_exp="pv0&gt;0">
+            <value>true</value>
+          </exp>
+          <pv_name>loc://SHOW_OVERLAY</pv_name>
+        </rule>
+      </rules>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <items>
+        <item>item 0</item>
+        <item>Item 2</item>
+      </items>
+    </widget>
   </widget>
   <widget type="group" version="3.0.0">
     <name>Box</name>
