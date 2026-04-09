@@ -143,6 +143,18 @@
       <precision>0</precision>
       <vertical_alignment>1</vertical_alignment>
     </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>INIT loc://SHOW_OVERLAY</name>
+      <pv_name>loc://SHOW_OVERLAY&lt;VLong&gt;(0)</pv_name>
+      <y>179</y>
+      <width>130</width>
+      <background_color>
+        <color red="255" green="212" blue="0">
+        </color>
+      </background_color>
+      <precision>0</precision>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>MAIN</name>
