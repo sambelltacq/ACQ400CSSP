@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-04-04 21:03:44 by pgm-->
+<!--Saved on 2026-04-12 19:13:45 by pgm-->
 <display version="2.0.0">
   <name>XRM Launcher</name>
   <widget type="label" version="2.0.0">
@@ -255,15 +255,18 @@
     <height>50</height>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>stream_initButton</name>
+    <name>stream_initButton1</name>
     <actions>
       <action type="open_display">
-        <description>Stream Initiator</description>
-        <file>opi/xrm/stream_initiator.bob</file>
+        <description>INST 1</description>
+        <file>opi/xrm/inst.bob</file>
+        <macros>
+          <CH>1</CH>
+        </macros>
         <target>tab</target>
       </action>
     </actions>
-    <text>STREAM INITIATOR</text>
+    <text>INST1</text>
     <x>630</x>
     <y>120</y>
     <width>150</width>
@@ -271,18 +274,21 @@
       <font family="Ubuntu" style="BOLD" size="14.0">
       </font>
     </font>
-    <tooltip>SOE Lookup Table</tooltip>
+    <tooltip>INST 1 data stream</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>stream_initButton_1</name>
+    <name>stream_initButton2</name>
     <actions>
       <action type="open_display">
-        <description>Stream Spy</description>
-        <file>opi/xrm/stream_spy.bob</file>
+        <description>INST2</description>
+        <file>opi/xrm/inst.bob</file>
+        <macros>
+          <CH>2</CH>
+        </macros>
         <target>tab</target>
       </action>
     </actions>
-    <text>STREAM SPY</text>
+    <text>INST2</text>
     <x>630</x>
     <y>160</y>
     <width>150</width>
@@ -290,6 +296,6 @@
       <font family="Ubuntu" style="BOLD" size="14.0">
       </font>
     </font>
-    <tooltip>SOE Lookup Table</tooltip>
+    <tooltip>INST 2 data stream</tooltip>
   </widget>
 </display>
