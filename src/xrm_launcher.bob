@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-04-12 19:13:45 by pgm-->
+<!--Saved on 2026-04-14 13:10:44 by pgm-->
 <display version="2.0.0">
   <name>XRM Launcher</name>
   <widget type="label" version="2.0.0">
@@ -17,10 +17,10 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>OPI SITE INFO</name>
-    <text>$(UUT):$(SITE) $(SITE_MODEL)</text>
+    <text>$(UUT):$(SITE) </text>
     <x>10</x>
     <y>40</y>
-    <width>390</width>
+    <width>130</width>
     <font>
       <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
       </font>
@@ -297,5 +297,12 @@
       </font>
     </font>
     <tooltip>INST 2 data stream</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>${UUT}:0:MODEL</pv_name>
+    <x>140</x>
+    <y>40</y>
+    <width>140</width>
   </widget>
 </display>
