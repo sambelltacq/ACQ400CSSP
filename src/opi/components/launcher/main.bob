@@ -507,6 +507,33 @@
             </font>
             <tooltip>Arbitrary Waveform Generator</tooltip>
           </widget>
+          <widget type="action_button" version="3.0.0">
+            <name>XRM Button</name>
+            <actions>
+              <action type="execute">
+                <description>open xrm_launcher.bob</description>
+                <script file="../../../scripts/handle_action_button.py">
+                </script>
+              </action>
+            </actions>
+            <text>XRM</text>
+            <x>320</x>
+            <width>150</width>
+            <visible>false</visible>
+            <font>
+              <font family="Ubuntu" style="BOLD" size="14.0">
+              </font>
+            </font>
+            <rules>
+              <rule name="SHOW_ON_XRM" prop_id="visible" out_exp="false">
+                <exp bool_exp="pvStr0.upper().find(&quot;XRM&quot;) != -1">
+                  <value>true</value>
+                </exp>
+                <pv_name>$(UUT):0:MODEL</pv_name>
+              </rule>
+            </rules>
+            <tooltip>XRM Launcher</tooltip>
+          </widget>
         </widget>
       </widget>
       <widget type="group" version="3.0.0">
