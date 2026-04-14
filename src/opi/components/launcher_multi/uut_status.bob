@@ -79,12 +79,6 @@
           <vertical_alignment>1</vertical_alignment>
           <rules>
             <rule name="Cstate colors" prop_id="background_color" out_exp="false">
-              <exp bool_exp="pv1&gt;0">
-                <value>
-                  <color red="255" green="0" blue="0">
-                  </color>
-                </value>
-              </exp>
               <exp bool_exp="pv0==0">
                 <value>
                   <color red="255" green="0" blue="0">
@@ -110,7 +104,6 @@
                 </value>
               </exp>
               <pv_name>${UUT}:MODE:CONTINUOUS:STATE</pv_name>
-              <pv_name>${UUT}:MODE:TRANS_ACT:STATE</pv_name>
             </rule>
           </rules>
         </widget>
