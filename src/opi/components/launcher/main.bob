@@ -903,6 +903,14 @@
           <color red="46" green="213" blue="115">
           </color>
         </background_color>
+        <rules>
+          <rule name="HIDE_ON_XRM" prop_id="visible" out_exp="false">
+            <exp bool_exp="pvStr0.upper().find(&quot;XRM&quot;) != -1">
+              <value>false</value>
+            </exp>
+            <pv_name>$(UUT):0:MODEL</pv_name>
+          </rule>
+        </rules>
         <widget type="label" version="2.0.0">
           <name>TITLE_5</name>
           <text>Scope</text>
