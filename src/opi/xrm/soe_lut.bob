@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-02-24 21:42:36 by pgm-->
+<!--Saved on 2026-04-13 11:46:34 by pgm-->
 <display version="2.0.0">
   <name>SOE_LUT $(MUUT)</name>
   <width>750</width>
@@ -30,7 +30,6 @@
       <y>50</y>
       <width>560</width>
       <height>850</height>
-      <show_toolbar>true</show_toolbar>
       <columns>
         <column>
           <name>Column 1</name>
@@ -97,6 +96,13 @@
         <y>72</y>
         <width>111</width>
       </widget>
+    </widget>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>${UUT}:SOE:MON_RL</pv_name>
+      <x>230</x>
+      <y>10</y>
+      <width>110</width>
     </widget>
   </widget>
   <widget type="group" version="3.0.0">
@@ -225,20 +231,6 @@
       <border_width>1</border_width>
     </widget>
   </widget>
-  <widget type="table" version="2.0.0">
-    <name>Table_1</name>
-    <x>630</x>
-    <y>1010</y>
-    <width>1</width>
-    <height>1</height>
-    <columns>
-      <column>
-        <name>Column 1</name>
-        <width>100</width>
-        <editable>true</editable>
-      </column>
-    </columns>
-  </widget>
   <widget type="group" version="3.0.0">
     <name>Row Edit</name>
     <x>620</x>
@@ -248,42 +240,42 @@
     <widget type="textentry" version="3.0.0">
       <name>Text Entry</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:ROW</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>22</y>
       <width>60</width>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_1</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:ROWCOUNT</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>62</y>
       <width>60</width>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_3</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:EVENT</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>102</y>
       <width>60</width>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_4</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:EVENT_STEP</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>132</y>
       <width>60</width>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_5</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:PV_ID</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>162</y>
       <width>60</width>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_6</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:PV_ID_STEP</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>192</y>
       <width>60</width>
     </widget>
@@ -343,14 +335,14 @@
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_7</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:OFFSET_US</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>222</y>
       <width>60</width>
     </widget>
     <widget type="textentry" version="3.0.0">
       <name>Text Entry_8</name>
       <pv_name>${UUT}:SOE_LUT:REDIT:OFFSET_US_STEP</pv_name>
-      <x>131</x>
+      <x>152</x>
       <y>252</y>
       <width>60</width>
     </widget>
@@ -365,26 +357,7 @@
       <text>OFFSET_US STEP</text>
       <x>2</x>
       <y>252</y>
+      <width>129</width>
     </widget>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>UPDATE_7</name>
-    <pv_name>$(pvname1)</pv_name>
-    <x>810</x>
-    <y>890</y>
-    <width>50</width>
-    <height>40</height>
-    <font>
-      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color red="255" green="255" blue="255">
-      </color>
-    </foreground_color>
-    <transparent>true</transparent>
-    <format>1</format>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
   </widget>
 </display>
