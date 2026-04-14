@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-06-02 11:00:14 by dt100-->
 <display version="2.0.0">
   <name>Mgt Single</name>
   <width>650</width>
@@ -1019,6 +1018,22 @@
               <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
             </widget>
           </widget>
+        </widget>
+        <widget type="bool_button" version="2.0.0">
+          <name>TX_DISABLE Button</name>
+          <pv_name>${UUT}:MGT:SFP:${num}:TX_DISABLE</pv_name>
+          <x>210</x>
+          <y>30</y>
+          <off_label>DISABLE</off_label>
+          <off_color>
+            <color name="Grid" red="128" green="128" blue="128">
+            </color>
+          </off_color>
+          <on_label>DISABLE</on_label>
+          <on_color>
+            <color name="MAJOR" red="255" green="0" blue="0">
+            </color>
+          </on_color>
         </widget>
       </widget>
       <widget type="label" version="2.0.0">

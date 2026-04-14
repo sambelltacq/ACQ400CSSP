@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-04-09 15:15:40 by dt100-->
 <display version="2.0.0">
   <name>MGT$(MUUT)</name>
   <width>1310</width>
@@ -31,24 +30,28 @@
           <macros>
             <CH>A</CH>
             <idx>0</idx>
+            <num>1</num>
           </macros>
         </instance>
         <instance>
           <macros>
             <CH>B</CH>
             <idx>1</idx>
+            <num>2</num>
           </macros>
         </instance>
         <instance>
           <macros>
             <CH>C</CH>
             <idx>2</idx>
+            <num>3</num>
           </macros>
         </instance>
         <instance>
           <macros>
             <CH>D</CH>
             <idx>3</idx>
+            <num>4</num>
           </macros>
         </instance>
       </instances>
