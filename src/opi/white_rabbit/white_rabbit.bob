@@ -395,8 +395,9 @@
             <value>1</value>
           </action>
         </actions>
-        <x>300</x>
+        <x>290</x>
         <y>540</y>
+        <width>80</width>
         <tooltip>$(actions)</tooltip>
       </widget>
       <widget type="group" version="3.0.0">
@@ -509,15 +510,15 @@
       <widget type="bool_button" version="2.0.0">
         <name>Boolean Button_2</name>
         <pv_name>${UUT}:MGT:SFP:$(wr_site):TX_DISABLE</pv_name>
-        <x>410</x>
+        <x>390</x>
         <y>540</y>
-        <width>120</width>
-        <off_label>SFP RESET</off_label>
+        <width>140</width>
+        <off_label>SFP DISABLE</off_label>
         <off_color>
           <color name="Grid" red="128" green="128" blue="128">
           </color>
         </off_color>
-        <on_label>SFP RESET</on_label>
+        <on_label>SFP ENABLE</on_label>
         <on_color>
           <color name="MAJOR" red="255" green="0" blue="0">
           </color>
