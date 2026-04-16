@@ -11,7 +11,7 @@
       <PREFIX>$(UUT):</PREFIX>
     </macros>
     <width>550</width>
-    <height>590</height>
+    <height>630</height>
     <style>3</style>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
@@ -27,7 +27,7 @@ PREFIX $(PREFIX)</text>
       <x>10</x>
       <y>10</y>
       <width>530</width>
-      <height>570</height>
+      <height>610</height>
       <font>
         <font family="Liberation Sans" style="BOLD" size="14.0">
         </font>
@@ -42,7 +42,7 @@ PREFIX $(PREFIX)</text>
       <name>LOADER_INNER</name>
       <file>white_rabbit.bob</file>
       <width>550</width>
-      <height>590</height>
+      <height>630</height>
       <transparent>true</transparent>
       <scripts>
         <script file="../../scripts/opi_loader.py">
