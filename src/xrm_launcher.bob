@@ -17,10 +17,10 @@
     <vertical_alignment>2</vertical_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>OPI SITE INFO</name>
-    <text>$(UUT):$(SITE) </text>
-    <x>180</x>
-    <y>20</y>
+    <name>UUTNAME</name>
+    <text>$(UUT)</text>
+    <x>10</x>
+    <y>40</y>
     <width>130</width>
     <font>
       <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
