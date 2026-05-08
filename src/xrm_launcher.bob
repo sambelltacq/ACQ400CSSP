@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2026-04-14 13:10:44 by pgm-->
 <display version="2.0.0">
   <name>XRM Launcher</name>
   <widget type="label" version="2.0.0">
@@ -16,8 +15,8 @@
     <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>OPI SITE INFO</name>
-    <text>$(UUT):$(SITE) </text>
+    <name>UUTNAME</name>
+    <text>$(UUT)</text>
     <x>10</x>
     <y>40</y>
     <width>130</width>
