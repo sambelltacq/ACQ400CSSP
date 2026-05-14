@@ -1,10 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
+  <widget type="textupdate" version="2.0.0">
+    <name>INIT TRACE EN</name>
+    <pv_name>loc://trace_en_$(DID)&lt;VDouble&gt;(255)</pv_name>
+    <x>460</x>
+    <y>10</y>
+    <width>120</width>
+  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot</name>
     <width>800</width>
     <height>600</height>
     <show_toolbar>true</show_toolbar>
+    <rules>
+      <rule name="HANDLE_TRACE_1_VIZ" prop_id="traces[0].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 0)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_2_VIZ" prop_id="traces[1].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 1)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_3_VIZ" prop_id="traces[2].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 2)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_4_VIZ" prop_id="traces[3].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 3)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_5_VIZ" prop_id="traces[4].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 4)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_6_VIZ" prop_id="traces[5].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 5)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_7_VIZ" prop_id="traces[6].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 6)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+      <rule name="HANDLE_TRACE_8_VIZ" prop_id="traces[7].visible" out_exp="false">
+        <exp bool_exp="pvInt0 &amp; (1 &lt;&lt; 7)">
+          <value>true</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>false</value>
+        </exp>
+        <pv_name>loc://trace_en_$(DID)</pv_name>
+      </rule>
+    </rules>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -55,7 +136,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="0" green="0" blue="255">
+          <color red="21" green="21" blue="196">
           </color>
         </color>
         <line_width>1</line_width>
@@ -72,7 +153,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="255" green="0" blue="0">
+          <color red="242" green="26" blue="26">
           </color>
         </color>
         <line_width>1</line_width>
@@ -89,7 +170,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="0" green="255" blue="0">
+          <color red="33" green="179" blue="33">
           </color>
         </color>
         <line_width>1</line_width>
@@ -106,7 +187,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="170" green="0" blue="255">
+          <color red="0" green="0" blue="0">
           </color>
         </color>
         <line_width>1</line_width>
@@ -123,7 +204,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="255" green="255" blue="0">
+          <color red="128" green="0" blue="255">
           </color>
         </color>
         <line_width>1</line_width>
@@ -140,7 +221,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="0" green="234" blue="255">
+          <color red="255" green="170" blue="0">
           </color>
         </color>
         <line_width>1</line_width>
@@ -157,7 +238,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="255" green="127" blue="0">
+          <color red="255" green="0" blue="240">
           </color>
         </color>
         <line_width>1</line_width>
@@ -174,7 +255,7 @@
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="191" green="255" blue="0">
+          <color red="243" green="132" blue="132">
           </color>
         </color>
         <line_width>1</line_width>
@@ -184,5 +265,14 @@
         <visible>true</visible>
       </trace>
     </traces>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>TRACE VIZ CONTROL</name>
+    <file>../components/scope/trace_viz_controls.bob</file>
+    <x>590</x>
+    <y>5</y>
+    <width>200</width>
+    <height>25</height>
+    <resize>2</resize>
   </widget>
 </display>
