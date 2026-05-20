@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-14 10:36:22 by sam-->
 <display version="2.0.0">
   <name>DIO_32$(MUUT):$(SITE)</name>
   <width>650</width>
@@ -32,12 +31,11 @@
         <visible>false</visible>
         <resize>2</resize>
         <rules>
-          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-            <exp bool_exp="true">
-              <expression>pv0!=pv1</expression>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>true</value>
             </exp>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+            <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
           </rule>
         </rules>
       </widget>
@@ -53,12 +51,11 @@
         <visible>false</visible>
         <resize>2</resize>
         <rules>
-          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-            <exp bool_exp="true">
-              <expression>pv0!=pv1</expression>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>true</value>
             </exp>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+            <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
           </rule>
         </rules>
       </widget>
@@ -74,12 +71,11 @@
         <visible>false</visible>
         <resize>2</resize>
         <rules>
-          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-            <exp bool_exp="true">
-              <expression>pv0!=pv1</expression>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>true</value>
             </exp>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+            <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
           </rule>
         </rules>
       </widget>
@@ -95,12 +91,11 @@
         <visible>false</visible>
         <resize>2</resize>
         <rules>
-          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-            <exp bool_exp="true">
-              <expression>pv0!=pv1</expression>
+          <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0==1">
+              <value>true</value>
             </exp>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISA</pv_name>
-            <pv_name>${UUT}:${SITE}:IMM:DO:BYTE$(byte).DISV</pv_name>
+            <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
           </rule>
         </rules>
       </widget>
@@ -256,12 +251,11 @@
           <height>30</height>
           <visible>false</visible>
           <rules>
-            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-              <exp bool_exp="true">
-                <expression>pv0!=pv1</expression>
+            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+              <exp bool_exp="pv0==0">
+                <value>true</value>
               </exp>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
+              <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
             </rule>
           </rules>
         </widget>
@@ -286,12 +280,11 @@
           <height>30</height>
           <visible>false</visible>
           <rules>
-            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-              <exp bool_exp="true">
-                <expression>pv0!=pv1</expression>
+            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+              <exp bool_exp="pv0==0">
+                <value>true</value>
               </exp>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
+              <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
             </rule>
           </rules>
         </widget>
@@ -316,12 +309,11 @@
           <height>30</height>
           <visible>false</visible>
           <rules>
-            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-              <exp bool_exp="true">
-                <expression>pv0!=pv1</expression>
+            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+              <exp bool_exp="pv0==0">
+                <value>true</value>
               </exp>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
+              <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
             </rule>
           </rules>
         </widget>
@@ -346,12 +338,11 @@
           <height>30</height>
           <visible>false</visible>
           <rules>
-            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="true">
-              <exp bool_exp="true">
-                <expression>pv0!=pv1</expression>
+            <rule name="HIDE_DISABLED" prop_id="visible" out_exp="false">
+              <exp bool_exp="pv0==0">
+                <value>true</value>
               </exp>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISA</pv_name>
-              <pv_name>${UUT}:${SITE}:IMM:DI:BYTE$(byte).DISV</pv_name>
+              <pv_name>${UUT}:${SITE}:ISOUTPUT:BYTE$(byte)</pv_name>
             </rule>
           </rules>
         </widget>
