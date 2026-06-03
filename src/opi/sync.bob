@@ -884,7 +884,7 @@
             <transparent>true</transparent>
             <widget type="label" version="2.0.0">
               <name>label_13</name>
-              <text>Driven</text>
+              <text>Driver Enabled</text>
               <x>10</x>
               <width>110</width>
               <height>30</height>
@@ -1468,6 +1468,7 @@
         <y>121</y>
         <width>58</width>
         <height>129</height>
+        <visible>false</visible>
         <style>3</style>
         <transparent>true</transparent>
         <widget type="polyline" version="2.0.0">
