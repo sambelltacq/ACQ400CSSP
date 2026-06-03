@@ -2,6 +2,9 @@
 <!--Saved on 2026-04-09 16:35:22 by pgm-->
 <display version="2.0.0">
   <name>SOE HT $(MUUT)</name>
+  <macros>
+    <MUUT>$(MUUT=)</MUUT>
+  </macros>
   <width>750</width>
   <height>740</height>
   <widget type="group" version="3.0.0">
