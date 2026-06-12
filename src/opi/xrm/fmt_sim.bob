@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Saved on 2026-04-13 19:17:25 by pgm-->
 <display version="2.0.0">
-  <name>FMT SIM $(MUUT)</name>
+  <name>FMT SIM $(UUT)</name>
   <width>750</width>
   <height>740</height>
   <widget type="group" version="3.0.0">
