@@ -1274,7 +1274,7 @@
         <widget type="group" version="3.0.0">
           <name>EVENT STATE INNER</name>
           <macros>
-            <pvname0>${UUT}:SIG:SYNC_BUS:TRG:D</pvname0>
+            <pvname0>${UUT}:SIG:SYNC_BUS:EVT:D</pvname0>
           </macros>
           <x>10</x>
           <y>10</y>
