@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Saved on 2026-04-13 11:46:34 by pgm-->
 <display version="2.0.0">
-  <name>SOE_LUT $(MUUT)</name>
-  <macros>
-    <MUUT>$(MUUT=)</MUUT>
-  </macros>
+  <name>SOE_LUT $(UUT)</name>
   <width>750</width>
   <height>740</height>
   <widget type="group" version="3.0.0">

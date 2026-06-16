@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Saved on 2026-04-01 22:57:20 by pgm-->
 <display version="2.0.0">
-  <name>FMT RX $(MUUT)</name>
-  <macros>
-    <MUUT>$(MUUT=)</MUUT>
-  </macros>
+  <name>FMT RX $(UUT)</name>
   <width>750</width>
   <height>740</height>
   <widget type="group" version="3.0.0">
