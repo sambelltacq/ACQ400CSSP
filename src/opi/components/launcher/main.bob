@@ -1289,14 +1289,14 @@
           <x>200</x>
           <y>50</y>
           <width>260</width>
-          <height>230</height>
+          <height>270</height>
           <style>3</style>
           <widget type="group" version="3.0.0">
             <name>LAUNCHERS INNER</name>
             <x>10</x>
             <y>50</y>
             <width>240</width>
-            <height>170</height>
+            <height>210</height>
             <style>3</style>
             <transparent>true</transparent>
             <widget type="group" version="3.0.0">
@@ -1657,7 +1657,7 @@
               <name>PRESET LAUNCHER BOLO</name>
               <y>120</y>
               <width>240</width>
-              <height>50</height>
+              <height>90</height>
               <visible>false</visible>
               <style>3</style>
               <transparent>true</transparent>
@@ -1726,14 +1726,14 @@
                 <name>PLOT LAUNCHER BOLO</name>
                 <y>20</y>
                 <width>240</width>
-                <height>30</height>
+                <height>70</height>
                 <style>3</style>
                 <transparent>true</transparent>
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_MAG</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:MAG</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:MAG.VALA</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
                     <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
@@ -1746,8 +1746,10 @@
                     <HEIGHT_L>700</HEIGHT_L>
                     <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
                     <MODE_POST>TW</MODE_POST>
-                    <SCOPE_MAP>1,4,7,10,13,16,19,22</SCOPE_MAP>
+                    <SCOPE_MAP>1-8</SCOPE_MAP>
                     <MODE_STRIP>CH</MODE_STRIP>
+                    <YAXIS_CODES_LABEL>Magnitude (Codes)</YAXIS_CODES_LABEL>
+                    <TITLE_FMT>Magnitude [ {chan_str} ]</TITLE_FMT>
                   </macros>
                   <width>60</width>
                   <height>30</height>
@@ -1783,8 +1785,8 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_PHI</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PHI</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:PHI.VALA</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
                     <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
@@ -1797,7 +1799,9 @@
                     <HEIGHT_L>700</HEIGHT_L>
                     <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
                     <MODE_POST>TW</MODE_POST>
-                    <SCOPE_MAP>2,5,8,11,14,17,20,23</SCOPE_MAP>
+                    <SCOPE_MAP>1-8</SCOPE_MAP>
+                    <YAXIS_CODES_LABEL>Phase (Codes)</YAXIS_CODES_LABEL>
+                    <TITLE_FMT>Phase [ {chan_str} ]</TITLE_FMT>
                   </macros>
                   <x>60</x>
                   <width>60</width>
@@ -1834,8 +1838,8 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_PWR</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}</YTRACE_FMT_CODES>
-                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:V.VALA</YTRACE_FMT_VOLTS>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PWR</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALA</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
                     <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
@@ -1848,7 +1852,9 @@
                     <HEIGHT_L>700</HEIGHT_L>
                     <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
                     <MODE_POST>TW</MODE_POST>
-                    <SCOPE_MAP>3,6,9,12,15,18,21,24</SCOPE_MAP>
+                    <SCOPE_MAP>1-8</SCOPE_MAP>
+                    <YAXIS_CODES_LABEL>Power (Codes)</YAXIS_CODES_LABEL>
+                    <TITLE_FMT>Power [ {chan_str} ]</TITLE_FMT>
                   </macros>
                   <x>120</x>
                   <width>60</width>
@@ -1880,6 +1886,113 @@
                       </font>
                     </font>
                     <tooltip>Scope 17-24</tooltip>
+                  </widget>
+                </widget>
+                <widget type="group" version="3.0.0">
+                  <name>PLOT_LAUNCHER_I</name>
+                  <macros>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALJ</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALQ</YTRACE_FMT_VOLTS>
+                    <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
+                    <POST_OPI>opi/scope_post.bob</POST_OPI>
+                    <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+                    <CROSS_SITE>0</CROSS_SITE>
+                    <YAXIS_VOLTS_LABEL>Current (mA)</YAXIS_VOLTS_LABEL>
+                    <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+                    <WIDTH_S>500</WIDTH_S>
+                    <HEIGHT_S>380</HEIGHT_S>
+                    <WIDTH_L>1000</WIDTH_L>
+                    <HEIGHT_L>700</HEIGHT_L>
+                    <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+                    <MODE_POST>TW</MODE_POST>
+                    <SCOPE_MAP>1-8</SCOPE_MAP>
+                    <YAXIS_CODES_LABEL>Current (Codes)</YAXIS_CODES_LABEL>
+                    <TITLE_FMT>Ohmic Heating - Current [ {chan_str} ]</TITLE_FMT>
+                  </macros>
+                  <y>40</y>
+                  <width>60</width>
+                  <height>30</height>
+                  <style>3</style>
+                  <transparent>true</transparent>
+                  <scripts>
+                    <script file="../../../scripts/handle_local.py">
+                      <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+                    </script>
+                  </scripts>
+                  <widget type="action_button" version="3.0.0">
+                    <name>CAL I Button</name>
+                    <actions>
+                      <action type="execute">
+                        <description>Execute Script</description>
+                        <script file="../../../scripts/init_scope.py">
+                        </script>
+                      </action>
+                    </actions>
+                    <text>CAL I</text>
+                    <width>60</width>
+                    <font>
+                      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                      </font>
+                    </font>
+                    <tooltip>Q</tooltip>
+                  </widget>
+                </widget>
+                <widget type="group" version="3.0.0">
+                  <name>PLOT_LAUNCHER_V</name>
+                  <macros>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALI</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALP</YTRACE_FMT_VOLTS>
+                    <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
+                    <POST_OPI>opi/scope_post.bob</POST_OPI>
+                    <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
+                    <CROSS_SITE>0</CROSS_SITE>
+                    <YAXIS_VOLTS_LABEL>Volts (V)</YAXIS_VOLTS_LABEL>
+                    <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
+                    <WIDTH_S>500</WIDTH_S>
+                    <HEIGHT_S>380</HEIGHT_S>
+                    <WIDTH_L>1000</WIDTH_L>
+                    <HEIGHT_L>700</HEIGHT_L>
+                    <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
+                    <MODE_POST>TW</MODE_POST>
+                    <SCOPE_MAP>1-8</SCOPE_MAP>
+                    <YAXIS_CODES_LABEL>Volts (Codes)</YAXIS_CODES_LABEL>
+                    <TITLE_FMT>Ohmic Heating - Volts [ {chan_str} ]</TITLE_FMT>
+                  </macros>
+                  <x>60</x>
+                  <y>40</y>
+                  <width>60</width>
+                  <height>30</height>
+                  <style>3</style>
+                  <transparent>true</transparent>
+                  <scripts>
+                    <script file="../../../scripts/handle_local.py">
+                      <pv_name>loc://SCOPE_MAP_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
+                      <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
+                    </script>
+                  </scripts>
+                  <widget type="action_button" version="3.0.0">
+                    <name>CAL V Button</name>
+                    <actions>
+                      <action type="execute">
+                        <description>Execute Script</description>
+                        <script file="../../../scripts/init_scope.py">
+                        </script>
+                      </action>
+                    </actions>
+                    <text>CAL V</text>
+                    <width>60</width>
+                    <font>
+                      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                      </font>
+                    </font>
+                    <tooltip>Q</tooltip>
                   </widget>
                 </widget>
               </widget>
