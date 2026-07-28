@@ -1891,8 +1891,8 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_I</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALJ</YTRACE_FMT_CODES>
-                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALQ</YTRACE_FMT_VOLTS>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALJ</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALQ</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
                     <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
@@ -1944,8 +1944,8 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_V</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALI</YTRACE_FMT_CODES>
-                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:TW:{chan:02d}:PWR.VALP</YTRACE_FMT_VOLTS>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALI</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALP</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
                     <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
