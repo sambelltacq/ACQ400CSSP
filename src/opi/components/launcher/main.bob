@@ -1732,7 +1732,7 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_MAG</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:MAG</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:MAG.VALA</YTRACE_FMT_CODES>
                     <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:MAG.VALA</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
@@ -1748,7 +1748,7 @@
                     <MODE_POST>TW</MODE_POST>
                     <SCOPE_MAP>1-8</SCOPE_MAP>
                     <MODE_STRIP>CH</MODE_STRIP>
-                    <YAXIS_CODES_LABEL>Magnitude (Codes)</YAXIS_CODES_LABEL>
+                    <YAXIS_CODES_LABEL>Magnitude (mv)</YAXIS_CODES_LABEL>
                     <TITLE_FMT>Magnitude [ {chan_str} ]</TITLE_FMT>
                   </macros>
                   <width>60</width>
@@ -1785,7 +1785,7 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_PHI</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PHI</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PHI.VALA</YTRACE_FMT_CODES>
                     <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:PHI.VALA</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
@@ -1800,7 +1800,7 @@
                     <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
                     <MODE_POST>TW</MODE_POST>
                     <SCOPE_MAP>1-8</SCOPE_MAP>
-                    <YAXIS_CODES_LABEL>Phase (Codes)</YAXIS_CODES_LABEL>
+                    <YAXIS_CODES_LABEL>Phase (RAD)</YAXIS_CODES_LABEL>
                     <TITLE_FMT>Phase [ {chan_str} ]</TITLE_FMT>
                   </macros>
                   <x>60</x>
@@ -1838,7 +1838,7 @@
                 <widget type="group" version="3.0.0">
                   <name>PLOT_LAUNCHER_PWR</name>
                   <macros>
-                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PWR</YTRACE_FMT_CODES>
+                    <YTRACE_FMT_CODES>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALA</YTRACE_FMT_CODES>
                     <YTRACE_FMT_VOLTS>{uut}:{site}:AI:{mode}:{chan:02d}:PWR.VALA</YTRACE_FMT_VOLTS>
                     <XTRACE_FMT_SECONDS>{uut}:{site}:AI:{mode}:TB.VALA</XTRACE_FMT_SECONDS>
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
@@ -1853,7 +1853,7 @@
                     <STRIP_OPI>opi/scope_strip.bob</STRIP_OPI>
                     <MODE_POST>TW</MODE_POST>
                     <SCOPE_MAP>1-8</SCOPE_MAP>
-                    <YAXIS_CODES_LABEL>Power (Codes)</YAXIS_CODES_LABEL>
+                    <YAXIS_CODES_LABEL>Power (mW)</YAXIS_CODES_LABEL>
                     <TITLE_FMT>Power [ {chan_str} ]</TITLE_FMT>
                   </macros>
                   <x>120</x>
