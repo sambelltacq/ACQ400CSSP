@@ -1668,6 +1668,7 @@
               <y>120</y>
               <width>240</width>
               <height>90</height>
+              <visible>false</visible>
               <style>3</style>
               <transparent>true</transparent>
               <rules>
@@ -1906,7 +1907,7 @@
                     <POST_OPI>opi/scope_post.bob</POST_OPI>
                     <LIVE_OPI>opi/scope_live.bob</LIVE_OPI>
                     <CROSS_SITE>0</CROSS_SITE>
-                    <YAXIS_VOLTS_LABEL>Current (mA)</YAXIS_VOLTS_LABEL>
+                    <YAXIS_VOLTS_LABEL>Current (A)</YAXIS_VOLTS_LABEL>
                     <XAXIS_SECONDS_LABEL>Seconds (s)</XAXIS_SECONDS_LABEL>
                     <WIDTH_S>500</WIDTH_S>
                     <HEIGHT_S>380</HEIGHT_S>
