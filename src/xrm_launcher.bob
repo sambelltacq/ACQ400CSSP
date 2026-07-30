@@ -381,7 +381,7 @@
       <font family="Ubuntu" style="BOLD" size="14.0">
       </font>
     </font>
-    <tooltip>Analog Trigger Thresholds</tooltip>
+    <tooltip>SOE presented as per-channel scalars</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>pm slice Button</name>
@@ -400,7 +400,7 @@
       <font family="Ubuntu" style="BOLD" size="14.0">
       </font>
     </font>
-    <tooltip>Analog Trigger Thresholds</tooltip>
+    <tooltip>PM presented as per-channel vectors</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_9</name>
