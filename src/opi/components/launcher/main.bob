@@ -979,6 +979,7 @@
                     <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot live data</tooltip>
               </widget>
               <widget type="action_button" version="3.0.0">
                 <name>MODE BUTTON 2</name>
@@ -1005,6 +1006,7 @@
                     <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot post shot data</tooltip>
               </widget>
               <widget type="action_button" version="3.0.0">
                 <name>MODE BUTTON 3</name>
@@ -1031,6 +1033,7 @@
                     <pv_name>loc://SCOPE_MODE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot live data in strip chart</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -1074,6 +1077,7 @@
                     <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot in samples</tooltip>
               </widget>
               <widget type="action_button" version="3.0.0">
                 <name>XAXIS BUTTON 2</name>
@@ -1100,6 +1104,7 @@
                     <pv_name>loc://SCOPE_XTYPE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot in seconds</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -1143,6 +1148,7 @@
                     <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot in codes</tooltip>
               </widget>
               <widget type="action_button" version="3.0.0">
                 <name>YAXIS BUTTON 2</name>
@@ -1154,7 +1160,7 @@
                   </action>
                 </actions>
                 <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
-                <text>VOLTS</text>
+                <text>UNITS</text>
                 <x>82</x>
                 <y>20</y>
                 <width>80</width>
@@ -1169,6 +1175,7 @@
                     <pv_name>loc://SCOPE_YTYPE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Plot in real-world units</tooltip>
               </widget>
             </widget>
             <widget type="group" version="3.0.0">
@@ -1212,6 +1219,7 @@
                     <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Small Plot</tooltip>
               </widget>
               <widget type="action_button" version="3.0.0">
                 <name>SIZE BUTTON 2</name>
@@ -1242,6 +1250,7 @@
                     <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Medium Plot</tooltip>
               </widget>
               <widget type="action_button" version="3.0.0">
                 <name>SIZE BUTTON 3</name>
@@ -1268,6 +1277,7 @@
                     <pv_name>loc://SCOPE_SIZE_$(DID)</pv_name>
                   </rule>
                 </rules>
+                <tooltip>Large Plot</tooltip>
               </widget>
             </widget>
           </widget>
@@ -1377,7 +1387,7 @@
                     <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                     </font>
                   </font>
-                  <tooltip>Scope Custom</tooltip>
+                  <tooltip>Plot custom channels</tooltip>
                 </widget>
               </widget>
             </widget>
@@ -1495,7 +1505,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 01-08</tooltip>
+                    <tooltip>Plot site chans 1-8</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1546,7 +1556,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 09-16</tooltip>
+                    <tooltip>Plot site chans 9-16</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1597,7 +1607,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 17-24</tooltip>
+                    <tooltip>Plot site chans 17-24</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1648,7 +1658,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 25-32</tooltip>
+                    <tooltip>Plot site chans 25-32</tooltip>
                   </widget>
                 </widget>
               </widget>
@@ -1658,7 +1668,6 @@
               <y>120</y>
               <width>240</width>
               <height>90</height>
-              <visible>false</visible>
               <style>3</style>
               <transparent>true</transparent>
               <rules>
@@ -1779,7 +1788,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 01-08</tooltip>
+                    <tooltip>Plot Magnitude</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1832,7 +1841,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 09-16</tooltip>
+                    <tooltip>Plot Phase</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1885,7 +1894,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Scope 17-24</tooltip>
+                    <tooltip>Plot Power</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1938,7 +1947,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Q</tooltip>
+                    <tooltip>Plot Ohmic Heating Current</tooltip>
                   </widget>
                 </widget>
                 <widget type="group" version="3.0.0">
@@ -1992,7 +2001,7 @@
                       <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
                       </font>
                     </font>
-                    <tooltip>Q</tooltip>
+                    <tooltip>Plot Ohmic Heating Voltage</tooltip>
                   </widget>
                 </widget>
               </widget>
