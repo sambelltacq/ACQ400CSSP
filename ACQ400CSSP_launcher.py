@@ -252,7 +252,7 @@ def run_cmd(cmd):
 
 def check_uut_hostnames(hostnames):
     """Warns if suppiled hostname is not in D-tacq format"""
-    pattern = re.compile(r'^(acq1001|acq1102|acq2106|acq2206|z7io)_[0-9]{3}$')
+    pattern = re.compile(r'^(acq1001|acq1102|acq2106|acq2206|z7io|kmcuz30)_[0-9]{3}$')
     for hostname in hostnames:
         if not pattern.fullmatch(hostname):
             logging.warning(f"hostname '{hostname}' is not in expected format: <model>_<ID>")
