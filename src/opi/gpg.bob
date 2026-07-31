@@ -795,6 +795,21 @@
           </widget>
         </widget>
       </widget>
+      <widget type="action_button" version="3.0.0">
+        <name>Pulse Soft Button</name>
+        <actions execute_as_one="true">
+          <action type="write_pv">
+            <description>PULSE SOFT TRG</description>
+            <pv_name>${UUT}:SIG:SOFT_TRIGGER</pv_name>
+            <value>1</value>
+          </action>
+        </actions>
+        <text>PULSE SOFT TRG</text>
+        <x>180</x>
+        <y>360</y>
+        <width>130</width>
+        <tooltip>$(actions)</tooltip>
+      </widget>
     </widget>
   </widget>
 </display>
