@@ -170,9 +170,7 @@ def init_memento(args):
         new_lines.append(f"org.phoebus.applications.console/prompt={ID}> \\ \n")
         new_lines.append(f"org.phoebus.applications.console/shell=python3 {helper_path} {ID}\n")
 
-    if not os.path.exists(SETTINGS):
-        print(f"Creating new workspace {WORKSPACE}")
-        os.makedirs(WORKSPACE, exist_ok=True)
+    os.makedirs(WORKSPACE, exist_ok=True)
 
     try:
         with open(SETTINGS_BASE, 'r') as base_fp:
