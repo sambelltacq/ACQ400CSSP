@@ -54,13 +54,14 @@ def run_main(args):
 
     init_memento(args)
     update_pref()
+    input()
     
     CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} -logging {LOGGING} {TARGET}')
 
     if args.debug:
+        print("CMD", CMD)
         run(CMD, shell=True, env=ENV, text=True)
         print('END')
-        print("CMD", CMD)
         #print(globals())
         input()
         return
@@ -158,7 +159,7 @@ def init_memento(args):
 
     new_lines = []
     macros_pref = "org.csstudio.display.builder.model/macros={macros}\n"
-    new_lines.append(macros_pref.format(macros=gen_macros_pref(args.uuts, args.debug)))
+    new_lines.append(macros_pref.format(macros=gen_macros_pref(args.uuts, args.debug, args.macros)))
     if len(args.uuts) > 1:
         args.console = False
         new_lines.append("org.phoebus.ui/home_display=src/acq400_launcher_multi.bob")
@@ -187,7 +188,7 @@ def init_memento(args):
     TARGET=f"-resource {resource} -layout null"
     print(f'init_memento() workspace {WORKSPACE} TARGET {TARGET}')
     
-def gen_macros_pref(uuts, debug):
+def gen_macros_pref(uuts, debug, user_macros):
     macros="<UUT>{uut}</UUT>".format(uut=uuts[0])
     if len(uuts) > 1:
         macros=""
@@ -196,6 +197,8 @@ def gen_macros_pref(uuts, debug):
             macros += f"<UUT{idx}>{uut}</UUT{idx}>"
     macros += f"<DEBUG>{debug}</DEBUG>"
     macros += f"<UUTS>{','.join(uuts)}</UUTS>"
+    for key, value in user_macros.items():
+         macros += f"<{key}>{value}</{key}>"
     return macros
 
 
@@ -254,10 +257,15 @@ def check_uut_hostnames(hostnames):
         if not pattern.fullmatch(hostname):
             logging.warning(f"hostname '{hostname}' is not in expected format: <model>_<ID>")
 
+def list_of_pairs(arg):
+    """Parse pairs into a dict"""
+    return dict(pair.split('=', 1) for pair in arg.split('/') if pair)
+
 def get_parser():
     parser = argparse.ArgumentParser(description='Start script for ACQ400CSSP')
     parser.add_argument('--debug', action='store_true', help="enable debug")
     parser.add_argument('--console', action='store_true', help="enable console")
+    parser.add_argument('--macros', default=None, type=list_of_pairs, help="Macro key values key1=val1/key2=val2")
     parser.add_argument('uuts', nargs='*', help="uut hostnames")
     return parser
 
