@@ -54,7 +54,6 @@ def run_main(args):
 
     init_memento(args)
     update_pref()
-    input()
     
     CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} -logging {LOGGING} {TARGET}')
 
