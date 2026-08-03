@@ -54,7 +54,6 @@ def run_main(args):
 
     init_memento(args)
     update_pref()
-    input()
     
     CMD = os.path.normpath(f'"{JAVA_BIN}" {JAVA_ARGS} -jar {PHOEBUS_JAR} -settings {SETTINGS} -logging {LOGGING} {TARGET}')
 
@@ -263,7 +262,7 @@ def get_parser():
     parser = argparse.ArgumentParser(description='Start script for ACQ400CSSP')
     parser.add_argument('--debug', action='store_true', help="enable debug")
     parser.add_argument('--console', action='store_true', help="enable console")
-    parser.add_argument('--macros', default=None, type=list_of_pairs, help="Macro key values key1=val1/key2=val2")
+    parser.add_argument('--macros', default={}, type=list_of_pairs, help="Macro key values key1=val1/key2=val2")
     parser.add_argument('uuts', nargs='*', help="uut hostnames")
     return parser
 

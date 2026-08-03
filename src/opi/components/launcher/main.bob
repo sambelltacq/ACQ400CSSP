@@ -2005,6 +2005,35 @@
                     <tooltip>Plot Ohmic Heating Voltage</tooltip>
                   </widget>
                 </widget>
+                <widget type="group" version="3.0.0">
+                  <name>Cal Status</name>
+                  <x>130</x>
+                  <y>45</y>
+                  <width>100</width>
+                  <height>20</height>
+                  <style>3</style>
+                  <transparent>true</transparent>
+                  <widget type="label" version="2.0.0">
+                    <name>Cal Label</name>
+                    <text>Calibration</text>
+                    <x>22</x>
+                    <width>78</width>
+                    <font>
+                      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+                      </font>
+                    </font>
+                    <vertical_alignment>1</vertical_alignment>
+                  </widget>
+                  <widget type="led" version="2.0.0">
+                    <name>Cal Led</name>
+                    <pv_name>${UUT}:B8:CALIBRATING</pv_name>
+                    <line_color>
+                      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+                      </color>
+                    </line_color>
+                    <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+                  </widget>
+                </widget>
               </widget>
             </widget>
           </widget>
