@@ -432,4 +432,20 @@
     <width>150</width>
     <height>30</height>
   </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>${UUT}:FMT:NULL_FMT_COUNT</pv_name>
+    <x>580</x>
+    <y>350</y>
+    <width>160</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>SOE request FMT fail count</text>
+    <x>370</x>
+    <y>350</y>
+    <width>200</width>
+    <height>30</height>
+  </widget>
 </display>
