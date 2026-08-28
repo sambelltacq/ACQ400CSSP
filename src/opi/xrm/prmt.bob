@@ -94,6 +94,33 @@
       <width>750</width>
       <height>90</height>
     </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>${UUT}:PRMT:LUT:LAST_EVENT</pv_name>
+      <x>231</x>
+      <y>90</y>
+      <width>130</width>
+    </widget>
+    <widget type="textentry" version="3.0.0">
+      <name>Text Entry_2</name>
+      <pv_name>${UUT}:PRMT:LUT:SOFT_EVENT</pv_name>
+      <x>231</x>
+      <y>130</y>
+      <width>120</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_8</name>
+      <text>LAST EVENT</text>
+      <x>100</x>
+      <y>90</y>
+      <width>110</width>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_9</name>
+      <text>SOFT_EVENT</text>
+      <x>100</x>
+      <y>130</y>
+    </widget>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Embedded Display_1</name>
