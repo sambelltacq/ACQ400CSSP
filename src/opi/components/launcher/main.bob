@@ -529,7 +529,7 @@
                 <exp bool_exp="pvStr0.upper().find(&quot;XRM&quot;) != -1">
                   <value>true</value>
                 </exp>
-                <pv_name>$(UUT):0:MODEL</pv_name>
+                <pv_name>$(UUT):SYS:VERSION:FPGA</pv_name>
               </rule>
             </rules>
             <tooltip>XRM Launcher</tooltip>
