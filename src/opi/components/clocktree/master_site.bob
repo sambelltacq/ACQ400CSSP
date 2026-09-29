@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-03-06 11:58:09 by sam-->
 <display version="2.0.0">
   <name>Master Site</name>
   <width>760</width>
@@ -124,6 +123,62 @@
         <horizontal_alignment>1</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+      </widget>
+      <widget type="group" version="3.0.0">
+        <name>Disable Cover</name>
+        <x>110</x>
+        <width>515</width>
+        <height>20</height>
+        <visible>false</visible>
+        <style>3</style>
+        <background_color>
+          <color red="240" green="240" blue="240" alpha="199">
+          </color>
+        </background_color>
+        <rules>
+          <rule name="DISABLE_WHEN_NOT_IDLE" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0!=0||pv1!=0">
+              <value>true</value>
+            </exp>
+            <exp bool_exp="true">
+              <value>false</value>
+            </exp>
+            <pv_name>${UUT}:MODE:TRANS_ACT:STATE</pv_name>
+            <pv_name>${UUT}:MODE:CONTINUOUS:STATE</pv_name>
+          </rule>
+        </rules>
+        <widget type="label" version="2.0.0">
+          <name>Disabled Label</name>
+          <text>NOT IDLE</text>
+          <x>65</x>
+          <width>240</width>
+          <font>
+            <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+            </font>
+          </font>
+          <background_color>
+            <color red="0" green="149" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Disabled Label_1</name>
+          <text>NOT IDLE</text>
+          <x>425</x>
+          <width>90</width>
+          <font>
+            <font name="Header 3" family="Liberation Sans" style="BOLD" size="16.0">
+            </font>
+          </font>
+          <background_color>
+            <color red="0" green="149" blue="255">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+        </widget>
       </widget>
     </widget>
   </widget>
