@@ -83,7 +83,7 @@ def format_channels(chans):
 
 # Main
 
-macros = get_macros(display, widget)
+macros = get_macros(widget, display)
 
 SCOPE_MAP = [item.strip() for item in macros.SCOPE_MAP.split('/') if len(item.strip()) > 0]
 SCOPE_MODE = macros.SCOPE_MODE #LIVE, POST, STRIP
