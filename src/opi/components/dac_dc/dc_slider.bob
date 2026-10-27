@@ -2,11 +2,11 @@
 <display version="2.0.0">
   <name>DC Slider</name>
   <width>120</width>
-  <height>250</height>
+  <height>280</height>
   <widget type="group" version="3.0.0">
     <name>DC SLIDER</name>
     <width>120</width>
-    <height>250</height>
+    <height>280</height>
     <visible>false</visible>
     <style>3</style>
     <background_color>
@@ -32,7 +32,7 @@
       <x>10</x>
       <y>10</y>
       <width>100</width>
-      <height>230</height>
+      <height>260</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="label" version="2.0.0">
@@ -56,7 +56,7 @@
       <widget type="combo" version="2.0.0">
         <name>Combo Box</name>
         <pv_name>${UUT}:${SITE}:$(GAIN):${id}</pv_name>
-        <y>210</y>
+        <y>240</y>
         <height>20</height>
         <rules>
           <rule name="DISABLE_IF_XRM" prop_id="visible" out_exp="false">
@@ -133,6 +133,15 @@
             </rule>
           </rules>
         </widget>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_1</name>
+        <pv_name>${UUT}:${SITE}:AO:SLOW_SET:CH:$(id):r</pv_name>
+        <y>210</y>
+        <precision>2</precision>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
       </widget>
     </widget>
   </widget>
