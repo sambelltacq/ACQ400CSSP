@@ -5,6 +5,9 @@
   <height>127</height>
   <widget type="group" version="3.0.0">
     <name>Counter</name>
+    <macros>
+      <TARGET_LONG>$(TARGET_LONG=0)</TARGET_LONG>
+    </macros>
     <width>102</width>
     <height>127</height>
     <style>2</style>
@@ -159,12 +162,12 @@
       </actions>
       <pv_name>${UUT}:0:SIG:${FUNC}_${TARGET}:RESET</pv_name>
       <text>C</text>
-      <x>50</x>
+      <x>53</x>
       <y>105</y>
       <width>25</width>
-      <height>20</height>
+      <height>19</height>
       <tooltip>$(actions)</tooltip>
-      <border_alarm_sensitive>$(SHOW_ALARM=1)</border_alarm_sensitive>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="led" version="2.0.0">
       <name>Counter Status</name>
@@ -201,6 +204,16 @@
         <color name="Header_ForeGround" red="255" green="255" blue="255">
         </color>
       </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Counter big target</name>
+      <text>${TARGET_LONG}</text>
+      <y>105</y>
+      <width>78</width>
+      <visible>$(TARGET_LONG)</visible>
+      <transparent>false</transparent>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
     </widget>
   </widget>
 </display>
